@@ -1,0 +1,20 @@
+{
+    "sources": [
+        {
+            "type": "single",
+            "resource": "minecraft:custom/snowball"
+        },
+		{
+            "type": "single",
+            "resource": "minecraft:custom/iceball"
+        },
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/snowball"
+        },
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/iceball"
+        }
+    ]
+}
