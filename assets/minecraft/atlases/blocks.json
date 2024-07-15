@@ -15,6 +15,22 @@
 		{
             "type": "single",
             "resource": "minecraft:custom_gui/iceball"
+        },
+		{
+            "type": "single",
+            "resource": "minecraft:custom/snowman_body"
+        },
+		{
+            "type": "single",
+            "resource": "minecraft:custom/snowman_arm"
+        },
+		{
+            "type": "single",
+            "resource": "minecraft:custom/snowman_face"
+        },
+		{
+            "type": "single",
+            "resource": "minecraft:custom/snowman_tophat"
         }
     ]
 }
