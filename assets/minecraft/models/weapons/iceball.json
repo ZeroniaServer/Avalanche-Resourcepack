@@ -3,7 +3,7 @@
 	"textures": {
 		"0": "custom/iceball",
 		"1": "custom_gui/iceball",
-		"particle": "custom/iceball"
+		"particle": "item/snowball"
 	},
 	"elements": [
 		{

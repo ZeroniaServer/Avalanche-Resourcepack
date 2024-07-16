@@ -31,6 +31,6 @@
 		{
             "type": "single",
             "resource": "minecraft:custom/snowman_tophat"
-        }
+		}
     ]
 }
