@@ -3,5 +3,13 @@
   "item.snowball.lore1": "???",
   "powerup.iceball.name": "Iceball",
   "powerup.iceball.lore1": "Short ranged throwable item.",
-  "powerup.iceball.lore2": "Instantly knocks out a player on hit."
+  "powerup.iceball.lore2": "Instantly knocks out a player on hit.",
+  "powerup.sleigh.name": "Sleigh",
+  "powerup.sleigh.lore1": "Take a seat and go for the ride",
+  "powerup.sleigh.lore2": "of your life!",
+  "powerup.sleigh.lore3": "Use the Sleigh to quickly traverse",
+  "powerup.sleigh.lore4": "the map. When the Sleigh falls, you",
+  "powerup.sleigh.lore5": "will jump. The Sleigh breaks when",
+  "powerup.sleigh.lore6": "it falls onto the ground too many",
+  "powerup.sleigh.lore7": "times or is left alone for too long."
 }
