@@ -36,65 +36,57 @@ void main() {
         vertexColor = vec4(0); // remove text + shadow
     }
 
-    // common chest color
-    else if (Color == vec4(169/255., 165/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y - 20.0, Position.z + 200.0);
+    // green firework on top
+    else if (Color == vec4(168/255., 164/255., 0, Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y + 3.0, Position.z + 200.0);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
-        // recolor to gray
-        vertexColor.r = 84.0/255.0;
-        vertexColor.g = 84.0/255.0;
-        vertexColor.b = 84.0/255.0;
+        // remove color from marker
+        vertexColor = texelFetch(Sampler2, UV2 / 16, 0); 
+    }
+    else if (Color == vec4(42/255., 41/255., 0, Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y + 3.0, Position.z + 200.0);
+        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
+
+        // remove color from marker
+        vertexColor.r = 0.25;
+        vertexColor.g = 0.25;
+        vertexColor.b = 0.25;
     }
 
-    // uncommon chest color
-    else if (Color == vec4(169/255., 166/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y - 20.0, Position.z + 200.0);
+    // red firework on top
+    else if (Color == vec4(168/255., 172/255., 0, Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y - 4.0, Position.z + 200.0);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
-        // recolor to dark aqua
-        vertexColor.r = 0;
-        vertexColor.g = 145.0/255.0;
-        vertexColor.b = 145.0/255.0;
+        // remove color from marker
+        vertexColor = texelFetch(Sampler2, UV2 / 16, 0); 
+    }
+    else if (Color == vec4(42/255., 43/255., 0, Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y - 4.0, Position.z + 200.0);
+        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
+
+        // remove color from marker
+        vertexColor.r = 0.25;
+        vertexColor.g = 0.25;
+        vertexColor.b = 0.25;
     }
 
-    // rare chest color
-    else if (Color == vec4(169/255., 167/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y - 20.0, Position.z + 200.0);
+    // firework below
+    else if (Color == vec4(168/255., 168/255., 0, Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y - 23.0, Position.z + 200.0);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
-        // recolor to dark aqua
-        vertexColor.r = 122.0/255.0;
-        vertexColor.g = 0;
-        vertexColor.b = 168.0/255.0;
+        // remove color from marker
+        vertexColor = texelFetch(Sampler2, UV2 / 16, 0); 
     }
-
-    // cargo barrel color
-    else if (Color == vec4(169/255., 168/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y - 6.0, Position.z + 200.0);
+    else if (Color == vec4(42/255., 42/255., 0, Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y - 23.0, Position.z + 200.0);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
-        // recolor to custom color
-        vertexColor.r = 91.0/255.0;
-        vertexColor.g = 70.0/255.0;
-        vertexColor.b = 36.0/255.0;
-    }
-    
-    // grave color
-    else if (Color == vec4(169/255., 169/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y - 20.0, Position.z + 200.0);
-        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
-
-        // recolor to custom color
-        vertexColor.r = 2.0/255.0;
-        vertexColor.g = 45.0/255.0;
-        vertexColor.b = 55.0/255.0;
-    }
-
-    // displace custom gui texture to hide in nametag view
-    else if (Color == vec4(123/255., 123/255., 0, Color.a)) {
-        vertexColor = texelFetch(Sampler2, UV2 / 16, 0);
-        vec3 newPos = vec3(Position.x, Position.y, Position.z + 200.0);
-        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
+        // remove color from marker
+        vertexColor.r = 0.25;
+        vertexColor.g = 0.25;
+        vertexColor.b = 0.25;
     }
 }
