@@ -31,6 +31,22 @@
 		{
             "type": "single",
             "resource": "minecraft:custom/snowman_tophat"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/firework_red"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/firework_green"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/green_firework"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/red_firework"
 		}
     ]
 }

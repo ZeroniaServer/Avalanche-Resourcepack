@@ -1,6 +1,9 @@
 {
   "item.snowball.name": "Snowball",
   "item.snowball.lore1": "???",
+  "item.rocket.name": "Avalanche Rocket",
+  "item.rocket.lore1": "Explodes on impact. Used to damage mountains.",
+  "item.rocket.lore2": "Does not damage players.",
   "powerup.iceball.name": "Iceball",
   "powerup.iceball.lore1": "Short ranged throwable item.",
   "powerup.iceball.lore2": "Instantly knocks out a player on hit.",
