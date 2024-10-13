@@ -30,7 +30,11 @@
         },
 		{
             "type": "single",
-            "resource": "minecraft:custom/snowman_tophat"
+            "resource": "minecraft:custom/snowman_tophat_red"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/snowman_tophat_green"
 		},
 		{
             "type": "single",

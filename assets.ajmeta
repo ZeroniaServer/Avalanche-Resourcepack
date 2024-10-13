@@ -1,0 +1,22 @@
+{
+	"snowman": {
+		"files": [
+			"assets/animated_java/models/empty.json",
+			"assets/animated_java/textures/item/transparent.png",
+			"assets/animated_java/models/item/snowman/default/head.json",
+			"assets/animated_java/models/item/snowman/default/face.json",
+			"assets/animated_java/models/item/snowman/default/carrot.json",
+			"assets/animated_java/models/item/snowman/default/hat.json",
+			"assets/animated_java/models/item/snowman/default/red.json",
+			"assets/animated_java/models/item/snowman/default/green.json",
+			"assets/animated_java/models/item/snowman/default/body.json",
+			"assets/animated_java/models/item/snowman/default/buttons.json",
+			"assets/animated_java/models/item/snowman/default/scarf_red.json",
+			"assets/animated_java/models/item/snowman/default/scarf_green.json",
+			"assets/animated_java/models/item/snowman/default/bottom.json",
+			"assets/animated_java/models/item/snowman/default/snowball.json",
+			"assets/animated_java/models/item/snowman/default/leftarm.json",
+			"assets/animated_java/models/item/snowman/default/rightarm.json"
+		]
+	}
+}

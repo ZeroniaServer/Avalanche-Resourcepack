@@ -1,0 +1,66 @@
+{
+	"textures": {
+		"6": "minecraft:custom/snowman_tophat_red"
+	},
+	"display": {
+		"head": {
+			"rotation": [0, 180, 0]
+		}
+	},
+	"elements": [
+		{
+			"from": [5, 6, 6],
+			"to": [11, 12, 12],
+			"rotation": {
+				"angle": 0,
+				"axis": "y",
+				"origin": [7, 8, 8]
+			},
+			"faces": {
+				"north": {
+					"uv": [0, 0, 3, 3],
+					"texture": "#6"
+				},
+				"east": {
+					"uv": [0, 0, 3, 3],
+					"texture": "#6"
+				},
+				"south": {
+					"uv": [0, 0, 3, 3],
+					"texture": "#6"
+				},
+				"west": {
+					"uv": [0, 0, 3, 3],
+					"texture": "#6"
+				},
+				"up": {
+					"uv": [3.5, 0, 6.5, 3],
+					"texture": "#6"
+				},
+				"down": {
+					"uv": [3.5, 0, 6.5, 3],
+					"texture": "#6"
+				}
+			}
+		},
+		{
+			"from": [2, 6.02, 3],
+			"to": [14, 6.02, 15],
+			"rotation": {
+				"angle": 0,
+				"axis": "y",
+				"origin": [8, 8, 8]
+			},
+			"faces": {
+				"up": {
+					"uv": [1.5, 10.5, 6.5, 15.5],
+					"texture": "#6"
+				},
+				"down": {
+					"uv": [1.5, 10.5, 6.5, 15.5],
+					"texture": "#6"
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,6 @@
+{
+	"parent": "animated_java:item/snowman/default/body",
+	"textures": {
+		"6": "minecraft:custom/snowman_tophat_green"
+	}
+}
