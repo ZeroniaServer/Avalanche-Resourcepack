@@ -1,19 +1,14 @@
 {
-    "blend": {
-        "func": "add",
-        "srcrgb": "srcalpha",
-        "dstrgb": "1-srcalpha"
+    "vertex": "minecraft:core/entity",
+    "fragment": "minecraft:core/entity",
+    "defines": {
+        "values": {
+            "ALPHA_CUTOUT": "0.1"
+        },
+        "flags": [
+            "NO_OVERLAY"
+        ]
     },
-    "vertex": "rendertype_armor_cutout_no_cull",
-    "fragment": "rendertype_armor_cutout_no_cull",
-    "attributes": [
-        "Position",
-        "Color",
-        "UV0",
-        "UV1",
-        "UV2",
-        "Normal"
-    ],
     "samplers": [
         { "name": "Sampler0" },
         { "name": "Sampler2" }
