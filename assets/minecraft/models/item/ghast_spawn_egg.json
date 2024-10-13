@@ -2,6 +2,8 @@
 	"parent": "minecraft:item/template_spawn_egg",
 	"overrides": [
 		{ "predicate": {"custom_model_data": 1}, "model": "weapons/sleigh"},
+		{ "predicate": {"custom_model_data": 2}, "model": "weapons/snowman/snowman_red_gui"},
+		{ "predicate": {"custom_model_data": 3}, "model": "weapons/snowman/snowman_green_gui"},
 		{ "predicate": {"damaged": 1, "damage": 0}, "model": "item/ghast_spawn_egg"}
 	]
 }
