@@ -1,0 +1,25 @@
+{
+    "snowballhit": {
+        "sounds": [
+            "weapon/snowball/impact"
+        ],
+        "subtitle": "subtitles.snowball.hit"
+    },
+	"iceballhit": {
+        "sounds": [
+            "weapon/iceball/impact"
+        ],
+        "subtitle": "subtitles.iceball.hit"
+    },
+	"avalanchetrigger": {
+        "sounds": [
+            "avalanche/trigger"
+        ],
+        "subtitle": "subtitles.avalanche.trigger"
+    },
+	"avalanchesnowfall": {
+        "sounds": [
+            "avalanche/snowfall"
+        ]
+    }
+}
