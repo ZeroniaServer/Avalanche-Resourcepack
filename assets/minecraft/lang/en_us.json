@@ -14,5 +14,9 @@
   "powerup.sleigh.lore4": "the map. When the Sleigh falls, you",
   "powerup.sleigh.lore5": "will jump. The Sleigh breaks when",
   "powerup.sleigh.lore6": "it falls onto the ground too many",
-  "powerup.sleigh.lore7": "times or is left alone for too long."
+  "powerup.sleigh.lore7": "times or is left alone for too long.",
+  "powerup.snowman.name": "Snowman",
+  "powerup.snowman.lore1": "This Snowman throws Snowballs at nearby",
+  "powerup.snowman.lore2": "enemy players. It melts over time and players",
+  "powerup.snowman.lore3": "can use Snowballs to damage it."
 }

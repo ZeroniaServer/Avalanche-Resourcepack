@@ -47,6 +47,26 @@
 		{
             "type": "single",
             "resource": "minecraft:custom_gui/red_firework"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/snowmanicon_green"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/snowmanicon_red"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/snowman_body_gui"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/snowman_face_gui"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/snowman_item_gui"
 		}
     ]
 }
