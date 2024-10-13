@@ -1,5 +1,5 @@
 {
-	"parent": "minecraft:item/diamond_hoe",
+	"parent": "minecraft:item/handheld",
 	"overrides": [
 		{ "predicate": {"custom_model_data": 1}, "model": "weapons/snowman/snowman_red"},
 		{ "predicate": {"custom_model_data": 2}, "model": "weapons/snowman/snowman_green"}

@@ -44,7 +44,6 @@ void main() {
     vertexDistance = fog_distance(Position, FogShape);
     vertexColor = minecraft_mix_light(Light0_Direction, Light1_Direction, Normal, Color);
 	lightColor = vertexDistance <= 800 ? minecraft_sample_lightmap(Sampler2, UV2) : texelFetch(Sampler2, UV2 / 16, 0);
-    //lightColor = minecraft_sample_lightmap(Sampler2, UV2);
 	maxLightColor = minecraft_sample_lightmap(Sampler2, ivec2(240.0, 240.0));
     texCoord0 = UV0;
     texCoord1 = UV1;
