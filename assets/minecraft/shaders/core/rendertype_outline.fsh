@@ -1,6 +1,6 @@
 #version 150
 
-#moj_import <utils.vsh>
+#moj_import <minecraft:utils.vsh>
 
 uniform sampler2D Sampler0;
 
@@ -15,7 +15,7 @@ void main() {
     vec4 color = texture(Sampler0, texCoord0);
     float alpha = textureLod(Sampler0, texCoord0, 0.0).a * 255.0;
     color = apply_emissive_perspective_glowing(color, alpha);
-    if (color.a < 0.1) {
+    if (color.a == 0.0) {
         discard;
     }
     fragColor = vec4(ColorModulator.rgb * vertexColor.rgb, ColorModulator.a);
