@@ -28,19 +28,12 @@ void main() {
         discard;
     }
 #endif
-    color * ColorModulator;
-    float alpha = textureLod(Sampler0, texCoord0, 0.0).a * 255.0;
-    #ifdef ENTITY_CUTOUT
-        if (!check_alpha(alpha, 250.0)) {
-            color *= vertexColor;
-        }
-    #else
-        color *= vertexColor;
-    #endif
+    color *= vertexColor * ColorModulator;
 #ifndef NO_OVERLAY
     color.rgb = mix(overlayColor.rgb, color.rgb, overlayColor.a);
 #endif
 #ifndef EMISSIVE
+    float alpha = textureLod(Sampler0, texCoord0, 0.0).a * 255.0;
     #ifdef ENTITY_CUTOUT
         color = apply_emissive_perspective_for_item(color, lightMapColor, isGUI, zPos, FogStart, FogEnd, alpha);
     #else

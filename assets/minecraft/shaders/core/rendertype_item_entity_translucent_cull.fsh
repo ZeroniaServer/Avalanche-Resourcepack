@@ -26,6 +26,9 @@ out vec4 fragColor;
 void main() {
     vec4 color = texture(Sampler0, texCoord0) * vertexColor * ColorModulator;
 	float alpha = textureLod(Sampler0, texCoord0, 0.0).a * 255.0;
+    if (!check_alpha(alpha, 250.0)) {
+        color *= vertexColor;
+    }
     color = apply_emissive_perspective_for_item(color, lightColor, isGUI, zPos, FogStart, FogEnd, alpha);
     if (color.a < 0.1) {
         discard;
