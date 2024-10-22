@@ -68,82 +68,94 @@
 			"predicate": {
 				"custom_model_data": 11
 			},
-			"model": "animated_java:item/snowman/default/leftarm"
+			"model": "animated_java:item/snowman/default/snowball2"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 12
 			},
-			"model": "animated_java:item/snowman/default/rightarm"
+			"model": "animated_java:item/snowman/default/leftarm"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 13
 			},
-			"model": "animated_java:item/snowman/green/carrot"
+			"model": "animated_java:item/snowman/default/rightarm"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 14
 			},
-			"model": "animated_java:item/snowman/green/face"
+			"model": "animated_java:item/snowman/green/carrot"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 15
 			},
-			"model": "animated_java:item/snowman/green/hat"
+			"model": "animated_java:item/snowman/green/face"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 16
 			},
-			"model": "animated_java:item/snowman/green/head"
+			"model": "animated_java:item/snowman/green/hat"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 17
 			},
-			"model": "animated_java:item/snowman/green/buttons"
+			"model": "animated_java:item/snowman/green/head"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 18
 			},
-			"model": "animated_java:item/snowman/green/scarf"
+			"model": "animated_java:item/snowman/green/buttons"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 19
 			},
-			"model": "animated_java:item/snowman/green/body"
+			"model": "animated_java:item/snowman/green/scarf"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 20
 			},
-			"model": "animated_java:item/snowman/green/bottom"
+			"model": "animated_java:item/snowman/green/body"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 21
 			},
-			"model": "animated_java:item/snowman/green/snowball"
+			"model": "animated_java:item/snowman/green/bottom"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 22
 			},
-			"model": "animated_java:item/snowman/green/leftarm"
+			"model": "animated_java:item/snowman/green/snowball"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 23
 			},
+			"model": "animated_java:item/snowman/green/snowball2"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 24
+			},
+			"model": "animated_java:item/snowman/green/leftarm"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 25
+			},
 			"model": "animated_java:item/snowman/green/rightarm"
 		}
 	],
 	"animated_java": {
-		"snowman": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+		"snowman": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 	}
 }

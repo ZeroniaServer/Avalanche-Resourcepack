@@ -7,16 +7,26 @@
 			"assets/animated_java/models/item/snowman/default/face.json",
 			"assets/animated_java/models/item/snowman/default/carrot.json",
 			"assets/animated_java/models/item/snowman/default/hat.json",
-			"assets/animated_java/models/item/snowman/default/red.json",
-			"assets/animated_java/models/item/snowman/default/green.json",
 			"assets/animated_java/models/item/snowman/default/body.json",
 			"assets/animated_java/models/item/snowman/default/buttons.json",
-			"assets/animated_java/models/item/snowman/default/scarf_red.json",
-			"assets/animated_java/models/item/snowman/default/scarf_green.json",
+			"assets/animated_java/models/item/snowman/default/scarf.json",
 			"assets/animated_java/models/item/snowman/default/bottom.json",
 			"assets/animated_java/models/item/snowman/default/snowball.json",
+			"assets/animated_java/models/item/snowman/default/snowball2.json",
 			"assets/animated_java/models/item/snowman/default/leftarm.json",
-			"assets/animated_java/models/item/snowman/default/rightarm.json"
+			"assets/animated_java/models/item/snowman/default/rightarm.json",
+			"assets/animated_java/models/item/snowman/green/carrot.json",
+			"assets/animated_java/models/item/snowman/green/face.json",
+			"assets/animated_java/models/item/snowman/green/hat.json",
+			"assets/animated_java/models/item/snowman/green/head.json",
+			"assets/animated_java/models/item/snowman/green/buttons.json",
+			"assets/animated_java/models/item/snowman/green/scarf.json",
+			"assets/animated_java/models/item/snowman/green/body.json",
+			"assets/animated_java/models/item/snowman/green/bottom.json",
+			"assets/animated_java/models/item/snowman/green/snowball.json",
+			"assets/animated_java/models/item/snowman/green/snowball2.json",
+			"assets/animated_java/models/item/snowman/green/leftarm.json",
+			"assets/animated_java/models/item/snowman/green/rightarm.json"
 		]
 	}
 }
