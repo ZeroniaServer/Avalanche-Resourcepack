@@ -18,5 +18,14 @@
   "powerup.snowman.name": "Snowman",
   "powerup.snowman.lore1": "This Snowman throws Snowballs at nearby",
   "powerup.snowman.lore2": "enemy players. It melts over time and players",
-  "powerup.snowman.lore3": "can use Snowballs to damage it."
+  "powerup.snowman.lore3": "can use Snowballs to damage it.",
+  "powerup.coalstock.name": "Coal Stocking",
+  "powerup.coalstock.lore1": "Shoots out a cloud of coal dust on impact",
+  "powerup.coalstock.lore2": "or when it gets near enemies.",
+  "powerup.coalstock.lore3": "Temporarily blinds enemy players and Snowmen.",
+  "powerup.snowglobe.name": "Snow Globe",
+  "powerup.snowglobe.lore1": "Releases a snow storm.",
+  "powerup.snowglobe.lore2": "Enemy players repeatedly take damage.",
+  "powerup.snowglobe.lore3": "Friendly players can throw Snowballs",
+  "powerup.snowglobe.name": "faster. Friendly Snowmen will heal."
 }

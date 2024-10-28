@@ -71,6 +71,14 @@
 		{
             "type": "single",
             "resource": "minecraft:custom_gui/snowman_item_gui"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/coalstockings"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/coalstockings_gui"
 		}
     ]
 }
