@@ -103,6 +103,14 @@
 		{
             "type": "single",
             "resource": "minecraft:custom/cloud_green"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/chocomug"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/choco_gui"
 		}
     ]
 }

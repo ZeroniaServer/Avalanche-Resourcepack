@@ -7,6 +7,8 @@
 		{ "predicate": {"custom_model_data": 4}, "model": "weapons/snowglobe/snowglobe_ball"},
 		{ "predicate": {"custom_model_data": 5}, "model": "weapons/snowglobe/cloud_red_main"},
 		{ "predicate": {"custom_model_data": 6}, "model": "weapons/snowglobe/cloud_green_main"},
-		{ "predicate": {"custom_model_data": 7}, "model": "weapons/snowglobe/snowmark_cloud"}
+		{ "predicate": {"custom_model_data": 7}, "model": "weapons/snowglobe/snowmark_cloud"},
+		{ "predicate": {"custom_model_data": 8}, "model": "weapons/hotchoco"},
+		{ "predicate": {"custom_model_data": 9}, "model": "weapons/hotchoco_drinking"}
 	]
 }
