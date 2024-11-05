@@ -79,6 +79,30 @@
 		{
             "type": "single",
             "resource": "minecraft:custom_gui/coalstockings_gui"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/snowglobe"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/snowglobe_gui"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/cloud"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/snow"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/cloud_red"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/cloud_green"
 		}
     ]
 }

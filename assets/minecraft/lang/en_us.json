@@ -25,7 +25,8 @@
   "powerup.coalstock.lore3": "Temporarily blinds enemy players and Snowmen.",
   "powerup.snowglobe.name": "Snow Globe",
   "powerup.snowglobe.lore1": "Releases a snow storm.",
-  "powerup.snowglobe.lore2": "Enemy players repeatedly take damage.",
+  "powerup.snowglobe.lore2": "Enemy players take damage and get marked.",
   "powerup.snowglobe.lore3": "Friendly players can throw Snowballs",
-  "powerup.snowglobe.name": "faster. Friendly Snowmen will heal."
+  "powerup.snowglobe.lore4": "faster. Friendly Snowmen will heal.",
+  "powerup.snowglobe.lore5": "Marked enemy players take extra damage."
 }
