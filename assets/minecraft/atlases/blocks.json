@@ -111,6 +111,38 @@
 		{
             "type": "single",
             "resource": "minecraft:custom_gui/choco_gui"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/campfire_green"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/campfire_red"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/campfire_flame_green"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/campfire_flame_red"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/campfire_revive_flame_green"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom/campfire_revive_flame_red"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/campfire_green"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/campfire_red"
 		}
     ]
 }

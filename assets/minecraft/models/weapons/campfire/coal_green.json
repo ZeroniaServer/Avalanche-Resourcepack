@@ -1,0 +1,27 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"2": "custom/campfire_green",
+		"particle": "custom/campfire_green"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 4],
+			"to": [12, 4, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 0, 7]},
+			"faces": {
+				"north": {"uv": [4, 8, 12, 11], "texture": "#2"},
+				"east": {"uv": [4, 8, 12, 11], "texture": "#2"},
+				"south": {"uv": [4, 8, 12, 11], "texture": "#2"},
+				"west": {"uv": [4, 8, 12, 11], "texture": "#2"},
+				"up": {"uv": [4, 8, 12, 16], "texture": "#2"},
+				"down": {"uv": [4, 8, 12, 16], "texture": "#2"}
+			}
+		}
+	],
+	"display": {
+		"head": {
+			"translation": [0, 0.75, 0]
+		}
+	}
+}

@@ -30,5 +30,12 @@
   "powerup.hotchoco.name": "Hot Chocolate",
   "powerup.hotchoco.effect.heal.1": "Restores health when consumed.",
   "powerup.hotchoco.effect.heal.2": "Can be used to revive yourself.",
-  "powerup.hotchoco.effect.support.1": "Removes Snow Globe marking effect."
+  "powerup.hotchoco.effect.support.1": "Removes Snow Globe marking effect.",
+  "powerup.campfire.name": "Healing Campfire",
+  "powerup.campfire.effect.heal.1": "Restores health of nearby teammates.",
+  "powerup.campfire.effect.heal.2": "Can revive one knocked out teammate.",
+  "powerup.campfire.effect.damage.1": "Causes nearby enemy Snowmen to melt faster.",
+  "powerup.campfire.effect.support.1": "Removes Snow Globe marking effect.",
+  "powerup.campfire.effect.temporary.1": "Extinguishes over time.",
+  "powerup.campfire.effect.temporary.2": "Extinguishes if a teammate uses it to revive."
 }
