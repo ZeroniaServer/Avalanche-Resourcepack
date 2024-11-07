@@ -143,6 +143,10 @@
 		{
             "type": "single",
             "resource": "minecraft:custom_gui/campfire_red"
+		},
+		{
+            "type": "single",
+            "resource": "minecraft:custom_gui/icicle"
 		}
     ]
 }

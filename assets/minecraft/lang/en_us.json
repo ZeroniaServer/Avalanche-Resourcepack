@@ -37,5 +37,11 @@
   "powerup.campfire.effect.damage.1": "Causes nearby enemy Snowmen to melt faster.",
   "powerup.campfire.effect.support.1": "Removes Snow Globe marking effect.",
   "powerup.campfire.effect.temporary.1": "Extinguishes over time.",
-  "powerup.campfire.effect.temporary.2": "Extinguishes if a teammate uses it to revive."
+  "powerup.campfire.effect.temporary.2": "Extinguishes if a teammate uses it to revive.",
+  "powerup.icicle.name": "Icicle",
+  "powerup.icicle.effect.damage.1": "Used to damage enemies.",
+  "powerup.icicle.effect.damage.2": "Destroys enemy Snowmen in one hit.",
+  "powerup.icicle.effect.support.1": "Has a high level of knockback.",
+  "powerup.icicle.effect.temporary.1": "Breaks after 3 hits.",
+  "powerup.icicle.effect.special.1": "Melee weapon."
 }
