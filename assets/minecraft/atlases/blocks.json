@@ -147,6 +147,14 @@
 		{
             "type": "single",
             "resource": "minecraft:custom_gui/icicle"
-		}
+		},
+            {
+                  "type": "single",
+                  "resource": "minecraft:custom_gui/sleigh"
+            },
+            {
+                  "type": "single",
+                  "resource": "minecraft:custom/sleigh"
+            }
     ]
 }
