@@ -148,13 +148,25 @@
             "type": "single",
             "resource": "minecraft:custom_gui/icicle"
 		},
-            {
-                  "type": "single",
-                  "resource": "minecraft:custom_gui/sleigh"
-            },
-            {
-                  "type": "single",
-                  "resource": "minecraft:custom/sleigh"
-            }
+        {
+              "type": "single",
+              "resource": "minecraft:custom_gui/sleigh"
+        },
+        {
+              "type": "single",
+              "resource": "minecraft:custom/sleigh"
+        },
+        {
+              "type": "single",
+              "resource": "minecraft:custom/barricade"
+        },
+        {
+              "type": "single",
+              "resource": "minecraft:custom/cracks_1"
+        },
+        {
+              "type": "single",
+              "resource": "minecraft:custom/cracks_2"
+        }
     ]
 }
