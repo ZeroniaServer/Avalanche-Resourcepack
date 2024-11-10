@@ -24,6 +24,7 @@
 		{ "predicate": {"custom_model_data": 21}, "model": "weapons/campfire/red_lit_revive"},
 		{ "predicate": {"custom_model_data": 22}, "model": "weapons/campfire/green_unlit"},
 		{ "predicate": {"custom_model_data": 23}, "model": "weapons/campfire/red_unlit"},
-		{ "predicate": {"custom_model_data": 24}, "model": "weapons/icicle"}
+		{ "predicate": {"custom_model_data": 24}, "model": "weapons/icicle"},
+		{ "predicate": {"custom_model_data": 25}, "model": "custom/giftbox"}
 	]
 }

@@ -167,6 +167,10 @@
         {
               "type": "single",
               "resource": "minecraft:custom/cracks_2"
+        },
+        {
+              "type": "single",
+              "resource": "minecraft:custom/giftbox"
         }
     ]
 }
