@@ -247,10 +247,10 @@
     "block.grass.hit": {
         "replace": true,
         "sounds": [
-            "dig/snow1",
-            "dig/snow2",
-            "dig/snow3",
-            "dig/snow4"
+            "barricade/dig1",
+            "barricade/dig2",
+            "barricade/dig3",
+            "barricade/dig4"
         ],
         "subtitle": "subtitles.block.generic.hit"
     }
