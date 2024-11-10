@@ -8,6 +8,7 @@
   "powerup.iceball.name": "Iceball",
   "powerup.iceball.effect.damage.1": "Knocks out enemies in one hit.",  
   "powerup.iceball.effect.damage.2": "Destroys enemy Snowmen in one hit.",
+  "powerup.iceball.effect.support.1": "Destroys Snow Barricades in one hit.",
   "powerup.iceball.effect.temporary.1": "Has a limited short range.",
   "powerup.sleigh.name": "Sleigh",
   "powerup.sleigh.effect.support.1": "Quick transport across the map.",
@@ -42,5 +43,8 @@
   "powerup.icicle.effect.damage.2": "Destroys enemy Snowmen in one hit.",
   "powerup.icicle.effect.support.1": "Has a high level of knockback.",
   "powerup.icicle.effect.temporary.1": "Breaks after 3 hits.",
-  "powerup.icicle.effect.special.1": "Melee weapon."
+  "powerup.icicle.effect.special.1": "Melee weapon.",
+  "powerup.barricade.name": "Snow Barricade",
+  "powerup.barricade.effect.support.1": "Used to build cover.",
+  "powerup.barricade.effect.temporary.1": "Can be destroyed."
 }
