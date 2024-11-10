@@ -6,5 +6,6 @@ execute if entity @s[tag=SleighHitbox] on vehicle on passengers if entity @s[typ
 
 #> Giftboxes - TODO actual functionality
 execute if entity @s[tag=GiftboxInteraction] run say @a[tag=self,limit=1] gets a gift!
+execute if entity @s[tag=GiftboxInteraction] at @s run function powerups:giftbox/open
 execute if entity @s[tag=GiftboxInteraction] on passengers run kill
 kill @s[tag=GiftboxInteraction]

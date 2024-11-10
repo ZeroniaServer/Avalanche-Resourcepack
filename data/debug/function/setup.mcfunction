@@ -21,6 +21,7 @@ scoreboard objectives add healticks dummy
 scoreboard objectives add ambientfxplayer dummy
 scoreboard objectives add breakicicle minecraft.broken:minecraft.diamond_hoe
 scoreboard objectives add blasttime dummy
+scoreboard objectives add giftweight dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100
