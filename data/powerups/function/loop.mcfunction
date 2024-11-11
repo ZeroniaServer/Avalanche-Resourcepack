@@ -8,6 +8,9 @@ execute as @e[type=arrow,tag=Coalstock] at @s run function powerups:coalstock/tr
 #> Snowballs
 function powerups:snowball/reload
 
+#> Iceballs
+function powerups:iceball/main
+
 #> Sleigh
 function powerups:sleigh/main
 

@@ -5,7 +5,7 @@ execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:c
 execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:custom_model_data":6}}}] on passengers run tag @s add Snowglobe
 
 #> Add team specific tags for certain items
-execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:custom_model_data":6}}}] store result score @s team on origin if entity @s[team=Green]
+execute if entity @s[nbt={Item:{id:"minecraft:snowball"}}] store result score @s team on origin if entity @s[team=Green]
 execute if score @s team matches 1 run tag @s add Green
 execute if score @s team matches 1 on passengers run tag @s add Green
 execute if score @s team matches 0 run tag @s add Red
