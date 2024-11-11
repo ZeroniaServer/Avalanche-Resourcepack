@@ -12,11 +12,15 @@
     "minecraft:red_concrete_powder",
     "minecraft:red_terracotta",
     "minecraft:red_glazed_terracotta",
+    "minecraft:lime_terracotta",
     "minecraft:calcite",
     "minecraft:diorite",
     "minecraft:diorite_stairs",
     "minecraft:light_blue_concrete",
     "minecraft:stone",
+    "minecraft:tuff",
+    "minecraft:deepslate",
+    "minecraft:cobbled_deepslate",
     "minecraft:target"
   ]
 }
