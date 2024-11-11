@@ -1,16 +1,13 @@
-execute if predicate gameplay:void at @s run function powerups:sleigh/break
+execute if predicate gameplay:void at @s run return run function powerups:sleigh/break
+
+scoreboard players add @s vehicle.dx 0
+scoreboard players add @s vehicle.dz 0
 
 ## ran as the vehicle base
-execute if score @s vehicle.dx matches ..-1 run scoreboard players operation @s vehicle.dx += .friction vehicle
-execute if score @s vehicle.dx matches 1.. run scoreboard players operation @s vehicle.dx -= .friction vehicle
-execute if score @s vehicle.dz matches ..-1 run scoreboard players operation @s vehicle.dz += .friction vehicle
-execute if score @s vehicle.dz matches 1.. run scoreboard players operation @s vehicle.dz -= .friction vehicle
-scoreboard players operation #temp vehicle.dx = @s vehicle.dx
-execute if score #temp vehicle.dx matches ..-1 run scoreboard players operation #temp vehicle.dx *= #-1 constant
-execute if score #temp vehicle.dx < .friction vehicle run scoreboard players set @s vehicle.dx 0
-scoreboard players operation #temp vehicle.dz = @s vehicle.dz
-execute if score #temp vehicle.dz matches ..-1 run scoreboard players operation #temp vehicle.dz *= #-1 constant
-execute if score #temp vehicle.dz < .friction vehicle run scoreboard players set @s vehicle.dz 0
+execute unless predicate gameplay:in_air run scoreboard players set @s vehicle.friction 70
+execute if predicate gameplay:on_ice run scoreboard players operation @s vehicle.friction /= #2 constant
+execute if predicate gameplay:in_air run scoreboard players set @s vehicle.friction 0
+execute unless score @s vehicle.friction matches 0 run function powerups:sleigh/friction
 #########
 
 ### smooth rotation ###

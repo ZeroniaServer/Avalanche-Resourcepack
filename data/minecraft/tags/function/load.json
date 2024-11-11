@@ -1,7 +1,8 @@
 {
-	"replace": false,
-	"values": [
-		"debug:setup",
-		"iris:setup/load"
-	]
+  "replace": false,
+  "values": [
+    "debug:setup",
+    "iris:setup/load",
+    "#bs.math:load"
+  ]
 }

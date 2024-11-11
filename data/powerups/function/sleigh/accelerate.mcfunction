@@ -5,7 +5,17 @@ scoreboard players operation c vehicle.dx /= .damper vehicle
 scoreboard players operation c vehicle.dz /= .damper vehicle
 scoreboard players operation @s vehicle.dx += c vehicle.dx
 scoreboard players operation @s vehicle.dz += c vehicle.dz
-execute if score @s vehicle.dx matches ..-500 run scoreboard players set @s vehicle.dx -500
-execute if score @s vehicle.dx matches 500.. run scoreboard players set @s vehicle.dx 500
-execute if score @s vehicle.dz matches ..-500 run scoreboard players set @s vehicle.dz -500
-execute if score @s vehicle.dz matches 500.. run scoreboard players set @s vehicle.dz 500
+
+# normalize
+scoreboard players operation #magnitude vehicle = @s vehicle.dx
+scoreboard players operation #magnitude vehicle *= #magnitude vehicle
+scoreboard players operation #magnitude vehicle.dz = @s vehicle.dz
+scoreboard players operation #magnitude vehicle.dz *= #magnitude vehicle.dz
+scoreboard players operation #magnitude vehicle += #magnitude vehicle.dz
+scoreboard players operation $math.isqrt.x bs.in = #magnitude vehicle
+function #bs.math:isqrt
+execute if score #sprint vehicle matches 1 run scoreboard players set #max vehicle 600
+execute unless score #sprint vehicle matches 1 run scoreboard players set #max vehicle 400
+execute if score $math.isqrt bs.out > #max vehicle run function powerups:sleigh/normalize
+
+scoreboard players operation @s vehicle.rot = .rot vehicle

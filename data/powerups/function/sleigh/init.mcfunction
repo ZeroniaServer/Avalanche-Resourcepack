@@ -14,5 +14,7 @@ scoreboard players set #1000 constant 1000
 scoreboard objectives add vehicle dummy
 scoreboard objectives add vehicle.dx dummy
 scoreboard objectives add vehicle.dz dummy
-scoreboard players set .friction vehicle 15
-scoreboard players set .damper vehicle 5
+scoreboard objectives add vehicle.rot dummy
+scoreboard objectives add vehicle.friction dummy
+scoreboard objectives add vehicle.max dummy
+scoreboard players set .damper vehicle 2
