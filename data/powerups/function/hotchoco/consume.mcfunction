@@ -1,3 +1,5 @@
+clear @s diamond_hoe[minecraft:custom_data~{HotChoco: 1b}] 1
+
 playsound item.honey_bottle.drink master @a ~ ~ ~ 1 2
 playsound entity.generic.drink master @a ~ ~ ~ 1 1
 particle heart ~ ~1 ~ 0.3 0.3 0.3 0.1 6 force
