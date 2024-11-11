@@ -11,3 +11,6 @@ particle dust{color:[0.000,1.000,0.000],scale:1} ~ ~.1 ~ 0.1 0.1 0.1 0.1 2
 particle dust{color:[1.000,0.933,1.000],scale:1} ~ ~.1 ~ 0.1 0.1 0.1 0.1 2
 particle dust{color:[1.000,0.000,1.000],scale:1} ~ ~.1 ~ 0.1 0.1 0.1 0.1 2
 particle dust{color:[1.000,0.000,1.000],scale:1} ~ ~.1 ~ 0.1 0.1 0.1 0.1 2
+
+execute on passengers run kill
+kill
