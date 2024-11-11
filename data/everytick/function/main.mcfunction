@@ -8,6 +8,7 @@ function powerups:loop
 function player:health
 function player:knockout
 execute as @a[predicate=gameplay:void] run function player:voiddeath
+function player:base_campfires
 
 #> Game logic
 function gameplay:avalanche/loop
