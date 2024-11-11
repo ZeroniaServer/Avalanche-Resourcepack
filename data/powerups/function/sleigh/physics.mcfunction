@@ -1,3 +1,4 @@
+execute if predicate gameplay:void on passengers on passengers run function player:voiddeath
 execute if predicate gameplay:void at @s run return run function powerups:sleigh/break
 
 scoreboard players add @s vehicle.dx 0
