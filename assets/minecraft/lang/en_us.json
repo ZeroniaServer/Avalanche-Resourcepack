@@ -38,6 +38,7 @@
   "powerup.iceball.effect.damage.1": "Knocks out enemies in one hit.",  
   "powerup.iceball.effect.damage.2": "Destroys enemy Snowmen in one hit.",
   "powerup.iceball.effect.support.1": "Destroys Snow Barricades in one hit.",
+  "powerup.iceball.effect.support.2": "Extinguishes enemy Campfires in one hit.",
   "powerup.iceball.effect.temporary.1": "Has a limited short range.",
   "powerup.sleigh.name": "Sleigh",
   "powerup.sleigh.effect.support.1": "Quick transport across the map.",
