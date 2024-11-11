@@ -14,8 +14,8 @@ scoreboard players operation #magnitude vehicle.dz *= #magnitude vehicle.dz
 scoreboard players operation #magnitude vehicle += #magnitude vehicle.dz
 scoreboard players operation $math.isqrt.x bs.in = #magnitude vehicle
 function #bs.math:isqrt
-execute if score #sprint vehicle matches 1 run scoreboard players set #max vehicle 600
-execute unless score #sprint vehicle matches 1 run scoreboard players set #max vehicle 400
+execute if score #sprint vehicle matches 1 run scoreboard players set #max vehicle 500
+execute unless score #sprint vehicle matches 1 run scoreboard players set #max vehicle 350
 execute if score $math.isqrt bs.out > #max vehicle run function powerups:sleigh/normalize
 
 scoreboard players operation @s vehicle.rot = .rot vehicle
