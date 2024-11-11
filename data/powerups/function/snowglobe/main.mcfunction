@@ -35,21 +35,21 @@ execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=285}] at @s r
 execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=290..}] run kill @s
 
 #> Blizzard sounds
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=1}] at @s run playsound minecraft:snowglobe_blizzard_1 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=21}] at @s run playsound minecraft:snowglobe_blizzard_2 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=41}] at @s run playsound minecraft:snowglobe_blizzard_3 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=61}] at @s run playsound minecraft:snowglobe_blizzard_4 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=81}] at @s run playsound minecraft:snowglobe_blizzard_5 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=101}] at @s run playsound minecraft:snowglobe_blizzard_6 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=121}] at @s run playsound minecraft:snowglobe_blizzard_7 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=141}] at @s run playsound minecraft:snowglobe_blizzard_8 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=161}] at @s run playsound minecraft:snowglobe_blizzard_9 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=181}] at @s run playsound minecraft:snowglobe_blizzard_10 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=201}] at @s run playsound minecraft:snowglobe_blizzard_11 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=221}] at @s run playsound minecraft:snowglobe_blizzard_12 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=241}] at @s run playsound minecraft:snowglobe_blizzard_13 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=261}] at @s run playsound minecraft:snowglobe_blizzard_14 master @a ~ ~ ~ 0.8 1
-execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=281}] at @s run playsound minecraft:snowglobe_blizzard_15 master @a ~ ~ ~ 0.8 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=1}] at @s run playsound minecraft:snowglobe_blizzard_1 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=21}] at @s run playsound minecraft:snowglobe_blizzard_2 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=41}] at @s run playsound minecraft:snowglobe_blizzard_3 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=61}] at @s run playsound minecraft:snowglobe_blizzard_4 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=81}] at @s run playsound minecraft:snowglobe_blizzard_5 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=101}] at @s run playsound minecraft:snowglobe_blizzard_6 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=121}] at @s run playsound minecraft:snowglobe_blizzard_7 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=141}] at @s run playsound minecraft:snowglobe_blizzard_8 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=161}] at @s run playsound minecraft:snowglobe_blizzard_9 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=181}] at @s run playsound minecraft:snowglobe_blizzard_10 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=201}] at @s run playsound minecraft:snowglobe_blizzard_11 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=221}] at @s run playsound minecraft:snowglobe_blizzard_12 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=241}] at @s run playsound minecraft:snowglobe_blizzard_13 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=261}] at @s run playsound minecraft:snowglobe_blizzard_14 master @a[distance=..24] ~ ~ ~ 0.2 1
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=281}] at @s run playsound minecraft:snowglobe_blizzard_15 master @a[distance=..24] ~ ~ ~ 0.2 1
 
 #> Damage enemies over time
 tag @a[tag=InEnemyCloud] remove InEnemyCloud
