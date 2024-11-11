@@ -10,15 +10,16 @@ scoreboard players set $sleigh giftweight 10
 
 #> Lower health and don't have healing powerups? Increase heal item chances.
 execute if score @s playerHP matches ..19 unless items entity @s container.* ghast_spawn_egg[custom_model_data=4] unless items entity @s container.* ghast_spawn_egg[custom_model_data=5] unless items entity @s container.* diamond_hoe[custom_model_data=8] run scoreboard players add $hotchoco giftweight 2
-execute if score @s playerHP matches ..10 unless items entity @s container.* ghast_spawn_egg[custom_model_data=4] unless items entity @s container.* ghast_spawn_egg[custom_model_data=5] unless items entity @s container.* diamond_hoe[custom_model_data=8] run scoreboard players add $hotchoco giftweight 5
+execute if score @s playerHP matches ..10 unless items entity @s container.* ghast_spawn_egg[custom_model_data=4] unless items entity @s container.* ghast_spawn_egg[custom_model_data=5] unless items entity @s container.* diamond_hoe[custom_model_data=8] run scoreboard players add $hotchoco giftweight 8
+
 execute if score @s playerHP matches ..19 unless items entity @s container.* ghast_spawn_egg[custom_model_data=4] unless items entity @s container.* ghast_spawn_egg[custom_model_data=5] unless items entity @s container.* diamond_hoe[custom_model_data=8] run scoreboard players add $campfire giftweight 1
-execute if score @s playerHP matches ..10 unless items entity @s container.* ghast_spawn_egg[custom_model_data=4] unless items entity @s container.* ghast_spawn_egg[custom_model_data=5] unless items entity @s container.* diamond_hoe[custom_model_data=8] run scoreboard players add $campfire giftweight 3
+execute if score @s playerHP matches ..10 unless items entity @s container.* ghast_spawn_egg[custom_model_data=4] unless items entity @s container.* ghast_spawn_egg[custom_model_data=5] unless items entity @s container.* diamond_hoe[custom_model_data=8] run scoreboard players add $campfire giftweight 6
 
 #> Already have barricades? Decrease the chances. A lot.
 execute if items entity @s container.* clay run scoreboard players set $barricade giftweight 1
 
 #> Already have a sleigh? Decrease the chances.
-execute if items entity @s container.* ghast_spawn_egg[custom_model_data=6] run scoreboard players set $sleigh giftweight 4
+execute if items entity @s container.* ghast_spawn_egg[custom_model_data=1] run scoreboard players set $sleigh giftweight 4
 
 #> Store weights in storage
 execute store result storage gift:weights iceball int 1 run scoreboard players get $iceball giftweight
