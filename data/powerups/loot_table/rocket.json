@@ -35,7 +35,7 @@
                             "show_in_tooltip": false
                         },
                         "minecraft:use_cooldown": {
-                            "seconds": 2,
+                            "seconds": 1,
                             "cooldown_group": "rocket"
                         }
                     }
@@ -83,7 +83,7 @@
                             "show_in_tooltip": false
                         },
                         "minecraft:use_cooldown": {
-                            "seconds": 2,
+                            "seconds": 1,
                             "cooldown_group": "rocket"
                         }
                     }
