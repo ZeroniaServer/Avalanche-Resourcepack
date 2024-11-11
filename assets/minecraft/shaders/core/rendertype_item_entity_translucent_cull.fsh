@@ -28,6 +28,7 @@ void main() {
 	float alpha = textureLod(Sampler0, texCoord0, 0.0).a * 255.0;
     if (check_alpha(alpha, 250.0) || check_alpha(alpha, 242)) {
         color = texture(Sampler0, texCoord0) * ColorModulator;
+        color = apply_emissive_perspective_for_item(color, lightColor, isGUI, zPos, FogStart, FogEnd, alpha);
     } else {
         vec4 vertColor = apply_emissive_perspective_for_item(unlitVertexColor, lightColor, isGUI, zPos, FogStart, FogEnd, alpha);
         color = texture(Sampler0, texCoord0) * vertColor * ColorModulator;
