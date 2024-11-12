@@ -1,0 +1,77 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:diamond_boots"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "team": "Red"
+                    }
+                }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "minecraft:item_name": "{\"translate\": \"game.armor.red.name\",\"color\":\"red\"}",
+                        "minecraft:custom_data": "{NoDrop:1b}",
+                        "minecraft:hide_additional_tooltip": {},
+                        "minecraft:unbreakable": {},
+                        "minecraft:enchantments": {
+                            "levels": {
+                        "minecraft:binding_curse": 1
+                                    },
+                        "show_in_tooltip": false
+                        },
+                        "minecraft:enchantment_glint_override": false,
+                        "!minecraft:attribute_modifiers": {}
+                    }
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:golden_boots"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "team": "Green"
+                    }
+                }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "minecraft:item_name": "{\"translate\": \"game.armor.green.name\",\"color\":\"green\"}",
+                        "minecraft:custom_data": "{NoDrop:1b}",
+                        "minecraft:hide_additional_tooltip": {},
+                        "minecraft:enchantments": {
+                            "levels": {
+                        "minecraft:binding_curse": 1
+                                    },
+                        "show_in_tooltip": false
+                        },
+                        "minecraft:enchantment_glint_override": false,
+                        "!minecraft:attribute_modifiers": {}
+                    }
+                }
+            ]
+        }
+    ]
+}

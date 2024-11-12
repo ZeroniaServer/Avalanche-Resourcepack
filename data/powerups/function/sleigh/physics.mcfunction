@@ -1,4 +1,4 @@
-execute if predicate gameplay:void at @s run function powerups:sleigh/break
+execute if predicate game:void at @s run function powerups:sleigh/break
 
 ## ran as the vehicle base
 execute if score @s vehicle.dx matches ..-1 run scoreboard players operation @s vehicle.dx += .friction vehicle

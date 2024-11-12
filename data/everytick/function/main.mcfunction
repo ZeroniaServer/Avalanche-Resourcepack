@@ -1,3 +1,6 @@
+#> Lobby
+function lobby:loop
+
 #> Bossbars
 function bossbars:loop
 
@@ -7,11 +10,11 @@ function powerups:loop
 #> Player logic
 function player:health
 function player:knockout
-execute as @a[predicate=gameplay:void] run function player:voiddeath
+execute as @a[predicate=game:void] run function player:voiddeath
 function player:base_campfires
 
 #> Game logic
-function gameplay:avalanche/loop
+function game:avalanche/loop
 
 #> EntityID
 execute if score #loaded entityid matches 1 run function entityid:real_tick
@@ -32,3 +35,8 @@ execute as @e[type=item] at @s if items entity @s contents *[custom_data~{NoDrop
 
 #> AJ tick
 function animated_java:global/on_tick
+
+#> Leave game
+execute as @a[scores={leftgame=1..}] run scoreboard players reset @s gameID
+execute as @a[scores={leftgame=1..}] run team leave @s
+scoreboard players reset @a[scores={leftgame=1..}] leftgame

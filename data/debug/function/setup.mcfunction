@@ -22,6 +22,8 @@ scoreboard objectives add ambientfxplayer dummy
 scoreboard objectives add breakicicle minecraft.broken:minecraft.diamond_hoe
 scoreboard objectives add blasttime dummy
 scoreboard objectives add giftweight dummy
+scoreboard objectives add leftgame minecraft.custom:minecraft.leave_game
+scoreboard objectives add leavegame trigger
 
 #> Static scores
 scoreboard players set $100 CmdData 100
@@ -124,3 +126,15 @@ gamerule fallDamage false
 gamerule fireDamage false
 gamerule drowningDamage false
 gamerule doTileDrops false
+
+#> Join area modifications
+fill -90 53 -148 -90 55 -150 green_stained_glass
+fill -35 49 -151 -35 51 -149 red_stained_glass
+fill -96 58 -145 -94 57 -145 air replace minecraft:barrier
+setblock -95 54 -147 air
+setblock -34 50 -148 air
+setblock -95 54 -147 oak_wall_sign{front_text:{messages:['{"translate":"lobby.leave.1","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger leavegame"}}','{"translate":"lobby.leave.2","color":"aqua"}','{"text":""}','{"text":""}']}}
+setblock -34 50 -148 oak_wall_sign[facing=east]{front_text:{messages:['{"translate":"lobby.leave.1","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger leavegame"}}','{"translate":"lobby.leave.2","color":"aqua"}','{"text":""}','{"text":""}']}}
+
+#> Bossbars
+function bossbars:create
