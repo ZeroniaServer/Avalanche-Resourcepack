@@ -1,0 +1,1 @@
+execute store result score @s gameID run scoreboard players get $current gameID

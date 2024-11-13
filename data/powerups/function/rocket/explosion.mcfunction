@@ -7,29 +7,29 @@ particle lava ~ ~ ~ 0 0 0 0.5 10 force
 execute if entity @s[tag=Scored] run playsound entity.firework_rocket.large_blast master @a ~ ~ ~ 6 0.8
 playsound entity.firework_rocket.blast master @a ~ ~ ~ 6 0.8
 playsound entity.firework_rocket.large_blast_far master @a[distance=20..] ~ ~ ~ 9 0
-execute if entity @s[tag=RocketRed,tag=Scored,predicate=gameplay:green_mountain] run playsound entity.generic.explode master @a ~ ~ ~ 3 0
-execute if entity @s[tag=RocketGreen,tag=Scored,predicate=gameplay:red_mountain] run playsound entity.generic.explode master @a ~ ~ ~ 3 0
+execute if entity @s[tag=RocketRed,tag=Scored,predicate=game:green_mountain] run playsound entity.generic.explode master @a ~ ~ ~ 3 0
+execute if entity @s[tag=RocketGreen,tag=Scored,predicate=game:red_mountain] run playsound entity.generic.explode master @a ~ ~ ~ 3 0
 
 execute if entity @s[tag=RocketRed,tag=!Scored] run playsound entity.generic.explode master @a ~ ~ ~ 3 1
 execute if entity @s[tag=RocketGreen,tag=!Scored] run playsound entity.generic.explode master @a ~ ~ ~ 3 1
 
-execute if entity @s[tag=RocketRed,tag=Scored,predicate=!gameplay:green_mountain] run playsound entity.generic.explode master @a ~ ~ ~ 3 1
-execute if entity @s[tag=RocketGreen,tag=Scored,predicate=!gameplay:red_mountain] run playsound entity.generic.explode master @a ~ ~ ~ 3 1
+execute if entity @s[tag=RocketRed,tag=Scored,predicate=!game:green_mountain] run playsound entity.generic.explode master @a ~ ~ ~ 3 1
+execute if entity @s[tag=RocketGreen,tag=Scored,predicate=!game:red_mountain] run playsound entity.generic.explode master @a ~ ~ ~ 3 1
 
-execute if entity @s[tag=RocketRed,tag=Scored,predicate=gameplay:green_mountain] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"large_ball",colors:[I;9043968,10027008],has_trail:true,fade_colors:[I;16711680]}]}}}}
-execute if entity @s[tag=RocketGreen,tag=Scored,predicate=gameplay:red_mountain] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"large_ball",colors:[I;24835,39173],has_trail:true,fade_colors:[I;2293504]}]}}}}
+execute if entity @s[tag=RocketRed,tag=Scored,predicate=game:green_mountain] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"large_ball",colors:[I;9043968,10027008],has_trail:true,fade_colors:[I;16711680]}]}}}}
+execute if entity @s[tag=RocketGreen,tag=Scored,predicate=game:red_mountain] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"large_ball",colors:[I;24835,39173],has_trail:true,fade_colors:[I;2293504]}]}}}}
 
 execute if entity @s[tag=RocketRed,tag=!Scored] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",colors:[I;9043968,10027008],has_trail:true,fade_colors:[I;16711680]}]}}}}
 execute if entity @s[tag=RocketGreen,tag=!Scored] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",colors:[I;24835,39173],has_trail:true,fade_colors:[I;2293504]}]}}}}
 
-execute if entity @s[tag=RocketRed,tag=Scored,predicate=!gameplay:green_mountain] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",colors:[I;9043968,10027008],has_trail:true,fade_colors:[I;16711680]}]}}}}
-execute if entity @s[tag=RocketGreen,tag=Scored,predicate=!gameplay:red_mountain] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",colors:[I;24835,39173],has_trail:true,fade_colors:[I;2293504]}]}}}}
+execute if entity @s[tag=RocketRed,tag=Scored,predicate=!game:green_mountain] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",colors:[I;9043968,10027008],has_trail:true,fade_colors:[I;16711680]}]}}}}
+execute if entity @s[tag=RocketGreen,tag=Scored,predicate=!game:red_mountain] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",colors:[I;24835,39173],has_trail:true,fade_colors:[I;2293504]}]}}}}
 
 
-execute if entity @s[tag=RocketRed] if predicate gameplay:green_mountain run scoreboard players add $DamageCalcG CmdData 2
-execute if entity @s[tag=RocketGreen] if predicate gameplay:red_mountain run scoreboard players add $DamageCalcR CmdData 2
+execute if entity @s[tag=RocketRed] if predicate game:green_mountain run scoreboard players add $DamageCalcG CmdData 2
+execute if entity @s[tag=RocketGreen] if predicate game:red_mountain run scoreboard players add $DamageCalcR CmdData 2
 
-execute if entity @s[tag=Scored] run function gameplay:balancing/set_multiplier
+execute if entity @s[tag=Scored] run function game:balancing/set_multiplier
 
 execute if entity @s[tag=RocketRed,tag=Scored] run scoreboard players operation $DamageCalcG CmdData *= $GreenMult CmdData
 execute if entity @s[tag=RocketGreen,tag=Scored] run scoreboard players operation $DamageCalcR CmdData *= $RedMult CmdData

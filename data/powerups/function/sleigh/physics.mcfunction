@@ -1,13 +1,13 @@
-execute if predicate gameplay:void on passengers on passengers run function player:voiddeath
-execute if predicate gameplay:void at @s run return run function powerups:sleigh/break
+execute if predicate game:void on passengers on passengers run function player:voiddeath
+execute if predicate game:void at @s run return run function powerups:sleigh/break
 
 scoreboard players add @s vehicle.dx 0
 scoreboard players add @s vehicle.dz 0
 
 ## ran as the vehicle base
-execute unless predicate gameplay:in_air run scoreboard players set @s vehicle.friction 70
-execute if predicate gameplay:on_ice run scoreboard players operation @s vehicle.friction /= #2 constant
-execute if predicate gameplay:in_air run scoreboard players set @s vehicle.friction 0
+execute unless predicate game:in_air run scoreboard players set @s vehicle.friction 70
+execute if predicate game:on_ice run scoreboard players operation @s vehicle.friction /= #2 constant
+execute if predicate game:in_air run scoreboard players set @s vehicle.friction 0
 execute unless score @s vehicle.friction matches 0 run function powerups:sleigh/friction
 #########
 
