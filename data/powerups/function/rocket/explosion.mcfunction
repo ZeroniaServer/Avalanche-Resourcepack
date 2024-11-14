@@ -46,6 +46,11 @@ scoreboard players set @e[type=item_display,tag=Snowman,distance=..4] playerHP 0
 #> Destroy nearby Sleighs
 execute as @e[type=turtle,distance=..4] at @s run function powerups:sleigh/break
 
+#> Destroy nearby Snow Barricades
+execute positioned ~ ~-100 ~ as @e[type=item_display,tag=barricade,distance=..4] at @s positioned ~ ~100 ~ run function powerups:barricade/damage
+execute positioned ~ ~-100 ~ as @e[type=item_display,tag=barricade,distance=..2.5] at @s positioned ~ ~100 ~ run function powerups:barricade/damage
+execute positioned ~ ~-100 ~ as @e[type=item_display,tag=barricade,distance=..1.5] at @s positioned ~ ~100 ~ run function powerups:barricade/damage
+
 #> Summon AECs + tag players as Blasted
 execute as @a[tag=!Blasted,gamemode=!spectator,distance=..5] at @s run summon area_effect_cloud ~ ~155 ~ {Tags:["BlastAEC"],Particle:{type:"block",block_state:"minecraft:air"},Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:0.1f,Duration:1,potion_contents:{custom_effects:[{id:"minecraft:levitation",amplifier:50,duration:2,show_particles:0b}]}}
 tag @a[tag=!Blasted,gamemode=!spectator,distance=..5] add Blasted
