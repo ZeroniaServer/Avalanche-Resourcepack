@@ -17,4 +17,6 @@ scoreboard objectives add vehicle.dz dummy
 scoreboard objectives add vehicle.rot dummy
 scoreboard objectives add vehicle.friction dummy
 scoreboard objectives add vehicle.max dummy
+scoreboard objectives add vehicle.since_jump dummy
+scoreboard objectives add vehicle.off_ground dummy
 scoreboard players set .damper vehicle 2

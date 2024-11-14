@@ -2,9 +2,11 @@
     "condition": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-        "stepping_on": {
-            "block": {
-                "blocks": "#powerups:ice"
+        "location": {
+            "position": {
+                "y": {
+                    "max": -56
+                }
             }
         }
     }

@@ -1,5 +1,4 @@
-execute if predicate game:void on passengers on passengers run function player:voiddeath
-execute if predicate game:void at @s run return run function powerups:sleigh/break
+execute if predicate powerups:sleigh_void at @s run return run function powerups:sleigh/break
 
 scoreboard players add @s vehicle.dx 0
 scoreboard players add @s vehicle.dz 0
@@ -21,7 +20,7 @@ execute unless score v vehicle.dx matches 0 run scoreboard players add #bool mat
 execute unless score v vehicle.dz matches 0 run scoreboard players add #bool math 1
 
 execute if score #bool math matches 1.. on passengers at @s[type=minecart] run function powerups:sleigh/rotate
-execute if score #bool math matches 1.. at @s[tag=!SleighOffGround] run function powerups:sleigh/effects
+execute if score #bool math matches 1.. at @s[predicate=!game:in_air] run function powerups:sleigh/effects
 
 data merge entity @s {NoAI:1b}
 execute if score #input math matches 1 run data merge entity @s {NoAI:0b}
