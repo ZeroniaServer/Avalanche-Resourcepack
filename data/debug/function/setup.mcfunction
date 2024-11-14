@@ -24,6 +24,8 @@ scoreboard objectives add blasttime dummy
 scoreboard objectives add giftweight dummy
 scoreboard objectives add leftgame minecraft.custom:minecraft.leave_game
 scoreboard objectives add leavegame trigger
+scoreboard objectives add BarricadeTracker dummy
+scoreboard objectives add readyup trigger
 
 #> Static scores
 scoreboard players set $100 CmdData 100
