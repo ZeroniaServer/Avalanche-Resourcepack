@@ -139,5 +139,10 @@ fill -85 50 -113 -35 40 -162 minecraft:stripped_cherry_wood[axis=z] replace mine
 setblock -66 50 -110 stripped_cherry_wood[axis=z]
 setblock -64 50 -111 stripped_cherry_wood[axis=z]
 setblock -63 50 -113 stripped_cherry_wood[axis=z]
+fill -16 45 -235 -13 47 -237 minecraft:stripped_cherry_wood[axis=y] replace barrel[facing=up]
+fill -16 45 -235 -13 47 -237 minecraft:stripped_cherry_wood[axis=z] replace barrel[facing=south]
+fill -111 46 -207 -113 47 -205 minecraft:stripped_cherry_wood[axis=y] replace barrel[facing=up]
+fill -111 46 -207 -113 47 -205 minecraft:stripped_cherry_wood[axis=z] replace barrel[facing=north]
+
 #> Bossbars
 function bossbars:create
