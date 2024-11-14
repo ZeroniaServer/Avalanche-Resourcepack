@@ -135,6 +135,9 @@ setblock -95 54 -147 air
 setblock -34 50 -148 air
 setblock -95 54 -147 oak_wall_sign{front_text:{messages:['{"translate":"lobby.leave.1","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger leavegame"}}','{"translate":"lobby.leave.2","color":"aqua"}','{"text":""}','{"text":""}']}}
 setblock -34 50 -148 oak_wall_sign[facing=east]{front_text:{messages:['{"translate":"lobby.leave.1","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger leavegame"}}','{"translate":"lobby.leave.2","color":"aqua"}','{"text":""}','{"text":""}']}}
-
+fill -85 50 -113 -35 40 -162 minecraft:stripped_cherry_wood[axis=z] replace minecraft:barrel
+setblock -66 50 -110 stripped_cherry_wood[axis=z]
+setblock -64 50 -111 stripped_cherry_wood[axis=z]
+setblock -63 50 -113 stripped_cherry_wood[axis=z]
 #> Bossbars
 function bossbars:create
