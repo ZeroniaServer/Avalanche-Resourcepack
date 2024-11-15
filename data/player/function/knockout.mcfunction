@@ -22,9 +22,9 @@ execute as @a[tag=Knockout,scores={knocktime=40}] run damage @s 1 freeze
 execute as @a[tag=Knockout,scores={knocktime=40}] at @s run scoreboard players remove @s playerHP 1
 execute as @a[tag=Knockout,scores={knocktime=42}] at @s run scoreboard players remove @s playerHP 1
 execute as @a[tag=Knockout,scores={knocktime=44}] at @s run scoreboard players remove @s playerHP 1
-execute as @a[tag=Knockout,scores={knocktime=47,playerHP=-9}] at @s run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 1 2
-execute as @a[tag=Knockout,scores={knocktime=50,playerHP=-12}] at @s run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 1 2
-execute as @a[tag=Knockout,scores={knocktime=53,playerHP=-15}] at @s run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 1 1
+execute as @a[tag=Knockout,scores={knocktime=47,playerHP=-9}] at @s run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 2
+execute as @a[tag=Knockout,scores={knocktime=50,playerHP=-12}] at @s run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 2
+execute as @a[tag=Knockout,scores={knocktime=53,playerHP=-15}] at @s run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 1
 execute as @a[tag=Knockout,scores={knocktime=55..}] at @s run scoreboard players set @s knocktime 39
 
 execute as @a[tag=Knockout,scores={playerHP=..-20,knocktime=45}] run function player:respawn
