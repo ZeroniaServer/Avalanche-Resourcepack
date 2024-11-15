@@ -12,3 +12,11 @@ execute if score $gamestate CmdData matches 0 run function lobby:readyup
 
 #> Modification room
 function lobby:settings/loop
+
+#> Hide bars if games are inactive
+execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_main players
+execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_green players
+execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_red players
+execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_main players
+execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_red players
+execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_green players

@@ -3,6 +3,29 @@ scoreboard players add @e[type=marker,tag=AvalancheEntity,tag=SnowEmitter] CmdDa
 scoreboard players add @e[type=block_display,tag=AvalancheEntity,tag=SnowBlockDisplay] CmdData 1
 scoreboard players add @e[type=block_display,tag=AvalancheEntity,tag=SecondarySnowBlockDisplay] CmdData 1
 
+# mountain font animation
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 1 run bossbar set bar_g_main name {"text":"\uE00B","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 1 run bossbar set bar_g_main name {"text":"\uE00C","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 5 run bossbar set bar_g_main name {"text":"\uE00A","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 9 run bossbar set bar_g_main name {"text":"\uE00B","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 9 run bossbar set bar_g_main name {"text":"\uE00C","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 13 run bossbar set bar_g_main name {"text":"\uE00A","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 17 run bossbar set bar_g_main name {"text":"\uE00B","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 17 run bossbar set bar_g_main name {"text":"\uE00C","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 21 run bossbar set bar_g_main name {"text":"\uE00A","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 25 run bossbar set bar_g_main name {"text":"\uE005","color":"#a8a000"}
+
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 1 run bossbar set bar_r_main name {"text":"\uE00B","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 1 run bossbar set bar_r_main name {"text":"\uE00C","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 5 run bossbar set bar_r_main name {"text":"\uE00A","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 9 run bossbar set bar_r_main name {"text":"\uE00B","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 9 run bossbar set bar_r_main name {"text":"\uE00C","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 13 run bossbar set bar_r_main name {"text":"\uE00A","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 17 run bossbar set bar_r_main name {"text":"\uE00B","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 17 run bossbar set bar_r_main name {"text":"\uE00C","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 21 run bossbar set bar_r_main name {"text":"\uE00A","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 25 run bossbar set bar_r_main name {"text":"\uE005","color":"#a8a000"}
+
 execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=5}] at @s run summon marker ~-5 ~4 ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-60.0f,0.0f]}
 execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=5}] at @s run summon marker ~ ~4 ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-45.0f,0.0f]}
 execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=5}] at @s run summon marker ~5 ~4 ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-30.0f,0.0f]}
