@@ -9,6 +9,7 @@
 		{ "predicate": {"custom_model_data": 3}, "model": "weapons/rocket/rocket_green"},
 		{ "predicate": {"custom_model_data": 4}, "model": "weapons/rocket/rocket_red"},
 		{ "predicate": {"custom_model_data": 5}, "model": "weapons/coalstockings"},
-		{ "predicate": {"custom_model_data": 6}, "model": "weapons/snowglobe/snowglobe"}
+		{ "predicate": {"custom_model_data": 6}, "model": "weapons/snowglobe/snowglobe"},
+		{ "predicate": {"custom_model_data": 7}, "model": "weapons/rocket/rocket_unclaimed"}
 	]
 }

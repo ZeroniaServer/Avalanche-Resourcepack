@@ -4,173 +4,177 @@
             "type": "single",
             "resource": "minecraft:custom/snowball"
         },
-		{
+        {
             "type": "single",
             "resource": "minecraft:custom/iceball"
         },
-		{
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/snowball"
         },
-		{
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/iceball"
         },
-		{
+        {
             "type": "single",
             "resource": "minecraft:custom/snowman_body"
         },
-		{
+        {
             "type": "single",
             "resource": "minecraft:custom/snowman_arm"
         },
-		{
+        {
             "type": "single",
             "resource": "minecraft:custom/snowman_face"
         },
-		{
+        {
             "type": "single",
             "resource": "minecraft:custom/snowman_tophat_red"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/snowman_tophat_green"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/firework_red"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/firework_green"
-		},
-		{
+        },
+        {
+            "type": "single",
+            "resource": "minecraft:custom/firework_unclaimed"
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/green_firework"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/red_firework"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/snowmanicon_green"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/snowmanicon_red"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/snowman_body_gui"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/snowman_face_gui"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/snowman_item_gui"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/coalstockings"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/coalstockings_gui"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/snowglobe"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/snowglobe_gui"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/cloud"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/snow"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/cloud_red"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/cloud_green"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/chocomug"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/choco_gui"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/campfire_green"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/campfire_red"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/campfire_flame_green"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/campfire_flame_red"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/campfire_revive_flame_green"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom/campfire_revive_flame_red"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/campfire_green"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/campfire_red"
-		},
-		{
+        },
+        {
             "type": "single",
             "resource": "minecraft:custom_gui/icicle"
-		},
-        {
-              "type": "single",
-              "resource": "minecraft:custom_gui/sleigh"
         },
         {
-              "type": "single",
-              "resource": "minecraft:custom/sleigh"
+            "type": "single",
+            "resource": "minecraft:custom_gui/sleigh"
         },
         {
-              "type": "single",
-              "resource": "minecraft:custom/barricade"
+            "type": "single",
+            "resource": "minecraft:custom/sleigh"
         },
         {
-              "type": "single",
-              "resource": "minecraft:custom/cracks_1"
+            "type": "single",
+            "resource": "minecraft:custom/barricade"
         },
         {
-              "type": "single",
-              "resource": "minecraft:custom/cracks_2"
+            "type": "single",
+            "resource": "minecraft:custom/cracks_1"
         },
         {
-              "type": "single",
-              "resource": "minecraft:custom/giftbox"
+            "type": "single",
+            "resource": "minecraft:custom/cracks_2"
+        },
+        {
+            "type": "single",
+            "resource": "minecraft:custom/giftbox"
         }
     ]
 }

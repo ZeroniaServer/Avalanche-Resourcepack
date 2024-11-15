@@ -1,9 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "custom/firework_red",
-		"2": "custom_gui/red_firework",
-		"particle": "custom/firework_red"
+		"0": "custom/firework_unclaimed",
+		"particle": "custom/firework_unclaimed"
 	},
 	"elements": [
 		{
@@ -83,15 +82,6 @@
 				"up": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#0"},
 				"down": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#0"}
 			}
-		},
-		{
-			"from": [6, 16, 6],
-			"to": [11, 16, 11],
-			"rotation": {"angle": 0, "axis": "y", "origin": [6, 16, 6]},
-			"faces": {
-				"up": {"uv": [0, 0, 16, 16], "texture": "#2"},
-				"down": {"uv": [0, 16, 16, 0], "texture": "#2"}
-			}
 		}
 	],
 	"gui_light": "front",
@@ -124,5 +114,6 @@
 			"translation": [-1.6, 1.59, 0],
 			"scale": [3.2, 3.2, 3.2]
 		}
-	}
+	},
+	"cgreenit": "Made with Blockbench"
 }
