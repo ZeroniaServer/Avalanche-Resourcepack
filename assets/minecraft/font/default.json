@@ -39,7 +39,7 @@
             "type": "bitmap",
             "file": "minecraft:font/mountain_icon.png",
             "ascent": 0,
-            "height": 20,
+            "height": 32,
             "chars": ["\uE005"]
         },
         {
@@ -69,6 +69,33 @@
             "ascent": 0,
             "height": 16,
             "chars": ["\uE009"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/mountain_icon_hit.png",
+            "ascent": 0,
+            "height": 32,
+            "chars": [
+                "\uE00A"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/mountain_icon_hit_red.png",
+            "ascent": 0,
+            "height": 32,
+            "chars": [
+                "\uE00B"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/mountain_icon_hit_green.png",
+            "ascent": 0,
+            "height": 32,
+            "chars": [
+                "\uE00C"
+            ]
         },
 		{
             "type": "space",

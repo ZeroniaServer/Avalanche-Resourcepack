@@ -1,0 +1,19 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/timer.png",
+            "ascent": 9,
+            "height": 16,
+            "chars": [
+                "0123456789:\u0000\u0000\u0000\u0000\u0000"
+            ]
+        },
+        {
+            "type": "space",
+            "advances": {
+                " ": -2
+            }
+        }
+    ]
+}

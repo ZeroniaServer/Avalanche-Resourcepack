@@ -278,5 +278,35 @@
             "random/explode3",
             "random/explode4"
         ]
+    },
+    "entity.snowball.throw": {
+        "replace": true,
+        "sounds": [
+            "silent"
+        ]
+    },
+    "snowballthrow": {
+        "sounds": [
+            "random/bow"
+        ],
+        "subtitle": "subtitles.entity.snowball.throw"
+    },
+    "iceballthrow": {
+        "sounds": [
+            "random/bow"
+        ],
+        "subtitle": "subtitles.iceball.throw"
+    },
+    "snowglobethrow": {
+        "sounds": [
+            "random/bow"
+        ],
+        "subtitle": "subtitles.snowglobe.throw"
+    },
+    "coalstockthrow": {
+        "sounds": [
+            "random/bow"
+        ],
+        "subtitle": "subtitles.coalstock.throw"
     }
 }

@@ -44,13 +44,7 @@ void main() {
         vertexColor = texelFetch(Sampler2, UV2 / 16, 0); 
     }
     else if (Color == vec4(42/255., 41/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y + 3.0, Position.z + 200.0);
-        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
-
-        // remove color from marker
-        vertexColor.r = 0.25;
-        vertexColor.g = 0.25;
-        vertexColor.b = 0.25;
+        vertexColor = vec4(0); // remove shadow
     }
 
     // red firework on top
@@ -62,13 +56,7 @@ void main() {
         vertexColor = texelFetch(Sampler2, UV2 / 16, 0); 
     }
     else if (Color == vec4(42/255., 43/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y - 4.0, Position.z + 200.0);
-        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
-
-        // remove color from marker
-        vertexColor.r = 0.25;
-        vertexColor.g = 0.25;
-        vertexColor.b = 0.25;
+        vertexColor = vec4(0); // remove shadow
     }
 
     // firework below
@@ -80,12 +68,30 @@ void main() {
         vertexColor = texelFetch(Sampler2, UV2 / 16, 0); 
     }
     else if (Color == vec4(42/255., 42/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y - 23.0, Position.z + 200.0);
+        vertexColor = vec4(0); // remove shadow
+    }
+
+    // mountain
+    else if (Color == vec4(168/255., 160/255., 0, Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y + 10.0, Position.z + 200.0);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // remove color from marker
-        vertexColor.r = 0.25;
-        vertexColor.g = 0.25;
-        vertexColor.b = 0.25;
+        vertexColor = texelFetch(Sampler2, UV2 / 16, 0); 
+    }
+    else if (Color == vec4(42/255., 40/255., 0, Color.a)) {
+        vertexColor = vec4(0); // remove shadow
+    }
+
+    // timer
+    else if (Color == vec4(168/255., 160/255., 4/255., Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y - 21.0, Position.z + 200.0);
+        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
+
+        // remove color from marker
+        vertexColor = texelFetch(Sampler2, UV2 / 16, 0); 
+    }
+    else if (Color == vec4(42/255., 40/255., 1/255., Color.a)) {
+        vertexColor = vec4(0); // remove shadow
     }
 }
