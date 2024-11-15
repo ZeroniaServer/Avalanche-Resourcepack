@@ -81,7 +81,7 @@
         },
         {
             "type": "bitmap",
-            "file": "minecraft:font/mountain_icon_hit_red.png",
+            "file": "minecraft:font/mountain_icon_hit_green.png",
             "ascent": 0,
             "height": 32,
             "chars": [
@@ -90,7 +90,7 @@
         },
         {
             "type": "bitmap",
-            "file": "minecraft:font/mountain_icon_hit_green.png",
+            "file": "minecraft:font/mountain_icon_hit_red.png",
             "ascent": 0,
             "height": 32,
             "chars": [
