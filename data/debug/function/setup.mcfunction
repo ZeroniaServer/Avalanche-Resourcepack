@@ -27,6 +27,8 @@ scoreboard objectives add leavegame trigger
 scoreboard objectives add BarricadeTracker dummy
 scoreboard objectives add readyup trigger
 scoreboard objectives add modify trigger
+scoreboard objectives add hasFireworks dummy
+scoreboard objectives modify hasFireworks displayname {"translate":"space.-5"}
 
 #> Static scores
 scoreboard players set $100 CmdData 100
@@ -90,9 +92,6 @@ team modify Red color red
 
 team modify noCol collisionRule never
 team modify Collide collisionRule pushOwnTeam
-
-scoreboard objectives remove vehicle.id
-scoreboard objectives remove freezetime
 
 #> Sleigh + WASD (thanks Cloud Wolf!)
 function powerups:sleigh/init

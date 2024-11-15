@@ -19,12 +19,12 @@ execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,ta
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 85 run playsound block.powder_snow.place master @a ~ ~ ~ 0.6 0.7
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 91 run playsound block.powder_snow.place master @a ~ ~ ~ 0.6 0.6
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 93 run playsound entity.snow_golem.shoot master @a ~ ~ ~ 0.4 1.2
-execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 93 summon arrow run function powerups:snowman/projectile
+execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 93 positioned ^-0.4 ^1 ^ summon marker run function powerups:snowman/projectile
 
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 100 run playsound block.powder_snow.place master @a ~ ~ ~ 0.6 0.7
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 103 run playsound block.powder_snow.place master @a ~ ~ ~ 0.6 0.6
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 106 run playsound entity.snow_golem.shoot master @a ~ ~ ~ 0.4 1.2
-execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 106 summon arrow run function powerups:snowman/projectile
+execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 106 positioned ^0.4 ^1 ^ summon marker run function powerups:snowman/projectile
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 115.. run scoreboard players set @s CmdData 68
 
 
@@ -50,10 +50,10 @@ execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 85 run playsound block.powder_snow.place master @a ~ ~ ~ 0.6 0.7
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 91 run playsound block.powder_snow.place master @a ~ ~ ~ 0.6 0.6
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 93 run playsound entity.snow_golem.shoot master @a ~ ~ ~ 0.4 1.2
-execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 93 summon arrow run function powerups:snowman/projectile
+execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 93 positioned ^-0.4 ^1 ^ summon marker run function powerups:snowman/projectile
 
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 100 run playsound block.powder_snow.place master @a ~ ~ ~ 0.6 0.7
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 103 run playsound block.powder_snow.place master @a ~ ~ ~ 0.6 0.6
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 106 run playsound entity.snow_golem.shoot master @a ~ ~ ~ 0.4 1.2
-execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 106 summon arrow run function powerups:snowman/projectile
+execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 106 positioned ^0.4 ^1 ^ summon marker run function powerups:snowman/projectile
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 115.. run scoreboard players set @s CmdData 68

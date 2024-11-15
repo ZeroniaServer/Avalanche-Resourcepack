@@ -5,4 +5,5 @@ execute if entity @s[tag=Snowball] run scoreboard players add @a[tag=victim,tag=
 #> Snow Mark bonus damage
 execute if entity @s[tag=Snowball] run scoreboard players add @a[tag=victim,tag=!Knockout] playerDamage 2
 
+execute at @s run function powerups:throwable_init/impact
 kill
