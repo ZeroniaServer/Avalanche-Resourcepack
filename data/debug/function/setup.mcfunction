@@ -146,6 +146,7 @@ fill -16 45 -235 -13 47 -237 minecraft:stripped_cherry_wood[axis=y] replace barr
 fill -16 45 -235 -13 47 -237 minecraft:stripped_cherry_wood[axis=z] replace barrel[facing=south]
 fill -111 46 -207 -113 47 -205 minecraft:stripped_cherry_wood[axis=y] replace barrel[facing=up]
 fill -111 46 -207 -113 47 -205 minecraft:stripped_cherry_wood[axis=z] replace barrel[facing=north]
+fill -87 51 -142 -101 57 -156 stripped_cherry_wood[axis=y] replace barrel
 
 #> Bossbars
 function bossbars:create
