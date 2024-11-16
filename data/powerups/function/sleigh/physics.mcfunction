@@ -25,7 +25,7 @@ execute if score #bool math matches 1.. at @s[predicate=!game:in_air] run functi
 data merge entity @s {NoAI:1b}
 execute if score #input math matches 1 run data merge entity @s {NoAI:0b}
 execute unless score #bool math matches 0 run data merge entity @s {NoAI:0b}
-execute if entity @s[tag=SleighOffGround] run data merge entity @s {NoAI:0b}
+execute if predicate game:in_air run data merge entity @s {NoAI:0b}
 
 ########################
 
