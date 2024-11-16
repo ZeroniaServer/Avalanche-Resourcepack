@@ -1,3 +1,5 @@
+execute if entity @s[tag=Knockout] run return run advancement revoke @s only entityid:interaction
+
 tag @s add self
 execute as @e[type=interaction] run function entityid:interaction/trycheck
 tag @s remove self

@@ -16,6 +16,12 @@ scoreboard players operation $math.isqrt.x bs.in = #magnitude vehicle
 function #bs.math:isqrt
 execute if score #sprint vehicle matches 1 run scoreboard players set #max vehicle 500
 execute unless score #sprint vehicle matches 1 run scoreboard players set #max vehicle 350
+
+# slow down under blizzards
+tag @s add sleighself
+execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=1..260}] at @s positioned ~-4.5 ~-5.5 ~-4.5 if entity @e[type=turtle,tag=sleighself,dx=6,dy=6,dz=6,limit=1] run scoreboard players set #max vehicle 200
+tag @s remove sleighself
+
 execute if score $math.isqrt bs.out > #max vehicle run function powerups:sleigh/normalize
 
 scoreboard players operation @s vehicle.rot = .rot vehicle
