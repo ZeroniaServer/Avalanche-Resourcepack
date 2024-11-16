@@ -1,3 +1,10 @@
+# run over snowmen in front
+execute on passengers rotated as @s[type=minecart] unless score #bool math matches 0 at @s positioned ^ ^1 ^1.2 run scoreboard players set @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1] playerHP 0
+
+# goomba stomp snowmen beneath
+execute if score #bool math matches 0 if predicate game:in_air on passengers rotated as @s[type=minecart] at @s positioned ^ ^-1 ^ run scoreboard players set @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1] playerHP 0
+execute on passengers rotated as @s[type=minecart] unless score #bool math matches 0 at @s positioned ^ ^-0.5 ^ run scoreboard players set @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1] playerHP 0
+
 # check if occupied
 scoreboard players set $occupied CmdData 0
 tag @s[tag=Occupied] remove Occupied
