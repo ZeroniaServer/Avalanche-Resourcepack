@@ -17,6 +17,8 @@ function lobby:settings/loop
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_main players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_green players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_red players
+execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_timer players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_main players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_red players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_green players
+execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_timer players
