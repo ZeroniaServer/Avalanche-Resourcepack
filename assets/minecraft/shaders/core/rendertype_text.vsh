@@ -102,4 +102,44 @@ void main() {
     else if (Color == vec4(42/255., 40/255., 2/255., Color.a)) {
         vertexColor = vec4(0); // remove shadow
     }
+
+    // green score
+    else if (Color == vec4(168/255., 160/255., 12/255., Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y + 19.0, Position.z + 200.0);
+        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
+
+        // recolor to green
+        vertexColor.r = 85.0/255.0;
+        vertexColor.g = 1;
+        vertexColor.b = 85.0/255.0;
+    }
+    else if (Color == vec4(42/255., 40/255., 3/255., Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y + 19.0, Position.z + 200.0);
+        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
+
+        // recolor to green
+        vertexColor.r = 21.0/255.0;
+        vertexColor.g = 63.0/255.0;
+        vertexColor.b = 21.0/255.0;
+    }
+
+    // red score
+    else if (Color == vec4(168/255., 160/255., 16/255., Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y + 19.0, Position.z + 200.0);
+        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
+
+        // recolor to green
+        vertexColor.r = 1;
+        vertexColor.g = 85.0/255.0;
+        vertexColor.b = 85.0/255.0;
+    }
+    else if (Color == vec4(42/255., 40/255., 4/255., Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y + 19.0, Position.z + 200.0);
+        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
+
+        // recolor to green
+        vertexColor.r = 63.0/255.0;
+        vertexColor.g = 21.0/255.0;
+        vertexColor.b = 21.0/255.0;
+    }
 }
