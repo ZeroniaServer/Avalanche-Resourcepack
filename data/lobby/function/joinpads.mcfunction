@@ -21,11 +21,11 @@ particle trail{color:[0.000,1.000,0.000],target:[-90.0,54.5,-148.5]} -87 54 -149
 
 #> Green
 execute as @a[team=Lobby,predicate=lobby:joinpad_green,limit=1,sort=random] run tag @s add JoinGreen
-execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..2 store result score @s gameID run scoreboard players get $current gameID
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 store result score @s gameID run scoreboard players get $current gameID
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tp @s @s
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tp -91 53 -149
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run rotate @s 90 0
-execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..2 at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
 execute as @a[tag=JoinGreen] run team join Green
 execute as @a[tag=JoinGreen] run loot replace entity @s armor.chest loot game:chestplate
 execute as @a[tag=JoinGreen] run loot replace entity @s armor.legs loot game:leggings
@@ -35,11 +35,11 @@ tag @a[tag=JoinGreen] remove JoinGreen
 
 #> Red
 execute as @a[team=Lobby,predicate=lobby:joinpad_red,limit=1,sort=random] run tag @s add JoinRed
-execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..2 store result score @s gameID run scoreboard players get $current gameID
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 store result score @s gameID run scoreboard players get $current gameID
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tp @s @s
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tp -34 49 -150
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run rotate @s -90 0
-execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..2 at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
 execute as @a[tag=JoinRed] run team join Red
 execute as @a[tag=JoinRed] run loot replace entity @s armor.chest loot game:chestplate
 execute as @a[tag=JoinRed] run loot replace entity @s armor.legs loot game:leggings

@@ -1,0 +1,24 @@
+#> Green
+setblock -121 66 -216 snow_block
+setblock -122 67 -215 snow_block
+setblock -122 67 -217 snow_block
+setblock -121 65 -215 snow_block
+setblock -121 65 -217 snow_block
+setblock -122 68 -214 snow_block
+setblock -123 68 -218 snow_block
+setblock -121 64 -214 snow_block
+setblock -121 64 -218 snow_block
+setblock -110 55 -225 snow_block
+setblock -110 54 -224 snow_block
+setblock -110 54 -226 snow_block
+setblock -111 56 -226 snow_block
+setblock -112 56 -224 snow_block
+setblock -110 53 -223 snow_block
+setblock -116 69 -236 snow_block
+setblock -116 70 -235 snow_block
+setblock -117 70 -237 snow_block
+setblock -116 68 -237 snow_block
+setblock -115 68 -235 snow_block
+setblock -11 67 -208 snow_block
+setblock -117 71 -234 snow_block
+setblock -115 67 -234 snow_block

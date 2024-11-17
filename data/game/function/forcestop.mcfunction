@@ -11,3 +11,7 @@ setblock -62 53 -93 crimson_wall_sign{front_text:{messages:['{"translate":"lobby
 
 scoreboard players set $GreenPoints CmdData 0
 scoreboard players set $RedPoints CmdData 0
+
+scoreboard objectives setdisplay below_name
+
+function game:weakpoint/remove_all

@@ -1,0 +1,56 @@
+scoreboard players reset $WeakpointSpawnRed CmdData
+scoreboard players reset $WeakpointSpawnGreen CmdData
+scoreboard players reset $GreenWeakpoint CmdData
+scoreboard players reset $RedWeakpoint CmdData
+scoreboard players reset $CurrentWeakRed CmdData
+scoreboard players reset $CurrentWeakGreen CmdData
+
+#> Red
+setblock -5 66 -226 snow_block
+setblock -4 67 -227 snow_block
+setblock -4 67 -225 snow_block
+setblock -5 65 -227 snow_block
+setblock -5 65 -225 snow_block
+setblock -5 64 -228 snow_block
+setblock -4 68 -228 snow_block
+setblock -3 68 -224 snow_block
+setblock -5 64 -224 snow_block
+setblock -16 55 -217 snow_block
+setblock -16 54 -216 snow_block
+setblock -16 54 -218 snow_block
+setblock -15 56 -216 snow_block
+setblock -14 56 -218 snow_block
+setblock -16 53 -219 snow_block
+setblock -10 69 -206 snow_block
+setblock -9 70 -205 snow_block
+setblock -10 70 -207 snow_block
+setblock -11 68 -207 snow_block
+setblock -10 68 -205 snow_block
+setblock -11 67 -208 snow_block
+setblock -8 71 -204 snow_block
+setblock -9 71 -208 snow_block
+
+#> Green
+setblock -121 66 -216 snow_block
+setblock -122 67 -215 snow_block
+setblock -122 67 -217 snow_block
+setblock -121 65 -215 snow_block
+setblock -121 65 -217 snow_block
+setblock -122 68 -214 snow_block
+setblock -123 68 -218 snow_block
+setblock -121 64 -214 snow_block
+setblock -121 64 -218 snow_block
+setblock -110 55 -225 snow_block
+setblock -110 54 -224 snow_block
+setblock -110 54 -226 snow_block
+setblock -111 56 -226 snow_block
+setblock -112 56 -224 snow_block
+setblock -110 53 -223 snow_block
+setblock -116 69 -236 snow_block
+setblock -116 70 -235 snow_block
+setblock -117 70 -237 snow_block
+setblock -116 68 -237 snow_block
+setblock -115 68 -235 snow_block
+setblock -118 71 -238 snow_block
+setblock -117 71 -234 snow_block
+setblock -115 67 -234 snow_block
