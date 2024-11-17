@@ -1,2 +1,2 @@
-$bossbar set bar_g_main name [$(green),$(mountain),$(red)]
-$bossbar set bar_r_main name [$(red),$(mountain),$(green)]
+$bossbar set bar_g_main name [{"translate":"space.20"},$(green),{"translate":"space.-20"},$(mountain),{"translate":"space.-20"},$(red),{"translate":"space.20"}]
+$bossbar set bar_r_main name [{"translate":"space.20"},$(red),{"translate":"space.-20"},$(mountain),{"translate":"space.-20"},$(green),{"translate":"space.20"}]
