@@ -94,4 +94,12 @@ void main() {
     else if (Color == vec4(42/255., 40/255., 1/255., Color.a)) {
         vertexColor = vec4(0); // remove shadow
     }
+
+		// invis
+    else if (Color == vec4(168/255., 160/255., 8/255., Color.a)) {
+        vertexColor = vec4(0); // remove text
+    }
+    else if (Color == vec4(42/255., 40/255., 2/255., Color.a)) {
+        vertexColor = vec4(0); // remove shadow
+    }
 }
