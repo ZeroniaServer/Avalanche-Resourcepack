@@ -4,27 +4,47 @@ scoreboard players add @e[type=block_display,tag=AvalancheEntity,tag=SnowBlockDi
 scoreboard players add @e[type=block_display,tag=AvalancheEntity,tag=SecondarySnowBlockDisplay] CmdData 1
 
 # mountain font animation
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 1 run bossbar set bar_g_main name {"text":"\uE00B","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 1 run bossbar set bar_g_main name {"text":"\uE00C","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 5 run bossbar set bar_g_main name {"text":"\uE00A","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 9 run bossbar set bar_g_main name {"text":"\uE00B","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 9 run bossbar set bar_g_main name {"text":"\uE00C","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 13 run bossbar set bar_g_main name {"text":"\uE00A","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 17 run bossbar set bar_g_main name {"text":"\uE00B","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 17 run bossbar set bar_g_main name {"text":"\uE00C","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 21 run bossbar set bar_g_main name {"text":"\uE00A","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 25 run bossbar set bar_g_main name {"text":"\uE005","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 1 run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 1 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 1 run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 1 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 5 run data modify storage game:data mountain set value '{"text":"\\uE00A","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 5 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 9 run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 9 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 9 run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 9 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 13 run data modify storage game:data mountain set value '{"text":"\\uE00A","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 13 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 17 run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 17 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 17 run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 17 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 21 run data modify storage game:data mountain set value '{"text":"\\uE00A","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 21 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 25 run data modify storage game:data mountain set value '{"text":"\\uE005","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 25 run function bossbars:get_points
 
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 1 run bossbar set bar_r_main name {"text":"\uE00B","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 1 run bossbar set bar_r_main name {"text":"\uE00C","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 5 run bossbar set bar_r_main name {"text":"\uE00A","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 9 run bossbar set bar_r_main name {"text":"\uE00B","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 9 run bossbar set bar_r_main name {"text":"\uE00C","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 13 run bossbar set bar_r_main name {"text":"\uE00A","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 17 run bossbar set bar_r_main name {"text":"\uE00B","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 17 run bossbar set bar_r_main name {"text":"\uE00C","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 21 run bossbar set bar_r_main name {"text":"\uE00A","color":"#a8a000"}
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 25 run bossbar set bar_r_main name {"text":"\uE005","color":"#a8a000"}
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 1 run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 1 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 1 run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 1 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 5 run data modify storage game:data mountain set value '{"text":"\\uE00A","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 5 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 9 run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 9 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 9 run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 9 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 13 run data modify storage game:data mountain set value '{"text":"\\uE00A","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 13 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 17 run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 17 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 17 run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 17 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 21 run data modify storage game:data mountain set value '{"text":"\\uE00A","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 21 run function bossbars:get_points
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 25 run data modify storage game:data mountain set value '{"text":"\\uE005","color":"#a8a000"}'
+execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 25 run function bossbars:get_points
 
 execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=5}] at @s run summon marker ~-5 ~4 ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-60.0f,0.0f]}
 execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=5}] at @s run summon marker ~ ~4 ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-45.0f,0.0f]}
