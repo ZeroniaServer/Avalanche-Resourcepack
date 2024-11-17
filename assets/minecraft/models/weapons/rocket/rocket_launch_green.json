@@ -1,0 +1,10 @@
+{
+    "parent": "weapons/rocket/rocket_green",
+    "display": {
+		"ground": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, -8, 0],
+			"scale": [0.8, 0.8, 0.8]
+		}
+	}
+}
