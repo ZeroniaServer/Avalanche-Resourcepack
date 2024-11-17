@@ -27,8 +27,9 @@ scoreboard objectives add leavegame trigger
 scoreboard objectives add BarricadeTracker dummy
 scoreboard objectives add readyup trigger
 scoreboard objectives add modify trigger
-scoreboard objectives add hasFireworks dummy
-scoreboard objectives modify hasFireworks displayname {"translate":"space.-5"}
+scoreboard objectives add fireworkCount dummy
+scoreboard objectives modify fireworkCount displayname {"text":"Rockets"}
+scoreboard objectives remove hasFireworks
 
 #> Static scores
 scoreboard players set $100 CmdData 100

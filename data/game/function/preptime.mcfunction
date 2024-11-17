@@ -11,4 +11,6 @@ execute if score $PrepTime CmdData matches 1 run title @s title "TODO: Prep sub"
 #> TODO: Destroy skirmish-wall structure, place back missing arena sections (ice flooring)
 
 #> End prep phase, swap to main game phase (state 3)
-execute if score $PrepTime CmdData = $PrepTimeConfig CmdData run scoreboard players set $gamestate CmdData 3
+execute if score $PrepTime CmdData >= $PrepTimeConfig CmdData run team modify Lobby nametagVisibility never
+execute if score $PrepTime CmdData >= $PrepTimeConfig CmdData run scoreboard objectives setdisplay below_name fireworkCount
+execute if score $PrepTime CmdData >= $PrepTimeConfig CmdData run scoreboard players set $gamestate CmdData 3

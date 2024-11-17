@@ -1,5 +1,5 @@
 clear @s
-loot replace entity @s armor.body loot game:chestplate
+loot replace entity @s armor.chest loot game:chestplate
 loot replace entity @s armor.legs loot game:leggings
 loot replace entity @s armor.feet loot game:boots
 

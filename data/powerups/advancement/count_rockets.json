@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:snowball",
+                        "predicates": {
+                            "minecraft:custom_data": "{Rocket:1b}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "powerups:rocket/count"
+    }
+}

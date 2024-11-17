@@ -1,5 +1,8 @@
 scoreboard players set $gamestate CmdData -1
 
+scoreboard objectives setdisplay below_name
+team modify Lobby nametagVisibility always
+
 #> Cycle the Game ID, forcing rejoiners to automatically swap to the lobby team
 function lobby:settings/gameidcycle
 
