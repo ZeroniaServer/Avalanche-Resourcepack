@@ -2,6 +2,9 @@ scoreboard players add $gametime CmdData 1
 
 # Game related loops
 
+#> Timer
+function game:timer
+
 #> Store player UUIDs in score
 execute as @a[team=!Lobby,team=!Spectator] unless score @s UUIDscore matches -2147483648..2147483647 store result score @s UUIDscore run data get entity @s UUID[0]
 
