@@ -15,18 +15,6 @@
                 "custom_model_data": 2
             },
             "model": "weapons/barricade/cracks_2"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 3
-            },
-            "model": "weapons/rocket/rocket_launch_green"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 4
-            },
-            "model": "weapons/rocket/rocket_launch_red"
         }
     ]
 }
