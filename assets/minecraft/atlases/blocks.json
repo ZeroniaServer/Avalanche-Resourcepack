@@ -175,6 +175,10 @@
         {
             "type": "single",
             "resource": "minecraft:custom/giftbox"
+        },
+        {
+            "type": "single",
+            "resource": "minecraft:custom/weakpoint_cracks"
         }
     ]
 }

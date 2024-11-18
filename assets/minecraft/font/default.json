@@ -98,6 +98,33 @@
             ]
         },
 		{
+            "type": "bitmap",
+            "file": "minecraft:font/firework_red_vertical.png",
+            "ascent": 8,
+            "height": 10,
+            "chars": [
+                "\uE00D"
+            ]
+        },
+		{
+            "type": "bitmap",
+            "file": "minecraft:font/firework_green_vertical.png",
+            "ascent": 8,
+            "height": 10,
+            "chars": [
+                "\uE00E"
+            ]
+        },
+		{
+            "type": "bitmap",
+            "file": "minecraft:font/wall.png",
+            "ascent": 0,
+            "height": 32,
+            "chars": [
+                "\uE00F"
+            ]
+        },
+		{
             "type": "space",
             "advances": {
                 "󏀀": -4096,
