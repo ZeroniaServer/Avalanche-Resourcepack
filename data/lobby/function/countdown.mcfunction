@@ -13,6 +13,6 @@ execute if score $CountSec CmdData matches 10 if score $Countdown CmdData matche
 execute if score $CountSec CmdData matches 15 if score $Countdown CmdData matches 1 as @a at @s run playsound block.note_block.chime master @s ~ ~ ~ 1 1.7
 execute if score $CountSec CmdData matches 20 if score $Countdown CmdData matches 1 as @a at @s run playsound block.note_block.chime master @s ~ ~ ~ 1 1.8
 
-execute if score $CountSec CmdData matches 10 if score $Countdown CmdData matches 0 as @a at @s run function game:forcestart
+execute if score $CountSec CmdData matches 10 if score $Countdown CmdData matches 0 run function game:forcestart
 execute if score $CountSec CmdData matches 20 run scoreboard players remove $Countdown CmdData 1
 execute if score $CountSec CmdData matches 20.. run scoreboard players reset $CountSec CmdData

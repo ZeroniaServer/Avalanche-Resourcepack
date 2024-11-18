@@ -16,5 +16,4 @@ function bossbars:get_points
 
 scoreboard objectives setdisplay below_name fireworkCount
 
-function game:weakpoint/pick_green
-function game:weakpoint/pick_red
+function game:start_prep

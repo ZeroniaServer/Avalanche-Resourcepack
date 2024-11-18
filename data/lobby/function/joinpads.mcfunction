@@ -3,7 +3,7 @@ scoreboard players set $InGreen CmdData 0
 scoreboard players set $InRed CmdData 0
 
 execute as @a[team=Green] run scoreboard players add $InGreen CmdData 1
-execute as @a[team=Green] run scoreboard players add $InRed CmdData 1
+execute as @a[team=Red] run scoreboard players add $InRed CmdData 1
 
 #> Particles
 execute if score $gamestate CmdData matches 0..2 run particle dust{color:[1.000f,0.000f,0.000f],scale:1} -36 50 -150.75 0 1 0 0 3 force
@@ -31,6 +31,7 @@ execute as @a[tag=JoinGreen] run loot replace entity @s armor.chest loot game:ch
 execute as @a[tag=JoinGreen] run loot replace entity @s armor.legs loot game:leggings
 execute as @a[tag=JoinGreen] run loot replace entity @s armor.feet loot game:boots
 execute as @a[tag=JoinGreen] run tellraw @a "TODO: Joined green team."
+execute as @a[tag=JoinGreen] run scoreboard players set @s fireworkCount 0
 tag @a[tag=JoinGreen] remove JoinGreen
 
 #> Red
@@ -45,6 +46,7 @@ execute as @a[tag=JoinRed] run loot replace entity @s armor.chest loot game:ches
 execute as @a[tag=JoinRed] run loot replace entity @s armor.legs loot game:leggings
 execute as @a[tag=JoinRed] run loot replace entity @s armor.feet loot game:boots
 execute as @a[tag=JoinRed] run tellraw @a "TODO: Joined red team."
+execute as @a[tag=JoinRed] run scoreboard players set @s fireworkCount 0
 tag @a[tag=JoinRed] remove JoinRed
 
 #> Leave

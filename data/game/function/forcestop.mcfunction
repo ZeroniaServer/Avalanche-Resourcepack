@@ -1,3 +1,4 @@
+function game:removewall
 scoreboard players set $gamestate CmdData -1
 
 scoreboard objectives setdisplay below_name
@@ -15,3 +16,4 @@ scoreboard players set $RedPoints CmdData 0
 scoreboard objectives setdisplay below_name
 
 function game:weakpoint/remove_all
+function powerups:barricade/clearall

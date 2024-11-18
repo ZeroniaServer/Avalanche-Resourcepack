@@ -12,3 +12,12 @@ say TODO: Settings confirmed, game is ready to play.
 fill -62 53 -93 -64 53 -93 air
 
 function bossbars:get_points
+
+scoreboard players set $60 CmdData 60
+scoreboard players set $20 CmdData 20
+
+execute store result score $ticks CmdData run scoreboard players operation $Minutes CmdData *= $60 CmdData
+execute store result score $ticks CmdData run scoreboard players operation $ticks CmdData *= $20 CmdData
+
+execute store result score $prepticks CmdData run scoreboard players get $PrepSeconds CmdData
+scoreboard players operation $prepticks CmdData *= $20 CmdData

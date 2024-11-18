@@ -3,7 +3,7 @@ scoreboard players add $gametime CmdData 1
 # Game related loops
 
 #> Timer
-# execute if score $gamestate CmdData matches 2 run function game:preptimer
+execute if score $gamestate CmdData matches 2 run function game:timer_prep
 execute if score $gamestate CmdData matches 3 run function game:timer
 
 #> Store player UUIDs in score
