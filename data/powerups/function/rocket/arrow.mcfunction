@@ -12,4 +12,4 @@ execute on vehicle run data modify storage avalanche:rocket mot set from entity 
 execute summon marker run function powerups:throwable_init/calc_rotation
 execute on passengers run data modify entity @s Rotation set from storage avalanche:rocket rot
 
-execute at @s[scores={lifetime=30..}] run function powerups:rocket/explosion
+execute at @s[scores={lifetime=20..}] run function powerups:rocket/explosion
