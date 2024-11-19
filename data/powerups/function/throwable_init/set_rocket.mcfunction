@@ -1,4 +1,4 @@
-data merge entity @s {Item:{id:"air"}}
+data remove entity @s Item
 
 # calculate rotation based on snowball motion
 data modify storage avalanche:rocket mot set from entity @s Motion

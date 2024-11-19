@@ -1,0 +1,70 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:snowball"
+                }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "minecraft:custom_name": "[{\"translate\":\"powerup.rocket.name\",\"italic\":false,\"color\":\"gold\"}]",
+                        "minecraft:lore": [
+                            "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.rocket.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]",
+                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.rocket.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
+                            "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.rocket.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]"
+                        ],
+                        "minecraft:custom_data": "{NoDrop:1b,Rocket:1b}",
+                        "minecraft:enchantment_glint_override": false,
+                        "minecraft:attribute_modifiers": {
+                            "modifiers": [],
+                            "show_in_tooltip": false
+                        },
+                        "minecraft:use_cooldown": {
+                            "seconds": 1,
+                            "cooldown_group": "rocket"
+                        }
+                    }
+                },
+                {
+                    "function": "minecraft:set_custom_model_data",
+                    "value": 4,
+                    "conditions": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "team": "Red"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "function": "minecraft:set_custom_model_data",
+                    "value": 3,
+                    "conditions": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "team": "Green"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "function": "minecraft:set_count",
+                    "count": {
+                        "type": "score",
+                        "score": "fireworkGiveback",
+                        "target": "this"
+                    }
+                }
+            ]
+        }
+    ]
+}
