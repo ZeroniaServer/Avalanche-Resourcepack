@@ -124,6 +124,24 @@
                 "\uE00F"
             ]
         },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/heart_full_nametag.png",
+            "ascent": 8,
+            "height": 9,
+            "chars": [
+                "\uE010"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/heart_frozen_nametag.png",
+            "ascent": 8,
+            "height": 9,
+            "chars": [
+                "\uE011"
+            ]
+        },
 		{
             "type": "space",
             "advances": {
