@@ -29,7 +29,6 @@ scoreboard objectives add readyup trigger
 scoreboard objectives add modify trigger
 scoreboard objectives add fireworkCount dummy
 scoreboard objectives modify fireworkCount displayname {"translate":"space.-5"}
-scoreboard objectives add fireworkGiveback dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100
