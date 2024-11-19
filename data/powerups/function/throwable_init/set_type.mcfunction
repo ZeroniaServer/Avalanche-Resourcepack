@@ -4,6 +4,12 @@ execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:c
 execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:custom_model_data":5}}}] on passengers run tag @s add Coalstock
 execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:custom_model_data":6}}}] on passengers run tag @s add Snowglobe
 
+#> Play throw sounds
+execute on passengers if entity @s[tag=Snowball] at @s run playsound snowballthrow master @a ~ ~ ~ 1 0.5
+execute on passengers if entity @s[tag=Iceball] at @s run playsound iceballthrow master @a ~ ~ ~ 1 0.5
+execute on passengers if entity @s[tag=Coalstock] at @s run playsound coalstockthrow master @a ~ ~ ~ 1 0.5
+execute on passengers if entity @s[tag=Snowglobe] at @s run playsound snowglobethrow master @a ~ ~ ~ 1 0.5
+
 #> Add team specific tags for certain items
 execute if entity @s[nbt={Item:{id:"minecraft:snowball"}}] store result score @s team on origin if entity @s[team=Green]
 execute if score @s team matches 1 run tag @s add Green
