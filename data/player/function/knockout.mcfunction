@@ -1,8 +1,17 @@
 execute as @a[tag=!Knockout,scores={playerHP=..0}] run ride @s dismount
 scoreboard players set @a[tag=!Knockout,scores={playerHP=..-1}] playerHP 0
+
+execute as @a[tag=!Knockout,scores={playerHP=..0}] at @s run function powerups:rocket/drop
+execute as @a[tag=!Knockout,scores={playerHP=..0}] run function inventory:save
+clear @a[tag=!Knockout,scores={playerHP=..0}] snowball
+clear @a[tag=!Knockout,scores={playerHP=..0}] diamond_hoe[!custom_data~{HotChoco:1b}]
+clear @a[tag=!Knockout,scores={playerHP=..0}] clay
+clear @a[tag=!Knockout,scores={playerHP=..0}] ghast_spawn_egg
+
 tag @a[tag=!Knockout,scores={playerHP=..0}] add Knockout
 tag @a[tag=Knockout,scores={playerHP=1..}] remove Knockout
 item replace entity @a[tag=!Knockout,scores={knocktime=1..}] armor.head with air
+
 scoreboard players reset @a[tag=!Knockout,scores={knocktime=1..}] knocktime
 
 scoreboard players add @a[tag=Knockout] knocktime 1

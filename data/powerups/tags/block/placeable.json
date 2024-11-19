@@ -21,6 +21,11 @@
     "minecraft:tuff",
     "minecraft:deepslate",
     "minecraft:cobbled_deepslate",
-    "minecraft:target"
+    "minecraft:target",
+    "minecraft:light_blue_concrete_powder",
+    "minecraft:light_blue_wool",
+    "minecraft:smooth_quartz_slab",
+    "minecraft:smooth_quartz_stairs",
+    "minecraft:smooth_quartz"
   ]
 }

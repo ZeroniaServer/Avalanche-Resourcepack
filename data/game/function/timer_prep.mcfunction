@@ -5,6 +5,9 @@ scoreboard players set $10 CmdData 10
 #> Remove 1 tick from the timer
 scoreboard players remove $prepticks CmdData 1
 
+#> False offset
+scoreboard players add $prepticks CmdData 20
+
 #> calculate remaining minutes and seconds
 #Minutes
 scoreboard players operation $minutes CmdData = $prepticks CmdData
@@ -25,6 +28,9 @@ scoreboard players operation $seconds_digit1 CmdData = $seconds CmdData
 scoreboard players operation $seconds_digit2 CmdData = $seconds CmdData
 scoreboard players operation $seconds_digit1 CmdData /= $10 CmdData
 scoreboard players operation $seconds_digit2 CmdData %= $10 CmdData
+
+#> Undo false offset
+scoreboard players remove $prepticks CmdData 20
 
 execute if score $minutes CmdData matches 10.. run data modify storage game:data minutes set value '{"score":{"name":"$minutes_digit1","objective":"CmdData"},"font":"minecraft:timer","color":"#a8a004"},{"text":" ","font":"minecraft:timer","color":"#a8a004"},{"score":{"name":"$minutes_digit2","objective":"CmdData"},"font":"minecraft:timer","color":"#a8a004"}'
 execute if score $seconds CmdData matches 10.. run data modify storage game:data seconds set value '{"score":{"name":"$seconds_digit1","objective":"CmdData"},"font":"minecraft:timer","color":"#a8a004"},{"text":" ","font":"minecraft:timer","color":"#a8a004"},{"score":{"name":"$seconds_digit2","objective":"CmdData"},"font":"minecraft:timer","color":"#a8a004"}'
