@@ -5,6 +5,8 @@ title @a[team=!Lobby,team=!Spectator] title {"translate":"game.start.preparation
 title @a[team=!Lobby,team=!Spectator] subtitle {"translate":"game.start.preparation.bottom","color":"aqua"}
 
 scoreboard players set $gamestate CmdData 2
+scoreboard players operation $prepticks CmdData = $PrepSeconds CmdData
+scoreboard players operation $prepticks CmdData *= $20 CmdData
 function bossbars:get_points
 
 #> TODO: Prep timer?
