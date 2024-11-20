@@ -21,7 +21,8 @@ function bossbars:get_points
 scoreboard players set $60 CmdData 60
 scoreboard players set $20 CmdData 20
 
-execute store result score $ticks CmdData run scoreboard players operation $Minutes CmdData *= $60 CmdData
+execute store result score $ticks CmdData run scoreboard players get $Minutes CmdData
+execute store result score $ticks CmdData run scoreboard players operation $ticks CmdData *= $60 CmdData
 execute store result score $ticks CmdData run scoreboard players operation $ticks CmdData *= $20 CmdData
 
 execute store result score $prepticks CmdData run scoreboard players get $PrepSeconds CmdData
