@@ -12,4 +12,4 @@ function bossbars:get_points
 
 execute as @a[team=!Lobby,team=!Spectator] at @s run playsound minecraft:entity.player.levelup master @a ~ ~ ~ 1 1.6
 
-scoreboard players set $ElfTimer CmdData 240
+scoreboard players set $ElfTimer CmdData 380
