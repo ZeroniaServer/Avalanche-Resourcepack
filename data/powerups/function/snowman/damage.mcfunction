@@ -6,3 +6,4 @@ execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={iceball=true
 
 #> Snowball
 execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={snowball=true}}] on vehicle on vehicle run scoreboard players remove @s[scores={CmdData=30..}] playerHP 200
+#TODO: Add damage animation here YZERO
