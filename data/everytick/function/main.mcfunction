@@ -24,3 +24,4 @@ scoreboard players reset @a[scores={leftgame=1..}] leftgame
 execute if score $gamestate CmdData matches 1 run function lobby:countdown
 execute if score $gamestate CmdData matches 2 run function game:preptime
 execute if score $gamestate CmdData matches 2..3 run function game:ingame
+execute if score $gamestate CmdData matches 4 run function game:end
