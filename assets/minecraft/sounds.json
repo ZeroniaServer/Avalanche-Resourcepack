@@ -308,5 +308,15 @@
             "random/bow"
         ],
         "subtitle": "subtitles.coalstock.throw"
+    },
+    "block.copper.step": {
+        "replace": true,
+        "sounds": [
+            "step/snow1",
+            "step/snow2",
+            "step/snow3",
+            "step/snow4"
+        ],
+        "subtitle": "subtitles.block.generic.footsteps"
     }
 }
