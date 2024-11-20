@@ -1,0 +1,37 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "team": "Lobby"
+                            }
+                        }
+                    }
+                ],
+                "location": [
+                    {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                            "items": [
+                                "minecraft:ghast_spawn_egg"
+                            ],
+                            "predicates": {
+                                "minecraft:custom_data": "{Snowman:1b}"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "powerups:snowman/place"
+    }
+}
