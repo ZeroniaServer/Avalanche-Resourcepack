@@ -1,5 +1,6 @@
 function entityid:assign_id
 
+tag @s add entityid_assigned
 execute if score @s entityid.0 matches 0 run tag @s add entityid.nbit0
 execute if score @s entityid.0 matches 1 run tag @s add entityid.bit0
 execute if score @s entityid.1 matches 0 run tag @s add entityid.nbit1
