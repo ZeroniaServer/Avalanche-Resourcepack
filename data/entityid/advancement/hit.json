@@ -1,5 +1,52 @@
 {
   "criteria": {
+    "snowball": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "direct_entity": {
+              "type": "minecraft:snowball",
+              "passenger": {
+                "type": "arrow",
+                "nbt": "{Tags:[\"Snowball\"]}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "iceball": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "direct_entity": {
+              "type": "minecraft:snowball",
+              "passenger": {
+                "type": "arrow",
+                "nbt": "{Tags:[\"Iceball\"]}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "icicle": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "slots": {
+            "weapon": {
+              "items": "minecraft:diamond_hoe",
+              "predicates": {
+                "minecraft:custom_data": "{Icicle:1b}"
+              }
+            }
+          }
+        }
+      }
+    },
     "target": {
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
@@ -923,6 +970,12 @@
     }
   },
   "requirements": [
+    [
+      "snowball",
+      "iceball",
+      "icicle",
+      "target"
+    ],
     [
       "target",
       "not_target"
