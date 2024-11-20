@@ -32,3 +32,12 @@ execute if score $ticks CmdData matches ..0 unless score $gamestate CmdData matc
 
 #> AJ tick
 function animated_java:global/on_tick
+
+#> Elf spawning
+execute if score $gamestate CmdData matches 3 run scoreboard players add $ElfTimer CmdData 1
+execute if score $ElfTimer CmdData matches 400 run function powerups:giftbox/spawn
+execute if score $ElfTimer CmdData matches 410 if predicate game:5050 run function powerups:giftbox/spawn
+execute if score $ElfTimer CmdData matches 420 run function powerups:giftbox/spawn
+execute if score $ElfTimer CmdData matches 430 if predicate game:5050 run function powerups:giftbox/spawn
+execute if score $ElfTimer CmdData matches 440 run function powerups:giftbox/spawn
+execute if score $ElfTimer CmdData matches 440.. run scoreboard players reset $ElfTimer CmdData
