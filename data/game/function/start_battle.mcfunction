@@ -1,3 +1,6 @@
+function game:weakpoint/pick_green
+function game:weakpoint/pick_red
+
 function game:removewall
 clear @a[team=!Lobby,team=!Spectator] clay
 loot give @a[team=!Lobby,team=!Spectator] loot powerups:snowball

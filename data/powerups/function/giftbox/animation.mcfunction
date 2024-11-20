@@ -19,3 +19,7 @@ execute as @e[type=item_display,tag=aj.elf.root,scores={CmdData=150..}] run kill
 scoreboard players add @e[type=item_display,tag=Giftbox,tag=New] CmdData 1
 execute as @e[type=item_display,tag=Giftbox,tag=New,scores={CmdData=3..}] run data merge entity @s {transformation:{scale:[1.0f,1.0f,1.0f]},interpolation_duration:0,start_interpolation:0}
 tag @e[type=item_display,tag=Giftbox,tag=New,scores={CmdData=3..}] remove New
+
+#> Kill the hitbox
+execute as @e[type=shulker,tag=GiftboxShulker] at @s unless entity @e[type=item_display,tag=Giftbox,distance=..1] run tp @s ~ ~-100 ~
+execute as @e[type=shulker,tag=GiftboxShulker] at @s unless entity @e[type=item_display,tag=Giftbox,distance=..1] run kill @s
