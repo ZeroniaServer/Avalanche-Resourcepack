@@ -41,7 +41,7 @@
                 },
                 "minecraft:custom_model_data": 1,
                 "minecraft:hide_additional_tooltip": {},
-                "minecraft:custom_data": "{NoDrop:1b}",
+                "minecraft:custom_data": "{NoDrop:1b,Sleigh:1b}",
                 "minecraft:custom_name": "[{\"translate\":\"powerup.sleigh.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
                 "minecraft:lore": [
                     "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.sleigh.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
