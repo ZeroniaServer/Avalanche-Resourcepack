@@ -29,3 +29,6 @@ function powerups:barricade/clearall
 scoreboard players set $End CmdData 0
 scoreboard players set $Winner CmdData 0
 scoreboard players reset $ElfTimer CmdData
+
+#> TODO: !!!!!! ACTUALLY KILL ENTITIES WE NEED TO KILL !!!!!!!
+kill @e[type=!player]
