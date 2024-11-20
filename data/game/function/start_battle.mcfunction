@@ -1,3 +1,6 @@
+function game:weakpoint/pick_green
+function game:weakpoint/pick_red
+
 function game:removewall
 clear @a[team=!Lobby,team=!Spectator] clay
 loot give @a[team=!Lobby,team=!Spectator] loot powerups:snowball
@@ -8,3 +11,5 @@ scoreboard players set $gamestate CmdData 3
 function bossbars:get_points
 
 execute as @a[team=!Lobby,team=!Spectator] at @s run playsound minecraft:entity.player.levelup master @a ~ ~ ~ 1 1.6
+
+scoreboard players set $ElfTimer CmdData 380

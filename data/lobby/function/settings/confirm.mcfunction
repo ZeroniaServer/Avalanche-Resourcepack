@@ -1,3 +1,6 @@
+fill -62 53 -93 -64 54 -93 air
+scoreboard players reset @a modify
+tag @a remove ModiOwner
 execute as @a at @s run playsound entity.player.levelup master @a ~ ~ ~ 1 2
 scoreboard players set $gamestate CmdData 0
 
@@ -23,3 +26,5 @@ execute store result score $ticks CmdData run scoreboard players operation $tick
 
 execute store result score $prepticks CmdData run scoreboard players get $PrepSeconds CmdData
 scoreboard players operation $prepticks CmdData *= $20 CmdData
+
+function lobby:settings/refreshsigns with storage lobby:customizer

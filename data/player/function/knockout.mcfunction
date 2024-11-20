@@ -23,6 +23,7 @@ effect give @a[tag=Knockout,scores={knocktime=1}] blindness 1 100 true
 effect clear @a[tag=Knockout,scores={knocktime=10}] slowness
 
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s run playsound snowballhit master @a ~ ~ ~ 1.1 0
+execute as @a[tag=Knockout,scores={knocktime=1}] at @s if predicate game:5050 run function powerups:giftbox/spawn
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s run particle block{block_state:"minecraft:snow"} ~ ~1.5 ~ 0.15 0.15 0.15 0.15 30
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s run particle minecraft:snowflake ~ ~1.5 ~ 0.1 0.1 0.1 0.1 7
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s run item replace entity @s armor.head with snow_block[minecraft:equippable={slot:head,camera_overlay:"misc/powder_snow_outline"},enchantment_glint_override=false,enchantments={levels:{binding_curse:1}}]

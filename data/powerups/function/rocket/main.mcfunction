@@ -11,3 +11,10 @@ execute as @a[tag=!Blasted,scores={blasttime=1..}] run scoreboard players reset 
 #> Rocket items
 execute as @e[type=item,tag=RocketItem] at @s run function powerups:rocket/item
 tag @a remove giveRocket
+
+#> Particles
+execute as @e[type=item,tag=RocketItemGreen] at @s run particle dust{color:[0.000,1.000,0.000],scale:1} ~ ~ ~ 0.1 0.2 0.1 0.1 2 force
+execute as @e[type=item,tag=RocketItemRed] at @s run particle dust{color:[1.000,0.000,0.000],scale:1} ~ ~ ~ 0.1 0.2 0.1 0.1 2 force
+
+execute as @e[type=item,tag=RocketItem,tag=!RocketItemGreen,tag=!RocketItemRed] at @s run particle dust{color:[1.000,0.000,0.000],scale:1} ~ ~ ~ 0.1 0 0.1 0.1 1 force
+execute as @e[type=item,tag=RocketItem,tag=!RocketItemGreen,tag=!RocketItemRed] at @s run particle dust{color:[0.000,1.000,0.000],scale:1} ~ ~ ~ 0.1 0 0.1 0.1 1 force
