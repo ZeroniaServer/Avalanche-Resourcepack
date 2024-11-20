@@ -16,6 +16,10 @@ effect give @a fire_resistance infinite 100 true
 execute as @e[type=item] at @s if items entity @s contents *[custom_data~{NoDrop:1b}] run function everytick:nodrop
 
 #> Leave game
+execute as @a[scores={leftgame=1..}] run scoreboard players set @s playerHP 20
+execute as @a[scores={leftgame=1..}] run function inventory:clear
+execute as @a[scores={leftgame=1..}] run effect clear @s blindness
+execute as @a[scores={leftgame=1..}] run effect clear @s darkness
 execute as @a[scores={leftgame=1..}] run scoreboard players reset @s gameID
 execute as @a[scores={leftgame=1..}] run team leave @s
 scoreboard players reset @a[scores={leftgame=1..}] leftgame
