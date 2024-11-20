@@ -23,7 +23,7 @@
                                 "minecraft:ghast_spawn_egg"
                             ],
                             "predicates": {
-                                "minecraft:custom_data": "{Sleigh:1b}"
+                                "minecraft:custom_data": "{Campfire:1b}"
                             }
                         }
                     }
@@ -32,6 +32,6 @@
         }
     },
     "rewards": {
-        "function": "powerups:sleigh/place"
+        "function": "powerups:campfire/place"
     }
 }

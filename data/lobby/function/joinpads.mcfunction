@@ -53,11 +53,7 @@ tag @a[tag=JoinRed] remove JoinRed
 scoreboard players enable @a[team=!Lobby] leavegame
 scoreboard players reset @a[team=Lobby] leavegame
 execute as @a[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveTeam
-execute as @a[tag=LeaveTeam] run scoreboard players set @s playerHP 20
-execute as @a[tag=LeaveTeam] run function inventory:clear
-execute as @a[tag=LeaveTeam] run effect clear @s blindness
-execute as @a[tag=LeaveTeam] run effect clear @s darkness
-execute as @a[tag=LeaveTeam] run clear @s
+execute as @a[tag=LeaveTeam] run function player:leave
 execute as @a[tag=LeaveTeam] run tp @s @s
 execute as @a[tag=LeaveTeam] run tp @s -65 52 -108
 execute as @a[tag=LeaveTeam] run rotate @s 180 0
@@ -65,6 +61,5 @@ execute as @a[tag=LeaveTeam,team=!Spectator,team=!Lobby] if score $gamestate Cmd
 execute as @a[tag=LeaveTeam,team=Spectator] if score $gamestate CmdData matches 0..2 at @s run tellraw @a "TODO: no longer spectating."
 execute as @a[tag=LeaveTeam] if score $gamestate CmdData matches 0..2 at @s run playsound block.beehive.exit master @a ~ ~ ~ 1 1
 execute as @a[tag=LeaveTeam] run team join Lobby @s
-execute as @a[tag=LeaveTeam] run scoreboard players reset @s gameID
 
 tag @a[tag=LeaveTeam] remove LeaveTeam

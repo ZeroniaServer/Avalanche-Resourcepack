@@ -32,7 +32,7 @@
                 ],
                 "minecraft:custom_model_data": 5,
                 "minecraft:hide_additional_tooltip": {},
-                "minecraft:custom_data": "{NoDrop:1b}",
+                "minecraft:custom_data": "{NoDrop:1b,Campfire:1b}",
                 "minecraft:entity_data": {
                     "id": "minecraft:marker",
                     "Tags": [
@@ -87,7 +87,7 @@
                 ],
                 "minecraft:custom_model_data": 4,
                 "minecraft:hide_additional_tooltip": {},
-                "minecraft:custom_data": "{NoDrop:1b}",
+                "minecraft:custom_data": "{NoDrop:1b,Campfire:1b}",
                 "minecraft:entity_data": {
                     "id": "minecraft:marker",
                     "Tags": [
