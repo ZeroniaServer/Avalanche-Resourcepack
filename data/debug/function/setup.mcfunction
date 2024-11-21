@@ -19,7 +19,8 @@ scoreboard objectives add snowballcharge dummy
 scoreboard objectives add snowballcounter dummy
 scoreboard objectives add healticks dummy
 scoreboard objectives add ambientfxplayer dummy
-scoreboard objectives add breakicicle minecraft.broken:minecraft.diamond_hoe
+scoreboard objectives remove breakicicle
+scoreboard objectives add breakicicle minecraft.broken:minecraft.elytra
 scoreboard objectives add blasttime dummy
 scoreboard objectives add giftweight dummy
 scoreboard objectives add leftgame minecraft.custom:minecraft.leave_game
