@@ -1,9 +1,10 @@
 #> Icicle (instant KO)
-execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] on vehicle on vehicle run scoreboard players set @s[scores={CmdData=30..}] playerHP 0
+execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run scoreboard players set @s playerHP 0
+execute as @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run function powerups:icicle/break
 
 #> Iceball (instant KO)
-execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={iceball=true}}] on vehicle on vehicle run scoreboard players set @s[scores={CmdData=30..}] playerHP 0
+execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={iceball=true}}] run scoreboard players set @s playerHP 0
 
 #> Snowball
-execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={snowball=true}}] on vehicle on vehicle run scoreboard players remove @s[scores={CmdData=30..}] playerHP 200
+execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={snowball=true}}] run scoreboard players remove @s playerHP 200
 #TODO: Add damage animation here YZERO

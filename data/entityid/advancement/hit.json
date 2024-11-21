@@ -38,7 +38,7 @@
         "player": {
           "slots": {
             "weapon": {
-              "items": "minecraft:diamond_hoe",
+              "items": "minecraft:elytra",
               "predicates": {
                 "minecraft:custom_data": "{Icicle:1b}"
               }

@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:diamond_hoe"
+                    "name": "minecraft:elytra"
                 }
             ],
             "functions": [
@@ -20,9 +20,26 @@
                             "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.icicle.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]",
                             "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.icicle.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]"
                         ],
-                        "minecraft:custom_model_data": 24,
                         "minecraft:custom_data": "{NoDrop:1b,Icicle:1b}",
-                        "max_damage": 6
+                        "max_damage": 6,
+                        "!equippable": {},
+                        "!rarity": {},
+                        "can_break": {
+                            "predicates": [
+                                {
+                                    "blocks": "minecraft:target"
+                                }
+                            ],
+                            "show_in_tooltip": false
+                        },
+                        "tool": {
+                            "rules": [
+                                {
+                                    "blocks": ["target"],
+                                    "correct_for_drops": true
+                                }
+                            ]
+                        }
                     }
                 },
                 {

@@ -7,6 +7,7 @@ clear @a[tag=!Knockout,scores={playerHP=..0}] snowball
 clear @a[tag=!Knockout,scores={playerHP=..0}] diamond_hoe[!custom_data~{HotChoco:1b}]
 clear @a[tag=!Knockout,scores={playerHP=..0}] clay
 clear @a[tag=!Knockout,scores={playerHP=..0}] ghast_spawn_egg
+clear @a[tag=!Knockout,scores={playerHP=..0}] elytra
 
 tag @a[tag=!Knockout,scores={playerHP=..0}] add Knockout
 execute as @a[tag=Knockout,scores={playerHP=1..}] run function inventory:load
