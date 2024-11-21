@@ -12,9 +12,9 @@
                 {
                     "function": "minecraft:set_count",
                     "count": {
-                    "type": "minecraft:score",
-                    "target": "this",
-                    "score": "BarricadeTracker"
+                        "type": "minecraft:score",
+                        "target": "this",
+                        "score": "hasBarricades"
                     }
                 }
             ]
