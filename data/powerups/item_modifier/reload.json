@@ -18,12 +18,20 @@
                     "minecraft:use_cooldown": {
                         "seconds": 0.25,
                         "cooldown_group": "snowball"
+                    },
+                    "can_break": {
+                        "predicates": [
+                            {
+                                "blocks": "minecraft:target"
+                            }
+                        ],
+                        "show_in_tooltip": false
                     }
                 }
             },
             "custom_data": {
-                "Remainder": "0b",
-                "Slow": "0b",
+                "Remainder": 0,
+                "Slow": 0,
                 "NoDrop": 1
             }
         }

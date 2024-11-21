@@ -47,7 +47,15 @@
                     "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.sleigh.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
                     "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.sleigh.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
                     "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.sleigh.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]"
-                ]
+                ],
+                "can_break": {
+                    "predicates": [
+                        {
+                            "blocks": "minecraft:target"
+                        }
+                    ],
+                    "show_in_tooltip": false
+                }
             }
         }
     ]

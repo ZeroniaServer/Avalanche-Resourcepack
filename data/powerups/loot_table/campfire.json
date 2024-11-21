@@ -9,51 +9,59 @@
                 }
             ],
             "conditions": [
-        {
-          "condition": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "team": "Red"
-          }
-        }
-      ],
-            "functions": [
-            {
-            "function": "minecraft:set_components",
-            "components": {
-                "minecraft:item_name": "{\"translate\": \"powerup.campfire.name\",\"color\":\"dark_aqua\"}",
-                "minecraft:lore": [
-                    "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.heal.1\",\"italic\":false,\"color\":\"light_purple\"}]",
-                    "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.heal.2\",\"italic\":false,\"color\":\"light_purple\"}]",
-                    "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
-                    "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
-                    "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]",
-                    "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.2\",\"italic\":false,\"color\":\"gold\"}]"
-                ],
-                "minecraft:custom_model_data": 5,
-                "minecraft:hide_additional_tooltip": {},
-                "minecraft:custom_data": "{NoDrop:1b,Campfire:1b}",
-                "minecraft:entity_data": {
-                    "id": "minecraft:marker",
-                    "Tags": [
-                        "CampfireSpawner",
-                        "Red"
-                    ],
-                    "data": {
-                        "durability": 5
+                {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "team": "Red"
                     }
-                },
-                "minecraft:can_place_on": {
-                    "predicates": [
-                        {
-                            "blocks": "#powerups:placeable"
+                }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "minecraft:item_name": "{\"translate\": \"powerup.campfire.name\",\"color\":\"dark_aqua\"}",
+                        "minecraft:lore": [
+                            "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.heal.1\",\"italic\":false,\"color\":\"light_purple\"}]",
+                            "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.heal.2\",\"italic\":false,\"color\":\"light_purple\"}]",
+                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
+                            "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
+                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]",
+                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.2\",\"italic\":false,\"color\":\"gold\"}]"
+                        ],
+                        "minecraft:custom_model_data": 5,
+                        "minecraft:hide_additional_tooltip": {},
+                        "minecraft:custom_data": "{NoDrop:1b,Campfire:1b}",
+                        "minecraft:entity_data": {
+                            "id": "minecraft:marker",
+                            "Tags": [
+                                "CampfireSpawner",
+                                "Red"
+                            ],
+                            "data": {
+                                "durability": 5
+                            }
+                        },
+                        "minecraft:can_place_on": {
+                            "predicates": [
+                                {
+                                    "blocks": "#powerups:placeable"
+                                }
+                            ],
+                            "show_in_tooltip": false
+                        },
+                        "can_break": {
+                            "predicates": [
+                                {
+                                    "blocks": "minecraft:target"
+                                }
+                            ],
+                            "show_in_tooltip": false
                         }
-                    ],
-                    "show_in_tooltip": false
+                    }
                 }
-                }
-            }
-        ]
+            ]
         },
         {
             "rolls": 1,
@@ -64,51 +72,59 @@
                 }
             ],
             "conditions": [
-        {
-          "condition": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "team": "Green"
-          }
-        }
-      ],
-            "functions": [
-            {
-            "function": "minecraft:set_components",
-            "components": {
-                "minecraft:item_name": "{\"translate\": \"powerup.campfire.name\",\"color\":\"dark_aqua\"}",
-                "minecraft:lore": [
-                    "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.heal.1\",\"italic\":false,\"color\":\"light_purple\"}]",
-                    "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.heal.2\",\"italic\":false,\"color\":\"light_purple\"}]",
-                    "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
-                    "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
-                    "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]",
-                    "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.2\",\"italic\":false,\"color\":\"gold\"}]"
-                ],
-                "minecraft:custom_model_data": 4,
-                "minecraft:hide_additional_tooltip": {},
-                "minecraft:custom_data": "{NoDrop:1b,Campfire:1b}",
-                "minecraft:entity_data": {
-                    "id": "minecraft:marker",
-                    "Tags": [
-                        "CampfireSpawner",
-                        "Green"
-                    ],
-                    "data": {
-                        "durability": 5
+                {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "team": "Green"
                     }
-                },
-                "minecraft:can_place_on": {
-                    "predicates": [
-                        {
-                            "blocks": "#powerups:placeable"
-                        }
-                    ],
-                    "show_in_tooltip": false
                 }
-            }
-        }
-        ]
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "minecraft:item_name": "{\"translate\": \"powerup.campfire.name\",\"color\":\"dark_aqua\"}",
+                        "minecraft:lore": [
+                            "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.heal.1\",\"italic\":false,\"color\":\"light_purple\"}]",
+                            "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.heal.2\",\"italic\":false,\"color\":\"light_purple\"}]",
+                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
+                            "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
+                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]",
+                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.2\",\"italic\":false,\"color\":\"gold\"}]"
+                        ],
+                        "minecraft:custom_model_data": 4,
+                        "minecraft:hide_additional_tooltip": {},
+                        "minecraft:custom_data": "{NoDrop:1b,Campfire:1b}",
+                        "minecraft:entity_data": {
+                            "id": "minecraft:marker",
+                            "Tags": [
+                                "CampfireSpawner",
+                                "Green"
+                            ],
+                            "data": {
+                                "durability": 5
+                            }
+                        },
+                        "minecraft:can_place_on": {
+                            "predicates": [
+                                {
+                                    "blocks": "#powerups:placeable"
+                                }
+                            ],
+                            "show_in_tooltip": false
+                        },
+                        "can_break": {
+                            "predicates": [
+                                {
+                                    "blocks": "minecraft:target"
+                                }
+                            ],
+                            "show_in_tooltip": false
+                        }
+                    }
+                }
+            ]
         }
     ]
 }

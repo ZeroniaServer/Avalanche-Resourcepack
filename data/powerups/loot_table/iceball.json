@@ -29,6 +29,14 @@
                         "minecraft:use_cooldown": {
                             "seconds": 3,
                             "cooldown_group": "iceball"
+                        },
+                        "can_break": {
+                            "predicates": [
+                                {
+                                    "blocks": "minecraft:target"
+                                }
+                            ],
+                            "show_in_tooltip": false
                         }
                     }
                 }

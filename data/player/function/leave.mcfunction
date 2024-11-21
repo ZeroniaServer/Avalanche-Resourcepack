@@ -9,3 +9,4 @@ tag @s remove Knockout
 team leave @s
 clear @s
 scoreboard players reset @s leftgame
+title @s actionbar ""
