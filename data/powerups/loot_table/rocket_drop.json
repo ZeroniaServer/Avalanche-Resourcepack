@@ -28,7 +28,15 @@
                             "seconds": 1,
                             "cooldown_group": "rocket"
                         },
-                        "minecraft:max_stack_size": 64
+                        "minecraft:max_stack_size": 64,
+                        "can_break": {
+                            "predicates": [
+                                {
+                                    "blocks": "minecraft:target"
+                                }
+                            ],
+                            "show_in_tooltip": false
+                        }
                     }
                 },
                 {

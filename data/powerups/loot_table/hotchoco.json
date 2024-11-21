@@ -32,7 +32,15 @@
                         "custom_data": {"HotChoco": 1, "NoDrop": 1},
                         "max_stack_size": 64,
                         "!max_damage": {},
-                        "use_cooldown": {"seconds": 0.55, "cooldown_group": "hotchoco"}
+                        "use_cooldown": {"seconds": 0.55, "cooldown_group": "hotchoco"},
+                        "can_break": {
+                            "predicates": [
+                                {
+                                    "blocks": "minecraft:target"
+                                }
+                            ],
+                            "show_in_tooltip": false
+                        }
                     }
                 }
             ]
