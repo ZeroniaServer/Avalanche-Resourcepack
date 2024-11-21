@@ -14,3 +14,10 @@ function bossbars:get_points
 # bossbar set bar_prep color white
 
 function game:calcbarricades
+
+fill -115 46 -209 -113 48 -211 moving_piston replace air
+fill -112 46 -210 -111 48 -209 moving_piston replace air
+fill -110 46 -209 -107 48 -208 moving_piston replace air
+fill -16 46 -233 -19 48 -234 moving_piston replace air
+fill -14 46 -232 -15 48 -233 moving_piston replace air
+fill -11 46 -233 -13 48 -231 moving_piston replace air
