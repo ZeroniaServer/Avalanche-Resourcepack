@@ -10,5 +10,5 @@ execute if entity @s[tag=hitbox,tag=Green] if entity @a[tag=hitter,team=Red] on 
 execute if entity @s[tag=hitbox,tag=Red] if entity @a[tag=hitter,team=Green] on vehicle on vehicle if score @s CmdData matches 40.. run function powerups:snowman/damage
 
 #> Icicle in general
-execute if entity @s[tag=!hitbox] as @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run function powerups:icicle/break
+execute if entity @s[tag=!hitbox,tag=!GiftboxInteraction] as @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run function powerups:icicle/break
 execute if entity @s[type=player,tag=!Knockout] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run scoreboard players remove @s playerHP 6
