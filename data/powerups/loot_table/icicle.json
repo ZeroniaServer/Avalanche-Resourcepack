@@ -31,14 +31,6 @@
                                 }
                             ],
                             "show_in_tooltip": false
-                        },
-                        "tool": {
-                            "rules": [
-                                {
-                                    "blocks": ["target"],
-                                    "correct_for_drops": true
-                                }
-                            ]
                         }
                     }
                 },
