@@ -10,15 +10,7 @@ item modify entity @s[tag=emptyMainhand] weapon.mainhand powerups:blank
 
 #> If mainhand has barricade (under a stack), give 2 more and then restore the original stack amount to prevent animation
 scoreboard players reset @s hasBarricades
-execute if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:0}] store result score @s hasBarricades run data get entity @s Inventory[{Slot:0b}].count
-execute unless score @s hasBarricades = @s hasBarricades if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:1}] store result score @s hasBarricades run data get entity @s Inventory[{Slot:1b}].count
-execute unless score @s hasBarricades = @s hasBarricades if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:2}] store result score @s hasBarricades run data get entity @s Inventory[{Slot:2b}].count
-execute unless score @s hasBarricades = @s hasBarricades if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:3}] store result score @s hasBarricades run data get entity @s Inventory[{Slot:3b}].count
-execute unless score @s hasBarricades = @s hasBarricades if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:4}] store result score @s hasBarricades run data get entity @s Inventory[{Slot:4b}].count
-execute unless score @s hasBarricades = @s hasBarricades if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:5}] store result score @s hasBarricades run data get entity @s Inventory[{Slot:5b}].count
-execute unless score @s hasBarricades = @s hasBarricades if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:6}] store result score @s hasBarricades run data get entity @s Inventory[{Slot:6b}].count
-execute unless score @s hasBarricades = @s hasBarricades if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:7}] store result score @s hasBarricades run data get entity @s Inventory[{Slot:7b}].count
-execute unless score @s hasBarricades = @s hasBarricades if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:8}] store result score @s hasBarricades run data get entity @s Inventory[{Slot:8b}].count
+execute if entity @s[tag=stackMainhand,tag=!fullStackMainhand] store result score @s hasBarricades run data get entity @s SelectedItem.count
 item modify entity @s[tag=stackMainhand,tag=!fullStackMainhand] weapon.mainhand powerups:add_one
 loot replace entity @s[tag=stackMainhand,tag=!fullStackMainhand] weapon.mainhand loot powerups:barricade_return
 
