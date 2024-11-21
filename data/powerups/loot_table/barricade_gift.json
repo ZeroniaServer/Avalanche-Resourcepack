@@ -11,11 +11,7 @@
             "functions": [
                 {
                     "function": "minecraft:set_count",
-                    "count": {
-                    "type": "minecraft:score",
-                    "target": "this",
-                    "score": "BarricadeTracker"
-                    }
+                    "count": 12
                 }
             ]
         }

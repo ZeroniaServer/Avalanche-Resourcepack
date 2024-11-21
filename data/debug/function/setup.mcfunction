@@ -31,6 +31,9 @@ scoreboard objectives add modify trigger
 scoreboard objectives add fireworkCount dummy
 scoreboard objectives modify fireworkCount displayname {"translate":"space.-5"}
 scoreboard objectives add modiowner dummy
+scoreboard objectives add spawnPlaceable minecraft.used:minecraft.ghast_spawn_egg
+scoreboard objectives add placeBarricade minecraft.used:minecraft.clay
+scoreboard objectives add hasBarricades dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100

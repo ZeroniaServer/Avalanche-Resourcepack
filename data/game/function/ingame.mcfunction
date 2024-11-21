@@ -45,3 +45,9 @@ execute if score $ElfTimer CmdData matches 420 run function powerups:giftbox/spa
 execute if score $ElfTimer CmdData matches 430 if predicate game:5050 run function powerups:giftbox/spawn
 execute if score $ElfTimer CmdData matches 440 run function powerups:giftbox/spawn
 execute if score $ElfTimer CmdData matches 440.. run scoreboard players reset $ElfTimer CmdData
+
+#> Main/offhand holding tags
+execute as @a[team=!Lobby,team=!Spectator,tag=!barricadeMainhand] if items entity @s weapon.mainhand clay run tag @s add barricadeMainhand
+execute as @a[team=!Lobby,team=!Spectator,tag=barricadeMainhand] unless items entity @s weapon.mainhand clay run tag @s remove barricadeMainhand
+execute as @a[team=!Lobby,team=!Spectator,tag=!barricadeOffhand] if items entity @s weapon.offhand clay run tag @s add barricadeOffhand
+execute as @a[team=!Lobby,team=!Spectator,tag=barricadeOffhand] unless items entity @s weapon.offhand clay run tag @s remove barricadeOffhand

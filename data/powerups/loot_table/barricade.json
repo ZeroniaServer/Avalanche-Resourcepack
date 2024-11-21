@@ -41,8 +41,20 @@
                     }
                 },
                 {
-                    "function": "minecraft:set_count",
-                    "count": 12
+                    "function": "minecraft:set_custom_data",
+                    "tag": "{Blank:1b}",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:inverted",
+                            "term": {
+                                "condition": "minecraft:entity_scores",
+                                "entity": "this",
+                                "scores": {
+                                    "placeBarricade": 0
+                                }
+                            }
+                        }
+                    ]
                 }
             ]
         }
