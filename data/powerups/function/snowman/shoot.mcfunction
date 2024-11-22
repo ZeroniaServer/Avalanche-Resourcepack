@@ -4,7 +4,7 @@ execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,ta
 
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s unless score @s CmdData matches 70.. unless entity @a[team=Green,tag=!Knockout,distance=..11] run tag @s remove Shooting
 
-
+execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 70 run tag @s remove DelayShot
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 70 run function powerups:snowman/stop_all_anims
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 70 run function animated_java:snowman/animations/prepare_shot/play
 
@@ -25,7 +25,8 @@ execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,ta
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 103 run playsound block.powder_snow.place master @a ~ ~ ~ 0.6 0.6
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 106 run playsound entity.snow_golem.shoot master @a ~ ~ ~ 0.4 1.2
 execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 106 positioned ^0.4 ^1 ^ summon marker run function powerups:snowman/projectile
-execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 115.. run scoreboard players set @s CmdData 68
+execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=DelayShot,tag=!Dying] at @s if score @s CmdData matches 115.. run function powerups:snowman/reset_delay
+execute as @e[type=item_display,tag=Snowman,tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!DelayShot,tag=!Dying] at @s if score @s CmdData matches 115.. run scoreboard players set @s[tag=!DelayShot] CmdData 68
 
 
 
@@ -35,7 +36,7 @@ execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,
 
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s unless score @s CmdData matches 70.. unless entity @a[team=Red,tag=!Knockout,distance=..11] run tag @s remove Shooting
 
-
+execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 70 run tag @s remove DelayShot
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 70 run function powerups:snowman/stop_all_anims
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 70 run function animated_java:snowman/animations/prepare_shot/play
 
@@ -56,4 +57,5 @@ execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 103 run playsound block.powder_snow.place master @a ~ ~ ~ 0.6 0.6
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 106 run playsound entity.snow_golem.shoot master @a ~ ~ ~ 0.4 1.2
 execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 106 positioned ^0.4 ^1 ^ summon marker run function powerups:snowman/projectile
-execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] at @s if score @s CmdData matches 115.. run scoreboard players set @s CmdData 68
+execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=DelayShot,tag=!Dying] at @s if score @s CmdData matches 115.. run function powerups:snowman/reset_delay
+execute as @e[type=item_display,tag=Snowman,tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!DelayShot,tag=!Dying] at @s if score @s CmdData matches 115.. run scoreboard players set @s[tag=!DelayShot] CmdData 68

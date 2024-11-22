@@ -30,6 +30,4 @@ scoreboard players set $End CmdData 0
 scoreboard players set $Winner CmdData 0
 scoreboard players reset $ElfTimer CmdData
 
-#> TODO: !!!!!! ACTUALLY KILL ENTITIES WE NEED TO KILL !!!!!!!
-#removed this because it broke sleigh friction, don't do this
 function arenaclear:reset
