@@ -14,3 +14,4 @@ function animated_java:elf/remove/all
 kill @e[type=interaction,tag=GiftboxInteraction]
 kill @e[type=item_display,tag=Giftbox]
 execute as @e[type=shulker] run function arenaclear:kill
+kill @e[type=marker,tag=GiftSpawner]

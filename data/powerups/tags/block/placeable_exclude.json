@@ -1,0 +1,25 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:air",
+        "minecraft:cave_air",
+        "minecraft:creeper_head",
+        "minecraft:barrier",
+        "minecraft:end_stone_brick_wall",
+        "minecraft:spruce_fence",
+        "minecraft:spruce_fence_gate",
+        "minecraft:andesite_wall",
+        "#minecraft:wool_carpets",
+        "minecraft:ladder",
+        "#minecraft:signs",
+        "#minecraft:wall_signs",
+        "#minecraft:buttons",
+        "minecraft:lever",
+        "minecraft:light",
+        "minecraft:sea_pickle",
+        "minecraft:candle",
+        "minecraft:flower_pot",
+        "minecraft:skeleton_skull",
+        "minecraft:lily_pad"
+    ]
+}

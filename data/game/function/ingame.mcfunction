@@ -51,3 +51,8 @@ execute as @a[team=!Lobby,team=!Spectator,tag=!barricadeMainhand] if items entit
 execute as @a[team=!Lobby,team=!Spectator,tag=barricadeMainhand] unless items entity @s weapon.mainhand clay run tag @s remove barricadeMainhand
 execute as @a[team=!Lobby,team=!Spectator,tag=!barricadeOffhand] if items entity @s weapon.offhand clay run tag @s add barricadeOffhand
 execute as @a[team=!Lobby,team=!Spectator,tag=barricadeOffhand] unless items entity @s weapon.offhand clay run tag @s remove barricadeOffhand
+
+execute as @a[team=!Lobby,team=!Spectator,tag=!campfireMainhand] if items entity @s weapon.mainhand ghast_spawn_egg[custom_data~{Campfire:1b}] run tag @s add campfireMainhand
+execute as @a[team=!Lobby,team=!Spectator,tag=campfireMainhand] unless items entity @s weapon.mainhand ghast_spawn_egg[custom_data~{Campfire:1b}] run tag @s remove campfireMainhand
+execute as @a[team=!Lobby,team=!Spectator,tag=!campfireOffhand] if items entity @s weapon.offhand ghast_spawn_egg[custom_data~{Campfire:1b}] run tag @s add campfireOffhand
+execute as @a[team=!Lobby,team=!Spectator,tag=campfireOffhand] unless items entity @s weapon.offhand ghast_spawn_egg[custom_data~{Campfire:1b}] run tag @s remove campfireOffhand
