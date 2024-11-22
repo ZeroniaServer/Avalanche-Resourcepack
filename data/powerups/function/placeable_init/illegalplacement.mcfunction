@@ -13,6 +13,8 @@ execute if block ~ ~ ~ lantern run return run tag @s add illegal
 execute if block ~ ~-0.5 ~ #minecraft:stairs run return run tag @s add illegal
 execute if block ~ ~ ~ #minecraft:fences run return run tag @s add illegal
 execute if block ~ ~ ~ #minecraft:walls run return run tag @s add illegal
+execute if block ~ ~ ~ campfire run return run tag @s add illegal
+execute if block ~ ~0.5 ~ #minecraft:wooden_trapdoors run return run tag @s add illegal
 
 #> Outside arena
 execute unless predicate game:in_arena run tag @s add illegal
