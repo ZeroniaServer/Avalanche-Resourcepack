@@ -17,7 +17,7 @@ execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=700..},tag=Exti
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=700..},tag=Extinguish] at @s run particle block{block_state:coal_block} ~ ~ ~ 0.1 0 0.1 0.1 10 force
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=700..},tag=Extinguish] at @s run playsound block.wood.break master @a ~ ~ ~ 0.6 0
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=700..},tag=Extinguish] at @s run playsound block.deepslate.break master @a ~ ~ ~ 0.6 0.6
-kill @e[type=item_display,tag=CampfireMain,scores={CmdData=700..},tag=Extinguish]
+execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=700..},tag=Extinguish] run function arenaclear:kill_recursive
 
 #> Revive effects
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=551..560},tag=!Extinguish,tag=Reviving] at @s run playsound particle.soul_escape master @a ~ ~ ~ 1 1
