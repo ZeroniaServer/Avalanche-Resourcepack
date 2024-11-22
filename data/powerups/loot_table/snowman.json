@@ -39,10 +39,6 @@
                                 "durability": 5
                             }
                         },
-                        "minecraft:use_cooldown": {
-                            "seconds": 10,
-                            "cooldown_group": "snowman"
-                        },
                         "minecraft:can_place_on": {
                             "predicates": [
                                 {
@@ -60,6 +56,22 @@
                             "show_in_tooltip": false
                         }
                     }
+                },
+                {
+                    "function": "minecraft:set_custom_data",
+                    "tag": "{Blank:1b}",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:inverted",
+                            "term": {
+                                "condition": "minecraft:entity_scores",
+                                "entity": "this",
+                                "scores": {
+                                    "spawnPlaceable": 0
+                                }
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -123,6 +135,22 @@
                             "show_in_tooltip": false
                         }
                     }
+                },
+                {
+                    "function": "minecraft:set_custom_data",
+                    "tag": "{Blank:1b}",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:inverted",
+                            "term": {
+                                "condition": "minecraft:entity_scores",
+                                "entity": "this",
+                                "scores": {
+                                    "spawnPlaceable": 0
+                                }
+                            }
+                        }
+                    ]
                 }
             ]
         }

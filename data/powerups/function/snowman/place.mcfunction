@@ -1,5 +1,8 @@
 advancement revoke @s only powerups:place_snowman
 
-execute at @n[type=marker,tag=SnowmanSpawner,tag=Red] facing entity @s eyes rotated ~ 0 run function animated_java:snowman/summon/red with storage snowman:team
-execute at @n[type=marker,tag=SnowmanSpawner,tag=Green] facing entity @s eyes rotated ~ 0 run function animated_java:snowman/summon/green with storage snowman:team
-kill @e[type=marker,tag=SnowmanSpawner]
+tag @s add placer
+data modify storage iris:settings MaxRecursionDepth set value 16
+data modify storage iris:settings Blacklist set value "#iris:shape_groups/air"
+execute at @s anchored eyes positioned ^ ^ ^ run function iris:get_target
+execute as @e[type=marker,tag=SnowmanSpawner,limit=1] at @s run function powerups:snowman/attemptplace
+tag @s remove placer
