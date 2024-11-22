@@ -139,8 +139,8 @@ gamerule drowningDamage false
 gamerule doTileDrops false
 
 #> Join area modifications
-fill -90 53 -148 -90 55 -150 green_stained_glass
-fill -35 49 -151 -35 51 -149 red_stained_glass
+fill -90 53 -148 -90 55 -150 cyan_stained_glass
+fill -35 49 -151 -35 51 -149 pink_stained_glass
 fill -96 58 -145 -94 57 -145 air replace minecraft:barrier
 setblock -95 54 -147 air
 setblock -34 50 -148 air
@@ -155,6 +155,13 @@ fill -16 45 -235 -13 47 -237 minecraft:stripped_cherry_wood[axis=z] replace barr
 fill -111 46 -207 -113 47 -205 minecraft:stripped_cherry_wood[axis=y] replace barrel[facing=up]
 fill -111 46 -207 -113 47 -205 minecraft:stripped_cherry_wood[axis=z] replace barrel[facing=north]
 fill -87 51 -142 -101 57 -156 stripped_cherry_wood[axis=y] replace barrel
-
+function debug:protect
+setblock -35 54 -152 minecraft:smooth_quartz
+data modify block -48 65 -65 profile set from block -82 65 -58 profile
+data modify block -48 65 -58 profile set from block -82 65 -58 profile
+data modify block -82 65 -86 profile set from block -82 65 -58 profile
+data modify block -82 65 -90 profile set from block -82 65 -58 profile
+setblock -36 50 -150 minecraft:cherry_wall_sign[facing=west,waterlogged=false]{front_text:{color:"red",has_glowing_text:1b,messages:['"🔴                 🔴"','"Enter to join"','"Red Team!"','"🔴                 🔴"']},is_waxed:1b} destroy
+setblock -89 54 -149 minecraft:oak_wall_sign[facing=east,waterlogged=false]{front_text:{color:"green",has_glowing_text:1b,messages:['"🟢                 🟢"','"Enter to join"','"Green Team!"','"🟢                 🟢"']},is_waxed:1b} destroy
 #> Bossbars
 function bossbars:create
