@@ -144,8 +144,8 @@ fill -35 49 -151 -35 51 -149 pink_stained_glass
 fill -96 58 -145 -94 57 -145 air replace minecraft:barrier
 setblock -95 54 -147 air
 setblock -34 50 -148 air
-setblock -95 54 -147 oak_wall_sign{front_text:{messages:['{"translate":"lobby.leave.1","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger leavegame"}}','{"translate":"lobby.leave.2","color":"aqua"}','{"text":""}','{"text":""}']}}
-setblock -34 50 -148 oak_wall_sign[facing=east]{front_text:{messages:['{"translate":"lobby.leave.1","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger leavegame"}}','{"translate":"lobby.leave.2","color":"aqua"}','{"text":""}','{"text":""}']}}
+setblock -95 54 -147 oak_wall_sign{front_text:{messages:['{"translate":"lobby.leave_sign.1","color":"#00CEFF","clickEvent":{"action":"run_command","value":"/trigger leavegame"}}','{"translate":"lobby.leave_sign.2","color":"#00CEFF"}','{"translate":"lobby.leave_sign.3","color":"aqua","bold":true}','{"translate":"lobby.leave_sign.4","color":"aqua","bold":true}']}} destroy
+setblock -34 50 -148 oak_wall_sign[facing=east]{front_text:{messages:['{"translate":"lobby.leave_sign.1","color":"#00CEFF","clickEvent":{"action":"run_command","value":"/trigger leavegame"}}','{"translate":"lobby.leave_sign.2","color":"#00CEFF"}','{"translate":"lobby.leave_sign.3","color":"aqua","bold":true}','{"translate":"lobby.leave_sign.4","color":"aqua","bold":true}']}} destroy
 fill -85 50 -113 -35 40 -162 minecraft:stripped_cherry_wood[axis=z] replace minecraft:barrel
 setblock -66 50 -110 stripped_cherry_wood[axis=z]
 setblock -64 50 -111 stripped_cherry_wood[axis=z]
@@ -163,5 +163,6 @@ data modify block -82 65 -86 profile set from block -82 65 -58 profile
 data modify block -82 65 -90 profile set from block -82 65 -58 profile
 setblock -36 50 -150 minecraft:cherry_wall_sign[facing=west,waterlogged=false]{front_text:{color:"red",has_glowing_text:1b,messages:['{"translate":"lobby.join_sign.red.1"}','{"translate":"lobby.join_sign.red.2"}','{"translate":"lobby.join_sign.red.3"}','{"translate":"lobby.join_sign.red.4"}']},is_waxed:1b} destroy
 setblock -89 54 -149 minecraft:oak_wall_sign[facing=east,waterlogged=false]{front_text:{color:"green",has_glowing_text:1b,messages:['{"translate":"lobby.join_sign.green.1"}','{"translate":"lobby.join_sign.green.2"}','{"translate":"lobby.join_sign.green.3"}','{"translate":"lobby.join_sign.green.4"}']},is_waxed:1b} destroy
+
 #> Bossbars
 function bossbars:create
