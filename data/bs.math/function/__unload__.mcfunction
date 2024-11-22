@@ -15,7 +15,7 @@
 # Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/math.html
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
+kill @e[type=marker,tag=bs.entity]
 
 scoreboard objectives remove bs.in
 scoreboard objectives remove bs.out

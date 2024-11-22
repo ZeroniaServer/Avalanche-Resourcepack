@@ -15,3 +15,7 @@ kill @e[type=interaction,tag=GiftboxInteraction]
 kill @e[type=item_display,tag=Giftbox]
 execute as @e[type=shulker] run function arenaclear:kill
 kill @e[type=marker,tag=GiftSpawner]
+kill @e[type=marker,tag=AVSnowStarter]
+kill @e[type=marker,tag=SnowEmitter]
+kill @e[type=block_display,tag=SnowBlockDisplay]
+kill @e[type=block_display,tag=SecondarySnowBlockDisplay]

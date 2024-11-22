@@ -15,4 +15,4 @@
 # Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/math.html#trigonometry
 # ------------------------------------------------------------------------------------------------------------
 
-return run execute as B5-0-0-0-1 run function bs.math:tan/run
+return run execute as @e[type=marker,tag=bs.entity,limit=1] run function bs.math:tan/run
