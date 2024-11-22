@@ -7,6 +7,8 @@ loot give @a[team=!Lobby,team=!Spectator] loot powerups:snowball
 title @a[team=!Lobby,team=!Spectator] title {"translate":"game.start","color":"dark_aqua","underlined": true}
 title @a[team=!Lobby,team=!Spectator] subtitle {"text":" "}
 
+team modify Lobby nametagVisibility never
+scoreboard objectives setdisplay below_name fireworkCount
 scoreboard players set $gamestate CmdData 3
 function bossbars:get_points
 

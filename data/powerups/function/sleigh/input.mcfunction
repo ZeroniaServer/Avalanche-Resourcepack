@@ -15,3 +15,4 @@ execute if score #input math matches 1.. unless score .s wasd matches 1 on vehic
 execute if score #input math matches 1.. if score .s wasd matches 1 on vehicle on vehicle run function powerups:sleigh/brake
 
 execute on vehicle rotated as @s on vehicle on passengers run rotate @s[type=item_display] ~ ~
+execute on vehicle rotated as @s on vehicle on passengers on passengers run rotate @s[type=oak_boat] ~ ~

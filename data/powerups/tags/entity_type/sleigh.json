@@ -3,6 +3,7 @@
     "minecraft:turtle",
     "minecraft:minecart",
     "minecraft:item_display",
-    "minecraft:interaction"
+    "minecraft:interaction",
+    "minecraft:oak_boat"
   ]
 }
