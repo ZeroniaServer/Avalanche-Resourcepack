@@ -16,3 +16,5 @@ execute if score #input math matches 1.. if score .s wasd matches 1 on vehicle o
 
 execute on vehicle rotated as @s on vehicle on passengers run rotate @s[type=item_display] ~ ~
 execute on vehicle rotated as @s on vehicle on passengers on passengers run rotate @s[type=oak_boat] ~ ~
+
+execute if predicate wasd:sneak at @s run tp @s ~ ~1 ~
