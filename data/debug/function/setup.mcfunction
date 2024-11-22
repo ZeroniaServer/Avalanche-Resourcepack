@@ -37,6 +37,7 @@ scoreboard objectives add hasBarricades dummy
 scoreboard objectives add hasCampfires dummy
 scoreboard objectives add hasSnowmen dummy
 scoreboard objectives add hasSleighs dummy
+scoreboard objectives add respawn dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100

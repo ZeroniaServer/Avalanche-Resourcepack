@@ -1,4 +1,5 @@
 scoreboard players set @s playerHP 20
+scoreboard players reset @s respawn
 function inventory:clear
 effect clear @s blindness
 effect clear @s darkness

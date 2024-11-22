@@ -9,6 +9,7 @@ execute if entity @e[type=turtle,distance=..1] run return run tag @s add illegal
 execute if block ~ ~-0.5 ~ #powerups:placeable_exclude run return run tag @s add illegal
 execute if block ~ ~0.5 ~ #minecraft:fence_gates[open=false] run return run tag @s add illegal
 execute if block ~ ~0.5 ~ #minecraft:walls run return run tag @s add illegal
+execute if block ~ ~0.5 ~ moving_piston run return run tag @s add illegal
 execute if block ~ ~ ~ lantern run return run tag @s add illegal
 execute if block ~ ~-0.5 ~ #minecraft:stairs run return run tag @s add illegal
 execute if block ~ ~ ~ #minecraft:fences run return run tag @s add illegal
