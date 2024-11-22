@@ -16,3 +16,5 @@ execute if entity @s[team=Red,tag=!SilentRespawn] run scoreboard players set $Re
 execute at @s[tag=!SilentRespawn] run playsound minecraft:entity.blaze.shoot master @s ~ ~ ~ 1 0
 
 tag @s remove SilentRespawn
+
+scoreboard players add @s respawn 1
