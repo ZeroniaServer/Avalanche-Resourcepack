@@ -107,5 +107,13 @@
   "game.end.win_red": "Red Team Won!",
   "game.end.tie": "It's a tie!",
   "game.end.betterluck": "Better luck next time...",
-  "game.end.wellplayed": "Well played!"
+  "game.end.wellplayed": "Well played!",
+  "lobby.join_sign.red.1": "🔴                 🔴",
+  "lobby.join_sign.red.2": "Enter to join",
+  "lobby.join_sign.red.3": "Red Team!",
+  "lobby.join_sign.red.4": "🔴                 🔴",
+  "lobby.join_sign.green.1": "🟢                 🟢",
+  "lobby.join_sign.green.2": "Enter to join",
+  "lobby.join_sign.green.3": "Green Team!",
+  "lobby.join_sign.green.4": "🟢                 🟢"
 }
