@@ -1,5 +1,3 @@
-function game:placewall
-
 function game:weakpoint/remove_all
 title @a[team=!Lobby,team=!Spectator] title {"translate":"game.start.preparation.top","color":"dark_aqua","underlined": true}
 title @a[team=!Lobby,team=!Spectator] subtitle {"translate":"game.start.preparation.bottom","color":"aqua"}
@@ -7,12 +5,17 @@ title @a[team=!Lobby,team=!Spectator] subtitle {"translate":"game.start.preparat
 scoreboard players set $gamestate CmdData 2
 scoreboard players operation $prepticks CmdData = $PrepSeconds CmdData
 scoreboard players operation $prepticks CmdData *= $20 CmdData
+# scoreboard players add $prepticks CmdData 
+function game:timer_prep
 function bossbars:get_points
+
+function game:placewall
 
 #> TODO: Prep timer?
 # bossbar add bar_prep [{"translate":"space.20"},{"translate":"space.-20"},{"text":"test"},{"translate":"space.-21"},{"translate":"space.20"}]
 # bossbar set bar_prep color white
 
+clear @a clay
 function game:calcbarricades
 
 fill -115 46 -209 -113 48 -211 moving_piston replace air

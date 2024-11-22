@@ -34,6 +34,9 @@ scoreboard objectives add modiowner dummy
 scoreboard objectives add spawnPlaceable minecraft.used:minecraft.ghast_spawn_egg
 scoreboard objectives add placeBarricade minecraft.used:minecraft.clay
 scoreboard objectives add hasBarricades dummy
+scoreboard objectives add hasCampfires dummy
+scoreboard objectives add hasSnowmen dummy
+scoreboard objectives add hasSleighs dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100

@@ -123,6 +123,22 @@
                             "show_in_tooltip": false
                         }
                     }
+                },
+                {
+                    "function": "minecraft:set_custom_data",
+                    "tag": "{Blank:1b}",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:inverted",
+                            "term": {
+                                "condition": "minecraft:entity_scores",
+                                "entity": "this",
+                                "scores": {
+                                    "spawnPlaceable": 0
+                                }
+                            }
+                        }
+                    ]
                 }
             ]
         }
