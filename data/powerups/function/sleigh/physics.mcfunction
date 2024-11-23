@@ -1,3 +1,4 @@
+execute if predicate powerups:sleigh_void at @s run scoreboard players set @s sleighDamage 4
 execute if predicate powerups:sleigh_void at @s run return run function powerups:sleigh/break
 
 scoreboard players add @s vehicle.dx 0
@@ -34,3 +35,6 @@ execute store result entity @s Motion[0] double 0.001 run scoreboard players get
 execute store result entity @s Motion[2] double 0.001 run scoreboard players get @s vehicle.dz
 
 function powerups:sleigh/pilot
+
+#> Display states
+execute on passengers if entity @s[type=item_display] run function powerups:sleigh/display
