@@ -1,4 +1,5 @@
-# TODO drop item with 1 less durability
+execute unless score @s sleighDamage matches 4 store result storage avalanche:sleighdrop val int 1 run scoreboard players get @s sleighDamage
+execute unless score @s sleighDamage matches 4 at @s run function powerups:sleigh/drop with storage avalanche:sleighdrop
 particle block{block_state:"spruce_planks"} ~ ~ ~ 0.5 0.5 0.5 0.1 100 force
 playsound minecraft:block.wooden_trapdoor.close master @a ~ ~ ~ 1 0
 playsound minecraft:entity.zombie.break_wooden_door master @a ~ ~ ~ 0.8 1.
