@@ -5,6 +5,9 @@ tag @s add self
 execute as @e[type=snowball,tag=!HasType] store success score @s CmdData on origin if entity @s[tag=self]
 tag @e[type=snowball,scores={CmdData=1}] add owned
 
+#> Resync firework rocket count
+execute store result score @s fireworkCount run clear @s snowball[custom_data~{Rocket:1b}] 0
+
 #> Spawn arrows in snowballs
 execute as @e[type=snowball,tag=owned] at @s run function powerups:throwable_init/owned
 
