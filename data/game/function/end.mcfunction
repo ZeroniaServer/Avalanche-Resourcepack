@@ -8,7 +8,7 @@ execute if score $End CmdData matches 1 run function game:timer
 
 #> Green wins
 execute if score $End CmdData matches 1 if score $Winner CmdData matches 1 as @a[team=Green] at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1.2
-execute if score $End CmdData matches 1 if score $Winner CmdData matches 1 as @a[team=Red] at @s run playsound entity.wither.death master @s ~ ~ ~ 1 2
+execute if score $End CmdData matches 1 if score $Winner CmdData matches 1 as @a[team=Red] at @s run playsound entity.wither.spawn master @s ~ ~ ~ 1 2
 execute if score $End CmdData matches 1 if score $Winner CmdData matches 1 as @a[team=!Green,team=!Red] at @s run playsound block.note_block.pling master @s ~ ~ ~ 1 2
 execute if score $End CmdData matches 1 if score $Winner CmdData matches 1 run title @a title {"translate":"game.end.win_green","color":"green"}
 execute if score $End CmdData matches 1 if score $Winner CmdData matches 1 run title @a[team=Green] subtitle {"translate":"game.end.wellplayed","color":"dark_green"}
@@ -17,7 +17,7 @@ execute if score $End CmdData matches 1 if score $Winner CmdData matches 1 run t
 
 #> Red wins
 execute if score $End CmdData matches 1 if score $Winner CmdData matches 2 as @a[team=Red] at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1.2
-execute if score $End CmdData matches 1 if score $Winner CmdData matches 2 as @a[team=Green] at @s run playsound entity.wither.death master @s ~ ~ ~ 1 2
+execute if score $End CmdData matches 1 if score $Winner CmdData matches 2 as @a[team=Green] at @s run playsound entity.wither.spawn master @s ~ ~ ~ 1 2
 execute if score $End CmdData matches 1 if score $Winner CmdData matches 2 as @a[team=!Green,team=!Red] at @s run playsound block.note_block.pling master @s ~ ~ ~ 1 2
 execute if score $End CmdData matches 1 if score $Winner CmdData matches 2 run title @a title {"translate":"game.end.win_red","color":"red"}
 execute if score $End CmdData matches 1 if score $Winner CmdData matches 2 run title @a[team=Red] subtitle {"translate":"game.end.wellplayed","color":"dark_green"}
