@@ -4,35 +4,35 @@
             "type": "bitmap",
             "file": "minecraft:font/heart_full.png",
             "ascent": 0,
-            "height": 41,
+            "height": 40,
             "chars": ["\uE000"]
         },
         {
             "type": "bitmap",
             "file": "minecraft:font/heart_frozen_half.png",
             "ascent": 0,
-            "height": 41,
+            "height": 40,
             "chars": ["\uE001"]
         },
         {
             "type": "bitmap",
             "file": "minecraft:font/heart_frozen.png",
             "ascent": 0,
-            "height": 41,
+            "height": 40,
             "chars": ["\uE002"]
         },
         {
             "type": "bitmap",
             "file": "minecraft:font/heart_empty_half.png",
             "ascent": 0,
-            "height": 41,
+            "height": 40,
             "chars": ["\uE003"]
         },
         {
             "type": "bitmap",
             "file": "minecraft:font/heart_empty.png",
             "ascent": 0,
-            "height": 41,
+            "height": 40,
             "chars": ["\uE004"]
         },
         {
@@ -140,6 +140,24 @@
             "height": 9,
             "chars": [
                 "\uE011"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/sleigh.png",
+            "ascent": 0,
+            "height": 40,
+            "chars": [
+                "\uE012"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/sleigh_empty.png",
+            "ascent": 0,
+            "height": 40,
+            "chars": [
+                "\uE013"
             ]
         },
 		{

@@ -142,4 +142,14 @@ void main() {
         vertexColor.g = 21.0/255.0;
         vertexColor.b = 21.0/255.0;
     }
+
+    // sleigh UI
+    if (Color == vec4(168/255., 160/255., 20/255., Color.a)) {
+        vertexColor = texelFetch(Sampler2, UV2 / 16, 0); // remove color from no shadow marker
+        vec3 newPos = vec3(Position.x + 50.0, Position.y, Position.z + 200.0);
+        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
+    }
+    else if (Color == vec4(42/255., 40/255., 5/255., Color.a)) {
+        vertexColor = vec4(0); // remove text + shadow
+    }
 }
