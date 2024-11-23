@@ -86,8 +86,8 @@ kill @e[type=block_display,tag=SecondarySnowBlockDisplay,scores={CmdData=20..}]
 #> Damage players
 execute as @e[type=marker,tag=SnowEmitter] at @s run scoreboard players set @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..5] playerHP 0
 execute as @e[type=marker,tag=SnowEmitter] at @s run scoreboard players set @e[type=item_display,tag=CampfireMain,scores={CmdData=23..699},distance=..5] CmdData 700
-execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run scoreboard players add @s playerDamage 1
-execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run damage @s 1 freeze
+execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout,predicate=!wasd:is_mounted] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run scoreboard players add @s playerDamage 1
+execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout,predicate=!wasd:is_mounted] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run damage @s 1 freeze
 
 #> Sleigh surfing
 execute as @e[type=turtle,predicate=game:on_ground,tag=!Surf] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run function powerups:sleigh/surf
