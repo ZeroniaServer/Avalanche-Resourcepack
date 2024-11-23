@@ -8,6 +8,7 @@ tag @s remove Blasted
 tag @s remove SnowMark
 tag @s remove Knockout
 tag @s remove CoalBlind
+tag @s remove snowmanTarget
 team leave @s
 clear @s
 scoreboard players reset @s leftgame

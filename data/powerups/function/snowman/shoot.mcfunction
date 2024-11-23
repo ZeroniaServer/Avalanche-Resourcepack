@@ -1,11 +1,10 @@
 execute on passengers if entity @s[type=area_effect_cloud] run data modify storage snowman:projectile UUID set from entity @s Owner
 
 #Red
-# TODO: Ev, add iris check here, if there is a clear line of sight (no blocks blocking view) in a 11 block range, add a "HasLOS" tag.
-execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=!Shooting,tag=!Dying,tag=HasLOS] if entity @a[team=Green,tag=!Knockout,distance=..11] run scoreboard players set @s CmdData 50
-execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=!Shooting,tag=!Dying,tag=HasLOS] if entity @a[team=Green,tag=!Knockout,distance=..11] run tag @s add Shooting
+execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=!Shooting,tag=!Dying] if entity @a[team=Green,tag=snowmanTarget,limit=1,distance=..11] run scoreboard players set @s CmdData 50
+execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=!Shooting,tag=!Dying] if entity @a[team=Green,tag=snowmanTarget,limit=1,distance=..11] run tag @s add Shooting
 
-execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] unless score @s CmdData matches 70.. unless entity @a[team=Green,tag=!Knockout,distance=..11] run tag @s remove Shooting
+execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] unless score @s CmdData matches 70.. unless entity @a[team=Green,tag=snowmanTarget,limit=1,distance=..11] run tag @s remove Shooting
 
 tag @s[tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={CmdData=70}] remove DelayShot
 execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={CmdData=70}] run function powerups:snowman/stop_all_anims
@@ -28,18 +27,16 @@ execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={
 execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={CmdData=103}] run playsound block.powder_snow.place master @a ~ ~ ~ 0.6 0.6
 execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={CmdData=106}] run playsound entity.snow_golem.shoot master @a ~ ~ ~ 0.4 1.2
 execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={CmdData=106}] positioned ^0.4 ^1 ^ summon marker run function powerups:snowman/projectile
-tag @s[tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={CmdData=115..}] remove HasLOS
 execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=DelayShot,tag=!Dying,scores={CmdData=115..}] run function powerups:snowman/reset_delay
 scoreboard players set @s[tag=Red,tag=Spawned,tag=Targeting,tag=Shooting,tag=!DelayShot,tag=!Dying,scores={CmdData=115..}] CmdData 68
 
 
 
 #Green
-# TODO: Ev, add iris check here, if there is a clear line of sight (no blocks blocking view) in a 11 block range, add a "HasLOS" tag.
-execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Shooting,tag=!Dying,tag=HasLOS] if entity @a[team=Red,tag=!Knockout,distance=..11] run scoreboard players set @s CmdData 50
-execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Shooting,tag=!Dying,tag=HasLOS] if entity @a[team=Red,tag=!Knockout,distance=..11] run tag @s add Shooting
+execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Shooting,tag=!Dying] if entity @a[team=Red,tag=snowmanTarget,limit=1,distance=..11] run scoreboard players set @s CmdData 50
+execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Shooting,tag=!Dying] if entity @a[team=Red,tag=snowmanTarget,limit=1,distance=..11] run tag @s add Shooting
 
-execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] unless score @s CmdData matches 70.. unless entity @a[team=Red,tag=!Knockout,distance=..11] run tag @s remove Shooting
+execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying] unless score @s CmdData matches 70.. unless entity @a[team=Red,tag=snowmanTarget,limit=1,distance=..11] run tag @s remove Shooting
 
 tag @s[tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={CmdData=70}] remove DelayShot
 execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={CmdData=70}] run function powerups:snowman/stop_all_anims
@@ -62,6 +59,5 @@ execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores
 execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={CmdData=103}] run playsound block.powder_snow.place master @a ~ ~ ~ 0.6 0.6
 execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={CmdData=106}] run playsound entity.snow_golem.shoot master @a ~ ~ ~ 0.4 1.2
 execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={CmdData=106}] positioned ^0.4 ^1 ^ summon marker run function powerups:snowman/projectile
-tag @s[tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!Dying,scores={CmdData=115..}] remove HasLOS
 execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=DelayShot,tag=!Dying,scores={CmdData=115..}] run function powerups:snowman/reset_delay
 scoreboard players set @s[tag=Green,tag=Spawned,tag=Targeting,tag=Shooting,tag=!DelayShot,tag=!Dying,scores={CmdData=115..}] CmdData 68
