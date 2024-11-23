@@ -179,6 +179,10 @@
         {
             "type": "single",
             "resource": "minecraft:custom/weakpoint_cracks"
+        },
+        {
+            "type": "single",
+            "resource": "minecraft:custom/blockysleigh"
         }
     ]
 }
