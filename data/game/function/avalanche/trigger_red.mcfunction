@@ -7,7 +7,7 @@ summon firework_rocket 4 70 -215 {Life:0,LifeTime:0,FireworksItem:{id:"minecraft
 summon firework_rocket -4 68 -222 {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",colors:[I;4521728]}]}}}}
 summon firework_rocket -1 65 -214 {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",colors:[I;4521728]}]}}}}
 
-summon marker -3 68 -212 {Tags:["AVSnowStarter","Red","AvalancheEntity"]}
+summon marker -2 68 -214 {Tags:["AVSnowStarter","Red","AvalancheEntity"]}
 
 scoreboard players reset $DamageRed CmdData
 scoreboard players reset $green_progress CmdData
