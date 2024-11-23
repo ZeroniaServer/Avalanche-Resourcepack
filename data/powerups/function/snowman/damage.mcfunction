@@ -1,3 +1,6 @@
+#> Non-valid damage type
+execute as @a[tag=hitter,limit=1] unless entity @s[advancements={entityid:hit={iceball=true}}] unless entity @s[advancements={entityid:hit={icicle=true}}] unless entity @s[advancements={entityid:hit={snowball=true}}] run return fail
+
 #> Icicle (instant KO)
 execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run scoreboard players set @s playerHP 0
 execute as @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run function powerups:icicle/break
@@ -9,11 +12,11 @@ execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={iceball=true
 execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={snowball=true}}] run scoreboard players remove @s playerHP 150
 
 #> Hurt anim
-execute run tag @s[tag=Spawned,tag=!Dying] add Hurt
-execute if entity @s[tag=Shooting,scores={CmdData=69..107}] run tag @s[tag=Spawned] add DelayShot
-execute if entity @s[type=item_display,tag=Snowman,tag=Spawned,tag=Hurt,tag=!Dying,tag=!DelayShot] at @s run function powerups:snowman/stop_all_anims
-execute if entity @s[type=item_display,tag=Snowman,tag=Spawned,tag=Hurt,tag=!Dying,tag=!DelayShot] at @s run function animated_java:snowman/animations/damage/play
+tag @s[tag=Spawned,tag=!Dying] add Hurt
+tag @s[tag=Spawned,tag=Shooting,scores={CmdData=69..107}] add DelayShot
+execute at @s[tag=Spawned,tag=Hurt,tag=!Dying,tag=!DelayShot] run function powerups:snowman/stop_all_anims
+execute at @s[tag=Spawned,tag=Hurt,tag=!Dying,tag=!DelayShot] run function animated_java:snowman/animations/damage/play
 execute at @s[tag=Spawned,tag=Hurt] run playsound entity.snow_golem.hurt master @a ~ ~ ~ 0.4 1
 execute at @s[tag=Spawned,tag=Hurt] run playsound entity.snow_golem.hurt master @a ~ ~ ~ 0.4 1.2
-execute run tag @s[type=item_display,tag=Snowman,tag=Spawned,tag=Hurt,tag=!Dying,tag=Spawned] remove Hurt
-execute run tag @s[tag=Spawned,tag=Shooting,tag=Hurt] add DelayShot
+tag @s[type=item_display,tag=Snowman,tag=Spawned,tag=Hurt,tag=!Dying,tag=Spawned] remove Hurt
+tag @s[tag=Spawned,tag=Shooting,tag=Hurt] add DelayShot
