@@ -8,11 +8,12 @@ $execute positioned ^ ^ ^-.1875 positioned ~ ~0.4171875 ~ run summon oak_boat ~ 
 
 execute positioned ^ ^ ^-.1875 run summon interaction ~ ~0.4171875 ~ {width:1.2,height:0.8,Tags:["SleighHitbox","init"],response:1b}
 execute positioned ^ ^ ^-.1875 run summon interaction ~ ~0.4171875 ~ {width:1.7,height:-0.4,Tags:["SleighHitbox","boatanchor","init"],response:1b}
+execute positioned ^ ^ ^-.1875 run summon interaction ~ ~0.4171875 ~ {width:1.7,height:-0.6,Tags:["SleighHitbox","init"],response:1b}
 execute positioned ^ ^ ^-.1875 run summon interaction ~ ~0.4171875 ~ {width:1.7,height:0.2,Tags:["SleighHitbox","init"],response:1b}
 
 ride @e[type=minecart,tag=init,limit=1] mount @e[type=turtle,tag=init,limit=1]
 ride @e[type=item_display,tag=init,limit=1] mount @e[type=turtle,tag=init,limit=1]
-execute as @e[type=interaction,tag=init,limit=3] run ride @s mount @e[type=turtle,tag=init,limit=1]
+execute as @e[type=interaction,tag=init,limit=4] run ride @s mount @e[type=turtle,tag=init,limit=1]
 ride @e[type=oak_boat,tag=init,limit=1] mount @e[type=interaction,tag=boatanchor,tag=init,limit=1]
 execute as @e[type=oak_boat,tag=init,limit=1] run function entityid:assign_tag
 execute as @e[type=oak_boat,tag=init,limit=1] run team join noCol
