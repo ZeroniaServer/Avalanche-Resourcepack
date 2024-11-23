@@ -3,6 +3,7 @@ function game:weakpoint/pick_red
 
 function game:removewall
 clear @a[team=!Lobby,team=!Spectator] clay
+clear @a[team=!Lobby,team=!Spectator] stone_shovel
 loot give @a[team=!Lobby,team=!Spectator] loot powerups:snowball
 title @a[team=!Lobby,team=!Spectator] title {"translate":"game.start","color":"dark_aqua","underlined": true}
 title @a[team=!Lobby,team=!Spectator] subtitle {"text":" "}
