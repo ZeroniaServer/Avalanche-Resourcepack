@@ -14,6 +14,9 @@ execute unless score $gamestate CmdData matches 0 as @a run trigger readyup set 
 #> Modification room
 function lobby:settings/loop
 
+#> Bossbars
+function bossbars:loop
+
 #> Hide bars if games are inactive
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_main players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_green players

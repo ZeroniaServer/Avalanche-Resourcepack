@@ -9,9 +9,6 @@ execute if score $gamestate CmdData matches 3 run function game:timer
 #> Store player UUIDs in score
 execute as @a[team=!Lobby,team=!Spectator] unless score @s UUIDscore matches -2147483648..2147483647 store result score @s UUIDscore run data get entity @s UUID[0]
 
-#> Bossbars
-function bossbars:loop
-
 #> Weapons
 function powerups:loop
 
