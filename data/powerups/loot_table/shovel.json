@@ -1,0 +1,50 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:stone_shovel"
+                }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "minecraft:custom_name": "[{\"translate\":\"powerup.shovel.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+                        "minecraft:lore": [
+                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.shovel.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
+                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.shovel.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
+                        ],
+                        "minecraft:custom_data": "{NoDrop:1b}",
+                        "minecraft:attribute_modifiers": {
+                            "modifiers": [],
+                            "show_in_tooltip": false
+                        },
+                        "can_break": {
+                            "predicates": [
+                                {
+                                    "blocks": "minecraft:target"
+                                }
+                            ],
+                            "show_in_tooltip": false
+                        },
+                        "tool": {
+                            "rules": [
+                                {
+                                    "blocks": "target",
+                                    "speed": 4,
+                                    "correct_for_drops": true
+                                }
+                            ]
+                        },
+                        "unbreakable": {
+                            "show_in_tooltip": false
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -16,6 +16,8 @@ function game:placewall
 # bossbar set bar_prep color white
 
 clear @a clay
+clear @a stone_shovel
+execute as @a unless entity @s[team=!Green,team=!Red] run loot replace entity @s hotbar.0 loot powerups:shovel
 function game:calcbarricades
 
 fill -115 46 -209 -113 48 -211 moving_piston replace air
