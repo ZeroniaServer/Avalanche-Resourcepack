@@ -39,5 +39,7 @@ execute at @s[tag=SleighJumpBig] run function powerups:sleigh/jumpbig
 scoreboard players reset @s[tag=Occupied] CmdData
 scoreboard players add @s[tag=!Occupied] CmdData 1
 scoreboard players add @s[scores={CmdData=250..}] sleighDamage 1
+execute as @s[scores={CmdData=250..}] at @s run particle item{item:{id:"minecraft:ghast_spawn_egg",components:{custom_model_data:1}}} ~ ~0.3 ~ 0.3 0.2 0.3 0.1 20
+execute as @s[scores={CmdData=250..}] at @s run playsound entity.item.break master @a ~ ~ ~ 0.6 1
 execute at @s[scores={CmdData=250..,sleighDamage=4}] run function powerups:sleigh/break
 scoreboard players set @s[scores={CmdData=250..}] CmdData 0

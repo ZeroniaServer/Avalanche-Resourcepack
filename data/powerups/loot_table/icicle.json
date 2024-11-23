@@ -21,7 +21,7 @@
                             "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.icicle.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]"
                         ],
                         "minecraft:custom_data": "{NoDrop:1b,Icicle:1b}",
-                        "max_damage": 6,
+                        "max_damage": 3,
                         "!equippable": {},
                         "!rarity": {},
                         "can_break": {
