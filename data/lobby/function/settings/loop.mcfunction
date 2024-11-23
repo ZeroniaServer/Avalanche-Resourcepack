@@ -7,13 +7,15 @@ execute as @a[tag=ModiOwner,predicate=lobby:modification_room,scores={modify=814
 execute as @a[tag=ModiOwner,predicate=lobby:modification_room,scores={modify=32466}] run function lobby:settings/barricades
 execute as @a[tag=ModiOwner,predicate=lobby:modification_room,scores={modify=298375}] run function lobby:settings/defaults
 execute as @a[tag=ModiOwner,predicate=lobby:modification_room,scores={modify=23401}] run function lobby:settings/confirm
+execute as @a[tag=ModiOwner,predicate=!lobby:modification_room] run trigger modify set -1
 scoreboard players reset @a[predicate=!lobby:modification_room] modify
 tag @a[predicate=!lobby:modification_room,tag=ModiOwner] remove ModiOwner
 effect clear @a[predicate=!lobby:modification_room,tag=ModiOwner] glowing
 execute as @a[predicate=lobby:modification_room] unless score @s modify matches 0 run scoreboard players reset @s modify
 
 scoreboard players add @a[tag=ModiOwner] modiowner 1
-scoreboard players reset @a[tag=ModiOwner,scores={modiowner=400..}] modify
+execute as @a[tag=ModiOwner,scores={modiowner=400..}] run trigger modify set -1
+execute as @a[tag=ModiOwner,scores={modiowner=400..}] run scoreboard players reset @s modify
 effect clear @a[tag=ModiOwner,scores={modiowner=400..}] glowing
 tag @a[tag=ModiOwner,scores={modiowner=400..}] remove ModiOwner
 scoreboard players reset @a[tag=!ModiOwner] modiowner
