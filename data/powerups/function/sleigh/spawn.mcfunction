@@ -16,5 +16,6 @@ execute as @e[type=interaction,tag=init,limit=3] run ride @s mount @e[type=turtl
 ride @e[type=oak_boat,tag=init,limit=1] mount @e[type=interaction,tag=boatanchor,tag=init,limit=1]
 execute as @e[type=oak_boat,tag=init,limit=1] run function entityid:assign_tag
 execute as @e[type=oak_boat,tag=init,limit=1] run team join noCol
+scoreboard players operation @e[type=turtle,tag=init,limit=1] sleighDamage = $dura sleighDamage
 
 tag @e[type=#powerups:sleigh,tag=init] remove init

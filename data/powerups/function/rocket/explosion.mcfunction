@@ -60,6 +60,7 @@ scoreboard players reset $DamageCalcR CmdData
 scoreboard players set @e[type=item_display,tag=Snowman,distance=..4] playerHP 0
 
 #> Destroy nearby Sleighs
+execute as @e[type=turtle,distance=..4] at @s run scoreboard players add @s sleighDamage 1
 execute as @e[type=turtle,distance=..4] at @s run function powerups:sleigh/break
 
 #> Destroy nearby Snow Barricades
