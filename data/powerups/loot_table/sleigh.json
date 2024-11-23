@@ -13,7 +13,8 @@
                                 "minecraft:entity_data": {
                                     "id": "minecraft:marker",
                                     "Tags": [
-                                        "SpawnSleigh"
+                                        "SpawnSleigh",
+                                        "dura0"
                                     ]
                                 }
                             }
@@ -55,7 +56,9 @@
                         }
                     ],
                     "show_in_tooltip": false
-                }
+                },
+                "minecraft:max_damage": 4,
+                "!minecraft:max_stack_size": {}
             }
         }
     ]

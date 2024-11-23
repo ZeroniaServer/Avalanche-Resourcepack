@@ -35,6 +35,9 @@ tag @s[tag=!SleighOffGround,scores={vehicle.off_ground=..6,vehicle.since_jump=1.
 
 execute at @s[tag=SleighJumpBig] run function powerups:sleigh/jumpbig
 
-# expire if unoccupied -- TODO remove?
+# expire over time if unoccupied
+scoreboard players reset @s[tag=Occupied] CmdData
 scoreboard players add @s[tag=!Occupied] CmdData 1
-execute at @s[scores={CmdData=950..}] run function powerups:sleigh/break
+scoreboard players add @s[scores={CmdData=250..}] sleighDamage 1
+execute at @s[scores={CmdData=250..,sleighDamage=4}] run function powerups:sleigh/break
+scoreboard players set @s[scores={CmdData=250..}] CmdData 0
