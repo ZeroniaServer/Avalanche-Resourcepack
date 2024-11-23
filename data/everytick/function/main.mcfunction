@@ -13,7 +13,7 @@ effect give @a instant_health infinite 100 true
 effect give @a fire_resistance infinite 100 true
 
 #> No Drop
-execute as @e[type=item,tag=!SleighItem] at @s if items entity @s contents *[custom_data~{NoDrop:1b}] run function everytick:nodrop
+execute as @e[type=item,tag=!SleighItem,tag=!mineBarricade] at @s if items entity @s contents *[custom_data~{NoDrop:1b}] run function everytick:nodrop
 
 #> Leave game
 execute as @a[scores={leftgame=1..}] run function player:leave

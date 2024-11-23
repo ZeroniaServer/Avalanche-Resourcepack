@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "powerups:barricade",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "items": "minecraft:stone_shovel"
+                            }
+                        }
+                    ],
+                    "functions": [
+                        {
+                            "function": "set_custom_data",
+                            "tag": "{MineBarricade:1b}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
