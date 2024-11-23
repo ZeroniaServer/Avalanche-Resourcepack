@@ -318,5 +318,17 @@
             "step/snow4"
         ],
         "subtitle": "subtitles.block.generic.footsteps"
+    },
+    "coalstockhit": {
+        "sounds": [
+            "weapon/coalstock/impact"
+        ],
+        "subtitle": "subtitles.coalstock.impact"
+    },
+    "coalstockblind": {
+        "sounds": [
+            "weapon/coalstock/blind"
+        ],
+        "subtitle": "subtitles.coalstock.blind"
     }
 }
