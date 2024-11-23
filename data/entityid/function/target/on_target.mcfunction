@@ -9,6 +9,7 @@ execute unless score @s throwsb matches 2.. if entity @e[type=item_display,tag=d
 #> Find new block player hit this tick
 data modify storage entityid:target Motion set from entity @s Motion
 
+scoreboard players operation $tempuuid UUIDscore = @s entityid
 execute if entity @s[tag=Iceball] summon marker run function entityid:target/find_block {limit:2}
 execute if entity @s[tag=Snowball] summon marker run function entityid:target/find_block {limit:1}
 
