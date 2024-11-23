@@ -14,6 +14,4 @@ execute as @a at @s run playsound block.note_block.chime master @s ~ ~ ~ 1 1.9
 
 function bossbars:get_points
 
-scoreboard objectives setdisplay below_name fireworkCount
-
 function game:start_prep
