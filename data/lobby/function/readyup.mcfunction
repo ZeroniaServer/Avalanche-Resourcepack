@@ -1,6 +1,9 @@
 #> Enable readyup triggers
-execute if score $gamestate CmdData matches 0 run scoreboard players enable @a[team=Green] readyup
-execute if score $gamestate CmdData matches 0 run scoreboard players enable @a[team=Red] readyup
+execute if score $gamestate CmdData matches 0 unless score $Countdown CmdData matches 0.. run scoreboard players enable @a[team=Green] readyup
+execute if score $gamestate CmdData matches 0 unless score $Countdown CmdData matches 0.. run scoreboard players enable @a[team=Red] readyup
+execute if score $gamestate CmdData matches 0 if score $Countdown CmdData matches 0.. as @a[team=Green] run trigger readyup set 0
+execute if score $gamestate CmdData matches 0 if score $Countdown CmdData matches 0.. as @a[team=Red] run trigger readyup set 0
+execute if score $gamestate CmdData matches 0 as @a[team=!Green,team=!Red] run trigger readyup set 0
 
 #> Ready
 execute if score $GreenReady CmdData matches 0 if score $gamestate CmdData matches 0 as @a[team=Green,limit=1,sort=random,scores={readyup=903281}] run tag @a[team=Green] remove Ready

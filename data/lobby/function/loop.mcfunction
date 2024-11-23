@@ -9,6 +9,7 @@ function lobby:joinpads
 
 #> Readyup
 execute if score $gamestate CmdData matches 0 run function lobby:readyup
+execute unless score $gamestate CmdData matches 0 as @a run trigger readyup set 0
 
 #> Modification room
 function lobby:settings/loop
