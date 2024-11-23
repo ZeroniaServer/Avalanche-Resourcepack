@@ -26,49 +26,49 @@
         "sounds": [
             "weapon/snowglobe/impact"
         ],
-        "subtitle": "subtitles.blizzard.impact"
+        "subtitle": "subtitles.snowglobe.impact"
     },
 	"snowglobeburst": {
         "sounds": [
             "weapon/snowglobe/burst"
         ],
-        "subtitle": "subtitles.blizzard.impact"
+        "subtitle": "subtitles.snowglobe.impact"
     },
 	"snowglobe_blizzard_1": {
         "sounds": [
             "weapon/snowglobe/wind/blizz1"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_2": {
         "sounds": [
             "weapon/snowglobe/wind/blizz2"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_3": {
         "sounds": [
             "weapon/snowglobe/wind/blizz3"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_4": {
         "sounds": [
             "weapon/snowglobe/wind/blizz4"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_5": {
         "sounds": [
             "weapon/snowglobe/wind/blizz5"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_6": {
         "sounds": [
             "weapon/snowglobe/wind/blizz6"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_7": {
         "sounds": [
@@ -79,49 +79,49 @@
         "sounds": [
             "weapon/snowglobe/wind/blizz8"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_9": {
         "sounds": [
             "weapon/snowglobe/wind/blizz9"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_10": {
         "sounds": [
             "weapon/snowglobe/wind/blizz10"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_11": {
         "sounds": [
             "weapon/snowglobe/wind/blizz11"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_12": {
         "sounds": [
             "weapon/snowglobe/wind/blizz12"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_13": {
         "sounds": [
             "weapon/snowglobe/wind/blizz13"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_14": {
         "sounds": [
             "weapon/snowglobe/wind/blizz14"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
 	"snowglobe_blizzard_15": {
         "sounds": [
             "weapon/snowglobe/wind/blizz15"
         ],
-        "subtitle": "subtitles.blizzard.wind"
+        "subtitle": "subtitles.snowglobe.wind"
     },
     "item.armor.equip_generic": {
         "replace": true,
@@ -325,10 +325,10 @@
         ],
         "subtitle": "subtitles.coalstock.impact"
     },
-    "coalstockblind": {
+    "coalstockrelease": {
         "sounds": [
             "weapon/coalstock/blind"
         ],
-        "subtitle": "subtitles.coalstock.blind"
+        "subtitle": "subtitles.coalstock.release"
     }
 }
