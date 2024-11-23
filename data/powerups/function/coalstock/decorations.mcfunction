@@ -1,0 +1,1 @@
+$data merge entity @s {start_interpolation:0,interpolation_duration:3,transformation:{scale:[0.6f,0.6f,0.6f],translation:[$(x)f,$(y)f,$(z)f],left_rotation:[$(l_rotation)f,0.0f,$(l_rotation).0f,1.0f],right_rotation:[$(r_rotation)f,0.0f,$(r_rotation).0f,1.0f]}}

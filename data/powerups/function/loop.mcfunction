@@ -37,3 +37,6 @@ function powerups:barricade/main
 
 #> Giftbox spawning
 function powerups:giftbox/animation
+
+#> Coal Stocking
+function powerups:coalstock/main

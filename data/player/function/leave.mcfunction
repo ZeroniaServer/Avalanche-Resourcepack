@@ -7,6 +7,7 @@ scoreboard players reset @s gameID
 tag @s remove Blasted
 tag @s remove SnowMark
 tag @s remove Knockout
+tag @s remove CoalBlind
 team leave @s
 clear @s
 scoreboard players reset @s leftgame
