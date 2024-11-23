@@ -61,3 +61,8 @@ execute as @a[team=!Lobby,team=!Spectator,tag=!snowmanMainhand] if items entity 
 execute as @a[team=!Lobby,team=!Spectator,tag=snowmanMainhand] unless items entity @s weapon.mainhand ghast_spawn_egg[custom_data~{Snowman:1b}] run tag @s remove snowmanMainhand
 execute as @a[team=!Lobby,team=!Spectator,tag=!snowmanOffhand] if items entity @s weapon.offhand ghast_spawn_egg[custom_data~{Snowman:1b}] run tag @s add snowmanOffhand
 execute as @a[team=!Lobby,team=!Spectator,tag=snowmanOffhand] unless items entity @s weapon.offhand ghast_spawn_egg[custom_data~{Snowman:1b}] run tag @s remove snowmanOffhand
+
+execute as @a[team=!Lobby,team=!Spectator,tag=!sleighMainhand] if items entity @s weapon.mainhand ghast_spawn_egg[custom_data~{Sleigh:1b}] run tag @s add sleighMainhand
+execute as @a[team=!Lobby,team=!Spectator,tag=sleighMainhand] unless items entity @s weapon.mainhand ghast_spawn_egg[custom_data~{Sleigh:1b}] run tag @s remove sleighMainhand
+execute as @a[team=!Lobby,team=!Spectator,tag=!sleighOffhand] if items entity @s weapon.offhand ghast_spawn_egg[custom_data~{Sleigh:1b}] run tag @s add sleighOffhand
+execute as @a[team=!Lobby,team=!Spectator,tag=sleighOffhand] unless items entity @s weapon.offhand ghast_spawn_egg[custom_data~{Sleigh:1b}] run tag @s remove sleighOffhand
