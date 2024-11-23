@@ -40,6 +40,7 @@ scoreboard objectives add hasSleighs dummy
 scoreboard objectives add respawn dummy
 scoreboard objectives add coalblind dummy
 scoreboard objectives add sleighDamage dummy
+scoreboard objectives add surfTimer dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100

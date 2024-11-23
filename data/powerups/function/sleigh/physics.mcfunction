@@ -23,6 +23,9 @@ execute unless score v vehicle.dz matches 0 run scoreboard players add #bool mat
 execute if score #bool math matches 1.. on passengers at @s[type=minecart] run function powerups:sleigh/rotate
 execute if score #bool math matches 1.. at @s[predicate=!game:in_air] run function powerups:sleigh/effects
 
+scoreboard players add @s[tag=Surf] surfTimer 1
+tag @s[scores={surfTimer=30..}] remove Surf
+scoreboard players reset @s[scores={surfTimer=30..}] surfTimer
 data merge entity @s[tag=!Surf] {NoAI:1b}
 execute if score #input math matches 1 run data merge entity @s {NoAI:0b}
 execute unless score #bool math matches 0 run data merge entity @s {NoAI:0b}
