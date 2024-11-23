@@ -9,3 +9,6 @@ tag @s remove SleighOffGround
 tag @s remove SleighJumpBig
 tag @s remove firstTick
 tag @s remove secondTick
+
+playsound entity.item.break master @a ~ ~ ~ 0.6 1
+particle item{item:{id:"minecraft:ghast_spawn_egg",components:{custom_model_data:1}}} ~ ~0.3 ~ 0.3 0.2 0.3 0.1 20
