@@ -8,7 +8,7 @@ particle block_crumble{block_state:"minecraft:coal_block"} ~ ~1 ~ 0.4 0.2 0.4 0.
 
 effect give @a[gamemode=!spectator,distance=..5] blindness 4 100 true
 effect give @a[gamemode=!spectator,distance=..5] darkness 4 100 true
-execute as @a[gamemode=!spectator,distance=..5] at @s run playsound coalstockblind master @s ~ ~ ~ 1 1
+execute as @a[gamemode=!spectator,distance=..5] at @s run playsound coalstockrelease master @s ~ ~ ~ 1 1
 tag @a[gamemode=!spectator,distance=..5] add CoalBlind
 tag @e[type=item_display,tag=Snowman,distance=..5] add CoalBlind
 
