@@ -181,5 +181,6 @@
   "game.end.win.red": "Red Team Won!",
   "game.end.tie": "It's a tie!",
   "game.end.betterluck": "Better luck next time...",
-  "game.end.wellplayed": "Well played!"
+  "game.end.wellplayed": "Well played!",
+  "game.no_players": "No players remaining. The previous match has been canceled."
 }
