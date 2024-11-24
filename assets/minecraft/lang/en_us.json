@@ -185,5 +185,10 @@
   "game.end.tie": "It’s a tie!",
   "game.end.betterluck": "Better luck next time...",
   "game.end.wellplayed": "Well played!",
-  "game.no_players": "No players remaining. The previous match has been canceled."
+  "game.no_players": "No players remaining. The previous match has been canceled.",
+  "error.cannot_join": "Unable to join team.",
+  "error.already_joined": "You already joined this team!",
+  "error.cannot_spectate": "Unable to spectate.",
+  "error.already_spectating": "You’re already spectating!",
+  "error.cannot_leave": "Unable to leave the game."
 }
