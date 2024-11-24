@@ -1,3 +1,8 @@
+bossbar set bar_lobby players @a[team=Lobby]
+bossbar set bar_lobby value 0
+bossbar set bar_lobby style notched_12
+bossbar set bar_lobby name {"translate":"lobby.in_progress","color":"green"}
+
 scoreboard players add $gametime CmdData 1
 
 # Game related loops
