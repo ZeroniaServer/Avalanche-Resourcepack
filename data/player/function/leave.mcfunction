@@ -9,6 +9,10 @@ tag @s remove SnowMark
 tag @s remove Knockout
 tag @s remove CoalBlind
 tag @s remove snowmanTarget
+tag @s[team=Red] add WasRed
+tag @s[team=!Red] remove WasRed
+tag @s[team=Green] add WasGreen
+tag @s[team=!Green] remove WasGreen
 team leave @s
 clear @s
 scoreboard players reset @s leftgame
