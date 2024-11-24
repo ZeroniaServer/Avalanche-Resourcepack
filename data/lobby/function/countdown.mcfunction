@@ -34,9 +34,9 @@ execute if score $CountSec CmdData matches 20 if score $Countdown CmdData matche
 execute if score $Countdown CmdData matches 2.. run bossbar set bar_lobby name {"translate":"lobby.countdown.seconds","color":"aqua","with":[{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"white"}]}
 execute if score $Countdown CmdData matches 1 run bossbar set bar_lobby name {"translate":"lobby.countdown.second","color":"aqua","with":[{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"white"}]}
 
-execute if score $CountSec CmdData matches 2 if score $Countdown CmdData matches 1 run function game:placewall
-execute if score $CountSec CmdData matches 20 if score $Countdown CmdData matches 1 run function game:forcestart
+execute if score $CountSec CmdData matches 5 if score $Countdown CmdData matches 1 run function game:forcestart
 execute if score $CountSec CmdData matches 20 if score $Countdown CmdData matches 1 run function lobby:unforcecountdown
+execute if score $CountSec CmdData matches 20 if score $Countdown CmdData matches 1 run function game:placewall
 execute if score $CountSec CmdData matches 20 run scoreboard players remove $Countdown CmdData 1
 execute if score $CountSec CmdData matches 20 store result bossbar bar_lobby value run scoreboard players get $Countdown CmdData
 execute if score $CountSec CmdData matches 20.. run scoreboard players reset $CountSec CmdData
