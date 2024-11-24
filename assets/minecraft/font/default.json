@@ -160,6 +160,42 @@
                 "\uE013"
             ]
         },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/green_firework_weakpoint.png",
+            "ascent": 7,
+            "height": 16,
+            "chars": [
+                "\uE014"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/green_firework_weakpoint_mirror.png",
+            "ascent": 0,
+            "height": 16,
+            "chars": [
+                "\uE015"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/red_firework_weakpoint.png",
+            "ascent": 0,
+            "height": 16,
+            "chars": [
+                "\uE016"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/red_firework_weakpoint_mirror.png",
+            "ascent": 0,
+            "height": 16,
+            "chars": [
+                "\uE017"
+            ]
+        },
 		{
             "type": "space",
             "advances": {
