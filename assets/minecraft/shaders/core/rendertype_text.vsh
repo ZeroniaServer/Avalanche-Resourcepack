@@ -152,4 +152,28 @@ void main() {
     else if (Color == vec4(42/255., 40/255., 5/255., Color.a)) {
         vertexColor = vec4(0); // remove text + shadow
     }
+
+    // mountain prep
+    else if (Color == vec4(168/255., 160/255., 24/255., Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y - 13.0, Position.z + 200.0);
+        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
+
+        // remove color from marker
+        vertexColor = texelFetch(Sampler2, UV2 / 16, 0); 
+    }
+    else if (Color == vec4(42/255., 40/255., 6/255., Color.a)) {
+        vertexColor = vec4(0); // remove shadow
+    }
+
+    // timer prep
+    else if (Color == vec4(168/255., 160/255., 28/255., Color.a)) {
+        vec3 newPos = vec3(Position.x, Position.y + 36.0, Position.z + 250.0);
+        gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
+
+        // remove color from marker
+        vertexColor = texelFetch(Sampler2, UV2 / 16, 0); 
+    }
+    else if (Color == vec4(42/255., 40/255., 7/255., Color.a)) {
+        vertexColor = vec4(0); // remove shadow
+    }
 }
