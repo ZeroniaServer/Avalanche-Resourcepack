@@ -5,7 +5,7 @@ execute as @a[team=!Lobby,team=!Spectator] unless score @s gameID = $current gam
 execute unless score $current gameID matches 0..2147483646 run function lobby:settings/gameidcycle
 
 #> Joinpads
-function lobby:joinpads
+execute if score $gamestate CmdData matches 0..3 run function lobby:joinpads
 
 #> Teleporters
 function lobby:poles/main
