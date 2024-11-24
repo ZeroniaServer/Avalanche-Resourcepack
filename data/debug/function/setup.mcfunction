@@ -101,9 +101,11 @@ team add Green
 team add Red
 team add noCol
 team add Collide
+team add Developer
 
 team modify Lobby color blue
 team modify Spectator color dark_blue
+team modify Developer color dark_green
 
 team modify Green color green
 team modify Red color red

@@ -19,6 +19,8 @@ execute as @e[type=item,tag=!SleighItem,tag=!mineBarricade] at @s if items entit
 execute as @a[scores={leftgame=1..}] run function player:leave
 
 #> Gamestate specific loops
+execute if score $gamestate CmdData matches 0..1 if score $GreenReady CmdData matches 1 unless entity @a[team=Green] run function lobby:readyteams/unreadyemptygreen
+execute if score $gamestate CmdData matches 0..1 if score $RedReady CmdData matches 1 unless entity @a[team=Red] run function lobby:readyteams/unreadyemptyred
 execute if score $gamestate CmdData matches 1 run function lobby:countdown
 execute if score $gamestate CmdData matches 2..3 run function game:ingame
 execute if score $gamestate CmdData matches 4 run function game:end
