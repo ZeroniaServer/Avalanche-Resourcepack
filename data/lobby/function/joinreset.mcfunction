@@ -1,3 +1,7 @@
+tag @s add self
+execute if score $gamestate CmdData matches 0 run bossbar set bar_ready_r players @a[tag=!self]
+execute if score $gamestate CmdData matches 0 run bossbar set bar_ready_g players @a[tag=!self]
+tag @s remove self
 team join Lobby @s
 gamemode adventure @s
 clear @s
