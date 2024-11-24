@@ -7,6 +7,9 @@ execute unless score $current gameID matches 0..2147483646 run function lobby:se
 #> Joinpads
 function lobby:joinpads
 
+#> Teleporters
+function lobby:poles/main
+
 #> Readyup
 execute if score $gamestate CmdData matches 0 run function lobby:readyup
 execute unless score $gamestate CmdData matches 0 as @a run trigger readyup set 0

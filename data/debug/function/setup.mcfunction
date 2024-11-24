@@ -175,3 +175,42 @@ setblock -13 47 -229 spruce_fence
 
 #> Bossbars
 function bossbars:create
+
+#> Teleport poles
+
+#Lobby -> teams
+setblock -64 47 -128 minecraft:spruce_planks
+fill -62 47 -128 -61 47 -128 minecraft:spruce_planks
+kill @e[type=item_display,tag=TeleportPole]
+kill @e[type=interaction,tag=LobbyTPInteraction]
+
+
+summon minecraft:item_display -63 48 -127 {item:{id:"diamond_hoe",components:{custom_model_data:26}},item_display:"head",Tags:["TeleportPole","SpectatePole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon interaction -63 48 -127 {width:0.6,height:3.25,Tags:["LobbyTPInteraction","WarpSpectate"],response:1b}
+fill -63 48 -127 -63 50 -127 cobblestone_wall
+
+summon minecraft:item_display -65 48 -128 {item:{id:"diamond_hoe",components:{custom_model_data:27}},item_display:"head",Tags:["TeleportPole","GreenPole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon interaction -65 48 -128 {width:0.6,height:3.25,Tags:["LobbyTPInteraction","WarpGreen"],response:1b}
+fill -65 48 -128 -65 50 -128 cobblestone_wall
+
+summon minecraft:item_display -61 48 -128 {item:{id:"diamond_hoe",components:{custom_model_data:28}},item_display:"head",Tags:["TeleportPole","RedPole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon interaction -61 48 -128 {width:0.6,height:3.25,Tags:["LobbyTPInteraction","WarpRed"],response:1b}
+fill -61 48 -128 -61 50 -128 cobblestone_wall
+
+#Teams -> Lobby
+summon minecraft:item_display -80 52 -148 {item:{id:"diamond_hoe",components:{custom_model_data:27}},item_display:"head",Tags:["TeleportPole","GreenLobbyPole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon interaction -80 52 -148 {width:0.6,height:3.25,Tags:["LobbyTPInteraction","WarpLobby"],response:1b}
+fill -80 52 -148 -80 54 -148 cobblestone_wall
+
+summon minecraft:item_display -42 48 -148 {item:{id:"diamond_hoe",components:{custom_model_data:28}},item_display:"head",Tags:["TeleportPole","RedLobbyPole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon interaction -42 48 -148 {width:0.6,height:3.25,Tags:["LobbyTPInteraction","WarpLobby"],response:1b}
+fill -42 48 -148 -42 50 -148 cobblestone_wall
+
+#Teams -> Teams
+summon minecraft:item_display -80 52 -152 {item:{id:"diamond_hoe",components:{custom_model_data:28}},item_display:"head",Tags:["TeleportPole","GreenRedPole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon interaction -80 52 -152 {width:0.6,height:3.25,Tags:["LobbyTPInteraction","WarpRed"],response:1b}
+fill -80 52 -152 -80 54 -152 cobblestone_wall
+
+summon minecraft:item_display -42 48 -152 {item:{id:"diamond_hoe",components:{custom_model_data:27}},item_display:"head",Tags:["TeleportPole","RedGreenPole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon interaction -42 48 -152 {width:0.6,height:3.25,Tags:["LobbyTPInteraction","WarpGreen"],response:1b}
+fill -42 50 -152 -42 50 -152 cobblestone_wall
