@@ -87,6 +87,7 @@
   "lobby.joined.green": "Green",
   "lobby.joined.red": "Red",
   "lobby.left_team": "%s left their team!",
+  "lobby.joined_spectator": "%s is now spectating the game.",
   "lobby.left_spectator": "%s is no longer spectating the game.",
   "lobby.try_join.imbalanced": "Team Imbalanced!",
   "lobby.try_join": "Join %s Team instead.",
@@ -196,5 +197,6 @@
   "error.cannot_leave": "Unable to leave the game.",
   "lobby.spectate": "Spectate",
   "lobby.join.red": "Join Red Team",
-  "lobby.join.green": "Join Green Team"
+  "lobby.join.green": "Join Green Team",
+  "lobby.leave_spectator": "Fly into the Blue particle cluster to quit spectating."
 }
