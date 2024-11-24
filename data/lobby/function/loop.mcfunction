@@ -18,6 +18,7 @@ function lobby:settings/loop
 function bossbars:loop
 
 #> Hide bars if games are inactive
+execute unless score $gamestate CmdData matches 2.. run bossbar set bar_prep players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_main players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_green players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_g_red players

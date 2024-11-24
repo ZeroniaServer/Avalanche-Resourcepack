@@ -7,7 +7,6 @@ scoreboard players operation $prepticks CmdData = $PrepSeconds CmdData
 scoreboard players operation $prepticks CmdData *= $20 CmdData
 # scoreboard players add $prepticks CmdData 
 function game:timer_prep
-function bossbars:get_points
 
 function game:placewall
 
