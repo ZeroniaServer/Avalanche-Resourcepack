@@ -30,16 +30,18 @@ execute if entity @s[tag=RocketRed] if predicate game:green_mountain run scorebo
 execute if entity @s[tag=RocketGreen] if predicate game:red_mountain run scoreboard players add $DamageCalcR CmdData 2
 
 #> Weakpoint hits
-execute if entity @s[tag=RocketGreen] if predicate game:red_mountain if score $RedWeakpoint CmdData matches 0 positioned -5 66 -226 if entity @s[distance=..3] run scoreboard players add $DamageCalcR CmdData 1
-execute if entity @s[tag=RocketGreen] if predicate game:red_mountain if score $RedWeakpoint CmdData matches 1 positioned -16 55 -217 if entity @s[distance=..3] run scoreboard players add $DamageCalcR CmdData 1
-execute if entity @s[tag=RocketGreen] if predicate game:red_mountain if score $RedWeakpoint CmdData matches 2 positioned -10 69 -206 if entity @s[distance=..3] run scoreboard players add $DamageCalcR CmdData 1
+execute if entity @s[tag=RocketGreen] if predicate game:red_mountain if score $RedWeakpoint CmdData matches 0 positioned -5 66 -226 if entity @s[distance=..3] run scoreboard players set $weakpointgreen CmdData 1
+execute if entity @s[tag=RocketGreen] if predicate game:red_mountain if score $RedWeakpoint CmdData matches 1 positioned -16 55 -217 if entity @s[distance=..3] run scoreboard players set $weakpointgreen CmdData 1
+execute if entity @s[tag=RocketGreen] if predicate game:red_mountain if score $RedWeakpoint CmdData matches 2 positioned -10 69 -206 if entity @s[distance=..3] run scoreboard players set $weakpointgreen CmdData 1
+execute if entity @s[tag=RocketGreen] if score $weakpointgreen CmdData matches 1 run scoreboard players add $DamageCalcR CmdData 1
 execute if entity @s[tag=RocketGreen] if predicate game:red_mountain if score $RedWeakpoint CmdData matches 0 positioned -5 66 -226 if entity @s[distance=..3] run function game:weakpoint/pick_red
 execute if entity @s[tag=RocketGreen] if predicate game:red_mountain if score $RedWeakpoint CmdData matches 1 positioned -16 55 -217 if entity @s[distance=..3] run function game:weakpoint/pick_red
 execute if entity @s[tag=RocketGreen] if predicate game:red_mountain if score $RedWeakpoint CmdData matches 2 positioned -10 69 -206 if entity @s[distance=..3] run function game:weakpoint/pick_red
 
-execute if entity @s[tag=RocketRed] if predicate game:green_mountain if score $GreenWeakpoint CmdData matches 0 positioned -121 66 -216 if entity @s[distance=..3] run scoreboard players add $DamageCalcG CmdData 1
-execute if entity @s[tag=RocketRed] if predicate game:green_mountain if score $GreenWeakpoint CmdData matches 1 positioned -110 55 -225 if entity @s[distance=..3] run scoreboard players add $DamageCalcG CmdData 1
-execute if entity @s[tag=RocketRed] if predicate game:green_mountain if score $GreenWeakpoint CmdData matches 2 positioned -116 69 -236 if entity @s[distance=..3] run scoreboard players add $DamageCalcG CmdData 1
+execute if entity @s[tag=RocketRed] if predicate game:green_mountain if score $GreenWeakpoint CmdData matches 0 positioned -121 66 -216 if entity @s[distance=..3] run scoreboard players set $weakpointred CmdData 1
+execute if entity @s[tag=RocketRed] if predicate game:green_mountain if score $GreenWeakpoint CmdData matches 1 positioned -110 55 -225 if entity @s[distance=..3] run scoreboard players add $weakpointred CmdData 1
+execute if entity @s[tag=RocketRed] if predicate game:green_mountain if score $GreenWeakpoint CmdData matches 2 positioned -116 69 -236 if entity @s[distance=..3] run scoreboard players add $weakpointred CmdData 1
+execute if entity @s[tag=RocketRed] if score $weakpointred CmdData matches 1 run scoreboard players add $DamageCalcG CmdData 1
 execute if entity @s[tag=RocketRed] if predicate game:green_mountain if score $GreenWeakpoint CmdData matches 0 positioned -121 66 -216 if entity @s[distance=..3] run function game:weakpoint/pick_green
 execute if entity @s[tag=RocketRed] if predicate game:green_mountain if score $GreenWeakpoint CmdData matches 1 positioned -110 55 -225 if entity @s[distance=..3] run function game:weakpoint/pick_green
 execute if entity @s[tag=RocketRed] if predicate game:green_mountain if score $GreenWeakpoint CmdData matches 2 positioned -116 69 -236 if entity @s[distance=..3] run function game:weakpoint/pick_green
