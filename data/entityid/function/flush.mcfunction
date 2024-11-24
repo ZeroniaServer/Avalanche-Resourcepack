@@ -34,3 +34,4 @@ scoreboard players reset * entityid.30
 scoreboard players reset * entityid.31
 scoreboard players reset * entityidset
 scoreboard players set #loaded entityid 1
+execute as @e[tag=entityid_assigned] run function entityid:tag_flush
