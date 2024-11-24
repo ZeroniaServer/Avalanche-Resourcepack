@@ -26,4 +26,7 @@ execute store result score $ticks CmdData run scoreboard players operation $tick
 execute store result score $prepticks CmdData run scoreboard players get $PrepSeconds CmdData
 scoreboard players operation $prepticks CmdData *= $20 CmdData
 
+execute store result bossbar bar_prep value run scoreboard players get $prepticks CmdData
+execute store result bossbar bar_prep max run scoreboard players get $prepticks CmdData
+
 function lobby:settings/refreshsigns with storage lobby:customizer

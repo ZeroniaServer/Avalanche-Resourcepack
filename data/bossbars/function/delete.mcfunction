@@ -1,3 +1,6 @@
+bossbar remove bar_prep
+bossbar remove bar_prep_timer
+
 bossbar remove bar_g_green
 bossbar remove bar_g_red
 bossbar remove bar_g_main
