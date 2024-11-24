@@ -40,6 +40,7 @@ scoreboard players set $RedReady CmdData 0
 scoreboard players set $GreenReady CmdData 0
 scoreboard players set $RedReadyFirst CmdData 0
 scoreboard players set $GreenReadyFirst CmdData 0
+function lobby:readyteams/refreshsigns
 bossbar set bar_ready_g value 0
 bossbar set bar_ready_r value 0
 bossbar set bar_lobby style notched_6

@@ -96,7 +96,6 @@ tag @a[tag=LeaveTeam] remove WasRed
 tag @a[tag=LeaveTeam] remove WasGreen
 execute as @a[tag=LeaveTeam] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.exit master @a ~ ~ ~ 1 1
 execute as @a[tag=LeaveTeam] run team join Lobby @s
-
 tag @a[tag=LeaveTeam] remove LeaveTeam
 
 #> Servermode trigger commands

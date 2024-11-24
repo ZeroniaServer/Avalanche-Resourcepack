@@ -1,6 +1,10 @@
-tellraw @a {"translate":"lobby.countdown.canceled","color":"red"}
+execute if score $RedReady CmdData matches 0 unless entity @a[team=Red] run tellraw @a {"translate":"lobby.countdown.canceled_empty","color":"red"}
+execute if score $RedReady CmdData matches 0 if entity @a[team=Red] run tellraw @a {"translate":"lobby.countdown.canceled","color":"red"}
+execute if score $GreenReady CmdData matches 0 unless entity @a[team=Green] run tellraw @a {"translate":"lobby.countdown.canceled_empty","color":"red"}
+execute if score $GreenReady CmdData matches 0 if entity @a[team=Green] run tellraw @a {"translate":"lobby.countdown.canceled","color":"red"}
 scoreboard players reset $Countdown CmdData
 scoreboard players reset $CountSec CmdData
 scoreboard players reset $precountdown CmdData
 scoreboard players set $gamestate CmdData 0
 bossbar set bar_lobby style progress
+function lobby:readyteams/refreshsigns

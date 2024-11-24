@@ -16,7 +16,8 @@ function lobby:poles/main
 
 #> Readyup
 execute if score $gamestate CmdData matches 0 run function lobby:readyup
-execute unless score $gamestate CmdData matches 0 as @a run trigger readyup set 0
+execute if score $gamestate CmdData matches 1 if score $precountdown CmdData matches ..19 run function lobby:readyup
+execute if score $gamestate CmdData matches 1 unless score $precountdown CmdData matches ..19 as @a run trigger readyup set 0
 execute unless score $gamestate CmdData matches 0..1 run bossbar set bar_ready_r players
 execute unless score $gamestate CmdData matches 0..1 run bossbar set bar_ready_g players
 
