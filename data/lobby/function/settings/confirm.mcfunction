@@ -10,7 +10,7 @@ scoreboard players set $GreenReady CmdData 0
 scoreboard players set $GreenPoints CmdData 0
 scoreboard players set $RedPoints CmdData 0
 
-say TODO: Settings confirmed, game is ready to play.
+function lobby:settings/announce with storage lobby:customizer
 
 fill -62 53 -93 -64 53 -93 air
 
