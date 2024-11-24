@@ -214,3 +214,5 @@ fill -80 52 -152 -80 54 -152 cobblestone_wall
 summon minecraft:item_display -42 48 -152 {item:{id:"diamond_hoe",components:{custom_model_data:27}},item_display:"head",Tags:["TeleportPole","RedGreenPole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
 summon interaction -42 48 -152 {width:0.6,height:3.25,Tags:["LobbyTPInteraction","WarpGreen"],response:1b}
 fill -42 50 -152 -42 50 -152 cobblestone_wall
+
+execute as @e[tag=LobbyTPInteraction,tag=!entityid_assigned] run function entityid:assign_tag
