@@ -29,4 +29,6 @@ scoreboard players operation $prepticks CmdData *= $20 CmdData
 execute store result bossbar bar_prep value run scoreboard players get $prepticks CmdData
 execute store result bossbar bar_prep max run scoreboard players get $prepticks CmdData
 
+bossbar set bar_lobby style progress
+
 function lobby:settings/refreshsigns with storage lobby:customizer
