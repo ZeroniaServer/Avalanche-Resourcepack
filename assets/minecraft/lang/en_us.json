@@ -198,5 +198,6 @@
   "lobby.spectate": "Spectate",
   "lobby.join.red": "Join Red Team",
   "lobby.join.green": "Join Green Team",
+  "lobby.leave_game": "Leave Game",
   "lobby.leave_spectator": "Fly into the Blue particle cluster to quit spectating."
 }
