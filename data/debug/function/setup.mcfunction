@@ -41,6 +41,8 @@ scoreboard objectives add respawn dummy
 scoreboard objectives add coalblind dummy
 scoreboard objectives add sleighDamage dummy
 scoreboard objectives add surfTimer dummy
+scoreboard objectives add leavecheck dummy
+scoreboard players add $curr leavecheck 0
 
 #> Static scores
 scoreboard players set $100 CmdData 100
