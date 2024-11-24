@@ -183,6 +183,18 @@
         {
             "type": "single",
             "resource": "minecraft:custom/blockysleigh"
+        },
+        {
+            "type": "single",
+            "resource": "minecraft:custom/pole_blue"
+        },
+        {
+            "type": "single",
+            "resource": "minecraft:custom/pole_green"
+        },
+        {
+            "type": "single",
+            "resource": "minecraft:custom/pole_red"
         }
     ]
 }

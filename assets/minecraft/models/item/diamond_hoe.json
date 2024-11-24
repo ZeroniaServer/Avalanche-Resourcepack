@@ -23,6 +23,9 @@
 		{ "predicate": {"custom_model_data": 22}, "model": "weapons/campfire/green_unlit"},
 		{ "predicate": {"custom_model_data": 23}, "model": "weapons/campfire/red_unlit"},
 		{ "predicate": {"custom_model_data": 24}, "model": "weapons/blockysleigh"},
-		{ "predicate": {"custom_model_data": 25}, "model": "custom/giftbox"}
+		{ "predicate": {"custom_model_data": 25}, "model": "custom/giftbox"},
+		{ "predicate": {"custom_model_data": 26}, "model": "custom/pole_blue"},
+		{ "predicate": {"custom_model_data": 27}, "model": "custom/pole_green"},
+		{ "predicate": {"custom_model_data": 28}, "model": "custom/pole_red"}
 	]
 }
