@@ -32,4 +32,4 @@ tag @a[tag=WarpSpectate] remove WarpSpectate
 execute positioned -63 95 -221 run tag @a[team=Spectator,distance=..3] add LeaveTeam
 
 particle dust{color:[0.000,0.500,1.000],scale:2} -63 95 -221 1 1 1 0.1 10 force @a[team=Spectator]
-title @a[team=Spectator] actionbar {"translate":"lobby.leave_spectator","color":"dark_aqua"}
+title @a[team=Spectator] actionbar {"translate":"lobby.leave_spectator","color":"aqua"}
