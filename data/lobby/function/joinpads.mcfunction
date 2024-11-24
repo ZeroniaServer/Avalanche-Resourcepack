@@ -135,3 +135,14 @@ execute if score $gamestate CmdData matches 0..3 if score $InRed CmdData = $InGr
 execute as @a[team=Red,scores={joinred=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_joined","color":"red"}]
 
 scoreboard players reset @a[scores={joinred=1..}] joinred
+
+#Spectator
+execute if score $servermode CmdData matches 1 run scoreboard players enable @a spectate
+execute unless score $servermode CmdData matches 1 run trigger spectate set 0
+
+execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 4 run tag @a[team=!Spectator,scores={spectate=1..}] add WarpSpectate
+
+execute unless score $gamestate CmdData matches 0..3 as @a if score @s spectate matches 1.. run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_spectate","color":"red"}]
+execute as @a[team=Spectator,scores={spectate=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_spectating","color":"red"}]
+
+scoreboard players reset @a[scores={spectate=1..}] spectate
