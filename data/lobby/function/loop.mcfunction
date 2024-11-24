@@ -21,7 +21,7 @@ execute unless score $gamestate CmdData matches 0..1 run bossbar set bar_ready_r
 execute unless score $gamestate CmdData matches 0..1 run bossbar set bar_ready_g players
 
 #> Modification room
-function lobby:settings/loop
+execute if score $gamestate CmdData matches -1 run function lobby:settings/loop
 
 #> Bossbars
 function bossbars:loop
