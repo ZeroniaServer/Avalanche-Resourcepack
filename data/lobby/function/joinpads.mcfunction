@@ -20,8 +20,11 @@ particle trail{color:[1.000,0.000,0.000],target:[-35.0,50.5,-149.5]} -38 50 -150
 particle trail{color:[0.000,1.000,0.000],target:[-90.0,54.5,-148.5]} -87 54 -149 0.1 1 1 0 1 force
 
 #> Green
-execute as @a[team=Lobby,predicate=lobby:joinpad_green,limit=1,sort=random] run tag @s add JoinGreen
-execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 store result score @s gameID run scoreboard players get $current gameID
+execute as @a[team=Lobby,predicate=lobby:joinpad_green,limit=1,sort=random] unless score $InGreen CmdData > $InRed CmdData unless score $InGreen CmdData >= $MaxTeamSize CmdData unless function lobby:nomidgamejoin if score $gamestate CmdData matches 0..3 run tag @s add JoinGreen
+execute if score $InGreen CmdData >= $MaxTeamSize CmdData as @a[team=Lobby,predicate=lobby:joinpad_green,tag=!tryJoinGreen] run function lobby:portals/green/full
+execute unless score $InGreen CmdData >= $MaxTeamSize CmdData if score $NoMidgameJoins CmdData matches 1 if score $gamestate CmdData matches 2.. as @a[team=Lobby,predicate=lobby:joinpad_green,tag=!tryJoinGreen] run function lobby:portals/green/full
+execute unless function lobby:nomidgamejoin if score $InGreen CmdData > $InRed CmdData as @a[team=Lobby,predicate=lobby:joinpad_green,tag=!tryJoinGreen] run function lobby:portals/green/imbalanced
+execute as @a[tag=JoinGreen] store result score @s gameID run scoreboard players get $current gameID
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run tp @s @s
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tp @s -91 53 -149 90 0
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2..3 run tp @s -114 47 -210 -90 0
@@ -32,18 +35,22 @@ execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2 run loot give
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 3 run loot give @s loot powerups:snowball
 
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
-execute as @a[tag=JoinGreen] run team join Green
-execute as @a[tag=JoinGreen] run loot replace entity @s armor.chest loot game:chestplate
-execute as @a[tag=JoinGreen] run loot replace entity @s armor.legs loot game:leggings
-execute as @a[tag=JoinGreen] run loot replace entity @s armor.feet loot game:boots
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run team join Green
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.chest loot game:chestplate
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.legs loot game:leggings
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.feet loot game:boots
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tellraw @a {"translate":"lobby.joined","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"lobby.joined.green","color":"green"}]}
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2..3 run tellraw @a {"translate":"lobby.joined.late","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"lobby.joined.green","color":"green"}]}
 
 execute as @a[tag=JoinGreen] run scoreboard players set @s fireworkCount 0
 tag @a[tag=JoinGreen] remove JoinGreen
+tag @a[tag=tryJoinGreen,predicate=!lobby:joinpad_green] remove tryJoinGreen
 
 #> Red
-execute as @a[team=Lobby,predicate=lobby:joinpad_red,limit=1,sort=random] run tag @s add JoinRed
+execute as @a[team=Lobby,predicate=lobby:joinpad_red,limit=1,sort=random] unless score $InRed CmdData > $InGreen CmdData unless score $InRed CmdData >= $MaxTeamSize CmdData unless function lobby:nomidgamejoin if score $gamestate CmdData matches 0..3 run tag @s add JoinRed
+execute if score $InRed CmdData >= $MaxTeamSize CmdData as @a[team=Lobby,predicate=lobby:joinpad_red,tag=!tryJoinRed] run function lobby:portals/red/full
+execute unless score $InRed CmdData >= $MaxTeamSize CmdData if score $NoMidgameJoins CmdData matches 1 if score $gamestate CmdData matches 2.. as @a[team=Lobby,predicate=lobby:joinpad_red,tag=!tryJoinRed] run function lobby:portals/red/full
+execute unless function lobby:nomidgamejoin if score $InRed CmdData > $InGreen CmdData as @a[team=Lobby,predicate=lobby:joinpad_red,tag=!tryJoinRed] run function lobby:portals/red/imbalanced
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 store result score @s gameID run scoreboard players get $current gameID
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run tp @s @s
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tp @s -34 49 -150 -90 0
@@ -54,14 +61,15 @@ execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run scoreboard 
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run loot give @s loot powerups:barricade_prep
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 3 run loot give @s loot powerups:snowball
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
-execute as @a[tag=JoinRed] run team join Red
-execute as @a[tag=JoinRed] run loot replace entity @s armor.chest loot game:chestplate
-execute as @a[tag=JoinRed] run loot replace entity @s armor.legs loot game:leggings
-execute as @a[tag=JoinRed] run loot replace entity @s armor.feet loot game:boots
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run team join Red
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.chest loot game:chestplate
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.legs loot game:leggings
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.feet loot game:boots
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tellraw @a {"translate":"lobby.joined","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"lobby.joined.red","color":"red"}]}
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2..3 run tellraw @a {"translate":"lobby.joined.late","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"lobby.joined.red","color":"red"}]}
 execute as @a[tag=JoinRed] run scoreboard players set @s fireworkCount 0
 tag @a[tag=JoinRed] remove JoinRed
+tag @a[tag=tryJoinRed,predicate=!lobby:joinpad_red] remove tryJoinRed
 
 #> Leave
 scoreboard players enable @a[team=!Lobby] leavegame
