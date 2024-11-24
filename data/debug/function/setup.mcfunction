@@ -43,6 +43,10 @@ scoreboard objectives add sleighDamage dummy
 scoreboard objectives add surfTimer dummy
 scoreboard objectives add leavecheck dummy
 scoreboard players add $curr leavecheck 0
+scoreboard objectives add spectate trigger
+scoreboard objectives add joinred trigger
+scoreboard objectives add joingreen trigger
+execute unless score $MaxTeamSize CmdData matches 0.. run scoreboard players set $MaxTeamSize CmdData 5
 
 #> Static scores
 scoreboard players set $100 CmdData 100
