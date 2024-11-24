@@ -17,3 +17,9 @@ execute as @e[type=item,tag=RocketItemGreen,tag=!RocketItemRed] at @s run partic
 execute as @e[type=item,tag=RocketItemRed,tag=!RocketItemGreen] at @s run particle dust{color:[1.000,0.000,0.000],scale:1} ~ ~ ~ 0.1 0.2 0.1 0.1 2 force @a[team=!Green]
 
 execute as @e[type=item,tag=RocketItem,tag=!RocketItemGreen,tag=!RocketItemRed] at @s run particle dust_color_transition{from_color:[1.000,0.000,0.000],to_color:[0.000,1.000,0.000],scale:1} ~ ~0.5 ~ 0.1 0.2 0.1 0.1 1 force
+
+#> Weakpoint rocket font timers
+execute if score $weakpointgreen CmdData matches 1.. run scoreboard players add $weakpointgreen CmdData 1
+execute if score $weakpointgreen CmdData matches 15.. run scoreboard players reset $weakpointgreen CmdData
+execute if score $weakpointred CmdData matches 1.. run scoreboard players add $weakpointred CmdData 1
+execute if score $weakpointred CmdData matches 15.. run scoreboard players reset $weakpointred CmdData
