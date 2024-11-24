@@ -1,3 +1,6 @@
+fill -90 53 -148 -90 55 -150 minecraft:cyan_stained_glass
+fill -35 51 -149 -35 49 -151 pink_stained_glass
+
 fill -62 53 -93 -64 54 -93 air
 scoreboard players reset @a modify
 tag @a remove ModiOwner
@@ -32,3 +35,5 @@ execute store result bossbar bar_prep max run scoreboard players get $prepticks 
 bossbar set bar_lobby style progress
 
 function lobby:settings/refreshsigns with storage lobby:customizer
+
+tag @a remove RequestSettings

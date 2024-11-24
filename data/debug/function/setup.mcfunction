@@ -148,8 +148,6 @@ gamerule drowningDamage false
 gamerule doTileDrops true
 
 #> Join area modifications
-fill -90 53 -148 -90 55 -150 cyan_stained_glass
-fill -35 49 -151 -35 51 -149 pink_stained_glass
 fill -96 58 -145 -94 57 -145 air replace minecraft:barrier
 setblock -95 54 -147 air
 setblock -34 50 -148 air
