@@ -19,6 +19,12 @@ execute if score $gamestate CmdData matches 0..2 run particle dust{color:[0.000f
 particle trail{color:[1.000,0.000,0.000],target:[-35.0,50.5,-149.5]} -38 50 -150 0.1 1 1 0 1 force
 particle trail{color:[0.000,1.000,0.000],target:[-90.0,54.5,-148.5]} -87 54 -149 0.1 1 1 0 1 force
 
+#> Block off portals
+execute if score $InGreen CmdData > $InRed CmdData run fill -90 53 -148 -90 55 -150 minecraft:light_gray_stained_glass
+execute if score $InGreen CmdData <= $InRed CmdData run fill -90 53 -148 -90 55 -150 minecraft:cyan_stained_glass
+execute if score $InRed CmdData > $InGreen CmdData run fill -35 49 -151 -35 51 -149 minecraft:light_gray_stained_glass
+execute if score $InRed CmdData <= $InGreen CmdData run fill -35 49 -151 -35 51 -149 minecraft:pink_stained_glass
+
 #> Green
 execute as @a[team=Lobby,predicate=lobby:joinpad_green,limit=1,sort=random] unless score $InGreen CmdData > $InRed CmdData unless score $InGreen CmdData >= $MaxTeamSize CmdData unless function lobby:nomidgamejoin if score $gamestate CmdData matches 0..3 run tag @s add JoinGreen
 execute if score $InGreen CmdData >= $MaxTeamSize CmdData as @a[team=Lobby,predicate=lobby:joinpad_green,tag=!tryJoinGreen] run function lobby:portals/green/full
