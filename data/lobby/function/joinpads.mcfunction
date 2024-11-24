@@ -84,3 +84,40 @@ execute as @a[tag=LeaveTeam] if score $gamestate CmdData matches 0..3 at @s run 
 execute as @a[tag=LeaveTeam] run team join Lobby @s
 
 tag @a[tag=LeaveTeam] remove LeaveTeam
+
+#> Servermode trigger commands
+#Green
+execute if score $servermode CmdData matches 1 run scoreboard players enable @a joingreen
+execute unless score $servermode CmdData matches 1 run trigger joingreen set 0
+
+execute if score $gamestate CmdData matches 0..1 unless score $InGreen CmdData > $InRed CmdData unless score $InGreen CmdData >= $MaxTeamSize CmdData run tag @a[team=!Green,team=!Red,scores={joingreen=1..}] add JoinGreen
+execute if score $gamestate CmdData matches 2..3 unless score $NoMidgameJoins CmdData matches 1 unless score $InGreen CmdData > $InRed CmdData unless score $InGreen CmdData >= $MaxTeamSize CmdData run tag @a[team=!Green,team=!Red,scores={joingreen=1..}] add JoinGreen
+execute if score $gamestate CmdData matches 0..1 unless score $InGreen CmdData >= $InRed CmdData unless score $InGreen CmdData >= $MaxTeamSize CmdData run tag @a[team=Red,scores={joingreen=1..}] add JoinGreen
+execute if score $gamestate CmdData matches 2..3 unless score $NoMidgameJoins CmdData matches 1 unless score $InGreen CmdData >= $InRed CmdData unless score $InGreen CmdData >= $MaxTeamSize CmdData run tag @a[team=Red,scores={joingreen=1..}] add JoinGreen
+execute if score $gamestate CmdData matches 0..3 if score $InGreen CmdData >= $MaxTeamSize CmdData as @a[team=!Green,scores={joingreen=1..},tag=!tryJoinGreen] run function lobby:portals/green/full
+execute if score $NoMidgameJoins CmdData matches 1 if score $gamestate CmdData matches 2..3 as @a[team=!Green,scores={joingreen=1..},tag=!tryJoinGreen] run function lobby:portals/green/full
+execute if score $gamestate CmdData matches 0..3 if score $InGreen CmdData > $InRed CmdData as @a[team=!Green,scores={joingreen=1..},tag=!tryJoinGreen] run function lobby:portals/green/imbalanced
+
+execute unless score $gamestate CmdData matches 0..3 run tellraw @a[scores={joingreen=1..}] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
+execute if score $gamestate CmdData matches 0..3 if score $InGreen CmdData = $InRed CmdData run tellraw @a[team=Red,scores={joingreen=1..}] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
+execute as @a[team=Green,scores={joingreen=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_joined","color":"red"}]
+
+scoreboard players reset @a[scores={joingreen=1..}] joingreen
+
+#Red
+execute if score $servermode CmdData matches 1 run scoreboard players enable @a joinred
+execute unless score $servermode CmdData matches 1 run trigger joinred set 0
+
+execute if score $gamestate CmdData matches 0..1 unless score $InRed CmdData > $InGreen CmdData unless score $InRed CmdData >= $MaxTeamSize CmdData run tag @a[team=!Red,team=!Green,scores={joinred=1..}] add JoinRed
+execute if score $gamestate CmdData matches 2..3 unless score $NoMidgameJoins CmdData matches 1 unless score $InRed CmdData >= $InGreen CmdData unless score $InRed CmdData >= $MaxTeamSize CmdData run tag @a[team=!Red,team=!Green,scores={joinred=1..}] add JoinRed
+execute if score $gamestate CmdData matches 0..1 unless score $InRed CmdData > $InGreen CmdData unless score $InRed CmdData >= $MaxTeamSize CmdData run tag @a[team=Green,scores={joinred=1..}] add JoinRed
+execute if score $gamestate CmdData matches 2..3 unless score $NoMidgameJoins CmdData matches 1 unless score $InRed CmdData >= $InGreen CmdData unless score $InRed CmdData >= $MaxTeamSize CmdData run tag @a[team=Green,scores={joinred=1..}] add JoinRed
+execute if score $gamestate CmdData matches 0..3 if score $InRed CmdData >= $MaxTeamSize CmdData as @a[team=!Red,scores={joinred=1..},tag=!tryJoinRed] run function lobby:portals/red/full
+execute if score $NoMidgameJoins CmdData matches 1 if score $gamestate CmdData matches 2..3 as @a[team=!Red,scores={joinred=1..},tag=!tryJoinRed] run function lobby:portals/red/full
+execute if score $gamestate CmdData matches 0..3 if score $InRed CmdData > $InGreen CmdData as @a[team=!Red,scores={joinred=1..},tag=!tryJoinRed] run function lobby:portals/red/imbalanced
+
+execute unless score $gamestate CmdData matches 0..3 run tellraw @a[scores={joinred=1..}] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
+execute if score $gamestate CmdData matches 0..3 if score $InRed CmdData = $InGreen CmdData run tellraw @a[team=Green,scores={joinred=1..}] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
+execute as @a[team=Red,scores={joinred=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_joined","color":"red"}]
+
+scoreboard players reset @a[scores={joinred=1..}] joinred
