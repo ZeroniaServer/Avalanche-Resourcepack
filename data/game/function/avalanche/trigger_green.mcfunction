@@ -11,6 +11,7 @@ summon marker -124 68 -228 {Tags:["AVSnowStarter","Green","AvalancheEntity"]}
 
 scoreboard players reset $DamageGreen CmdData
 scoreboard players reset $red_progress CmdData
+scoreboard players reset $weakpointred CmdData
 
 scoreboard players add $RedPoints CmdData 1
 function bossbars:get_points
