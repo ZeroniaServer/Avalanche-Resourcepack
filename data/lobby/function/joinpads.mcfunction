@@ -69,11 +69,14 @@ scoreboard players reset @a[team=Lobby] leavegame
 execute as @a[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveTeam
 execute as @a[tag=LeaveTeam,team=Green] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {"translate":"lobby.left_team","color":"dark_aqua","with":[{"selector":"@s","color":"green"}]}
 execute as @a[tag=LeaveTeam,team=Red] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {"translate":"lobby.left_team","color":"dark_aqua","with":[{"selector":"@s","color":"red"}]}
+execute as @a[tag=LeaveTeam,team=Spectator] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {"translate":"lobby.left_spectator","color":"dark_aqua","with":[{"selector":"@s"}]}
 execute as @a[tag=LeaveTeam] run function player:leave
 execute as @a[tag=LeaveTeam] run tp @s @s
-execute as @a[tag=LeaveTeam] run tp @s -65 52 -108
-execute as @a[tag=LeaveTeam] run rotate @s 180 0
-execute as @a[tag=LeaveTeam,team=Spectator] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {"translate":"lobby.left_spectator","color":"dark_aqua","with":[{"selector":"@s"}]}
+execute as @a[tag=LeaveTeam,tag=WasRed] run tp @s -40 50 -150 -90 0
+execute as @a[tag=LeaveTeam,tag=WasGreen] run tp @s -85 54 -149 90 0
+execute as @a[tag=LeaveTeam,tag=!WasGreen,tag=!WasRed] run tp @s -65 52 -108 180 0
+tag @a[tag=LeaveTeam] remove WasRed
+tag @a[tag=LeaveTeam] remove WasGreen
 execute as @a[tag=LeaveTeam] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.exit master @a ~ ~ ~ 1 1
 execute as @a[tag=LeaveTeam] run team join Lobby @s
 
