@@ -10,6 +10,9 @@ execute if entity @s[tag=GiftboxInteraction] on target run function powerups:gif
 execute if entity @s[tag=GiftboxInteraction] at @s run function powerups:giftbox/open
 
 #> Warp Poles
+execute if entity @s[tag=WarpGreen] on target run tag @s add LobbyWarp
+execute if entity @s[tag=WarpRed] on target run tag @s add LobbyWarp
+execute if entity @s[tag=WarpLobby] on target run tag @s add LobbyWarp
 execute if entity @s[tag=WarpGreen] on target run tag @s add WarpGreen
 execute if entity @s[tag=WarpRed] on target run tag @s add WarpRed
 execute if entity @s[tag=WarpLobby] on target run tag @s add WarpLobby
