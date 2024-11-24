@@ -20,7 +20,6 @@ function powerups:loop
 #> Player logic
 function player:health
 function player:knockout
-execute as @a[predicate=game:void] run function player:voiddeath
 function player:base_campfires
 execute as @a[team=Red] run function player:firework_belowname
 execute as @a[team=Green] run function player:firework_belowname
