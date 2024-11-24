@@ -219,6 +219,14 @@ summon minecraft:item_display -42 48 -152 {item:{id:"diamond_hoe",components:{cu
 summon interaction -42 48 -152 {width:0.6,height:3.25,Tags:["LobbyTPInteraction","WarpGreen"],response:1b}
 fill -42 50 -152 -42 50 -152 cobblestone_wall
 
+summon minecraft:item_display -4 45 -233 {item:{id:"diamond_hoe",components:{custom_model_data:26}},item_display:"head",Tags:["TeleportPole","LeavePole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon interaction -4 45 -233 {width:0.6,height:3.25,Tags:["LobbyTPInteraction","WarpLobby"],response:1b}
+fill -4 45 -233 -4 47 -233 heavy_core
+
+summon minecraft:item_display -122 45 -209 {item:{id:"diamond_hoe",components:{custom_model_data:26}},item_display:"head",Tags:["TeleportPole","LeavePole"],transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0.0,2.8,0.0],scale:[1,1,1]}}
+summon interaction -122 45 -209 {width:0.6,height:3.25,Tags:["LobbyTPInteraction","WarpLobby"],response:1b}
+fill -122 45 -209 -122 47 -209 heavy_core
+
 execute as @e[tag=LobbyTPInteraction,tag=!entityid_assigned] run function entityid:assign_tag
 
 #> Text displays
@@ -236,3 +244,6 @@ summon text_display -79.85 53 -148 {Tags:["LobbyText"],text:'["",{"text":" "},{"
 
 summon text_display -89 54.35 -149 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.join.green","color":"green"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-12763843,shadow:0b,see_through:0b,alignment:"center"}
 summon text_display -36 50.35 -150 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.join.red","color":"red"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-12763843,shadow:0b,see_through:0b,alignment:"center"}
+
+summon text_display -121.15 46 -209 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.leave_game","color":"dark_blue"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
+summon text_display -3.85 46 -233 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.leave_game","color":"dark_blue"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
