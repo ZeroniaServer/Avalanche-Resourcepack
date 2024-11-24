@@ -72,9 +72,12 @@ execute as @a[tag=LeaveTeam,team=Red] if score $gamestate CmdData matches 0..3 a
 execute as @a[tag=LeaveTeam,team=Spectator] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {"translate":"lobby.left_spectator","color":"dark_aqua","with":[{"selector":"@s"}]}
 execute as @a[tag=LeaveTeam] run function player:leave
 execute as @a[tag=LeaveTeam] run tp @s @s
-execute as @a[tag=LeaveTeam,tag=WasRed] run tp @s -40 50 -150 -90 0
-execute as @a[tag=LeaveTeam,tag=WasGreen] run tp @s -85 54 -149 90 0
-execute as @a[tag=LeaveTeam,tag=!WasGreen,tag=!WasRed] run tp @s -65 52 -108 180 0
+execute unless entity @a[team=Red] unless entity @a[team=Green] if loaded -63 27 -222 if score $gamestate CmdData matches 2.. run tellraw @a ["\n",{"translate":"game.no_players","color":"red"}]
+execute unless entity @a[team=Red] unless entity @a[team=Green] if loaded -63 27 -222 if score $gamestate CmdData matches 2.. run function game:forcestop
+execute as @a[tag=LeaveTeam,tag=WasRed] if score $gamestate CmdData matches 0.. run tp @s -40 50 -150 -90 0
+execute as @a[tag=LeaveTeam,tag=WasGreen] if score $gamestate CmdData matches 0.. run tp @s -85 54 -149 90 0
+execute as @a[tag=LeaveTeam,tag=!WasGreen,tag=!WasRed] if score $gamestate CmdData matches 0.. run tp @s -65 52 -108 180 0
+execute as @a[tag=LeaveTeam] if score $gamestate CmdData matches -1 run tp @s -65 52 -108 0 0
 tag @a[tag=LeaveTeam] remove WasRed
 tag @a[tag=LeaveTeam] remove WasGreen
 execute as @a[tag=LeaveTeam] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.exit master @a ~ ~ ~ 1 1
