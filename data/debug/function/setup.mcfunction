@@ -171,9 +171,7 @@ data modify block -48 65 -58 profile set from block -82 65 -58 profile
 data modify block -82 65 -86 profile set from block -82 65 -58 profile
 data modify block -82 65 -90 profile set from block -82 65 -58 profile
 setblock -36 50 -150 air
-setblock -36 50 -150 minecraft:cherry_wall_sign[facing=west,waterlogged=false]{front_text:{color:"red",has_glowing_text:1b,messages:['{"translate":"lobby.join_sign.red.1"}','{"translate":"lobby.join_sign.red.2"}','{"translate":"lobby.join_sign.red.3"}','{"translate":"lobby.join_sign.red.4"}']},is_waxed:1b}
 setblock -89 54 -149 air
-setblock -89 54 -149 minecraft:oak_wall_sign[facing=east,waterlogged=false]{front_text:{color:"green",has_glowing_text:1b,messages:['{"translate":"lobby.join_sign.green.1"}','{"translate":"lobby.join_sign.green.2"}','{"translate":"lobby.join_sign.green.3"}','{"translate":"lobby.join_sign.green.4"}']},is_waxed:1b}
 setblock -113 47 -213 spruce_fence
 setblock -13 47 -229 spruce_fence
 
