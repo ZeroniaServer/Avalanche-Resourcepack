@@ -10,3 +10,5 @@ setblock -57 16 -204 air
 setblock -69 16 -238 air
 setblock -59 38 -263 air
 setblock -67 38 -179 air
+
+scoreboard players set $wallplaced CmdData 0

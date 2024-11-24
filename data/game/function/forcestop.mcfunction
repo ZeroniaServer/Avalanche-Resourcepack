@@ -32,6 +32,7 @@ scoreboard players reset $ElfTimer CmdData
 
 scoreboard players reset $precountdown CmdData
 scoreboard players reset $Countdown CmdData
+scoreboard players reset $CountSec CmdData
 scoreboard players set $RedReady CmdData 0
 scoreboard players set $GreenReady CmdData 0
 scoreboard players set $RedReadyFirst CmdData 0

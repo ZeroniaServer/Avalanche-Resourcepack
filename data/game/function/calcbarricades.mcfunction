@@ -1,4 +1,4 @@
-#> Store blocks per player in macro variable
+#> Store blocks per player in score variable
 
 scoreboard players reset @a BarricadeTracker
 execute as @a[team=Green] store result score @s BarricadeTracker run scoreboard players get $Barricades CmdData

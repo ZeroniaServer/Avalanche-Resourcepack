@@ -26,7 +26,9 @@ execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run tp @s 
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tp @s -91 53 -149 90 0
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2..3 run tp @s -114 47 -210 -90 0
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2 run loot give @s loot powerups:shovel
-# TODO add barricades here?? what do we do
+#TODO: maybe a nicer way to give out a fair number of barricades, for now this should do
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2 run scoreboard players set @s BarricadeTracker 10
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2 run loot give @s loot powerups:barricade_prep
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 3 run loot give @s loot powerups:snowball
 
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
@@ -47,9 +49,10 @@ execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run tp @s @s
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tp @s -34 49 -150 -90 0
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2..3 run tp @s -12 47 -232 90 0
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run loot give @s loot powerups:shovel
-# TODO add barricades here?? what do we do
+#TODO: maybe a nicer way to give out a fair number of barricades, for now this should do
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run scoreboard players set @s BarricadeTracker 10
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run loot give @s loot powerups:barricade_prep
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 3 run loot give @s loot powerups:snowball
-
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
 execute as @a[tag=JoinRed] run team join Red
 execute as @a[tag=JoinRed] run loot replace entity @s armor.chest loot game:chestplate
