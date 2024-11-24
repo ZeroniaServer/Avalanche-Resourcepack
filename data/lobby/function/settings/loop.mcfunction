@@ -21,3 +21,6 @@ tag @a[tag=ModiOwner,scores={modiowner=400..}] remove ModiOwner
 scoreboard players reset @a[tag=!ModiOwner] modiowner
 
 effect give @a[tag=ModiOwner] glowing 1 0 true
+
+#> Particles
+execute unless entity @a[predicate=lobby:modification_room] run particle trail{color:[0.384,0.208,0.275],target:[-62.5,53.5,-94.5]} -63 53 -100 1 1 0.1 0 10 force

@@ -1,3 +1,6 @@
+fill -90 53 -148 -90 55 -150 minecraft:light_gray_stained_glass
+fill -35 51 -149 -35 49 -151 light_gray_stained_glass
+
 function game:removewall
 scoreboard players set $gamestate CmdData -1
 

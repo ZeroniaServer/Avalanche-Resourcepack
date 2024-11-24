@@ -9,6 +9,7 @@ execute unless score $current gameID matches 0..2147483646 run function lobby:se
 
 #> Joinpads
 execute if score $gamestate CmdData matches 0..3 run function lobby:joinpads
+execute if score $gamestate CmdData matches -1 run function lobby:joinpads_off
 
 #> Teleporters
 function lobby:poles/main
