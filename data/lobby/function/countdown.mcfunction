@@ -2,6 +2,7 @@
 execute if score $precountdown CmdData matches 1.. run scoreboard players add $precountdown CmdData 1
 execute if score $precountdown CmdData matches 20 run scoreboard players set $Countdown CmdData 10
 execute if score $precountdown CmdData matches 20 run scoreboard players set $CountSec CmdData 0
+execute if score $precountdown CmdData matches 20 store result bossbar bar_lobby value run scoreboard players get $Countdown CmdData
 execute if score $precountdown CmdData matches 20 if entity @a[team=Green,tag=Ready] if entity @a[team=Red,tag=Ready] as @a at @s run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 1
 execute if score $precountdown CmdData matches 20 if entity @a[team=Green,tag=Ready] if entity @a[team=Red,tag=Ready] as @a at @s run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 0.8
 execute if score $precountdown CmdData matches 20 run scoreboard players reset $precountdown
@@ -9,7 +10,13 @@ execute if score $precountdown CmdData matches 1.. run return fail
 
 bossbar set bar_ready_g players
 bossbar set bar_ready_r players
+bossbar set bar_ready_r value 0
+bossbar set bar_ready_g value 0
 bossbar set bar_lobby style notched_10
+
+#> Cancel countdown conditions
+execute unless score $forcecountdown CmdData matches 1 if score $Countdown CmdData matches 2.. unless entity @a[team=Red] run return run function lobby:cancelcountdown
+execute unless score $forcecountdown CmdData matches 1 if score $Countdown CmdData matches 2.. unless entity @a[team=Green] run return run function lobby:cancelcountdown
 
 scoreboard players add $CountSec CmdData 1
 
@@ -29,6 +36,7 @@ execute if score $CountSec CmdData matches 20 if score $Countdown CmdData matche
 execute if score $Countdown CmdData matches 2.. run bossbar set bar_lobby name {"translate":"lobby.countdown.seconds","color":"aqua","with":[{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"white"}]}
 execute if score $Countdown CmdData matches 1 run bossbar set bar_lobby name {"translate":"lobby.countdown.second","color":"aqua","with":[{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"white"}]}
 
+execute if score $CountSec CmdData matches 2 if score $Countdown CmdData matches 1 run function game:placewall
 execute if score $CountSec CmdData matches 20 if score $Countdown CmdData matches 1 run function game:forcestart
 execute if score $CountSec CmdData matches 20 run scoreboard players remove $Countdown CmdData 1
 execute if score $CountSec CmdData matches 20 store result bossbar bar_lobby value run scoreboard players get $Countdown CmdData
