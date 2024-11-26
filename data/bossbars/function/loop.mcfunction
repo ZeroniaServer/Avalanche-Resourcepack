@@ -48,7 +48,8 @@ execute unless score $gamestate CmdData matches 2.. run bossbar set bar_lobby pl
 #> Store correct information and values in the lobby bar
 execute if score $gamestate CmdData matches -1 run bossbar set bar_lobby value 0
 execute if score $gamestate CmdData matches -1 run bossbar set bar_lobby style notched_6
-execute if score $gamestate CmdData matches -1 run bossbar set bar_lobby name {"translate":"chat.confirm","color":"#784859","with":[{"translate":"chat.settings_box","color":"#dd82a2","bold":true}]}
+execute if score $gamestate CmdData matches -1 unless entity @a[tag=ModiOwner] run bossbar set bar_lobby name {"translate":"chat.confirm","color":"#784859","with":[{"translate":"chat.settings_box","color":"#dd82a2","bold":true}]}
+execute if score $gamestate CmdData matches -1 if entity @a[tag=ModiOwner] run bossbar set bar_lobby name {"translate":"customizer.box_owner","color":"#784859","with":[{"selector":"@a[tag=ModiOwner,limit=1]","color":"#dd82a2","bold":true}]}
 
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Green] unless entity @a[team=Red] run bossbar set bar_lobby value 0
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Green] unless entity @a[team=Red] run bossbar set bar_lobby name {"translate":"lobby.wait.join.both","color":"dark_aqua","with":[{"translate":"lobby.wait.join.green","color":"green"},{"translate":"lobby.wait.join.red","color":"red"}]}
