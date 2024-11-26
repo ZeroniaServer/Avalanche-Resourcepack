@@ -113,6 +113,9 @@ team modify Red color red
 team modify noCol collisionRule never
 team modify Collide collisionRule pushOwnTeam
 
+team modify Red friendlyFire false
+team modify Green friendlyFire false
+
 #> Sleigh + WASD (thanks Cloud Wolf!)
 function powerups:sleigh/init
 function wasd:init
