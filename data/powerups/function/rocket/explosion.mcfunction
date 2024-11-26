@@ -62,8 +62,8 @@ scoreboard players reset $DamageCalcR CmdData
 scoreboard players set @e[type=item_display,tag=Snowman,distance=..4] playerHP 0
 
 #> Destroy nearby Sleighs
-execute as @e[type=turtle,distance=..4] at @s run scoreboard players add @s sleighDamage 1
-execute as @e[type=turtle,distance=..4] at @s run function powerups:sleigh/break
+execute as @e[type=turtle,distance=..5] at @s run scoreboard players add @s sleighDamage 1
+execute as @e[type=turtle,distance=..5] at @s run function powerups:sleigh/break
 
 #> Destroy nearby Snow Barricades
 execute positioned ~ ~-100 ~ as @e[type=item_display,tag=barricade,distance=..4] at @s positioned ~ ~100 ~ run function powerups:barricade/damage
@@ -76,8 +76,13 @@ tag @a[tag=!Blasted,gamemode=!spectator,distance=..5] add Blasted
 
 #> Blast nearby players backward
 scoreboard players set $blast CmdData 0
+execute on origin run tag @s add shooter
 execute if entity @a[gamemode=!spectator,distance=..5] run scoreboard players set $blast CmdData 1
 execute if score $blast CmdData matches 1 run function powerups:rocket/blast/summonslime
+execute as @a[gamemode=!spectator,distance=..5] run say @a[tag=shooter,limit=1]
+execute at @s as @a[gamemode=!spectator,distance=..5] run damage @s 1 arrow at ~ ~ ~
+execute as @a[gamemode=!spectator,distance=..5] run damage @s 1 arrow by @a[tag=shooter,limit=1]
+execute on origin run tag @s remove shooter
 
 execute on passengers run kill @s
 kill @s
