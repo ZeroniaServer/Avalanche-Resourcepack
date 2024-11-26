@@ -73,6 +73,7 @@
     "minecraft:light_blue_stained_glass_pane",
     "minecraft:copper_block",
     "#minecraft:candles",
-    "minecraft:campfire"
+    "minecraft:campfire",
+    "minecraft:brown_terracotta"
   ]
 }
