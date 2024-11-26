@@ -79,7 +79,6 @@ scoreboard players set $blast CmdData 0
 execute on origin run tag @s add shooter
 execute if entity @a[gamemode=!spectator,distance=..5] run scoreboard players set $blast CmdData 1
 execute if score $blast CmdData matches 1 run function powerups:rocket/blast/summonslime
-execute as @a[gamemode=!spectator,distance=..5] run say @a[tag=shooter,limit=1]
 execute at @s as @a[gamemode=!spectator,distance=..5] run damage @s 1 arrow at ~ ~ ~
 execute as @a[gamemode=!spectator,distance=..5] run damage @s 1 arrow by @a[tag=shooter,limit=1]
 execute on origin run tag @s remove shooter
