@@ -13,6 +13,7 @@ tag @s remove snowmanTarget
 tag @s remove SleighDismounted
 tag @s remove KOmessaged
 tag @s remove SilentRespawn
+tag @s remove NaturalRespawn
 tag @s[team=Red] add WasRed
 tag @s[team=!Red] remove WasRed
 tag @s[team=Green] add WasGreen
