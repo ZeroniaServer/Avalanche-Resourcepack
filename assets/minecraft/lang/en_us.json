@@ -1,7 +1,7 @@
 {
   "knockout.attack.direct": "%1$s was knocked out by %2$s!",
   "knockout.attack.blizzard": "%1$s was knocked out by %2$s’s Blizzard!",
-  "knockout.attack.avalanche": "%1$s was knocked out by %2$s’s Avalanche!",
+  "knockout.avalanche": "%1$s was knocked out in an Avalanche!",
   "knockout.void.accident": "%1$s fell out of the arena!",
   "knockout.void.sleigh": "%1$s rode their Sleigh off of the arena!",
   "knockout.void.direct": "%1$s was knocked out of the arena by %2$s!",
