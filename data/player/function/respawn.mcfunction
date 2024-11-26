@@ -9,6 +9,7 @@ scoreboard players set @s playerHP 20
 scoreboard players reset @s playerDamage
 effect clear @s blindness
 effect clear @s darkness
+clear @s diamond_hoe[!custom_data~{HotChoco:1b}]
 execute if score $gamestate CmdData matches 3 run loot give @s loot powerups:snowball
 
 execute if entity @s[team=Green,tag=!SilentRespawn] run scoreboard players set $GreenRespawn CmdData 1

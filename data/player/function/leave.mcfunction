@@ -1,3 +1,4 @@
+ride @s dismount
 scoreboard players set @s playerHP 20
 scoreboard players reset @s respawn
 function inventory:clear
@@ -11,6 +12,7 @@ tag @s remove CoalBlind
 tag @s remove snowmanTarget
 tag @s remove SleighDismounted
 tag @s remove KOmessaged
+tag @s remove SilentRespawn
 tag @s[team=Red] add WasRed
 tag @s[team=!Red] remove WasRed
 tag @s[team=Green] add WasGreen
