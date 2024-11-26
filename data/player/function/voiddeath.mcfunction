@@ -10,6 +10,13 @@ clear @s elytra
 # TODO: make sure hats are not diamond hoes so they don't get cleared
 clear @s diamond_hoe
 
-# TODO tellraw player death here
+#> Knockout messages
+execute if entity @s[tag=SleighDismounted] run tellraw @a [{"translate":"knockout.void.sleigh","color":"dark_aqua","with":[{"selector":"@s"}]}]
+scoreboard players set #attacker CmdData 0
+execute if entity @s[tag=!SleighDismounted] on attacker if entity @s run scoreboard players set #attacker CmdData 1
+execute if score #attacker CmdData matches 0 if entity @s[tag=!SleighDismounted] run tellraw @a [{"translate":"knockout.void.accident","color":"dark_aqua","with":[{"selector":"@s"}]}]
+tag @s add self
+execute if entity @s[tag=!SleighDismounted] on attacker run tellraw @a [{"translate":"knockout.void.direct","color":"dark_aqua","with":[{"selector":"@a[tag=self,limit=1]"},{"selector":"@s"}]}]
+tag @s remove self
 
 function player:respawn

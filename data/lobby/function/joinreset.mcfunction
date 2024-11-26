@@ -13,7 +13,7 @@ execute if entity @s[tag=!firstJoined] run tp @s -65 54 -52 -180 0
 execute if entity @s[tag=!firstJoined] run say TODO: Welcome!
 tag @s add firstJoined
 scoreboard players operation @s leavecheck = $curr leavecheck
-playsound entity.player.levelup master @s ~ ~ ~ 1 2
+playsound entity.player.levelup master @s ~ ~ ~ 1 1.75
 title @s title ""
 title @s subtitle ""
 title @s actionbar ""

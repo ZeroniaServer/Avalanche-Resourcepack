@@ -12,7 +12,6 @@ bossbar set bar_ready_g value 0
 bossbar set bar_lobby style notched_10
 
 #> Cancel countdown conditions
-execute unless score $forcecountdown CmdData matches 1 if score $Countdown CmdData matches 2.. unless entity @a[team=Red] run say hihi
 execute unless score $forcecountdown CmdData matches 1 if score $Countdown CmdData matches 2.. unless entity @a[team=Red] run return run function lobby:cancelcountdown
 execute unless score $forcecountdown CmdData matches 1 if score $Countdown CmdData matches 2.. unless entity @a[team=Green] run return run function lobby:cancelcountdown
 

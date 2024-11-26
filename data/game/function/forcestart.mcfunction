@@ -20,3 +20,5 @@ bossbar set bar_lobby style notched_12
 bossbar set bar_lobby name {"translate":"lobby.in_progress","color":"green"}
 
 function game:start_prep
+
+function lobby:readyteams/refreshsigns

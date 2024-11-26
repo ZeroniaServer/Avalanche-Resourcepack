@@ -6,4 +6,4 @@ summon minecraft:item_display ~ ~ ~ { Tags:['aj.new','aj.rig_entity','aj.rig_roo
 data modify entity @e[type=area_effect_cloud,tag=snowmanid,tag=init,limit=1] Owner set from entity @a[tag=placer,limit=1] UUID
 tag @e[type=area_effect_cloud,tag=snowmanid,tag=init,limit=1] remove init
 execute as @e[type=item_display,tag=aj.new,limit=1,distance=..0.01] run function animated_java:snowman/zzz/0
-execute as @e[type=husk,tag=hitbox,tag=!entityid_assigned,limit=1] run function entityid:assign_tag
+execute as @e[type=husk,tag=hitbox,tag=!entityid_assigned,limit=1] run function powerups:snowman/name {team:"Green"}

@@ -9,6 +9,7 @@ tag @s remove SnowMark
 tag @s remove Knockout
 tag @s remove CoalBlind
 tag @s remove snowmanTarget
+tag @s remove SleighDismounted
 tag @s[team=Red] add WasRed
 tag @s[team=!Red] remove WasRed
 tag @s[team=Green] add WasGreen
