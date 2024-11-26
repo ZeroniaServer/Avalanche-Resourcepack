@@ -2,6 +2,9 @@ fill -90 53 -148 -90 55 -150 minecraft:light_gray_stained_glass
 fill -35 51 -149 -35 49 -151 light_gray_stained_glass
 
 function game:removewall
+
+execute as @a[team=!Lobby,team=!Spectator] run function player:leave
+
 scoreboard players set $gamestate CmdData -1
 
 scoreboard objectives setdisplay below_name
@@ -41,9 +44,17 @@ scoreboard players set $GreenReady CmdData 0
 scoreboard players set $RedReadyFirst CmdData 0
 scoreboard players set $GreenReadyFirst CmdData 0
 function lobby:readyteams/refreshsigns
+
 bossbar set bar_ready_g value 0
 bossbar set bar_ready_r value 0
 bossbar set bar_lobby style notched_6
 bossbar set bar_lobby name {"translate":"chat.confirm","color":"dark_purple","with":[{"translate":"chat.settings_box","color":"light_purple","bold":true}]}
+
+scoreboard players set $red_progress CmdData 0
+scoreboard players set $green_progress CmdData 0
+scoreboard players set $RedPoints CmdData 0
+scoreboard players set $GreenPoints CmdData 0
+scoreboard players set $DamageRed CmdData 0
+scoreboard players set $DamageGreen CmdData 0
 
 function arenaclear:reset
