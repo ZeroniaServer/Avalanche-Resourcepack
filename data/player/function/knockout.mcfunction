@@ -9,8 +9,8 @@ clear @a[tag=!Knockout,scores={playerHP=..0}] clay
 clear @a[tag=!Knockout,scores={playerHP=..0}] ghast_spawn_egg
 clear @a[tag=!Knockout,scores={playerHP=..0}] elytra
 
-tag @a[tag=!Knockout,scores={playerHP=..0}] add Knockout
 tag @a[tag=!Knockout,scores={playerHP=..0}] remove KOmessaged
+tag @a[tag=!Knockout,scores={playerHP=..0}] add Knockout
 execute as @a[tag=Knockout,scores={playerHP=1..}] run function inventory:load
 tag @a[tag=Knockout,scores={playerHP=1..}] remove Knockout
 item replace entity @a[tag=!Knockout,scores={knocktime=1..}] armor.head with air

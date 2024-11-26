@@ -19,5 +19,6 @@ execute at @s[tag=!SilentRespawn] run playsound minecraft:entity.blaze.shoot mas
 
 tag @s remove SilentRespawn
 tag @s remove SleighDismounted
+tag @s remove KOmessaged
 
 scoreboard players add @s respawn 1
