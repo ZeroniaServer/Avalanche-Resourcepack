@@ -1,3 +1,6 @@
+execute positioned -114 46 -210 as @a[team=Green,tag=Knockout,distance=..1] run function player:base_revive
+execute positioned -12 45 -232 as @a[team=Red,tag=Knockout,distance=..1] run function player:base_revive
+
 execute if score $GreenRespawn CmdData matches 1.. run scoreboard players add $GreenRespawn CmdData 1
 execute if score $RedRespawn CmdData matches 1.. run scoreboard players add $RedRespawn CmdData 1
 

@@ -1,6 +1,6 @@
 rotate @s ~ ~
-execute at @s if entity @e[type=item_display,tag=Snowman,tag=Red,limit=1,sort=nearest,distance=..2] facing entity @p[team=Green,tag=snowmanTarget] eyes run rotate @s ~ ~
-execute at @s if entity @e[type=item_display,tag=Snowman,tag=Green,limit=1,sort=nearest,distance=..2] facing entity @p[team=Red,tag=snowmanTarget] eyes run rotate @s ~ ~
+execute at @s if entity @e[type=item_display,tag=Snowman,tag=Red,limit=1,sort=nearest,distance=..2] facing entity @p[team=Green,tag=snowmanTarget] eyes run rotate @s ~ ~10
+execute at @s if entity @e[type=item_display,tag=Snowman,tag=Green,limit=1,sort=nearest,distance=..2] facing entity @p[team=Red,tag=snowmanTarget] eyes run rotate @s ~ ~10
 execute at @s run tp @s ^ ^0.6 ^1
 
 data modify storage snowman:projectile Pos set from entity @s Pos

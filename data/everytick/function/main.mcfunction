@@ -33,5 +33,3 @@ execute if score $gamestate CmdData matches 4 run function game:end
 execute as @e[type=snowball,predicate=!game:in_arena] on passengers run kill @s
 execute as @e[type=snowball,predicate=!game:in_arena] run kill @s
 execute as @e[type=item_display,predicate=!game:in_arena,tag=rocketdisplay] run kill @s
-execute as @e[type=turtle,tag=vehicle,predicate=!game:in_arena] run ride @p dismount
-execute as @e[type=turtle,tag=vehicle,predicate=!game:in_arena] run function arenaclear:kill_recursive

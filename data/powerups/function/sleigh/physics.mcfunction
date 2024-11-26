@@ -1,5 +1,5 @@
-execute if predicate powerups:sleigh_void at @s run scoreboard players set @s sleighDamage 4
-execute if predicate powerups:sleigh_void at @s run return run function powerups:sleigh/break
+execute at @s unless predicate game:in_arena run scoreboard players set @s sleighDamage 4
+execute at @s unless predicate game:in_arena run return run function powerups:sleigh/break
 
 scoreboard players add @s vehicle.dx 0
 scoreboard players add @s vehicle.dz 0
