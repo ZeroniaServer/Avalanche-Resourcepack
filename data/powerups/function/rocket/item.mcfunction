@@ -6,9 +6,9 @@ execute if score @s lifetime matches 140 run tag @s remove RocketItemRed
 execute if score @s lifetime matches 140 run playsound entity.item_frame.add_item master @a ~ ~ ~ 1 2
 
 tag @a remove giveRocket
-execute if entity @s[tag=RocketItemGreen] run tag @p[team=Green,tag=!Knockout,distance=..1] add giveRocket
-execute if entity @s[tag=RocketItemRed] run tag @p[team=Red,tag=!Knockout,distance=..1] add giveRocket
-execute if score @s lifetime matches 140.. run tag @p[team=!Spectator,team=!Lobby,tag=!Knockout,distance=..1] add giveRocket
+execute if entity @s[tag=RocketItemGreen] run tag @p[team=Green,tag=!Knockout,distance=..2] add giveRocket
+execute if entity @s[tag=RocketItemRed] run tag @p[team=Red,tag=!Knockout,distance=..2] add giveRocket
+execute if score @s lifetime matches 140.. run tag @p[team=!Spectator,team=!Lobby,tag=!Knockout,distance=..2] add giveRocket
 data modify entity @s Owner set from entity @p[tag=giveRocket] UUID
 data modify entity @s Thrower set from entity @p[tag=giveRocket] UUID
 execute if entity @p[team=Green,tag=giveRocket] run item modify entity @s contents powerups:rocket_green
