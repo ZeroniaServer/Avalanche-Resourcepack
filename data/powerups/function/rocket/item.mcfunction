@@ -14,3 +14,5 @@ data modify entity @s Thrower set from entity @p[tag=giveRocket] UUID
 execute if entity @p[team=Green,tag=giveRocket] run item modify entity @s contents powerups:rocket_green
 execute if entity @p[team=Red,tag=giveRocket] run item modify entity @s contents powerups:rocket_red
 execute if entity @p[tag=giveRocket] run tag @s remove RocketItem
+
+function powerups:throwable_init/airtoggle
