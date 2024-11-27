@@ -1,10 +1,12 @@
 {
   "knockout.attack.direct": "%1$s was knocked out by %2$s!",
   "knockout.attack.blizzard": "%1$s was knocked out by %2$s’s Blizzard!",
+  "knockout.attack.snowman": "%1$s was knocked out by %2$s’s Snowman!",
   "knockout.avalanche": "%1$s was knocked out in an Avalanche!",
   "knockout.void.accident": "%1$s fell out of the arena!",
   "knockout.void.sleigh": "%1$s rode their Sleigh off of the arena!",
   "knockout.void.direct": "%1$s was knocked out of the arena by %2$s!",
+  "knockout.void.snowman": "%1$s was knocked out of the arena by %2$s’s Snowman!",
   "revive.hotchoco": "%1$s has been revived!",
   "revive.campfire.self": "%1$s has been revived by their Healing Campfire!",
   "revive.campfire.other": "%1$s has been revived by %2$s’s Healing Campfire!",
