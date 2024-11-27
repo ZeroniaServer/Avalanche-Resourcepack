@@ -48,6 +48,7 @@ scoreboard objectives add joinred trigger
 scoreboard objectives add joingreen trigger
 scoreboard objectives add snowmanhit dummy
 execute unless score $MaxTeamSize CmdData matches 0.. run scoreboard players set $MaxTeamSize CmdData 5
+execute unless score $forcedmodes CmdData matches 0.. run scoreboard players set $forcedmodes CmdData 1
 
 #> Static scores
 scoreboard players set $100 CmdData 100
