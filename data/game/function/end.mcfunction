@@ -38,4 +38,7 @@ execute if score $End CmdData matches 1 if score $Winner CmdData matches 0 run t
 execute if score $End CmdData matches 1 if score $Winner CmdData matches 0 run title @a[team=Green] subtitle {"translate":"game.end.betterluck","color":"dark_gray"}
 execute if score $End CmdData matches 1 if score $Winner CmdData matches 0 run title @a[team=!Green,team=!Red] subtitle {"text":" "}
 
+execute if score $End CmdData matches 100 as @a[team=Red,gamemode=adventure] run gamemode spectator @s
+execute if score $End CmdData matches 100 as @a[team=Green,gamemode=adventure] run gamemode spectator @s
+
 execute if score $End CmdData matches 200.. run function game:forcestop

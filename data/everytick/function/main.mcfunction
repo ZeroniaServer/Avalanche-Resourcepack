@@ -1,6 +1,9 @@
 #> Lobby
 function lobby:loop
 
+#> Forced modes
+execute if score $forcedmodes CmdData matches 1 as @a run function player:forcedmodes
+
 #> EntityID
 execute if score #loaded entityid matches 1 run function entityid:real_tick
 
