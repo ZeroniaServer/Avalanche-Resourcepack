@@ -33,6 +33,7 @@ tag @s[tag=!SleighOffGround,scores={vehicle.off_ground=..6,vehicle.since_jump=1.
 # big fall detection
 execute if predicate game:big_fall run tag @s[tag=!SleighJumpBig] add SleighOffGround
 execute if predicate game:big_fall run tag @s[tag=!SleighJumpBig] add SleighJumpBig
+execute if predicate game:big_fall run tag @s add bigFall
 
 # auto jump
 # execute at @s[tag=Occupied,tag=!SleighOffGround] unless predicate game:on_ground if block ~ ~ ~ air if block ~ ~-1 ~ air if block ~ ~-2 ~ air if block ~ ~-3 ~ air if block ~ ~-4 ~ air if block ~ ~-5 ~ air run tag @s add SleighJumpBig
