@@ -20,3 +20,5 @@ execute if score $RedRespawn CmdData matches 30 run setblock -12 45 -232 campfir
 
 execute if score $GreenRespawn CmdData matches 30.. run scoreboard players reset $GreenRespawn CmdData
 execute if score $RedRespawn CmdData matches 30.. run scoreboard players reset $RedRespawn CmdData
+
+execute as @e[type=marker,tag=BaseCampfire] at @s run function powerups:campfire/heal

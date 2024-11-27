@@ -1,0 +1,3 @@
+execute as @s at @s positioned ~ ~1 ~ summon marker run function powerups:campfire/storecoords
+execute if entity @s[team=Green] as @e[type=marker,tag=BaseCampfire,tag=Green,limit=1] run function powerups:campfire/playparticle with storage campfire:coords
+execute if entity @s[team=Red] as @e[type=marker,tag=BaseCampfire,tag=Red,limit=1] run function powerups:campfire/playparticle with storage campfire:coords
