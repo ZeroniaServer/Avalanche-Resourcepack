@@ -1,2 +1,2 @@
-$summon arrow ~ ~ ~ {PierceLevel:10,Silent:1b,damage:0.0001d,Motion:[$(x)d,$(y)d,$(z)d],Tags:["init","ThrowableArrow"]}
+$summon arrow ~ ~ ~ {PierceLevel:10,damage:0.0001d,Motion:[$(x)d,$(y)d,$(z)d],Tags:["init","ThrowableArrow"],SoundEvent:"entity.snowball.throw"}
 execute as @e[type=arrow,tag=init,limit=1] run function powerups:throwable_init/arrow
