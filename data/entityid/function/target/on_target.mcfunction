@@ -12,6 +12,7 @@ data modify storage entityid:target Motion set from entity @s Motion
 scoreboard players operation $tempuuid UUIDscore = @s entityid
 execute if entity @s[tag=Iceball] summon marker run function entityid:target/find_block {limit:2}
 execute if entity @s[tag=Snowball] summon marker run function entityid:target/find_block {limit:1}
+execute if entity @s[tag=SnowmanSnowball] summon marker run function entityid:target/find_block {limit:1}
 
 #> Ice ball special consideration
 execute if entity @s[tag=Iceball] run tag @e[type=item_display,tag=damaged,predicate=player:matches_uuid] add break

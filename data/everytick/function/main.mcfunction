@@ -18,6 +18,10 @@ execute as @e[type=item,tag=!SleighItem,tag=!mineBarricade] at @s if items entit
 #> Leave game
 execute as @a[scores={leftgame=1..}] run function player:leave
 
+#> Snowman hit
+execute as @a[scores={snowmanhit=1..}] run scoreboard players add @s snowmanhit 1
+execute as @a[scores={snowmanhit=100..}] run scoreboard players reset @s snowmanhit
+
 #> Void deaths
 execute as @a[predicate=game:void] run function player:voiddeath
 execute as @a[team=Spectator,predicate=!game:spectatable] run function player:voiddeath

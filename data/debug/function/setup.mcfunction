@@ -46,6 +46,7 @@ scoreboard players add $curr leavecheck 0
 scoreboard objectives add spectate trigger
 scoreboard objectives add joinred trigger
 scoreboard objectives add joingreen trigger
+scoreboard objectives add snowmanhit dummy
 execute unless score $MaxTeamSize CmdData matches 0.. run scoreboard players set $MaxTeamSize CmdData 5
 
 #> Static scores

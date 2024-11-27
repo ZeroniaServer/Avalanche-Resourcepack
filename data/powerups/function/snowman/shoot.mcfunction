@@ -1,5 +1,4 @@
 execute on passengers if entity @s[type=area_effect_cloud] run data modify storage snowman:projectile UUID set from entity @s Owner
-execute on passengers on passengers if entity @s[type=husk] run data modify storage snowman:projectile self set from entity @s UUID
 
 #Red
 execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=!Shooting,tag=!Dying] if entity @a[team=Green,tag=snowmanTarget,limit=1,distance=..11] run scoreboard players set @s CmdData 50
