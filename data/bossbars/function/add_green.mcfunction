@@ -10,6 +10,4 @@ bossbar set bar_g_main max 350
 bossbar set bar_g_green max 350
 bossbar set bar_g_red max 350
 
-bossbar set bar_g_red value 350
-
-scoreboard players set $bar_g_main CmdData 0
+# bossbar set bar_g_red value 350

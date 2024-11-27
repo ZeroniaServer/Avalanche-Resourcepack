@@ -36,4 +36,6 @@ bossbar set bar_lobby style progress
 
 function lobby:settings/refreshsigns with storage lobby:customizer
 
+function arenaclear:reset
+
 tag @a remove RequestSettings
