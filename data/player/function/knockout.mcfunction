@@ -10,6 +10,7 @@ clear @a[tag=!Knockout,scores={playerHP=..0}] ghast_spawn_egg
 clear @a[tag=!Knockout,scores={playerHP=..0}] elytra
 
 tag @a[tag=!Knockout,scores={playerHP=..0}] remove KOmessaged
+execute as @a[tag=!Knockout,scores={playerHP=..0}] run function player:findrocket
 tag @a[tag=!Knockout,scores={playerHP=..0}] add Knockout
 execute as @a[tag=Knockout,scores={playerHP=1..}] run function inventory:load
 tag @a[tag=Knockout,scores={playerHP=1..}] remove Knockout
