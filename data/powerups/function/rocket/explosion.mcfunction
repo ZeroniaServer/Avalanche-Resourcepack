@@ -70,14 +70,15 @@ execute positioned ~ ~-100 ~ as @e[type=item_display,tag=barricade,distance=..4]
 execute positioned ~ ~-100 ~ as @e[type=item_display,tag=barricade,distance=..2.5] at @s positioned ~ ~100 ~ run function powerups:barricade/damage
 execute positioned ~ ~-100 ~ as @e[type=item_display,tag=barricade,distance=..1.5] at @s positioned ~ ~100 ~ run function powerups:barricade/damage
 
-#> Summon AECs + tag players as Blasted
-execute as @a[tag=!Blasted,gamemode=!spectator,distance=..5] at @s run summon area_effect_cloud ~ ~155 ~ {Tags:["BlastAEC"],Particle:{type:"block",block_state:"minecraft:air"},Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:0.1f,Duration:1,potion_contents:{custom_effects:[{id:"minecraft:levitation",amplifier:50,duration:2,show_particles:0b}]}}
+#> Give levitation + tag players as Blasted
+execute as @a[tag=!Blasted,gamemode=!spectator,distance=..5] unless predicate game:low_arena run effect give @s levitation 1 60 true
+execute as @a[tag=!Blasted,gamemode=!spectator,distance=..5] if predicate game:low_arena run effect give @s levitation 1 200 true
 tag @a[tag=!Blasted,gamemode=!spectator,distance=..5] add Blasted
 
 #> Blast nearby players backward
 scoreboard players set $blast CmdData 0
 execute on origin run tag @s add shooter
-execute if entity @a[gamemode=!spectator,distance=..5] run scoreboard players set $blast CmdData 1
+execute as @a[gamemode=!spectator,distance=..5] unless entity @s[tag=shooter,predicate=game:low_arena] run scoreboard players set $blast CmdData 1
 execute if score $blast CmdData matches 1 run function powerups:rocket/blast/summonslime
 execute at @s as @a[gamemode=!spectator,distance=..5] run damage @s 1 arrow at ~ ~ ~
 execute as @a[gamemode=!spectator,distance=..5] run damage @s 1 arrow by @a[tag=shooter,limit=1]
