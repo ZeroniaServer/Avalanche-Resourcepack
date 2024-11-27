@@ -1,3 +1,5 @@
+execute if entity @s[tag=!Knockout,predicate=game:void] at @s run function powerups:rocket/drop
+
 execute if entity @s[team=Lobby] run tp @s @s
 execute if entity @s[team=Lobby] run return run tp @s -65 52 -108 -180 0
 execute if entity @s[team=Spectator] run return run tp @s -63 85 -221
