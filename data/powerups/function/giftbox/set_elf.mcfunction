@@ -48,5 +48,5 @@ execute if score $elftype CmdData matches 901..999 if score $elfanimation CmdDat
 execute if score $elftype CmdData matches 901..999 if score $elfanimation CmdData matches 91.. facing entity @p eyes rotated ~180 0 run function animated_java:elf/summon {args:{variant: 'yellow', animation: 'spawn_variant_5', start_animation: true}}
 
 #> Variant 7 - Secret
-execute if score $elftype CmdData matches 1000 run say SECRET TRIGGERED
+execute if score $elftype CmdData matches 1000 run summon area_effect_cloud ~ ~ ~ {Tags:["elfsecret"],Duration:150}
 execute if score $elftype CmdData matches 1000 facing entity @p eyes rotated ~180 0 run function animated_java:elf/summon {args:{variant: 'secret', animation: 'spawn_variant_secret', start_animation: true}}
