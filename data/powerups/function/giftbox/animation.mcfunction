@@ -21,6 +21,7 @@ execute as @e[type=item_display,tag=Giftbox,tag=New,scores={CmdData=3..}] run da
 tag @e[type=item_display,tag=Giftbox,tag=New,scores={CmdData=3..}] remove New
 
 #> Kill the hitbox
+execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ air run particle item{item:{id:"minecraft:diamond_hoe",components:{custom_model_data:25}}} ~ ~0.2 ~ 0.1 0.1 0.1 0.03 30 force
 execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ air on passengers run kill
 execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ air run kill
 execute as @e[type=shulker,tag=GiftboxShulker] at @s unless entity @e[type=item_display,tag=Giftbox,distance=..1] run function arenaclear:kill
