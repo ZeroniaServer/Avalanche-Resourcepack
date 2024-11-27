@@ -1,3 +1,4 @@
+tag @s add self
 execute unless score $gamestate CmdData matches 2 if entity @s[tag=!Knockout,predicate=game:void] at @s run function powerups:rocket/drop
 
 execute if entity @s[team=Lobby] run tp @s @s
@@ -17,7 +18,6 @@ execute if entity @s[tag=SleighDismounted] run tellraw @a [{"translate":"knockou
 scoreboard players set #attacker CmdData 0
 execute if entity @s[tag=!SleighDismounted] on attacker run scoreboard players set #attacker CmdData 1
 execute if score #attacker CmdData matches 0 if entity @s[tag=!SleighDismounted] run tellraw @a [{"translate":"knockout.void.accident","color":"dark_aqua","with":[{"selector":"@s"}]}]
-tag @s add self
 execute if entity @s[tag=!SleighDismounted] unless score @s snowmanhit matches 1.. on attacker run tellraw @a [{"translate":"knockout.void.direct","color":"dark_aqua","with":[{"selector":"@a[tag=self,limit=1]"},{"selector":"@s"}]}]
 execute if entity @s[tag=!SleighDismounted] if score @s snowmanhit matches 1.. on attacker run tellraw @a [{"translate":"knockout.void.snowman","color":"dark_aqua","with":[{"selector":"@a[tag=self,limit=1]"},{"selector":"@s"}]}]
 

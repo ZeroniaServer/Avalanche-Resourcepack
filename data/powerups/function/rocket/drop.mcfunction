@@ -1,5 +1,5 @@
-playsound entity.item.pickup master @a ~ ~ ~ 1 0.6
-playsound minecraft:entity.firework_rocket.blast master @s ~ ~ ~ 1 1.6
+playsound entity.item.pickup master @a[tag=!self] ~ ~ ~ 1 0.6
+playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 1 1.6
 
 scoreboard players add @s fireworkCount 1
 loot spawn ~ ~1 ~ loot powerups:rocket_drop
