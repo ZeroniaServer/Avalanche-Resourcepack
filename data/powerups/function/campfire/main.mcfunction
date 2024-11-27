@@ -1,6 +1,9 @@
 #> Spawning/animations
 function powerups:campfire/animation
 
+execute as @e[type=item_display,tag=CampfireMain] at @s if block ~ ~-1 ~ air run scoreboard players set @s CmdData 700 
+execute as @e[type=item_display,tag=CampfireMain] at @s if block ~ ~-1 ~ air run tag @s add Extinguish
+
 #> Heal nearby players
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=20..600},tag=!Extinguish,tag=!Reviving] at @s run function powerups:campfire/heal
 
