@@ -6,6 +6,7 @@ execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:c
 
 #> Play throw sounds
 execute on passengers if entity @s[tag=Snowball] at @s run playsound snowballthrow master @a ~ ~ ~ 1 0.5
+execute on passengers if entity @s[tag=SnowmanSnowball] at @s run playsound snowballthrow master @a ~ ~ ~ 1 0.5
 execute on passengers if entity @s[tag=Iceball] at @s run playsound iceballthrow master @a ~ ~ ~ 1 0.5
 execute on passengers if entity @s[tag=Coalstock] at @s run playsound coalstockthrow master @a ~ ~ ~ 1 0.5
 execute on passengers if entity @s[tag=Snowglobe] at @s run playsound snowglobethrow master @a ~ ~ ~ 1 0.5

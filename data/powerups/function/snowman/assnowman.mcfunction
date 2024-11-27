@@ -13,6 +13,12 @@ execute at @s[tag=CoalBlind,tag=!Dying] run particle dust{color:[0.000,0.000,0.1
 tag @s[tag=CoalBlind,scores={coalblind=120..}] remove CoalBlind
 scoreboard players reset @s[scores={coalblind=120..}] coalblind
 
-execute at @s if block ~ ~-0.5 ~ air run scoreboard players set @s playerHP 0
-execute at @s if block ~ ~-0.5 ~ air run scoreboard players set @s CmdData 220
-execute at @s if block ~ ~-0.5 ~ air run particle block_crumble{block_state:snow_block} ~ ~1 ~ 0.2 0.5 0.2 0.1 40 force
+scoreboard players set #kill CmdData 0
+execute at @s[tag=!Dying] if block ~ ~-0.5 ~ air run scoreboard players set #kill CmdData 1
+execute if entity @s[tag=Green,tag=!Dying] on passengers if entity @s[type=area_effect_cloud] on origin unless entity @s[team=Green] run scoreboard players set #kill CmdData 1
+execute if entity @s[tag=Red,tag=!Dying] on passengers if entity @s[type=area_effect_cloud] on origin unless entity @s[team=Red] run scoreboard players set #kill CmdData 1
+execute if score #kill CmdData matches 1 run scoreboard players set @s playerHP 0
+execute if score #kill CmdData matches 1 run function animated_java:snowman/animations/spawn/stop
+execute if score #kill CmdData matches 1 run tag @s add Spawned
+execute if score #kill CmdData matches 1 run scoreboard players set @s CmdData 220
+execute if score #kill CmdData matches 1 run particle block_crumble{block_state:snow_block} ~ ~1 ~ 0.2 0.5 0.2 0.1 40 force

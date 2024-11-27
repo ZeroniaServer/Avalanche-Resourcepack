@@ -10,6 +10,7 @@ execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={iceball=true
 
 #> Snowball
 execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={snowball=true}}] run scoreboard players remove @s playerHP 150
+execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={snowman=true}}] run scoreboard players remove @s playerHP 150
 
 #> Hurt anim
 tag @s[tag=Spawned,tag=!Dying] add Hurt
