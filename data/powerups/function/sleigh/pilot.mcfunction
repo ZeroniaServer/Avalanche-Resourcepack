@@ -20,8 +20,8 @@ execute if score $occupied CmdData matches 1 run tag @s add Occupied
 execute if score $occupied CmdData matches 0 run tag @s[tag=Occupied] remove Occupied
 
 # coyote time for jump detection
-scoreboard players add @s[predicate=game:in_air,scores={vehicle.off_ground=..7}] vehicle.off_ground 1
-scoreboard players set @s[predicate=!game:in_air] vehicle.off_ground 0
+scoreboard players add @s[predicate=!game:on_ground,scores={vehicle.off_ground=..7}] vehicle.off_ground 1
+scoreboard players set @s[predicate=game:on_ground] vehicle.off_ground 0
 
 # input buffering for jump detection
 execute if entity @s[tag=Occupied] on passengers on passengers if predicate wasd:jump on vehicle on vehicle run scoreboard players set @s vehicle.since_jump 6
@@ -29,6 +29,10 @@ scoreboard players remove @s[scores={vehicle.since_jump=1..}] vehicle.since_jump
 execute if entity @s[tag=!Occupied] run scoreboard players set @s vehicle.since_jump 0
 
 tag @s[tag=!SleighOffGround,scores={vehicle.off_ground=..6,vehicle.since_jump=1..}] add SleighJumpBig
+
+# big fall detection
+execute if predicate game:big_fall run tag @s[tag=!SleighJumpBig] add SleighOffGround
+execute if predicate game:big_fall run tag @s[tag=!SleighJumpBig] add SleighJumpBig
 
 # auto jump
 # execute at @s[tag=Occupied,tag=!SleighOffGround] unless predicate game:on_ground if block ~ ~ ~ air if block ~ ~-1 ~ air if block ~ ~-2 ~ air if block ~ ~-3 ~ air if block ~ ~-4 ~ air if block ~ ~-5 ~ air run tag @s add SleighJumpBig
