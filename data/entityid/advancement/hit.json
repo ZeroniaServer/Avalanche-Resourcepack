@@ -44,6 +44,31 @@
               }
             }
           }
+        },
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_player_attack",
+                "expected": true
+              }
+            ]
+          }
+        }
+      }
+    },
+    "interaction": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "entityid:interaction",
+                "expected": true
+              }
+            ]
+          }
         }
       }
     },
@@ -974,7 +999,7 @@
       "snowball",
       "iceball",
       "icicle",
-      "target"
+      "interaction"
     ],
     [
       "target",
