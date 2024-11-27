@@ -1,3 +1,5 @@
+function powerups:loop
+
 bossbar set bar_lobby style notched_20
 bossbar set bar_lobby name {"translate":"lobby.ending","color":"red"}
 
