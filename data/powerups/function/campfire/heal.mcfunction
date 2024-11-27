@@ -1,5 +1,8 @@
-execute if entity @s[tag=Green] as @a[team=Green,distance=..3,tag=!Knockout,scores={playerHP=1..19}] run function powerups:campfire/particle
-execute if entity @s[tag=Red] as @a[team=Red,distance=..3,tag=!Knockout,scores={playerHP=1..19}] run function powerups:campfire/particle
+execute if entity @s[tag=Green,tag=CampfireMain] as @a[team=Green,distance=..3,tag=!Knockout,scores={playerHP=1..19}] run function powerups:campfire/particle
+execute if entity @s[tag=Red,tag=CampfireMain] as @a[team=Red,distance=..3,tag=!Knockout,scores={playerHP=1..19}] run function powerups:campfire/particle
+
+execute if entity @s[tag=Green,tag=BaseCampfire] as @a[team=Green,distance=..3,tag=!Knockout,scores={playerHP=1..19}] run function player:campfire_particle
+execute if entity @s[tag=Red,tag=BaseCampfire] as @a[team=Red,distance=..3,tag=!Knockout,scores={playerHP=1..19}] run function player:campfire_particle
 
 scoreboard players add @s healticks 1
 execute if entity @s[tag=Green,scores={healticks=10..12}] run tag @a[team=Green,tag=!Knockout,tag=Snowmark,scores={playerHP=1..19},distance=..3] remove Snowmark

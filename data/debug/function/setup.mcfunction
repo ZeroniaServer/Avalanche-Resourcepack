@@ -252,3 +252,8 @@ summon text_display -36 50.35 -150 {Tags:["LobbyText"],text:'["",{"text":" "},{"
 
 summon text_display -121.15 46 -209 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.leave_game","color":"dark_blue"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
 summon text_display -3.85 46 -233 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.leave_game","color":"dark_blue"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
+
+#> Base campfires
+kill @e[type=marker,tag=BaseCampfire]
+summon marker -114 46 -210 {Tags:["BaseCampfire","Green"]}
+summon marker -12 45 -232 {Tags:["BaseCampfire","Red"]}
