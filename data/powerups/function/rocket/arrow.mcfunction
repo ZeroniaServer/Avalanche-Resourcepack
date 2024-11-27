@@ -1,6 +1,6 @@
 scoreboard players add @s lifetime 1
 execute if entity @s[scores={lifetime=1}] on vehicle run data merge entity @s {NoGravity:1b}
-execute if entity @s[scores={lifetime=12}] on vehicle run data merge entity @s {NoGravity:0b}
+execute if entity @s[scores={lifetime=15}] on vehicle run data merge entity @s {NoGravity:0b}
 execute at @s[scores={lifetime=1}] run playsound entity.firework_rocket.launch master @a ~ ~ ~ 1 0.8
 execute at @s[scores={lifetime=1}] run particle cloud ~ ~ ~ 0 0 0 0.1 5 force
 execute at @s[scores={lifetime=1..}] run particle firework ~ ~ ~ 0 0 0 0.02 1 force
