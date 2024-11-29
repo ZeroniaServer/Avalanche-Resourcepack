@@ -212,7 +212,7 @@
   "lobby.join.red": "Join Red Team",
   "lobby.join.green": "Join Green Team",
   "lobby.leave_game": "Leave Game",
-  "lobby.leave_spectator": "Fly into the Blue particle cluster to quit spectating.",
+  "lobby.leave_spectator": "Fly into the Blue particle cluster to stop spectating.",
   "secret": "%1$s This has a %2$s chance of happening!",
   "secret.found": "Secret Found!"
 }
