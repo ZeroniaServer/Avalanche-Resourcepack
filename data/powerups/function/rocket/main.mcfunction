@@ -33,3 +33,6 @@ execute if score $weakpointgreen CmdData matches 1.. run scoreboard players add 
 execute if score $weakpointgreen CmdData matches 15.. run scoreboard players reset $weakpointgreen CmdData
 execute if score $weakpointred CmdData matches 1.. run scoreboard players add $weakpointred CmdData 1
 execute if score $weakpointred CmdData matches 15.. run scoreboard players reset $weakpointred CmdData
+
+#> Rocket item displays
+kill @e[type=item_display,tag=rocketdisplay,predicate=!wasd:is_mounted]

@@ -25,7 +25,7 @@ execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:c
 execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:custom_model_data":4}}}] on passengers run tag @s add RocketRed
 
 #> Fix rocket visuals
-execute on passengers if entity @s[tag=AvalancheRocket] on vehicle run function powerups:throwable_init/set_rocket
+execute on passengers if entity @s[tag=AvalancheRocket] on vehicle at @s run function powerups:throwable_init/set_rocket
 
 tag @s add HasType
 
