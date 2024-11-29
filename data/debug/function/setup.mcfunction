@@ -257,3 +257,6 @@ summon text_display -3.85 46 -233 {Tags:["LobbyText"],text:'["",{"text":" "},{"t
 kill @e[type=marker,tag=BaseCampfire]
 summon marker -114 46 -210 {Tags:["BaseCampfire","Green"]}
 summon marker -12 45 -232 {Tags:["BaseCampfire","Red"]}
+
+#> Forceload
+forceload add -144 -33 47 -336
