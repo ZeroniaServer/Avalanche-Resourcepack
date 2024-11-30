@@ -1,5 +1,5 @@
 tag @s add self
-execute unless score $gamestate CmdData matches 2 if entity @s[tag=!Knockout,predicate=game:void] at @s run function powerups:rocket/drop
+execute unless score $gamestate CmdData matches 2 if entity @s[tag=!Knockout,predicate=game:void] at @s positioned ~ -25 ~ run function powerups:rocket/drop
 
 execute if entity @s[team=Lobby] run tp @s @s
 execute if entity @s[team=Lobby] run return run tp @s -65 52 -108 -180 0
