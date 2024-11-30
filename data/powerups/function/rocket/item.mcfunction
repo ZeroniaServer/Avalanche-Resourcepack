@@ -15,4 +15,17 @@ execute if entity @p[team=Green,tag=giveRocket] run item modify entity @s conten
 execute if entity @p[team=Red,tag=giveRocket] run item modify entity @s contents powerups:rocket_red
 execute if entity @p[tag=giveRocket] run tag @s remove RocketItem
 
+#> Particles
+execute at @s[tag=RocketItemGreen,tag=!RocketItemRed] run particle dust{color:[0.000,1.000,0.000],scale:1} ~ ~ ~ 0.1 0.2 0.1 0.1 2 force @a[team=!Red]
+execute at @s[tag=RocketItemRed,tag=!RocketItemGreen] run particle dust{color:[1.000,0.000,0.000],scale:1} ~ ~ ~ 0.1 0.2 0.1 0.1 2 force @a[team=!Green]
+
+execute at @s[tag=!RocketItemGreen,tag=!RocketItemRed] run particle dust_color_transition{from_color:[1.000,0.000,0.000],to_color:[0.000,1.000,0.000],scale:1} ~ ~0.5 ~ 0.1 0.2 0.1 0.1 1 force
+
+#> Rocket items void
+scoreboard players add @s[tag=Voided] CmdData 1
+execute at @s[tag=Voided,scores={CmdData=..2}] run particle firework ~ ~ ~ 0 0 0 .02 1 force
+execute at @s[tag=Voided,scores={CmdData=2}] run particle firework ~ ~ ~ 0 0 0 .2 6 force
+execute at @s[tag=Voided,scores={CmdData=2}] run playsound entity.firework_rocket.twinkle master @a ~ ~ ~ 0.3 2
+tag @s[tag=Voided,scores={CmdData=2..}] remove Voided
+
 function powerups:throwable_init/airtoggle
