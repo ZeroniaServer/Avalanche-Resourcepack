@@ -10,7 +10,7 @@ tp @s @s
 execute if score $gamestate CmdData matches -1 run tp @s[tag=firstJoined] -65 52 -108 0 0
 execute if score $gamestate CmdData matches 0.. run tp @s[tag=firstJoined] -65 52 -108 180 0
 execute if entity @s[tag=!firstJoined] run tp @s -65 54 -52 -180 0
-execute if entity @s[tag=!firstJoined] run say TODO: Welcome!
+# execute if entity @s[tag=!firstJoined] run say TODO: Welcome!
 tag @s add firstJoined
 scoreboard players operation @s leavecheck = $curr leavecheck
 scoreboard players operation @s gameID = $current gameID
