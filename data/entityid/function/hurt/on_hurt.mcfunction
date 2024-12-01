@@ -4,8 +4,8 @@ execute if entity @s[tag=Snowball] run scoreboard players add @a[tag=victim,tag=
 execute if entity @s[tag=SnowmanSnowball] run scoreboard players add @a[tag=victim,tag=!Knockout,limit=1] playerDamage 5
 
 #> Snow Mark bonus damage
-execute if entity @s[tag=Snowball] run scoreboard players add @a[tag=victim,tag=!Knockout,tag=SnowMark,limit=1] playerDamage 2
-execute if entity @s[tag=SnowmanSnowball] run scoreboard players add @a[tag=victim,tag=!Knockout,tag=SnowMark,limit=1] playerDamage 2
+execute if entity @s[tag=Snowball] run scoreboard players add @a[tag=victim,tag=!Knockout,tag=SnowMark,limit=1] playerDamage 3
+execute if entity @s[tag=SnowmanSnowball] run scoreboard players add @a[tag=victim,tag=!Knockout,tag=SnowMark,limit=1] playerDamage 3
 
 #> Knockout messages
 execute as @a[tag=victim,tag=!Knockout,tag=!KOmessaged,limit=1] if score @s playerDamage >= @s playerHP run tag @s add KOmessage

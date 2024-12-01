@@ -2,11 +2,11 @@ tag @a[tag=InEnemyCloud] remove InEnemyCloud
 tag @a[tag=InFriendlyCloud] remove InFriendlyCloud
 
 #> Cloud spawning animation
-data merge entity @s[scores={CmdData=2}] {interpolation_duration:6,start_interpolation:0,transformation:{scale:[1.0f,2.0f,1.0f]}}
-data merge entity @s[scores={CmdData=8}] {interpolation_duration:3,start_interpolation:0,transformation:{scale:[1.5f,1.5f,1.5f]}}
+data merge entity @s[scores={CmdData=2}] {interpolation_duration:6,start_interpolation:0,transformation:{scale:[2.0f,3.0f,2.0f],translation:[0.0f,1.5f,0.0f]}}
+data merge entity @s[scores={CmdData=8}] {interpolation_duration:3,start_interpolation:0,transformation:{scale:[2.5f,2.5f,2.5f],translation:[0.0f,1.5f,0.0f]}}
 
 #> Cloud particles
-execute at @s[scores={CmdData=5..250}] run particle snowflake ~ ~-0.4 ~ 0.6 0 0.6 0 3 force @a
+execute at @s[scores={CmdData=5..250}] run particle snowflake ~ ~0.3 ~ 1.5 0.2 1.5 0 3 force @a
 
 #> Despawn
 data merge entity @s[scores={CmdData=270}] {interpolation_duration:10,start_interpolation:0,transformation:{scale:[0.0f,1.0f,0.0f]}}
@@ -34,26 +34,26 @@ execute at @s[scores={CmdData=261}] run playsound minecraft:snowglobe_blizzard_1
 execute at @s[scores={CmdData=281}] run playsound minecraft:snowglobe_blizzard_15 master @a[distance=..24] ~ ~ ~ 0.2 1
 
 #> Damage enemies over time
-execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-2.5 ~-5.5 ~-2.5 run tag @a[team=Green,tag=!Knockout,dx=4,dy=4,dz=4] add InEnemyCloud
-execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-2.5 ~-5.5 ~-2.5 run tag @a[team=Red,tag=!Knockout,dx=4,dy=4,dz=4] add InFriendlyCloud
-execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-2.5 ~-5.5 ~-2.5 run tag @a[team=Red,tag=!Knockout,dx=4,dy=4,dz=4] add InEnemyCloud
-execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-2.5 ~-5.5 ~-2.5 run tag @a[team=Green,tag=!Knockout,dx=4,dy=4,dz=4] add InFriendlyCloud
+execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-3.5 ~-5.5 ~-3.5 run tag @a[team=Green,tag=!Knockout,dx=6,dy=6,dz=6] add InEnemyCloud
+execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-3.5 ~-5.5 ~-3.5 run tag @a[team=Red,tag=!Knockout,dx=6,dy=6,dz=6] add InFriendlyCloud
+execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-3.5 ~-5.5 ~-3.5 run tag @a[team=Red,tag=!Knockout,dx=6,dy=6,dz=6] add InEnemyCloud
+execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-3.5 ~-5.5 ~-3.5 run tag @a[team=Green,tag=!Knockout,dx=6,dy=6,dz=6] add InFriendlyCloud
 
 #> Heal Snowmen in range to full HP
-execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-2.5 ~-5.5 ~-2.5 as @e[type=item_display,tag=Snowman,tag=Green,tag=!Dying,dx=4,dy=4,dz=4,scores={playerHP=1..898}] at @s run particle heart ~ ~1 ~ 0.5 0.5 0.5 0.1 5 force
-execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-2.5 ~-5.5 ~-2.5 as @e[type=item_display,tag=Snowman,tag=Red,tag=!Dying,dx=4,dy=4,dz=4,scores={playerHP=1..898}] at @s run particle heart ~ ~1 ~ 0.5 0.5 0.5 0.1 5 force
-execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-2.5 ~-5.5 ~-2.5 run scoreboard players set @e[type=item_display,tag=Snowman,tag=Green,tag=!Dying,dx=4,dy=4,dz=4,scores={playerHP=1..900}] playerHP 900
-execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-2.5 ~-5.5 ~-2.5 run scoreboard players set @e[type=item_display,tag=Snowman,tag=Red,tag=!Dying,dx=4,dy=4,dz=4,scores={playerHP=1..900}] playerHP 900
+execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-3.5 ~-5.5 ~-3.5 as @e[type=item_display,tag=Snowman,tag=Green,tag=!Dying,dx=3.5,dy=3.5,dz=3.5,scores={playerHP=1..898}] at @s run particle heart ~ ~1 ~ 0.5 0.5 0.5 0.1 5 force
+execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-3.5 ~-5.5 ~-3.5 as @e[type=item_display,tag=Snowman,tag=Red,tag=!Dying,dx=3.5,dy=3.5,dz=3.5,scores={playerHP=1..898}] at @s run particle heart ~ ~1 ~ 0.5 0.5 0.5 0.1 5 force
+execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-3.5 ~-5.5 ~-3.5 run scoreboard players set @e[type=item_display,tag=Snowman,tag=Green,tag=!Dying,dx=3.5,dy=3.5,dz=3.5,scores={playerHP=1..900}] playerHP 900
+execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-3.5 ~-5.5 ~-3.5 run scoreboard players set @e[type=item_display,tag=Snowman,tag=Red,tag=!Dying,dx=3.5,dy=3.5,dz=3.5,scores={playerHP=1..900}] playerHP 900
 
 #> Extinguish enemy campfires
-execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-2.5 ~-5.5 ~-2.5 run scoreboard players add @e[type=item_display,tag=CampfireMain,tag=!Extinguish,tag=!Reviving,scores={CmdData=20..585},tag=Green,dx=4,dy=4,dz=4] CmdData 5
-execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-2.5 ~-5.5 ~-2.5 run scoreboard players add @e[type=item_display,tag=CampfireMain,tag=!Extinguish,tag=!Reviving,scores={CmdData=20..585},tag=Red,dx=4,dy=4,dz=4] CmdData 5
+execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-3.5 ~-5.5 ~-3.5 run scoreboard players add @e[type=item_display,tag=CampfireMain,tag=!Extinguish,tag=!Reviving,scores={CmdData=20..585},tag=Green,dx=3.5,dy=3.5,dz=3.5] CmdData 5
+execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-3.5 ~-5.5 ~-3.5 run scoreboard players add @e[type=item_display,tag=CampfireMain,tag=!Extinguish,tag=!Reviving,scores={CmdData=20..585},tag=Red,dx=3.5,dy=3.5,dz=3.5] CmdData 5
 
 #> Snow-Mark nearby players
-execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run tag @a[team=Green,tag=!Knockout,dx=6,dy=6,dz=6] add SnowMark
-execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run tag @a[team=Red,tag=!Knockout,dx=6,dy=6,dz=6] add SnowMark
-execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run scoreboard players set @a[team=Green,tag=!Knockout,dx=6,dy=6,dz=6,scores={snowmark=2..}] snowmark 2
-execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run scoreboard players set @a[team=Red,tag=!Knockout,dx=6,dy=6,dz=6,scores={snowmark=2..}] snowmark 2
+execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run tag @a[team=Green,tag=!Knockout,dx=8.5,dy=8.5,dz=8.5] add SnowMark
+execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run tag @a[team=Red,tag=!Knockout,dx=8.5,dy=8.5,dz=8.5] add SnowMark
+execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run scoreboard players set @a[team=Green,tag=!Knockout,dx=8.5,dy=8.5,dz=8.5,scores={snowmark=2..}] snowmark 2
+execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run scoreboard players set @a[team=Red,tag=!Knockout,dx=8.5,dy=8.5,dz=8.5,scores={snowmark=2..}] snowmark 2
 
 #> Pulse
 execute if entity @s[scores={CmdData=10..265}] run function powerups:snowglobe/random_wobble

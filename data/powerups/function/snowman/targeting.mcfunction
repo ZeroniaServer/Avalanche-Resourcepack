@@ -23,7 +23,7 @@ execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=CoalBlind,tag=!Dying] run fu
 scoreboard players set @s[tag=Red,tag=Spawned,tag=Targeting,tag=CoalBlind,tag=!Dying] CmdData 50
 tag @s[tag=Red,tag=Spawned,tag=Targeting,tag=CoalBlind,tag=!Dying] remove Targeting
 
-execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=!Dying,tag=!CoalBlind] run rotate @s facing entity @a[team=Green,tag=snowmanTarget,distance=..10,limit=1]
+execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=!Dying,tag=!CoalBlind] run rotate @s facing entity @a[team=Green,tag=snowmanTarget,distance=..12,limit=1]
 execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=!Dying] run rotate @s ~ 0
 
 #Green
@@ -48,5 +48,5 @@ execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=CoalBlind,tag=!Dying] run 
 scoreboard players set @s[tag=Green,tag=Spawned,tag=Targeting,tag=CoalBlind,tag=!Dying] CmdData 50
 tag @s[tag=Green,tag=Spawned,tag=Targeting,tag=CoalBlind,tag=!Dying] remove Targeting
 
-execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Dying,tag=!CoalBlind] run rotate @s facing entity @a[team=Red,tag=snowmanTarget,distance=..10,limit=1]
+execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Dying,tag=!CoalBlind] run rotate @s facing entity @a[team=Red,tag=snowmanTarget,distance=..12,limit=1]
 execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Dying] run rotate @s ~ 0

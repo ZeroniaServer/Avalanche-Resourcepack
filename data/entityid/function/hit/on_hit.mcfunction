@@ -12,7 +12,7 @@ execute if entity @s[tag=hitbox,tag=Red] if entity @a[tag=hitter,team=Green] on 
 #> Icicle in general
 execute if entity @s[tag=!hitbox,tag=!GiftboxInteraction] as @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run function powerups:icicle/break
 execute if entity @s[type=player,tag=!Knockout] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run scoreboard players add @s playerDamage 5
-execute if entity @s[type=player,tag=!Knockout,tag=SnowMark] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run scoreboard players add @s playerDamage 2
+execute if entity @s[type=player,tag=!Knockout,tag=SnowMark] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run scoreboard players add @s playerDamage 3
 execute if entity @s[type=player,tag=!Knockout] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] if score @s playerDamage >= @s playerHP run tag @s add KOmessage
 execute if entity @s[tag=KOmessage,tag=!KOmessaged] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run tellraw @a [{"translate":"knockout.attack.direct","color":"dark_aqua","with":[{"selector":"@s"},{"selector":"@a[tag=hitter,limit=1]"}]}]
 execute if entity @s[type=player,tag=!Knockout] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] if score @s playerDamage >= @s playerHP run tag @s add KOmessaged
