@@ -19,7 +19,7 @@ effect give @a fire_resistance infinite 100 true
 execute as @e[type=item,tag=!SleighItem,tag=!mineBarricade] at @s if items entity @s contents *[custom_data~{NoDrop:1b}] run function everytick:nodrop
 
 #> Leave game
-execute as @a[scores={leftgame=1..}] run function player:leave
+# execute as @a[scores={leftgame=1..}] run function player:leave
 
 #> Snowman hit
 execute as @a[scores={snowmanhit=1..}] run scoreboard players add @s snowmanhit 1
