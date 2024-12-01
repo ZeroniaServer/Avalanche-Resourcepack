@@ -9,5 +9,6 @@ tag @s add FWItem
 
 execute if predicate game:high_arena run tag @s add higharena
 execute if predicate game:high_arena run data merge entity @s[tag=!Voided] {NoGravity:0b}
+data merge entity @s[tag=movedfloor] {NoGravity:0b}
 
 item modify entity @s contents [{"function":"minecraft:set_custom_data","tag":"{Rocket:1b}"}]
