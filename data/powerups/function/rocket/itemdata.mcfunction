@@ -7,6 +7,7 @@ execute if entity @a[tag=self,team=Red] run tag @s add RocketItemGreen
 tag @s add RocketItem
 tag @s add FWItem
 
-execute if predicate game:high_arena at @s positioned over motion_blocking unless block ~ ~-1 ~ air run data merge entity @s {NoGravity:0b}
+execute if predicate game:high_arena run tag @s add higharena
+execute if predicate game:high_arena run data merge entity @s[tag=!Voided] {NoGravity:0b}
 
 item modify entity @s contents [{"function":"minecraft:set_custom_data","tag":"{Rocket:1b}"}]
