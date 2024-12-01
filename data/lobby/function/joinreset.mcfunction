@@ -17,4 +17,4 @@ scoreboard players operation @s gameID = $current gameID
 playsound entity.player.levelup master @s ~ ~ ~ 1 1.75
 title @s title ""
 title @s subtitle ""
-title @s actionbar ""
+# title @s actionbar ""
