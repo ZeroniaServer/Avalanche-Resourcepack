@@ -12,6 +12,5 @@ execute at @s[tag=!Voided] as @a[tag=self,limit=1] run loot spawn ~ ~1 ~ loot po
 execute at @s[tag=Voided] as @a[tag=self,limit=1] run loot spawn ~ ~6 ~ loot powerups:rocket_drop
 
 execute if entity @s[tag=void] as @e[type=item] if items entity @s contents snowball[custom_data~{Dropped:1b}] run tag @s add Voided
-say @e[tag=Voided]
 
 kill
