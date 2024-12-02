@@ -1,4 +1,4 @@
-execute as @a[team=!Lobby,gamemode=!spectator,gamemode=!creative] run function player:actionbar
+# execute as @a[team=!Lobby,gamemode=!spectator,gamemode=!creative] run function player:actionbar
 execute as @a[team=!Lobby,gamemode=spectator] run title @s actionbar ""
 execute as @a[team=!Lobby,gamemode=creative] run title @s actionbar ""
 
