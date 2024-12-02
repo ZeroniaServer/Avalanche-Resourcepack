@@ -4,7 +4,7 @@ fill -35 51 -149 -35 49 -151 pink_stained_glass
 fill -62 53 -93 -64 54 -93 air
 scoreboard players reset @a modify
 tag @a remove ModiOwner
-execute as @a at @s run playsound entity.player.levelup master @a ~ ~ ~ 1 2
+execute as @a at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 2
 scoreboard players set $gamestate CmdData 0
 
 scoreboard players set $RedReady CmdData 0

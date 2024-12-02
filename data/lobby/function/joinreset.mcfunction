@@ -12,6 +12,7 @@ execute if score $gamestate CmdData matches 0.. run tp @s[tag=firstJoined] -65 5
 execute if entity @s[tag=!firstJoined] run tp @s -65 54 -52 -180 0
 # execute if entity @s[tag=!firstJoined] run say TODO: Welcome!
 tag @s add firstJoined
+tag @s add SilentRespawn
 scoreboard players operation @s leavecheck = $curr leavecheck
 scoreboard players operation @s gameID = $current gameID
 playsound entity.player.levelup master @s ~ ~ ~ 1 1.75
