@@ -1,2 +1,2 @@
-data modify storage avalanche:rocket mot set from entity @s Pos
+data modify storage avalanche:motion Motion set from entity @s Pos
 kill

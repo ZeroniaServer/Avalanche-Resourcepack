@@ -27,9 +27,6 @@ execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:c
 #> Fix rocket visuals
 execute on passengers if entity @s[tag=AvalancheRocket] on vehicle at @s run function powerups:throwable_init/set_rocket
 
-#> Other snowball physics
-execute on passengers unless entity @s[tag=AvalancheRocket] on vehicle at @s run function powerups:throwable_init/set_motion
-
 tag @s add HasType
 
 scoreboard players reset @s CmdData
