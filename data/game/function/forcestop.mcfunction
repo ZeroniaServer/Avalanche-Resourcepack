@@ -13,13 +13,13 @@ team modify Lobby nametagVisibility always
 #> Cycle the Game ID, forcing rejoiners to automatically swap to the lobby team
 function lobby:settings/gameidcycle
 
-fill -62 53 -93 -64 54 -93 air
-setblock -62 54 -93 mangrove_wall_sign
-setblock -63 54 -93 mangrove_wall_sign
-setblock -64 54 -93 mangrove_wall_sign
+fill -56 53 -91 -56 54 -89 air
+setblock -56 54 -91 mangrove_wall_sign[facing=west]
+setblock -56 54 -90 mangrove_wall_sign[facing=west]
+setblock -56 54 -89 mangrove_wall_sign[facing=west]
 
-setblock -64 53 -93 mangrove_wall_sign
-setblock -62 53 -93 mangrove_wall_sign
+setblock -56 53 -91 mangrove_wall_sign[facing=west]
+setblock -56 53 -89 mangrove_wall_sign[facing=west]
 
 function lobby:settings/refreshsigns with storage lobby:customizer
 

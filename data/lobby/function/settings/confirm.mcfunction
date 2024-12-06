@@ -1,7 +1,7 @@
 fill -90 53 -148 -90 55 -150 minecraft:cyan_stained_glass
 fill -35 51 -149 -35 49 -151 pink_stained_glass
 
-fill -62 53 -93 -64 54 -93 air
+
 scoreboard players reset @a modify
 tag @a remove ModiOwner
 execute as @a at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 2
@@ -15,7 +15,7 @@ scoreboard players set $RedPoints CmdData 0
 
 function lobby:settings/announce with storage lobby:customizer
 
-fill -62 53 -93 -64 53 -93 air
+fill -56 53 -91 -56 54 -89 air
 
 function bossbars:get_points
 

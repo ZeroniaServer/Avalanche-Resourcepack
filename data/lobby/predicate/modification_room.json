@@ -5,16 +5,16 @@
       "location": {
         "position": {
           "x": {
-            "min": -66,
-            "max": -60
+            "min": -59,
+            "max": -55
           },
           "y": {
             "min": 51,
-            "max": 56
+            "max": 59
           },
           "z": {
-            "min": -97,
-            "max": -92
+            "min": -92,
+            "max": -88
           }
         }
       }
