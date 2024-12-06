@@ -23,4 +23,5 @@ scoreboard players reset @a[tag=!ModiOwner] modiowner
 effect give @a[tag=ModiOwner] glowing 1 0 true
 
 #> Particles
-execute unless entity @a[predicate=lobby:modification_room] run particle trail{color:[0.384,0.208,0.275],target:[-57.5,54.5,-89.5]} -60 54 -90 0.1 1 1 0 10 force
+execute unless entity @a[predicate=lobby:modification_room] run particle trail{color:[0.929,0.529,0.651],target:[-57.5,54.5,-89.5]} -60 54 -90 0.1 1 1 0 5 force
+execute unless entity @a[predicate=lobby:modification_room] run particle trail{color:[0.086,0.6,0.604],target:[-57.5,54.5,-89.5]} -60 54 -90 0.1 1 1 0 5 force
