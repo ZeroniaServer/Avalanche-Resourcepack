@@ -48,7 +48,7 @@ function lobby:readyteams/refreshsigns
 bossbar set bar_ready_g value 0
 bossbar set bar_ready_r value 0
 bossbar set bar_lobby style notched_6
-bossbar set bar_lobby name {"translate":"chat.confirm","color":"dark_purple","with":[{"translate":"chat.settings_box","color":"light_purple","bold":true}]}
+bossbar set bar_lobby name {"translate":"chat.confirm","color":"#f089a8","with":[{"translate":"chat.settings_box","color":"#1dc6c7","bold":true}]}
 
 scoreboard players set $red_progress CmdData 0
 scoreboard players set $green_progress CmdData 0

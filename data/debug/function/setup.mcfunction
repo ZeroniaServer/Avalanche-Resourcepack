@@ -260,3 +260,5 @@ summon marker -12 45 -232 {Tags:["BaseCampfire","Red"]}
 
 #> Forceload
 forceload add -144 -33 47 -336
+
+setworldspawn -65 52 -65
