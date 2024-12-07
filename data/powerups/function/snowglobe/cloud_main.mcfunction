@@ -69,7 +69,7 @@ execute as @a[tag=!InFriendlyCloud,predicate=powerups:snowball_blizzard_offhand]
 #> Overall player effects
 scoreboard players reset @a[tag=!InEnemyCloud,scores={blizzardtime=1..}] blizzardtime
 scoreboard players add @a[tag=InEnemyCloud] blizzardtime 1
-execute as @a[tag=InEnemyCloud,scores={blizzardtime=5}] run scoreboard players add @s playerDamage 3
+execute as @a[tag=InEnemyCloud,scores={blizzardtime=5}] run scoreboard players add @s[tag=!IFrame] playerDamage 3
 tag @s add self
 execute as @a[tag=InEnemyCloud,scores={blizzardtime=5},tag=!Knockout] if score @s playerDamage >= @s playerHP run function powerups:snowglobe/knockout
 tag @s remove self

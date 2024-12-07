@@ -8,3 +8,8 @@ execute as @a[scores={playerDamage=1..}] unless score @s respawn matches 1.. run
 #> Spawn immunity
 scoreboard players add @a[scores={respawn=1..}] respawn 1
 scoreboard players reset @a[scores={respawn=60..}] respawn
+
+#> Invulnerability frames
+scoreboard players add @a[tag=IFrame] iframe 1
+tag @a[tag=IFrame,scores={iframe=15..}] remove IFrame
+scoreboard players reset @a[tag=!IFrame,scores={iframe=-1000..}] iframe

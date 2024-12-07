@@ -49,14 +49,15 @@ scoreboard objectives add spectate trigger
 scoreboard objectives add joinred trigger
 scoreboard objectives add joingreen trigger
 scoreboard objectives add snowmanhit dummy
-execute unless score $MaxTeamSize CmdData matches 0.. run scoreboard players set $MaxTeamSize CmdData 5
-execute unless score $forcedmodes CmdData matches 0.. run scoreboard players set $forcedmodes CmdData 1
+scoreboard objectives add iframe dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100
 scoreboard players set $200 CmdData 200
 scoreboard players set $350 CmdData 350
 scoreboard players set $1000 CmdData 1000
+execute unless score $MaxTeamSize CmdData matches 0.. run scoreboard players set $MaxTeamSize CmdData 5
+execute unless score $forcedmodes CmdData matches 0.. run scoreboard players set $forcedmodes CmdData 1
 
 #> Entity ID
 scoreboard objectives add entityid dummy
