@@ -15,8 +15,8 @@ ride @e[type=minecart,tag=init,limit=1] mount @e[type=turtle,tag=init,limit=1]
 ride @e[type=item_display,tag=init,limit=1] mount @e[type=turtle,tag=init,limit=1]
 execute as @e[type=interaction,tag=init,limit=4] run ride @s mount @e[type=turtle,tag=init,limit=1]
 ride @e[type=oak_boat,tag=init,limit=1] mount @e[type=interaction,tag=boatanchor,tag=init,limit=1]
-execute as @e[type=oak_boat,tag=init,limit=1] run function entityid:assign_tag
 execute as @e[type=oak_boat,tag=init,limit=1] run team join noCol
+execute as @e[type=oak_boat,tag=init,limit=1] run function entityid:assign_tag
 scoreboard players operation @e[type=turtle,tag=init,limit=1] sleighDamage = $dura sleighDamage
 
 tag @e[type=#powerups:sleigh,tag=init] remove init
