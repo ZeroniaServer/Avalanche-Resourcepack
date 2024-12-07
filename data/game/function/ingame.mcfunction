@@ -67,3 +67,14 @@ execute as @a[team=!Lobby,team=!Spectator,tag=!sleighMainhand] if items entity @
 execute as @a[team=!Lobby,team=!Spectator,tag=sleighMainhand] unless items entity @s weapon.mainhand ghast_spawn_egg[custom_data~{Sleigh:1b}] run tag @s remove sleighMainhand
 execute as @a[team=!Lobby,team=!Spectator,tag=!sleighOffhand] if items entity @s weapon.offhand ghast_spawn_egg[custom_data~{Sleigh:1b}] run tag @s add sleighOffhand
 execute as @a[team=!Lobby,team=!Spectator,tag=sleighOffhand] unless items entity @s weapon.offhand ghast_spawn_egg[custom_data~{Sleigh:1b}] run tag @s remove sleighOffhand
+
+#> Freezing in mountains
+tag @a remove inMountains 
+execute as @a[team=!Lobby,team=!Spectator] at @s unless entity @s[predicate=!game:red_mountain_player,predicate=!game:green_mountain_player] run tag @s add inMountains
+scoreboard players reset @a[tag=!inMountains,scores={mountaintime=1..}] mountaintime
+scoreboard players add @a[tag=inMountains] mountaintime 1
+execute as @a[tag=inMountains,scores={mountaintime=5}] run scoreboard players add @s[tag=!IFrame] playerDamage 1
+execute as @a[tag=inMountains,scores={mountaintime=5},tag=!Knockout] if score @s playerDamage >= @s playerHP run tellraw @a [{"translate":"knockout.mountains","color":"dark_aqua","with":[{"selector":"@s"}]}]
+execute as @a[tag=inMountains,tag=!Knockout,scores={mountaintime=5}] run damage @s 1 starve
+effect give @a[tag=inMountains,tag=!Knockout] slowness 1 3 true
+execute as @a[tag=inMountains,scores={mountaintime=10..}] run scoreboard players reset @s mountaintime

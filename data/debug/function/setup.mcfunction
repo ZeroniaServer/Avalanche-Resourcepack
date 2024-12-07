@@ -50,6 +50,7 @@ scoreboard objectives add joinred trigger
 scoreboard objectives add joingreen trigger
 scoreboard objectives add snowmanhit dummy
 scoreboard objectives add iframe dummy
+scoreboard objectives add mountaintime dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100
