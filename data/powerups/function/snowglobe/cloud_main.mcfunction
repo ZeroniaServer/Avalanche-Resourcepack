@@ -73,7 +73,7 @@ execute as @a[tag=InEnemyCloud,scores={blizzardtime=5}] run scoreboard players a
 tag @s add self
 execute as @a[tag=InEnemyCloud,scores={blizzardtime=5},tag=!Knockout] if score @s playerDamage >= @s playerHP run function powerups:snowglobe/knockout
 tag @s remove self
-execute as @a[tag=InEnemyCloud,scores={blizzardtime=5}] run damage @s 1 starve
+execute as @a[tag=InEnemyCloud,tag=!Knockout,scores={blizzardtime=5}] run damage @s 1 starve
 execute as @a[tag=InEnemyCloud,scores={blizzardtime=10..}] run scoreboard players reset @s blizzardtime
 
 effect give @a[tag=InEnemyCloud,tag=!Knockout] slowness 1 3 true
