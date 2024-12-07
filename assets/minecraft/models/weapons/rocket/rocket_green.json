@@ -1,5 +1,4 @@
 {
-	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "custom/firework_green",
 		"particle": "custom/firework_green"
@@ -113,6 +112,5 @@
 			"translation": [0, -8, 0],
 			"scale": [0.8, 0.8, 0.8]
 		}
-	},
-	"cgreenit": "Made with Blockbench"
+	}
 }

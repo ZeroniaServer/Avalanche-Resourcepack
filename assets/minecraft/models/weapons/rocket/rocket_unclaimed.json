@@ -1,5 +1,4 @@
 {
-	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "custom/firework_unclaimed",
 		"particle": "custom/firework_unclaimed"
@@ -114,6 +113,5 @@
 			"translation": [-1.6, 1.59, 0],
 			"scale": [3.2, 3.2, 3.2]
 		}
-	},
-	"cgreenit": "Made with Blockbench"
+	}
 }
