@@ -3,8 +3,8 @@ function lobby:loop
 
 #> Lobby health bars
 execute as @a[team=!Spectator,gamemode=!spectator,gamemode=!creative] run function player:actionbar
-execute as @a[team=Lobby,gamemode=spectator] run title @s actionbar ""
-execute as @a[team=Lobby,gamemode=creative] run title @s actionbar ""
+execute as @a[team=!Spectator,gamemode=spectator] run title @s actionbar ""
+execute as @a[gamemode=creative] run title @s actionbar ""
 
 #> Forced modes
 execute if score $forcedmodes CmdData matches 1 as @a run function player:forcedmodes

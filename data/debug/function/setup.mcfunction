@@ -98,6 +98,19 @@ scoreboard objectives add const dummy
 scoreboard players set 2 const 2
 scoreboard players set -1 const -1
 
+#> Parkour
+scoreboard objectives add parkourMins dummy
+scoreboard objectives add parkourSecs dummy
+scoreboard objectives add parkourDeci dummy
+scoreboard objectives add parkourDeci2 dummy
+scoreboard objectives add parkourTimer dummy
+scoreboard objectives add finalParkourTime dummy
+scoreboard objectives add bestParkourMins dummy
+scoreboard objectives add bestParkourSecs dummy
+scoreboard objectives add bestParkourDeci dummy
+scoreboard objectives add bestParkourDeci2 dummy
+scoreboard objectives add bestParkourTime dummy
+
 #> Teams
 team add Lobby
 team add Spectator
