@@ -30,7 +30,7 @@ effect clear @a[tag=Knockout,scores={knocktime=10}] slowness
 #TODO: sound event for knockout with custom subtitle
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s run playsound snowballhit master @a ~ ~ ~ 1.1 0
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s run attribute @s minecraft:knockback_resistance base set 1.0
-execute as @a[tag=Knockout,scores={knocktime=1}] at @s if blocks ~ -64 ~ ~ ~-1 ~ ~ -63 ~ masked run tp @s @s
+execute as @a[tag=Knockout,scores={knocktime=1}] at @s unless blocks ~ -64 ~ ~ ~-1 ~ ~ -63 ~ masked run tp @s @s
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s if predicate game:5050 run function powerups:giftbox/spawn
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s run particle block{block_state:"minecraft:snow"} ~ ~1.5 ~ 0.15 0.15 0.15 0.15 30
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s run particle minecraft:snowflake ~ ~1.5 ~ 0.1 0.1 0.1 0.1 7
