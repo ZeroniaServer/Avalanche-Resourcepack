@@ -15,8 +15,7 @@
 # Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/math.html
 # ------------------------------------------------------------------------------------------------------------
 
-forceload add -30000000 1600
-execute if loaded -30000000 0 1600 unless entity @e[type=marker,tag=bs.entity,limit=1] run summon minecraft:marker -30000000 0 1600 {Tags:["bs.entity","bs.persistent"]}
+execute if loaded 0 0 0 unless entity @e[type=marker,tag=bs.entity,limit=1] run summon minecraft:marker 0 0 0 {Tags:["bs.entity","bs.persistent"]}
 
 scoreboard objectives add bs.in dummy [{"text":"BS ","color":"dark_gray"},{"text":"Input","color":"aqua"}]
 scoreboard objectives add bs.out dummy [{"text":"BS ","color":"dark_gray"},{"text":"Output","color":"aqua"}]
