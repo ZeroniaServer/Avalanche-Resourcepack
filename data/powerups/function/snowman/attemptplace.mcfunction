@@ -12,6 +12,10 @@ execute unless score $raydist CmdData matches 2000000.. run tag @s add illegal
 # Didn't hit anything so definitely safe placement
 execute if data storage iris:output {TargetType:"NONE"} run tag @s remove illegal
 
+# Prevent in bases
+execute at @s[tag=!illegal] if predicate game:green_base run tag @s add illegal
+execute at @s[tag=!illegal] if predicate game:red_base run tag @s add illegal
+
 # Finally, protect against other illegal placement conditions
 execute at @s[tag=!illegal] run function powerups:placeable_init/illegalplacement
 

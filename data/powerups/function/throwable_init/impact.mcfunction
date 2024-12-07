@@ -1,11 +1,16 @@
 execute on vehicle run kill
 
-# execute unless entity @s[tag=!Snowball,tag=!Iceball] at @s[nbt={inBlockState:{Name:"minecraft:target"}}] run function entityid:target/on_target
+execute at @s if predicate game:red_base run tag @s add BasePrevention
+execute at @s if predicate game:green_base run tag @s add BasePrevention
+execute at @s if predicate game:red_base on vehicle run tag @s add BasePrevention
+execute at @s if predicate game:green_base on vehicle run tag @s add BasePrevention
+execute at @s if predicate game:red_base on passengers run tag @s add BasePrevention
+execute at @s if predicate game:green_base on passengers run tag @s add BasePrevention
 
-execute at @s[tag=Snowball] run return run function powerups:snowball/impact
-execute at @s[tag=SnowmanSnowball] run return run function powerups:snowball/impact
-execute at @s[tag=Iceball] run return run function powerups:iceball/impact
-execute at @s[tag=Coalstock] run return run function powerups:coalstock/impact
-execute at @s[tag=Snowglobe] run return run function powerups:snowglobe/impact
-execute at @s[tag=AvalancheRocket] run tag @s add Scored
-execute at @s[tag=AvalancheRocket] run function powerups:rocket/explosion
+execute at @s[tag=Snowball,tag=!BasePrevention] run return run function powerups:snowball/impact
+execute at @s[tag=SnowmanSnowball,tag=!BasePrevention] run return run function powerups:snowball/impact
+execute at @s[tag=Iceball,tag=!BasePrevention] run return run function powerups:iceball/impact
+execute at @s[tag=Coalstock,tag=!BasePrevention] run return run function powerups:coalstock/impact
+execute at @s[tag=Snowglobe,tag=!BasePrevention] run return run function powerups:snowglobe/impact
+execute at @s[tag=AvalancheRocket,tag=!BasePrevention] run tag @s add Scored
+execute at @s[tag=AvalancheRocket,tag=!BasePrevention] run function powerups:rocket/explosion
