@@ -50,8 +50,8 @@ execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-3.5 ~-5.5 ~-3.5 run 
 execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-3.5 ~-5.5 ~-3.5 run scoreboard players add @e[type=item_display,tag=CampfireMain,tag=!Extinguish,tag=!Reviving,scores={CmdData=20..585},tag=Red,dx=3.5,dy=3.5,dz=3.5] CmdData 5
 
 #> Snow-Mark nearby players
-execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run tag @a[team=Green,tag=!Knockout,dx=8.5,dy=8.5,dz=8.5] add SnowMark
-execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run tag @a[team=Red,tag=!Knockout,dx=8.5,dy=8.5,dz=8.5] add SnowMark
+execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run tag @a[team=Green,tag=!Knockout,tag=!IFrame,dx=8.5,dy=8.5,dz=8.5] add SnowMark
+execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run tag @a[team=Red,tag=!Knockout,tag=!IFrame,dx=8.5,dy=8.5,dz=8.5] add SnowMark
 execute at @s[tag=Red,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run scoreboard players set @a[team=Green,tag=!Knockout,dx=8.5,dy=8.5,dz=8.5,scores={snowmark=2..}] snowmark 2
 execute at @s[tag=Green,scores={CmdData=1..260}] positioned ~-4.5 ~-5.5 ~-4.5 run scoreboard players set @a[team=Red,tag=!Knockout,dx=8.5,dy=8.5,dz=8.5,scores={snowmark=2..}] snowmark 2
 

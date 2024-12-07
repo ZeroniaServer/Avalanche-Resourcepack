@@ -41,3 +41,6 @@ execute as @e[type=marker,tag=CoalStockMarker,tag=z1] at @s run tp @s ~ ~ ~0.6
 execute as @e[type=marker,tag=CoalStockMarker,tag=z2] at @s run tp @s ~ ~ ~-0.6
 
 kill @e[type=marker,tag=CoalStockMarker,scores={CmdData=5..}]
+
+#> Base prevention
+kill @e[tag=BasePrevention]

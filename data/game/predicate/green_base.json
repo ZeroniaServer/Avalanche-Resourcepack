@@ -12,11 +12,11 @@
                             "max": -107
                         },
                         "y": {
-                            "min": 44,
+                            "min": 42,
                             "max": 55
                         },
                         "z": {
-                            "min": -214,
+                            "min": -216,
                             "max": -203
                         }
                     }
@@ -30,16 +30,38 @@
                 "location": {
                     "position": {
                         "x": {
-                            "min": -115,
+                            "min": -126,
                             "max": -110
                         },
                         "y": {
-                            "min": 55,
+                            "min": 42,
                             "max": 61
                         },
                         "z": {
-                            "min": -211,
-                            "max": -207
+                            "min": -216,
+                            "max": -203
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "position": {
+                        "x": {
+                            "min": -126,
+                            "max": -110
+                        },
+                        "y": {
+                            "min": 42,
+                            "max": 61
+                        },
+                        "z": {
+                            "min": -216,
+                            "max": -203
                         }
                     }
                 }
