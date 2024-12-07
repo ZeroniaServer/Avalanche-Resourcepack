@@ -6,6 +6,8 @@ particle cloud ~ ~1.4 ~ 0.3 0.3 0.3 0 4 force
 execute if entity @s[tag=Knockout] run particle block{block_state:snow_block} ~ ~1.6 ~ 0.1 0.1 0.1 0.1 20 force
 execute if entity @s[tag=Knockout] run particle splash ~ ~1.6 ~ 0.1 0.1 0.1 0.1 20 force
 execute if entity @s[tag=Knockout] run playsound block.fire.extinguish master @a ~ ~ ~ 0.6 1.2
+execute if entity @s[tag=Knockout] run scoreboard players reset @s iframe
+execute if entity @s[tag=Knockout] run tag @s add IFrame
 
 tag @s remove SnowMark
 
