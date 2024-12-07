@@ -15,5 +15,6 @@ execute as @e[type=snowball,tag=owned] at @s run function powerups:throwable_ini
 execute as @e[type=snowball,tag=HasPassenger,tag=!HasType] on passengers on vehicle run function powerups:throwable_init/set_type
 
 #> Reset scores
+execute on vehicle on vehicle run tag @s add slowThrow
 scoreboard players reset @s throwsb
 tag @s remove self
