@@ -4,7 +4,10 @@
         "property": "minecraft:display_context",
         "cases": [
             {
-                "when": "gui",
+                "when": [
+                    "gui",
+                    "ground"
+                ],
                 "model": {
                     "type": "minecraft:model",
                     "model": "minecraft:weapons/sleigh_gui"
@@ -16,7 +19,6 @@
                     "thirdperson_righthand",
                     "firstperson_lefthand",
                     "firstperson_righthand",
-                    "ground",
                     "head",
                     "fixed",
                     "none"
