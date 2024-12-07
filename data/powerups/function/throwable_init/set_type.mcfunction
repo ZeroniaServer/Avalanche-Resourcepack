@@ -1,8 +1,8 @@
 #> Add tags to the arrow depending on what snowball was used
-execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:custom_model_data":1}}}] on passengers run tag @s add Snowball
-execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:custom_model_data":2}}}] on passengers run tag @s add Iceball
-execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:custom_model_data":5}}}] on passengers run tag @s add Coalstock
-execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:custom_model_data":6}}}] on passengers run tag @s add Snowglobe
+execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:item_model":"minecraft:weapons/snowball"}}}] on passengers run tag @s add Snowball
+execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:item_model":"minecraft:weapons/iceball"}}}] on passengers run tag @s add Iceball
+execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:item_model":"minecraft:weapons/coalstockings"}}}] on passengers run tag @s add Coalstock
+execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:item_model":"minecraft:weapons/snowglobe"}}}] on passengers run tag @s add Snowglobe
 
 #> Play throw sounds
 execute on passengers if entity @s[tag=Snowball] at @s run playsound snowballthrow master @a ~ ~ ~ 1 0.5
@@ -21,8 +21,8 @@ execute if score @s team matches 0 on passengers run tag @s add Red
 
 #rocket stuff
 execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:custom_data":{Rocket:1b}}}}] on passengers run tag @s add AvalancheRocket
-execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:custom_model_data":3}}}] on passengers run tag @s add RocketGreen
-execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:custom_model_data":4}}}] on passengers run tag @s add RocketRed
+execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:item_model":"minecraft:weapons/rocket_green"}}}] on passengers run tag @s add RocketGreen
+execute if entity @s[nbt={Item:{id:"minecraft:snowball",components:{"minecraft:item_model":"minecraft:weapons/rocket_red"}}}] on passengers run tag @s add RocketRed
 
 #> Fix rocket visuals
 execute on passengers if entity @s[tag=AvalancheRocket] on vehicle at @s run function powerups:throwable_init/set_rocket

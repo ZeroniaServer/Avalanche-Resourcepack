@@ -30,7 +30,7 @@
                             "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]",
                             "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.2\",\"italic\":false,\"color\":\"gold\"}]"
                         ],
-                        "minecraft:custom_model_data": 5,
+                        "minecraft:item_model": "minecraft:weapons/campfire_red",
                         "minecraft:hide_additional_tooltip": {},
                         "minecraft:custom_data": "{NoDrop:1b,Campfire:1b}",
                         "minecraft:entity_data": {
@@ -109,7 +109,7 @@
                             "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]",
                             "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.2\",\"italic\":false,\"color\":\"gold\"}]"
                         ],
-                        "minecraft:custom_model_data": 4,
+                        "minecraft:item_model": "minecraft:weapons/campfire_green",
                         "minecraft:hide_additional_tooltip": {},
                         "minecraft:custom_data": "{NoDrop:1b,Campfire:1b}",
                         "minecraft:entity_data": {

@@ -10,6 +10,6 @@ data modify entity @s Motion set from storage avalanche:rocket mot
 tag @s add AirToggle
 data modify storage avalanche:rocket rotX set from storage avalanche:rocket rot[0]
 data modify storage avalanche:rocket rotY set from storage avalanche:rocket rot[1]
-execute on passengers if entity @s[tag=RocketGreen] run data modify storage avalanche:rocket c set value 3
-execute on passengers if entity @s[tag=RocketRed] run data modify storage avalanche:rocket c set value 4
+execute on passengers if entity @s[tag=RocketGreen] run data modify storage avalanche:rocket team set value "green"
+execute on passengers if entity @s[tag=RocketRed] run data modify storage avalanche:rocket team set value "red"
 execute on passengers at @s run function powerups:throwable_init/spawn_rocket_display with storage avalanche:rocket

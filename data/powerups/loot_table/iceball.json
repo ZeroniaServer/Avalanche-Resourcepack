@@ -20,7 +20,7 @@
                             "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.iceball.effect.support.2\",\"italic\":false,\"color\":\"blue\"}]",
                             "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.iceball.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
                         ],
-                        "minecraft:custom_model_data": 2,
+                        "minecraft:item_model": "minecraft:weapons/iceball",
                         "minecraft:custom_data": "{NoDrop:1b}",
                         "minecraft:attribute_modifiers": {
                             "modifiers": [],

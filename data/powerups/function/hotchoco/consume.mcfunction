@@ -23,7 +23,7 @@ execute if score #replaceslot CmdData matches 0 run clear @s diamond_hoe[minecra
 
 execute if entity @s[tag=Knockout] run function inventory:clear
 
-execute if items entity @s weapon.mainhand diamond_hoe[custom_model_data=9] run item modify entity @s weapon.mainhand powerups:undrink_choco
-execute if items entity @s weapon.offhand diamond_hoe[custom_model_data=9] run item modify entity @s weapon.offhand powerups:undrink_choco
+execute if items entity @s weapon.mainhand diamond_hoe[item_model="minecraft:weapons/hotchoco_drinking"] run item modify entity @s weapon.mainhand powerups:undrink_choco
+execute if items entity @s weapon.offhand diamond_hoe[item_model="minecraft:weapons/hotchoco_drinking"] run item modify entity @s weapon.offhand powerups:undrink_choco
 
 advancement revoke @s only powerups:consume_choco

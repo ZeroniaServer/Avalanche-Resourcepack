@@ -2,7 +2,7 @@ $summon turtle ~ ~ ~ {Rotation:[$(rotX)f,0.0f],Silent:1b,Invulnerable:1b,Team:"n
 
 $execute positioned ^ ^ ^-.1875 run summon minecart ~ ~0.4171875 ~ {Rotation:[$(rotX)f,0.0f],Tags:["vehicle","init"]}
 
-$execute positioned ^ ^ ^-.1875 run summon item_display ~ ~0.4171875 ~ {teleport_duration:3,item:{id:"minecraft:ghast_spawn_egg",count:1,components:{custom_model_data:1}},Rotation:[$(rotX)f,0.0f],start_interpolation:0,transformation:{scale:[1.8,1.8,1.8],translation:[0.0,0.35,0.0],left_rotation:[0.0,0.0,0.0,1.0],right_rotation:[0.0,0.0,0.0,1.0]},Tags:["vehicle","init","NewSleigh"]}
+$execute positioned ^ ^ ^-.1875 run summon item_display ~ ~0.4171875 ~ {teleport_duration:3,item:{id:"minecraft:ghast_spawn_egg",count:1,components:{item_model:"minecraft:weapons/sleigh"}},Rotation:[$(rotX)f,0.0f],start_interpolation:0,transformation:{scale:[1.8,1.8,1.8],translation:[0.0,0.35,0.0],left_rotation:[0.0,0.0,0.0,1.0],right_rotation:[0.0,0.0,0.0,1.0]},Tags:["vehicle","init","NewSleigh"]}
 
 $execute positioned ^ ^ ^-.1875 positioned ~ ~0.4171875 ~ run summon oak_boat ~ ~-0.5 ~ {Tags:["sleighboat","init"],Rotation:[$(rotX)f,0.0f],width:0,height:-0.5,Passengers:[{id:"marker"}],Invulnerable:1b,Silent:1b}
 

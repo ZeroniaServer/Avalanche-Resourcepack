@@ -1,2 +1,2 @@
-$execute if entity @s[tag=Green] run particle trail{color:[0.000,1.000,0.000],target:[$(x),$(y),$(z)]} ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force
-$execute if entity @s[tag=Red] run particle trail{color:[1.000,0.000,0.000],target:[$(x),$(y),$(z)]} ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force
+$execute if entity @s[tag=Green] run particle trail{duration:40,color:[0.000,1.000,0.000],target:[$(x),$(y),$(z)]} ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force
+$execute if entity @s[tag=Red] run particle trail{duration:40,color:[1.000,0.000,0.000],target:[$(x),$(y),$(z)]} ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force

@@ -17,7 +17,7 @@
                             "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.coalstock.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
                             "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.coalstock.effect.support.2\",\"italic\":false,\"color\":\"blue\"}]"
                         ],
-                        "minecraft:custom_model_data": 5,
+                        "minecraft:item_model": "minecraft:weapons/coalstockings",
                         "minecraft:custom_data": "{NoDrop:1b}",
                         "minecraft:attribute_modifiers": {
                             "modifiers": [],

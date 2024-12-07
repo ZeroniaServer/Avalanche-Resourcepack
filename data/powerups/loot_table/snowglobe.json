@@ -21,7 +21,7 @@
                             "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowglobe.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]",
                             "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowglobe.effect.temporary.2\",\"italic\":false,\"color\":\"gold\"}]"
                         ],
-                        "minecraft:custom_model_data": 6,
+                        "minecraft:item_model": "minecraft:weapons/snowglobe",
                         "minecraft:custom_data": "{NoDrop:1b}",
                         "minecraft:attribute_modifiers": {
                             "modifiers": [],

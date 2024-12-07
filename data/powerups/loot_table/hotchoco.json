@@ -18,7 +18,7 @@
                             "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.hotchoco.effect.heal.2\",\"italic\":false,\"color\":\"light_purple\"}]",
                             "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.hotchoco.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]"
                         ],
-                        "minecraft:custom_model_data": 8,
+                        "minecraft:item_model": "minecraft:weapons/hotchoco",
                         "minecraft:attribute_modifiers": {
                             "modifiers": [],
                             "show_in_tooltip": false
