@@ -93,9 +93,11 @@ execute unless entity @a[team=Red] unless entity @a[team=Green] if score $gamest
 execute as @a[tag=LeaveTeam] run gamemode adventure @s
 execute as @a[tag=LeaveTeam,tag=WasRed] if score $gamestate CmdData matches 0.. run tp @s -40 50 -150 -90 0
 execute as @a[tag=LeaveTeam,tag=WasGreen] if score $gamestate CmdData matches 0.. run tp @s -85 54 -149 90 0
-execute as @a[tag=LeaveTeam,tag=WasSpectator] run tp @s -65 52 -108 180 0
+execute as @a[tag=LeaveTeam,tag=WasSpectator] if score $gamestate CmdData matches 0.. run tp @s -65 52 -108 180 0
+execute as @a[tag=LeaveTeam] if score $gamestate CmdData matches -1 run tp @s -65 52 -108 0 0
 tag @a[tag=LeaveTeam] remove WasRed
 tag @a[tag=LeaveTeam] remove WasGreen
+tag @a[tag=LeaveTeam] remove WasSpectator
 execute as @a[tag=LeaveTeam] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.exit master @a ~ ~ ~ 1 1
 execute as @a[tag=LeaveTeam] run team join Lobby @s
 tag @a[tag=LeaveTeam] remove LeaveTeam
