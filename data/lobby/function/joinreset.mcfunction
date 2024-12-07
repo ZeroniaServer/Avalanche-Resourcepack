@@ -19,5 +19,3 @@ playsound entity.player.levelup master @s ~ ~ ~ 1 1.75
 title @s title ""
 title @s subtitle ""
 # title @s actionbar ""
-
-say hi

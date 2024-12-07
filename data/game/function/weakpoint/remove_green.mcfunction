@@ -19,6 +19,6 @@ setblock -116 70 -235 snow_block
 setblock -117 70 -237 snow_block
 setblock -116 68 -237 snow_block
 setblock -115 68 -235 snow_block
-setblock -11 67 -208 snow_block
+setblock -118 71 -238 snow_block
 setblock -117 71 -234 snow_block
 setblock -115 67 -234 snow_block
