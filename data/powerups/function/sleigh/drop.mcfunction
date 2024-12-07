@@ -40,7 +40,7 @@ $loot spawn ~ ~0.01 ~ loot {\
                     ],\
                     "show_in_tooltip": false\
                 },\
-                "minecraft:custom_model_data": 1,\
+                "minecraft:item_model": "minecraft:weapons/sleigh",\
                 "minecraft:hide_additional_tooltip": {},\
                 "minecraft:custom_data": "{Sleigh:1b}",\
                 "minecraft:custom_name": "[{\"translate\":\"powerup.sleigh.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",\

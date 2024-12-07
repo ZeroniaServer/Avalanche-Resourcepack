@@ -26,7 +26,7 @@
                             "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
                             "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
                         ],
-                        "minecraft:custom_model_data": 2,
+                        "minecraft:item_model": "minecraft:weapons/snowman_red",
                         "minecraft:custom_data": "{NoDrop:1b,Snowman:1b}",
                         "minecraft:hide_additional_tooltip": {},
                         "minecraft:entity_data": {
@@ -101,7 +101,7 @@
                             "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
                             "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowman.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
                         ],
-                        "minecraft:custom_model_data": 3,
+                        "minecraft:item_model": "minecraft:weapons/snowman_green",
                         "minecraft:custom_data": "{NoDrop:1b,Snowman:1b}",
                         "minecraft:hide_additional_tooltip": {},
                         "minecraft:entity_data": {

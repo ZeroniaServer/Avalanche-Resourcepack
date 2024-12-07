@@ -16,8 +16,8 @@ execute if block -90 54 -149 cyan_stained_glass if score $gamestate CmdData matc
 execute if block -90 54 -149 cyan_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[0.000f,1.000f,0.000f],scale:1} -89 53.25 -149 0 0 1 0 3 force
 execute if block -90 54 -149 cyan_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[0.000f,1.000f,0.000f],scale:1} -89 55.75 -149 0 0 1 0 3 force
 
-execute if block -35 50 -150 pink_stained_glass run particle trail{color:[1.000,0.000,0.000],target:[-35.0,50.5,-149.5]} -38 50 -150 0.1 1 1 0 1 force
-execute if block -90 54 -149 cyan_stained_glass run particle trail{color:[0.000,1.000,0.000],target:[-90.0,54.5,-148.5]} -87 54 -149 0.1 1 1 0 1 force
+execute if block -35 50 -150 pink_stained_glass run particle trail{duration:30,color:[1.000,0.000,0.000],target:[-35.0,50.5,-149.5]} -38 50 -150 0.1 1 1 0 1 force
+execute if block -90 54 -149 cyan_stained_glass run particle trail{duration:30,color:[0.000,1.000,0.000],target:[-90.0,54.5,-148.5]} -87 54 -149 0.1 1 1 0 1 force
 
 #> Block off portals
 execute if score $InGreen CmdData > $InRed CmdData run fill -90 53 -148 -90 55 -150 minecraft:light_gray_stained_glass

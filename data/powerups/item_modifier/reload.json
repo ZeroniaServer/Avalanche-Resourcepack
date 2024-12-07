@@ -14,7 +14,7 @@
                         "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowball.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
                         "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowball.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]"
                     ],
-                    "minecraft:custom_model_data": 1,
+                    "minecraft:item_model": "minecraft:weapons/snowball",
                     "minecraft:use_cooldown": {
                         "seconds": 0.25,
                         "cooldown_group": "snowball"

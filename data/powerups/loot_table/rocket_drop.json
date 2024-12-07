@@ -40,27 +40,31 @@
                     }
                 },
                 {
-                    "function": "minecraft:set_custom_model_data",
-                    "value": 4,
-                    "conditions": [
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "team": "Green"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "function": "minecraft:set_custom_model_data",
-                    "value": 3,
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "item_model": "minecraft:weapons/rocket_red"
+                    },
                     "conditions": [
                         {
                             "condition": "entity_properties",
                             "entity": "this",
                             "predicate": {
                                 "team": "Red"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "item_model": "minecraft:weapons/rocket_green"
+                    },
+                    "conditions": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "team": "Green"
                             }
                         }
                     ]

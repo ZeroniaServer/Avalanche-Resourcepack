@@ -1,6 +1,6 @@
 scoreboard players add @s lifetime 1
 execute if score @s lifetime matches 140 run particle explosion ~ ~ ~ 0 0 0 0 1 force
-execute if score @s lifetime matches 140 run item modify entity @s contents [{"function":"minecraft:set_components","components":{"minecraft:custom_model_data":7}}]
+execute if score @s lifetime matches 140 run item modify entity @s contents [{"function":"minecraft:set_components","components":{"minecraft:item_model":"minecraft:weapons/rocket_unclaimed"}}]
 execute if score @s lifetime matches 140.. run tag @s remove RocketItemGreen
 execute if score @s lifetime matches 140.. run tag @s remove RocketItemRed
 execute if score @s lifetime matches 140 run playsound entity.item_frame.add_item master @a ~ ~ ~ 1 2
