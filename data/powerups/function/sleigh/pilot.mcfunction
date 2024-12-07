@@ -28,7 +28,9 @@ execute if entity @s[tag=Occupied] on passengers on passengers if predicate wasd
 scoreboard players remove @s[scores={vehicle.since_jump=1..}] vehicle.since_jump 1
 execute if entity @s[tag=!Occupied] run scoreboard players set @s vehicle.since_jump 0
 
-tag @s[tag=!SleighOffGround,scores={vehicle.off_ground=..6,vehicle.since_jump=1..}] add SleighJumpBig
+scoreboard players add @s sleighjumpcd 0
+tag @s[tag=!SleighOffGround,scores={vehicle.off_ground=..6,vehicle.since_jump=1..,sleighjumpcd=0}] add SleighJumpBig
+scoreboard players remove @s[scores={sleighjumpcd=1..}] sleighjumpcd 1
 
 # big fall detection
 execute if predicate game:big_fall run tag @s[tag=!SleighJumpBig] add SleighOffGround
