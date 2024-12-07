@@ -18,6 +18,8 @@ tag @s[team=Red] add WasRed
 tag @s[team=!Red] remove WasRed
 tag @s[team=Green] add WasGreen
 tag @s[team=!Green] remove WasGreen
+tag @s[team=Spectator] add WasSpectator
+tag @s[team=!Spectator] remove WasSpectator
 team leave @s
 clear @s
 scoreboard players reset @s leftgame
