@@ -2,7 +2,6 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "custom/iceball",
-		"1": "custom_gui/iceball",
 		"particle": "item/snowball"
 	},
 	"elements": [
@@ -656,17 +655,8 @@
 				"up": {"uv": [12, 10, 13, 12], "texture": "#0"},
 				"down": {"uv": [12, 10, 13, 12], "texture": "#0"}
 			}
-		},
-		{
-			"from": [5, 1, 9],
-			"to": [11, 7, 9],
-			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 9]},
-			"faces": {
-				"south": {"uv": [0, 0, 16, 16], "texture": "#1"}
-			}
 		}
 	],
-	"gui_light": "front",
 	"display": {
 		"thirdperson_righthand": {
 			"translation": [0, 4, 2],
@@ -688,10 +678,6 @@
 		},
 		"ground": {
 			"translation": [0, 6.75, 0]
-		},
-		"gui": {
-			"translation": [0, 10.68, 0],
-			"scale": [2.67, 2.67, 2.67]
 		}
 	},
 	"groups": [

@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"0": "animated_java:item/elf/head"
+		"0": "animated_java:item/elf/head",
+		"particle": "animated_java:item/elf/head"
 	},
 	"display": {
 		"head": {

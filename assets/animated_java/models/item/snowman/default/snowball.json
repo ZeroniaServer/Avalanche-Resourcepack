@@ -1,7 +1,7 @@
 {
 	"textures": {
 		"3": "minecraft:custom/snowball",
-		"4": "minecraft:custom_gui/snowball"
+		"particle": "minecraft:custom/snowball"
 	},
 	"display": {
 		"head": {
@@ -1125,21 +1125,6 @@
 					"uv": [9, 14, 10, 15],
 					"rotation": 180,
 					"texture": "#3"
-				}
-			}
-		},
-		{
-			"from": [6, 8, 10],
-			"to": [12, 14, 10],
-			"rotation": {
-				"angle": 0,
-				"axis": "y",
-				"origin": [8, 8, 8]
-			},
-			"faces": {
-				"south": {
-					"uv": [0, 0, 16, 16],
-					"texture": "#4"
 				}
 			}
 		}

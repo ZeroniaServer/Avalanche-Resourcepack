@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"6": "minecraft:custom/snowman_tophat_red"
+		"6": "minecraft:custom/snowman_tophat_red",
+		"particle": "minecraft:custom/snowman_tophat_red"
 	},
 	"display": {
 		"head": {

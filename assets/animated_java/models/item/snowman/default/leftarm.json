@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"2": "minecraft:custom/snowman_arm"
+		"2": "minecraft:custom/snowman_arm",
+		"particle": "minecraft:custom/snowman_arm"
 	},
 	"display": {
 		"head": {

@@ -2,7 +2,6 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "custom/chocomug",
-		"1": "custom_gui/choco_gui",
 		"particle": "custom/chocomug"
 	},
 	"elements": [
@@ -117,17 +116,8 @@
 				"up": {"uv": [7, 6, 10, 7], "texture": "#0"},
 				"down": {"uv": [7, 6, 10, 7], "texture": "#0"}
 			}
-		},
-		{
-			"from": [6, 3.8, 3],
-			"to": [11, 3.8, 8],
-			"rotation": {"angle": 0, "axis": "y", "origin": [9, 3.8, 4]},
-			"faces": {
-				"down": {"uv": [0, 0, 16, 16], "texture": "#1"}
-			}
 		}
 	],
-	"gui_light": "front",
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [21, 17, 0],
@@ -149,11 +139,6 @@
 		},
 		"ground": {
 			"translation": [-0.75, 4, 2]
-		},
-		"gui": {
-			"rotation": [-90, 0, 0],
-			"translation": [-1.59, 8, 0],
-			"scale": [3.2, 3.2, 3.2]
 		}
 	}
 }

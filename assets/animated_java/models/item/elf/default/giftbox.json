@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"2": "animated_java:item/elf/giftbox"
+		"2": "animated_java:item/elf/giftbox",
+		"particle": "animated_java:item/elf/giftbox"
 	},
 	"display": {
 		"head": {

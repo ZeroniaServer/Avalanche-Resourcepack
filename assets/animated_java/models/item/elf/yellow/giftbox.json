@@ -1,7 +1,0 @@
-{
-	"parent": "animated_java:item/elf/default/giftbox",
-	"textures": {
-		"0": "animated_java:item/elf/head_yellow",
-		"1": "animated_java:item/elf/body_yellow"
-	}
-}

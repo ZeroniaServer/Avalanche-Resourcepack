@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"0": "minecraft:custom/snowman_body"
+		"0": "minecraft:custom/snowman_body",
+		"particle": "minecraft:custom/snowman_body"
 	},
 	"display": {
 		"head": {

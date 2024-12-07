@@ -2,7 +2,6 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "custom/sleigh",
-		"1": "custom_gui/sleigh",
 		"particle": "custom/sleigh"
 	},
 	"elements": [
@@ -148,17 +147,8 @@
 				"up": {"uv": [6, 8, 12, 10], "texture": "#0"},
 				"down": {"uv": [6, 8, 12, 10], "texture": "#0"}
 			}
-		},
-		{
-			"from": [5, 1, -1],
-			"to": [11, 7, -1],
-			"rotation": {"angle": 0, "axis": "y", "origin": [9, 1, -1]},
-			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#1"}
-			}
 		}
 	],
-	"gui_light": "front",
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [0, 0, -60],
@@ -175,11 +165,6 @@
 		"firstperson_lefthand": {
 			"rotation": [60, 0, -30],
 			"translation": [12.25, 3.25, -5.5]
-		},
-		"gui": {
-			"rotation": [0, 180, 0],
-			"translation": [0, 10.7, 0],
-			"scale": [2.66, 2.66, 2.66]
 		}
 	}
 }

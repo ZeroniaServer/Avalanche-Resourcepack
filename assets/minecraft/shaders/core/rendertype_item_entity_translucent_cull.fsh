@@ -10,16 +10,11 @@ uniform float FogStart;
 uniform float FogEnd;
 uniform vec4 FogColor;
 
-in float zPos;
 in float vertexDistance;
 in vec4 vertexColor;
-in vec4 unlitVertexColor;
 in vec4 lightColor;
 in vec2 texCoord0;
 in vec2 texCoord1;
-in vec4 normal;
-
-flat in int isGUI;
 
 out vec4 fragColor;
 
@@ -29,7 +24,7 @@ void main() {
     if (check_alpha(alpha, 250.0) || check_alpha(alpha, 242)) {
         color = texture(Sampler0, texCoord0) * ColorModulator;
     }
-    color = apply_emissive_perspective_for_item(color, lightColor, isGUI, zPos, FogStart, FogEnd, alpha);
+    color = apply_global_emissive(color, lightColor, alpha);
     if (color.a < 0.1) {
         discard;
     }
