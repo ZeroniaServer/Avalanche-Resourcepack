@@ -15,11 +15,11 @@
         "location": {
           "position": {
             "x": {
-              "min": -20,
+              "min": -21,
               "max": 20
             },
             "y": {
-              "min": 53,
+              "min": 43,
               "max": 75
             },
             "z": {
