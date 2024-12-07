@@ -22,6 +22,10 @@ tag @s add sleighself
 execute as @e[type=item_display,tag=StormCloudMain,scores={CmdData=1..260}] at @s positioned ~-4.5 ~-5.5 ~-4.5 if entity @e[type=turtle,tag=sleighself,dx=6,dy=6,dz=6,limit=1] run scoreboard players set #max vehicle 200
 tag @s remove sleighself
 
+# slow down while throwing
+execute if entity @s[tag=slowThrow] run scoreboard players operation #max vehicle /= 2 const
+tag @s remove slowThrow
+
 execute if score $math.isqrt bs.out > #max vehicle run function powerups:sleigh/normalize
 
 scoreboard players operation @s vehicle.rot = .rot vehicle
