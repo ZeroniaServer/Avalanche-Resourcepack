@@ -15,7 +15,7 @@
                         "minecraft:custom_name": "[{\"translate\":\"powerup.coalstock.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
                         "minecraft:lore": [
                             "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.coalstock.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
-                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.coalstock.effect.support.2\",\"italic\":false,\"color\":\"blue\"}]"
+                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.coalstock.effect.support.2\",\"italic\":false,\"color\":\"blue\"}]","[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.coalstock.effect.support.3\",\"italic\":false,\"color\":\"blue\"}]"
                         ],
                         "minecraft:item_model": "minecraft:weapons/coalstockings",
                         "minecraft:custom_data": "{NoDrop:1b}",
