@@ -127,6 +127,8 @@ team modify Lobby color blue
 team modify Spectator color dark_blue
 team modify Developer color dark_green
 
+team modify Lobby collisionRule never
+
 team modify Green color green
 team modify Red color red
 
