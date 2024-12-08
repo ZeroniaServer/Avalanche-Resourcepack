@@ -13,7 +13,7 @@ scoreboard players set $GreenReady CmdData 0
 scoreboard players set $GreenPoints CmdData 0
 scoreboard players set $RedPoints CmdData 0
 
-title @a title {"translate":"customizer.confirmed","underlined":true,"color":"dark_green"}
+title @a title {"translate":"customizer.confirmed","underlined":true,"color":"#87edce","shadow_color":[0.165,0.341,0.494,1]}
 title @a subtitle [{"translate":"chat.the_game","color":"green","with":[{"translate":"chat.ready_to_play","color":"green"}]}]
 function lobby:settings/announce with storage lobby:customizer
 
