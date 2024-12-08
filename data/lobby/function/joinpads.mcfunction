@@ -40,7 +40,7 @@ execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2 run scoreboar
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2 run loot give @s loot powerups:barricade_prep
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 3 run loot give @s loot powerups:snowball
 
-execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 at @s run playsound jointeam master @a ~ ~ ~ 1 1
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run team join Green
 execute as @a[tag=JoinGreen] run attribute @s knockback_resistance base set 0.25
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.chest loot game:chestplate
@@ -67,7 +67,7 @@ execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run loot give @
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run scoreboard players set @s BarricadeTracker 10
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run loot give @s loot powerups:barricade_prep
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 3 run loot give @s loot powerups:snowball
-execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 at @s run playsound jointeam master @a ~ ~ ~ 1 1
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run team join Red
 execute as @a[tag=JoinRed] run attribute @s knockback_resistance base set 0.25
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.chest loot game:chestplate
@@ -97,8 +97,9 @@ execute as @a[tag=LeaveTeam,tag=WasSpectator] if score $gamestate CmdData matche
 execute as @a[tag=LeaveTeam] if score $gamestate CmdData matches -1 run tp @s -65 52 -108 0 0
 tag @a[tag=LeaveTeam] remove WasRed
 tag @a[tag=LeaveTeam] remove WasGreen
+execute as @a[tag=LeaveTeam,tag=!WasSpectator] if score $gamestate CmdData matches 0..3 at @s run playsound leaveteam master @a ~ ~ ~ 1 1
+execute as @a[tag=LeaveTeam,tag=WasSpectator] if score $gamestate CmdData matches 0..3 at @s run playsound leavespectator master @a ~ ~ ~ 1 1
 tag @a[tag=LeaveTeam] remove WasSpectator
-execute as @a[tag=LeaveTeam] if score $gamestate CmdData matches 0..3 at @s run playsound block.beehive.exit master @a ~ ~ ~ 1 1
 execute as @a[tag=LeaveTeam] run team join Lobby @s
 tag @a[tag=LeaveTeam] remove LeaveTeam
 

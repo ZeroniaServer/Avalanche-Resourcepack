@@ -39,9 +39,9 @@ execute if score $seconds CmdData matches ..9 run data modify storage game:data 
 
 function bossbars:set_timer with storage game:data
 
-execute if score $prepticks CmdData matches 30 as @a[team=!Lobby,team=!Spectator] at @s run playsound block.note_block.chime master @s ~ ~ ~ 1 1.4
-execute if score $prepticks CmdData matches 25 as @a[team=!Lobby,team=!Spectator] at @s run playsound block.note_block.chime master @s ~ ~ ~ 1 1.5
-execute if score $prepticks CmdData matches 20 as @a[team=!Lobby,team=!Spectator] at @s run playsound block.note_block.chime master @s ~ ~ ~ 1 1.6
-execute if score $prepticks CmdData matches 15 as @a[team=!Lobby,team=!Spectator] at @s run playsound block.note_block.chime master @s ~ ~ ~ 1 1.7
-execute if score $prepticks CmdData matches 10 as @a[team=!Lobby,team=!Spectator] at @s run playsound block.note_block.chime master @s ~ ~ ~ 1 1.8
+execute if score $prepticks CmdData matches 30 as @a[team=!Lobby,team=!Spectator] at @s run playsound preptimer master @s ~ ~ ~ 1 1.4
+execute if score $prepticks CmdData matches 25 as @a[team=!Lobby,team=!Spectator] at @s run playsound preptimer master @s ~ ~ ~ 1 1.5
+execute if score $prepticks CmdData matches 20 as @a[team=!Lobby,team=!Spectator] at @s run playsound preptimer master @s ~ ~ ~ 1 1.6
+execute if score $prepticks CmdData matches 15 as @a[team=!Lobby,team=!Spectator] at @s run playsound preptimer master @s ~ ~ ~ 1 1.7
+execute if score $prepticks CmdData matches 10 as @a[team=!Lobby,team=!Spectator] at @s run playsound preptimer master @s ~ ~ ~ 1 1.8
 execute if score $prepticks CmdData matches ..0 run function game:start_battle

@@ -14,7 +14,7 @@ execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=20..1200},tag=!
 #> Extinguish
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1200..},tag=!Extinguish] at @s run particle smoke ~ ~0.2 ~ 0.1 0.2 0.1 0.03 5 force
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1200..},tag=!Extinguish] at @s run particle large_smoke ~ ~0.2 ~ 0.1 0.3 0.1 0 8 force
-execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1200..},tag=!Extinguish] at @s run playsound block.fire.extinguish master @a ~ ~ ~ 0.8 0.8
+execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1200..},tag=!Extinguish] at @s run playsound campfireextinguish master @a ~ ~ ~ 0.8 0.8
 execute as @e[type=item_display,tag=CampfireMain,tag=Green,scores={CmdData=1200..},tag=!Extinguish] at @s run data merge entity @s {item:{id:"diamond_hoe",components:{item_model:"minecraft:campfire/green_unlit"}}}
 execute as @e[type=item_display,tag=CampfireMain,tag=Red,scores={CmdData=1200..},tag=!Extinguish] at @s run data merge entity @s {item:{id:"diamond_hoe",components:{item_model:"minecraft:campfire/red_unlit"}}}
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Extinguish] at @s run particle block{block_state:oak_log} ~ ~ ~ 0.1 0 0.1 0.1 20 force
@@ -24,9 +24,9 @@ execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Ext
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Extinguish] run function arenaclear:kill_recursive
 
 #> Revive effects
-execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1151..1160},tag=!Extinguish,tag=Reviving] at @s run playsound particle.soul_escape master @a ~ ~ ~ 1 1
-execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1150},tag=!Extinguish,tag=Reviving] at @s run playsound entity.blaze.shoot master @a ~ ~ ~ 0.8 0.6
-execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1155},tag=!Extinguish,tag=Reviving] at @s run playsound entity.blaze.shoot master @a ~ ~ ~ 0.8 1.5
+execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1151..1160},tag=!Extinguish,tag=Reviving] at @s run playsound playerrevive master @a ~ ~ ~ 1 1
+execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1150},tag=!Extinguish,tag=Reviving] at @s run playsound playerrespawn2 master @a ~ ~ ~ 0.8 0.6
+execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1155},tag=!Extinguish,tag=Reviving] at @s run playsound playerrespawn2 master @a ~ ~ ~ 0.8 1.5
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1150},tag=!Extinguish,tag=Reviving] at @s run particle soul_fire_flame ~ ~0.2 ~ 0 0 0 0.1 15 force
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1150..1180},tag=!Extinguish,tag=Reviving] at @s run particle soul ~ ~0.1 ~ 0.1 0.4 0.1 0.1 1 force
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1150..1160},tag=!Extinguish,tag=Reviving] at @s run particle soul_fire_flame ~ ~0.5 ~ 0 0.4 0 0.01 3 force

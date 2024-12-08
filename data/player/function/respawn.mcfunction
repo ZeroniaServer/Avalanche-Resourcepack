@@ -21,7 +21,7 @@ attribute @s minecraft:knockback_resistance base set 0.25
 execute if entity @s[team=Green,tag=!SilentRespawn] run scoreboard players set $GreenRespawn CmdData 1
 execute if entity @s[team=Red,tag=!SilentRespawn] run scoreboard players set $RedRespawn CmdData 1
 
-execute at @s[tag=!SilentRespawn] run playsound minecraft:entity.blaze.shoot master @s ~ ~ ~ 1 0
+execute at @s[tag=!SilentRespawn] run playsound playerrespawn2 master @s ~ ~ ~ 1 0
 
 tag @s remove SilentRespawn
 tag @s remove SleighDismounted
