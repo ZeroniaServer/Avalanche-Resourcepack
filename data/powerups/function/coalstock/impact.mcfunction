@@ -6,6 +6,12 @@ particle falling_dust{block_state:"minecraft:coal_block"} ~ ~ ~ 1 1 1 0.1 10 for
 particle dust{color:[0.000,0.000,0.100],scale:3} ~ ~ ~ 0.4 0.4 0.4 0.1 10 force
 particle block_crumble{block_state:"minecraft:coal_block"} ~ ~1 ~ 0.4 0.2 0.4 0.1 20 force
 
+#> Refueling campfires
+execute if entity @s[tag=Red] as @e[type=item_display,tag=CampfireMain,tag=Red,scores={CmdData=22..1199},distance=..1] at @s run function powerups:campfire/refuel
+execute if entity @s[tag=Red] as @e[type=item_display,tag=CampfireMain,tag=Red,scores={CmdData=1200..},distance=..1] at @s run function powerups:campfire/reignite
+execute if entity @s[tag=Green] as @e[type=item_display,tag=CampfireMain,tag=Green,scores={CmdData=22..1199},distance=..1] at @s run function powerups:campfire/refuel
+execute if entity @s[tag=Green] as @e[type=item_display,tag=CampfireMain,tag=Green,scores={CmdData=1200..},distance=..1] at @s run function powerups:campfire/reignite
+
 effect give @a[gamemode=!spectator,distance=..4] blindness 4 100 true
 effect give @a[gamemode=!spectator,distance=..4] darkness 4 100 true
 execute as @a[gamemode=!spectator,distance=..4] at @s run stopsound @s * coalstockrelease
