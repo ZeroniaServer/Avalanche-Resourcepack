@@ -3,7 +3,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:use_cooldown": {
-                "seconds": 2.25,
+                "seconds": 0.75,
                 "cooldown_group": "snowball"
             },
             "minecraft:use_remainder": {
