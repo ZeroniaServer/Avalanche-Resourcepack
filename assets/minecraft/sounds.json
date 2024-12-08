@@ -870,7 +870,7 @@
         "sounds": [
             "mob/ghast/fireball4"
         ],
-        "subtitle": "subtitles.campfire.light"
+        "subtitle": "subtitles.player.respawn"
     },
     "playerwarp": {
         "sounds": [
