@@ -19,8 +19,8 @@ execute as @e[type=item_display,tag=CampfireMain,tag=Green,scores={CmdData=1200.
 execute as @e[type=item_display,tag=CampfireMain,tag=Red,scores={CmdData=1200..},tag=!Extinguish] at @s run data merge entity @s {item:{id:"diamond_hoe",components:{item_model:"minecraft:campfire/red_unlit"}}}
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Extinguish] at @s run particle block{block_state:oak_log} ~ ~ ~ 0.1 0 0.1 0.1 20 force
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Extinguish] at @s run particle block{block_state:coal_block} ~ ~ ~ 0.1 0 0.1 0.1 10 force
-execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Extinguish] at @s run playsound block.wood.break master @a ~ ~ ~ 0.6 0
-execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Extinguish] at @s run playsound block.deepslate.break master @a ~ ~ ~ 0.6 0.6
+execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Extinguish] at @s run playsound campfirebreak master @a ~ ~ ~ 0.6 0
+execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Extinguish] at @s run playsound campfirebreak2 master @a ~ ~ ~ 0.6 0.6
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Extinguish] run function arenaclear:kill_recursive
 
 #> Revive effects

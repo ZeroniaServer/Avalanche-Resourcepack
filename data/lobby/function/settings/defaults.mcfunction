@@ -8,4 +8,4 @@ data modify storage lobby:customizer barricades set value 120
 
 function lobby:settings/refreshsigns with storage lobby:customizer
 
-playsound minecraft:block.chiseled_bookshelf.insert.enchanted master @a -62 53 -93 1 1
+playsound settingsrestore master @a -56 53 -91 1 1

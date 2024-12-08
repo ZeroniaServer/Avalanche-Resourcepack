@@ -7,9 +7,9 @@ execute at @s[tag=Red,tag=Spawned,tag=!Targeting,tag=!Dying,tag=!CoalBlind] if e
 execute at @s[tag=Red,tag=Spawned,tag=!Targeting,tag=!Dying,tag=!CoalBlind] if entity @a[team=Green,tag=snowmanTarget,limit=1] run scoreboard players set @s CmdData 50
 execute at @s[tag=Red,tag=Spawned,tag=!Targeting,tag=!Dying,tag=!CoalBlind] if entity @a[team=Green,tag=snowmanTarget,limit=1] run tag @s add Targeting
 
-execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=!Shooting,scores={CmdData=51}] run playsound block.powder_snow.fall master @a ~ ~ ~ 1 1.3
-execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=!Shooting,scores={CmdData=57}] run playsound block.snow.fall master @a ~ ~ ~ 1 1
-execute at @s[tag=Red,tag=Spawned,tag=Targeting,tag=!Shooting,scores={CmdData=57}] run particle block{block_state:snow_block} ~ ~ ~ 0.1 0 0.1 0.1 20 force
+execute at @s[tag=Red,tag=Spawned,tag=Targeting,scores={CmdData=51}] run playsound snowmansnow master @a ~ ~ ~ 1 1.3
+execute at @s[tag=Red,tag=Spawned,tag=Targeting,scores={CmdData=57}] run playsound snowmantarget master @a ~ ~ ~ 1 1
+execute at @s[tag=Red,tag=Spawned,tag=Targeting,scores={CmdData=57}] run particle block{block_state:snow_block} ~ ~ ~ 0.1 0 0.1 0.1 20 force
 scoreboard players set @s[tag=Red,tag=Spawned,tag=Targeting,tag=!Shooting,scores={CmdData=200..}] CmdData 60
 
 
@@ -32,8 +32,8 @@ execute at @s[tag=Green,tag=Spawned,tag=!Targeting,tag=!Dying,tag=!CoalBlind] if
 execute at @s[tag=Green,tag=Spawned,tag=!Targeting,tag=!Dying,tag=!CoalBlind] if entity @a[team=Red,tag=snowmanTarget,limit=1] run scoreboard players set @s CmdData 50
 execute at @s[tag=Green,tag=Spawned,tag=!Targeting,tag=!Dying,tag=!CoalBlind] if entity @a[team=Red,tag=snowmanTarget,limit=1] run tag @s add Targeting
 
-execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Shooting,scores={CmdData=51}] run playsound block.powder_snow.fall master @a ~ ~ ~ 1 1.3
-execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Shooting,scores={CmdData=57}] run playsound block.snow.fall master @a ~ ~ ~ 1 1
+execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Shooting,scores={CmdData=51}] run playsound snowmansnow master @a ~ ~ ~ 1 1.3
+execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Shooting,scores={CmdData=57}] run playsound snowmantarget master @a ~ ~ ~ 1 1
 execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Shooting,scores={CmdData=57}] run particle block{block_state:snow_block} ~ ~ ~ 0.1 0 0.1 0.1 20 force
 execute at @s[tag=Green,tag=Spawned,tag=Targeting,tag=!Shooting,scores={CmdData=200..}] run scoreboard players set @s CmdData 60
 

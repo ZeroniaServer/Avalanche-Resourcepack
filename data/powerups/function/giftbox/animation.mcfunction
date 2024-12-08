@@ -1,11 +1,11 @@
 scoreboard players add @e[type=item_display,tag=aj.elf.root] CmdData 1
 execute as @e[type=item_display,tag=aj.elf.root,scores={CmdData=6}] at @s run particle block{block_state:packed_ice} ~ ~ ~ 0.2 0.1 0.2 0.1 20 force
-execute as @e[type=item_display,tag=aj.elf.root,scores={CmdData=6}] at @s run playsound block.glass.hit master @a ~ ~ ~ 1 0
+execute as @e[type=item_display,tag=aj.elf.root,scores={CmdData=6}] at @s run playsound elfemerge master @a ~ ~ ~ 1 0
 
-execute as @e[type=item_display,tag=aj.elf.root,scores={CmdData=9}] at @s run playsound entity.allay.ambient_with_item master @a ~ ~ ~ 1 1.1
+execute as @e[type=item_display,tag=aj.elf.root,scores={CmdData=9}] at @s run playsound elfgiggle master @a ~ ~ ~ 1 1.1
 
-execute as @e[type=item_display,tag=aj.elf.root,scores={CmdData=20}] at @s run playsound block.wool.place master @a ~ ~ ~ 1 1.2
-execute as @e[type=item_display,tag=aj.elf.root,scores={CmdData=50}] at @s run playsound minecraft:entity.allay.item_given master @a ~ ~ ~ 0.6 1.2
+execute as @e[type=item_display,tag=aj.elf.root,scores={CmdData=20}] at @s run playsound giftboxplace master @a ~ ~ ~ 1 1.2
+execute as @e[type=item_display,tag=aj.elf.root,scores={CmdData=50}] at @s run playsound elfgiggle2 master @a ~ ~ ~ 0.6 1.2
 
 #> Place the actual giftbox
 execute as @e[type=item_display,tag=aj.elf.root,scores={CmdData=23}] store result storage elf:data rotation double 1 run data get entity @s Rotation[0]
@@ -22,7 +22,7 @@ tag @e[type=item_display,tag=Giftbox,tag=New,scores={CmdData=3..}] remove New
 
 #> Kill the hitbox
 execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ air unless predicate game:low_arena run particle item{item:{id:"minecraft:diamond_hoe",components:{item_model:"minecraft:custom/giftbox"}}} ~ ~0.2 ~ 0.1 0.1 0.1 0.03 30 force
-execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ air unless predicate game:low_arena run playsound block.wool.break master @a ~ ~ ~ 1 1.2
+execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ air unless predicate game:low_arena run playsound giftboxbreak master @a ~ ~ ~ 1 1.2
 execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ air on passengers run kill
 execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ air run kill
 execute as @e[type=shulker,tag=GiftboxShulker] at @s unless entity @e[type=item_display,tag=Giftbox,distance=..1] run function arenaclear:kill

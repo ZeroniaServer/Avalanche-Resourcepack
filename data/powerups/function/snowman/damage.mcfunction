@@ -17,7 +17,7 @@ tag @s[tag=Spawned,tag=!Dying] add Hurt
 tag @s[tag=Spawned,tag=Shooting,scores={CmdData=69..107}] add DelayShot
 execute at @s[tag=Spawned,tag=Hurt,tag=!Dying,tag=!DelayShot] run function powerups:snowman/stop_all_anims
 execute at @s[tag=Spawned,tag=Hurt,tag=!Dying,tag=!DelayShot] run function animated_java:snowman/animations/damage/play
-execute at @s[tag=Spawned,tag=Hurt] run playsound entity.snow_golem.hurt master @a ~ ~ ~ 0.4 1
-execute at @s[tag=Spawned,tag=Hurt] run playsound entity.snow_golem.hurt master @a ~ ~ ~ 0.4 1.2
+execute at @s[tag=Spawned,tag=Hurt] run playsound snowmanhurt master @a ~ ~ ~ 0.4 1
+execute at @s[tag=Spawned,tag=Hurt] run playsound snowmanhurt master @a ~ ~ ~ 0.4 1.2
 tag @s[type=item_display,tag=Snowman,tag=Spawned,tag=Hurt,tag=!Dying,tag=Spawned] remove Hurt
 tag @s[tag=Spawned,tag=Shooting,tag=Hurt] add DelayShot

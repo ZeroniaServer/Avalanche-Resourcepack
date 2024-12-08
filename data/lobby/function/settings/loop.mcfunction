@@ -1,6 +1,6 @@
 scoreboard players enable @a[predicate=lobby:modification_room] modify
 
-execute unless entity @a[tag=ModiOwner] if entity @a[predicate=lobby:modification_room,limit=1,scores={modify=1..}] run playsound item.book.page_turn master @a -63 53 -93 1 1
+execute unless entity @a[tag=ModiOwner] if entity @a[predicate=lobby:modification_room,limit=1,scores={modify=1..}] run playsound settingsclaim master @a -63 53 -93 1 1
 execute unless entity @a[tag=ModiOwner] if entity @a[predicate=lobby:modification_room,limit=1,scores={modify=1..}] run tag @a[predicate=lobby:modification_room,limit=1,sort=random,scores={modify=1..}] add ModiOwner
 execute as @a[tag=ModiOwner,predicate=lobby:modification_room,scores={modify=293044}] run function lobby:settings/time
 execute as @a[tag=ModiOwner,predicate=lobby:modification_room,scores={modify=8143}] run function lobby:settings/preptime

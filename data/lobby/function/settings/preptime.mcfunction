@@ -9,4 +9,4 @@ execute if score $PrepSeconds CmdData matches 42069 run scoreboard players set $
 
 function lobby:settings/refreshsigns with storage lobby:customizer
 
-playsound block.wooden_button.click_on master @a -62 54 -93 1 1.6
+playsound settingsclick master @a -56 54 -91 1 1.6
