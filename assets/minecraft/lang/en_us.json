@@ -166,6 +166,7 @@
   "powerup.coalstock.name": "Coal Stocking",
   "powerup.coalstock.effect.support.1": "Blinds nearby enemies.",
   "powerup.coalstock.effect.support.2": "Blinds nearby Snowmen.",
+  "powerup.coalstock.effect.support.3": "Refuels nearby Campfires.",
   "powerup.snowglobe.name": "Snow Globe",
   "powerup.snowglobe.effect.damage.1": "Deals constant damage to enemies.",
   "powerup.snowglobe.effect.support.1": "Allies can rapidly throw Snowballs.",
