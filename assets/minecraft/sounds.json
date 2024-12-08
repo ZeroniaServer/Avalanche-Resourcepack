@@ -1,9 +1,95 @@
 {
+    "leaveteam": {
+        "sounds": [
+            {
+                "attenuation_distance": 14,
+                "name": "block/beehive/exit"
+            },
+            {
+                "attenuation_distance": 14,
+                "name": "block/beehive/exit",
+                "pitch": 0.9
+            },
+            {
+                "attenuation_distance": 14,
+                "name": "block/beehive/exit",
+                "pitch": 1.1
+            }
+        ],
+        "subtitle": "subtitles.team.leave"
+    },
+    "leavespectator": {
+        "sounds": [
+            {
+                "attenuation_distance": 14,
+                "name": "block/beehive/exit"
+            },
+            {
+                "attenuation_distance": 14,
+                "name": "block/beehive/exit",
+                "pitch": 0.9
+            },
+            {
+                "attenuation_distance": 14,
+                "name": "block/beehive/exit",
+                "pitch": 1.1
+            }
+        ],
+        "subtitle": "subtitles.spectate.leave"
+    },
+    "jointeam": {
+        "sounds": [
+            {
+                "attenuation_distance": 14,
+                "name": "block/beehive/enter",
+                "pitch": 0.7
+            },
+            {
+                "attenuation_distance": 14,
+                "name": "block/beehive/enter",
+                "pitch": 0.8
+            }
+        ],
+        "subtitle": "subtitles.team.join"
+    },
+    "joinspectator": {
+        "sounds": [
+            {
+                "attenuation_distance": 14,
+                "name": "block/beehive/enter",
+                "pitch": 0.7
+            },
+            {
+                "attenuation_distance": 14,
+                "name": "block/beehive/enter",
+                "pitch": 0.8
+            }
+        ],
+        "subtitle": "subtitles.spectate.join"
+    },
+    "joinfail": {
+        "sounds": [
+            "random/break"
+        ],
+        "subtitle": "subtitles.team.joinfail"
+    },
+    "gamestart": {
+        "sounds": [
+            "random/levelup"
+        ],
+        "subtitle": "subtitles.game.start"
+    },
     "snowballhit": {
         "sounds": [
             "weapon/snowball/impact"
         ],
         "subtitle": "subtitles.snowball.impact"
+    },
+    "knockout": {
+        "sounds": [
+            "weapon/snowball/impact"
+        ],
+        "subtitle": "subtitles.player.knockout"
     },
 	"iceballhit": {
         "sounds": [
@@ -20,6 +106,28 @@
 	"avalanchesnowfall": {
         "sounds": [
             "avalanche/snowfall"
+        ]
+    },
+    "avalanchesnowfall2": {
+        "sounds": [
+            "dig/snow1",
+            "dig/snow2",
+            "dig/snow3",
+            "dig/snow4"
+        ]
+    },
+    "avalanchesnowfall3": {
+        "sounds": [
+            "block/powder_snow/step1",
+            "block/powder_snow/step2",
+            "block/powder_snow/step3",
+            "block/powder_snow/step4",
+            "block/powder_snow/step5",
+            "block/powder_snow/step6",
+            "block/powder_snow/step7",
+            "block/powder_snow/step8",
+            "block/powder_snow/step9",
+            "block/powder_snow/step10"
         ]
     },
 	"snowglobehit": {
@@ -182,6 +290,29 @@
             "silent"
         ]
     },
+    "prepstart": {
+        "sounds": [
+            "random/levelup"
+        ],
+        "subtitle": "subtitles.game.prepstart"
+    },
+    "prepstart2": {
+        "sounds": [
+            "note/icechime"
+        ]
+    },
+    "preptimer": {
+        "sounds": [
+            "note/icechime"
+        ],
+        "subtitle": "subtitles.game.preptimer"
+    },
+    "battlestart": {
+        "sounds": [
+            "random/levelup"
+        ],
+        "subtitle": "subtitles.game.battlestart"
+    },
     "wingame": {
         "sounds": [
             {
@@ -190,6 +321,26 @@
             }
         ],
         "subtitle": "subtitles.game.win"
+    },
+    "tiegame": {
+        "sounds": [
+            "mob/wither/hurt1",
+            "mob/wither/hurt2",
+            "mob/wither/hurt3",
+            "mob/wither/hurt4"
+        ],
+        "subtitle": "subtitles.game.tie"
+    },
+    "losegame": {
+        "sounds": [
+            "mob/wither/spawn"
+        ],
+        "subtitle": "subtitles.game.lose"
+    },
+    "endgame": {
+        "sounds": [
+            "note/pling"
+        ]
     },
     "parkourstart": {
         "sounds": [
@@ -330,5 +481,369 @@
             "weapon/coalstock/blind"
         ],
         "subtitle": "subtitles.coalstock.release"
+    },
+    "giftboxopen1": {
+        "sounds": [
+            "mob/chicken/plop"
+        ],
+        "subtitle": "subtitles.giftbox.open"
+    },
+    "giftboxopen2": {
+        "sounds": [
+            "dig/cloth1",
+            "dig/cloth2",
+            "dig/cloth3",
+            "dig/cloth4"
+        ]
+    },
+    "giftboxopen3": {
+        "sounds": [
+            "random/orb"
+        ]
+    },
+    "giftboxbreak": {
+        "sounds": [
+            "dig/cloth1",
+            "dig/cloth2",
+            "dig/cloth3",
+            "dig/cloth4"
+        ],
+        "subtitle": "subtitles.giftbox.break"
+    },
+    "sleighplace1": {
+        "sounds": [
+            "mob/chicken/plop"
+        ],
+        "subtitle": "subtitles.sleigh.place"
+    },
+    "sleighplace2": {
+        "sounds": [
+            "block/nether_wood/break1",
+            "block/nether_wood/break2",
+            "block/nether_wood/break3",
+            "block/nether_wood/break4"
+        ]
+    },
+    "sleighdrop": {
+        "sounds": [
+            "mob/chicken/plop"
+        ],
+        "subtitle": "subtitles.sleigh.drop"
+    },
+    "sleighdrop2": {
+        "sounds": [
+            "block/nether_wood/break1",
+            "block/nether_wood/break2",
+            "block/nether_wood/break3",
+            "block/nether_wood/break4"
+        ]
+    },
+    "sleighbreak1": {
+        "sounds": [
+            {
+                "name": "block/wooden_trapdoor/close1",
+                "volume": 0.9
+            },
+            {
+                "name": "block/wooden_trapdoor/close2",
+                "volume": 0.9
+            },
+            {
+                "name": "block/wooden_trapdoor/close3",
+                "volume": 0.9
+            }
+        ],
+        "subtitle": "subtitles.sleigh.break"
+    },
+    "sleighbreak2": {
+        "sounds": [
+            "mob/zombie/woodbreak"
+        ]
+    },
+    "sleighjump": {
+        "sounds": [
+            "mob/bat/takeoff"
+        ],
+        "subtitle": "subtitles.sleigh.jump"
+    },
+    "sleighland": {
+        "sounds": [
+            "dig/wood1",
+            "dig/wood2",
+            "dig/wood3",
+            "dig/wood4"
+        ],
+        "subtitle": "subtitles.sleigh.land"
+    },
+    "sleighlandsnow1": {
+        "sounds": [
+            "dig/snow1",
+            "dig/snow2",
+            "dig/snow3",
+            "dig/snow4"
+        ]
+    },
+    "sleighlandsnow2": {
+        "sounds": [
+            "entity/snowman/death1",
+            "entity/snowman/death2",
+            "entity/snowman/death3"
+        ]
+    },
+    "sleighlandice1": {
+        "sounds": [
+            "dig/stone1",
+            "dig/stone2",
+            "dig/stone3",
+            "dig/stone4"
+        ]
+    },
+    "sleighlandice2": {
+        "sounds": [
+            "entity/player/hurt/freeze_hurt1",
+            "entity/player/hurt/freeze_hurt2",
+            "entity/player/hurt/freeze_hurt3",
+            "entity/player/hurt/freeze_hurt4",
+            "entity/player/hurt/freeze_hurt5"
+        ]
+    },
+    "sleighdrift": {
+        "sounds": [
+            "block/powder_snow/break1",
+            "block/powder_snow/break2",
+            "block/powder_snow/break3",
+            "block/powder_snow/break4",
+            "block/powder_snow/break5",
+            "block/powder_snow/break6",
+            "block/powder_snow/break7"
+        ],
+        "subtitle": "subtitles.sleigh.drift"
+    },
+    "sleighbrake": {
+        "sounds": [
+            "step/snow1",
+            "step/snow2",
+            "step/snow3",
+            "step/snow4"
+        ],
+        "subtitle": "subtitles.sleigh.brake`"
+    },
+    "sleighdamage": {
+        "sounds": [
+            "random/break"
+        ],
+        "subtitle": "subtitles.sleigh.damage"
+    },
+    "sleightransform": {
+        "sounds": [
+            "entity/shulker_bullet/hit1",
+            "entity/shulker_bullet/hit2",
+            "entity/shulker_bullet/hit3",
+            "entity/shulker_bullet/hit4"
+        ],
+        "subtitle": "subtitles.sleigh.transform"
+    },
+    "campfirelight": {
+        "sounds": [
+            "mob/ghast/fireball4"
+        ],
+        "subtitle": "subtitles.campfire.light"
+    },
+    "campfireignite": {
+        "sounds": [
+            "fire/ignite"
+        ],
+        "subtitle": "subtitles.campfire.ignite"
+    },
+    "campfireextinguish": {
+        "sounds": [
+            "random/fizz"
+        ],
+        "subtitle": "subtitles.campfire.extinguish"
+    },
+    "campfirerevive": {
+        "sounds": [
+            "random/fizz"
+        ]
+    },
+    "playerrevive": {
+        "sounds": [
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed1",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed2",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed3",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed4",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed5",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed6",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed7",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed8",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed9",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed10",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed11",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed12",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed13",
+                "volume": 0.25
+            }
+        ],
+        "subtitle": "subtitles.player.revive"
+    },
+    "playerrespawn": {
+        "sounds": [
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed1",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed2",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed3",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed4",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed5",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed6",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed7",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed8",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed9",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed10",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed11",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed12",
+                "volume": 0.25
+            },
+            {
+                "attenuation_distance": 12,
+                "name": "enchant/soulspeed/soulspeed13",
+                "volume": 0.25
+            }
+        ],
+        "subtitle": "subtitles.player.respawn"
+    },
+    "playerrespawn2": {
+        "sounds": [
+            "mob/ghast/fireball4"
+        ],
+        "subtitle": "subtitles.campfire.light"
+    },
+    "playerwarp": {
+        "sounds": [
+            {
+                "name": "block/bell/bell_use01",
+                "pitch": 0.93,
+                "volume": 12.0
+            },
+            {
+                "name": "block/bell/bell_use01",
+                "pitch": 0.95,
+                "volume": 12.0
+            },
+            {
+                "name": "block/bell/bell_use01",
+                "pitch": 0.97,
+                "volume": 12.0
+            },
+            {
+                "name": "block/bell/bell_use02",
+                "pitch": 0.93,
+                "volume": 12.0
+            },
+            {
+                "name": "block/bell/bell_use02",
+                "pitch": 0.95,
+                "volume": 12.0
+            },
+            {
+                "name": "block/bell/bell_use02",
+                "pitch": 0.97,
+                "volume": 12.0
+            }
+        ]
     }
 }
