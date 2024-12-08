@@ -196,6 +196,15 @@
                 "\uE017"
             ]
         },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/logo.png",
+            "ascent": 12,
+            "height": 32,
+            "chars": [
+                "\uE018"
+            ]
+        },
 		{
             "type": "space",
             "advances": {
