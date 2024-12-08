@@ -49,7 +49,7 @@
                             "condition": "entity_properties",
                             "entity": "this",
                             "predicate": {
-                                "team": "Red"
+                                "team": "Green"
                             }
                         }
                     ]
@@ -64,7 +64,7 @@
                             "condition": "entity_properties",
                             "entity": "this",
                             "predicate": {
-                                "team": "Green"
+                                "team": "Red"
                             }
                         }
                     ]
