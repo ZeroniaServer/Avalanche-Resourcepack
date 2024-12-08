@@ -6,4 +6,4 @@ $data merge entity $(bone_right_arm) { transformation: [0.8366796164812006f,0.26
 $data merge entity $(bone_left_arm) { transformation: [0.8366796164812008f,-0.2684486406076402f,0.477391397828638f,0.5625000000000001f,-0.03550612950736649f,0.8432216980659759f,0.5363920978893504f,0.09687499999999999f,-0.5465405146302302f,-0.46573865554261473f,0.6959748347469762f,-0.60625f,0f,0f,0f,1f], start_interpolation: 0, interpolation_duration: 1 }
 
 particle block{block_state:packed_ice} ^ ^-0.1 ^-0.2 0.2 0.1 0.2 0.1 30 force
-playsound block.glass.hit master @a ~ ~ ~ 1 1.2
+playsound elfemerge master @a ~ ~ ~ 1 1.2

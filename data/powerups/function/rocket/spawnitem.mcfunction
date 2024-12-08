@@ -6,8 +6,8 @@ function powerups:placeable_init/alignfloor
 execute at @s[tag=illegal,predicate=game:low_arena] run tp @s ~ 44 ~
 execute at @s[tag=illegal,predicate=!game:rocket_arena] facing -63 42 -221 run function powerups:rocket/movefloor
 
-execute at @s run playsound entity.item.pickup master @a[tag=!self] ~ ~ ~ 1 0.6
-execute at @s run playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 1 1.6
+execute at @s run playsound rocketspawn master @a ~ ~ ~ 1 1.6
+execute at @s run playsound rocketspawn2 master @a[tag=!self] ~ ~ ~ 1 0.6
 execute at @s[tag=!void,tag=!movedfloor] as @a[tag=self,limit=1] run loot spawn ~ ~1 ~ loot powerups:rocket_drop
 execute at @s[tag=void,tag=!movedfloor] as @a[tag=self,limit=1] run loot spawn ~ ~-1 ~ loot powerups:rocket_drop
 execute at @s[tag=movedfloor] as @a[tag=self,limit=1] run loot spawn ~ ~1 ~ loot powerups:rocket_drop

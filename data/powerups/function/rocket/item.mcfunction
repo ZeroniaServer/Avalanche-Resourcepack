@@ -3,7 +3,7 @@ execute if score @s lifetime matches 140 run particle explosion ~ ~ ~ 0 0 0 0 1 
 execute if score @s lifetime matches 140 run item modify entity @s contents [{"function":"minecraft:set_components","components":{"minecraft:item_model":"minecraft:weapons/rocket_unclaimed"}}]
 execute if score @s lifetime matches 140.. run tag @s remove RocketItemGreen
 execute if score @s lifetime matches 140.. run tag @s remove RocketItemRed
-execute if score @s lifetime matches 140 run playsound entity.item_frame.add_item master @a ~ ~ ~ 1 2
+execute if score @s lifetime matches 140 run playsound rocketconvert master @a ~ ~ ~ 1 2
 
 tag @a remove giveRocket
 execute if entity @s[tag=RocketItemGreen] run tag @p[team=Green,tag=!Knockout,distance=..2] add giveRocket
@@ -25,7 +25,7 @@ execute at @s[tag=!RocketItemGreen,tag=!RocketItemRed] run particle dust_color_t
 scoreboard players add @s[tag=Voided] CmdData 1
 execute at @s[tag=Voided,scores={CmdData=..2}] run particle firework ~ ~ ~ 0 0 0 .02 1 force
 execute at @s[tag=Voided,scores={CmdData=2}] run particle firework ~ ~ ~ 0 0 0 .2 6 force
-execute at @s[tag=Voided,scores={CmdData=2}] run playsound entity.firework_rocket.twinkle master @a ~ ~ ~ 0.3 2
+execute at @s[tag=Voided,scores={CmdData=2}] run playsound rocketvoid master @a ~ ~ ~ 0.3 2
 tag @s[tag=Voided,scores={CmdData=2..}] remove Voided
 
 #> High arena falling

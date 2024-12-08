@@ -1,11 +1,11 @@
-playsound item.honey_bottle.drink master @a ~ ~ ~ 1 2
-playsound entity.generic.drink master @a ~ ~ ~ 1 1
+playsound hotchocodrink master @a ~ ~ ~ 1 2
+playsound hotchocodrink2 master @a ~ ~ ~ 1 1
 particle heart ~ ~1 ~ 0.3 0.3 0.3 0.1 6 force
 particle cloud ~ ~1.4 ~ 0.3 0.3 0.3 0 4 force
 
 execute if entity @s[tag=Knockout] run particle block{block_state:snow_block} ~ ~1.6 ~ 0.1 0.1 0.1 0.1 20 force
 execute if entity @s[tag=Knockout] run particle splash ~ ~1.6 ~ 0.1 0.1 0.1 0.1 20 force
-execute if entity @s[tag=Knockout] run playsound block.fire.extinguish master @a ~ ~ ~ 0.6 1.2
+execute if entity @s[tag=Knockout] run playsound playerrevive2 master @a ~ ~ ~ 0.6 1.2
 execute if entity @s[tag=Knockout] run scoreboard players reset @s iframe
 execute if entity @s[tag=Knockout] run tag @s add IFrame
 
