@@ -2,7 +2,8 @@
 function lobby:loop
 
 #> Lobby health bars
-execute as @a[team=!Spectator,gamemode=!spectator,gamemode=!creative] run function player:actionbar
+execute if score $gamestate CmdData matches 2.. as @a[team=Red,gamemode=!spectator,gamemode=!creative] run function player:actionbar
+execute if score $gamestate CmdData matches 2.. as @a[team=Green,gamemode=!spectator,gamemode=!creative] run function player:actionbar
 execute as @a[team=!Spectator,gamemode=spectator] run title @s actionbar ""
 execute as @a[gamemode=creative] run title @s actionbar ""
 

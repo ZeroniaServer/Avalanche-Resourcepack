@@ -1,6 +1,6 @@
 execute unless score @s sleighDamage matches 4 store result storage avalanche:sleighdrop val int 1 run scoreboard players get @s sleighDamage
 execute unless score @s sleighDamage matches 4 at @s run function powerups:sleigh/drop with storage avalanche:sleighdrop
-execute unless predicate powerups:sleigh_void if entity @s[tag=Occupied] on passengers on passengers run tag @s[type=player] add SleighDismounted
+execute if predicate powerups:sleigh_void if entity @s[tag=Occupied] on passengers on passengers run tag @s[type=player] add SleighDismounted
 execute if predicate powerups:sleigh_void if entity @s[tag=Occupied] on passengers on passengers at @s[type=player] run particle block{block_state:"spruce_planks"} ~ ~4.5 ~ 0.5 0.5 0.5 0.1 100 force
 execute if predicate powerups:sleigh_void unless entity @s[tag=Occupied] run particle block{block_state:"spruce_planks"} ~ ~ ~ 0.5 0.5 0.5 0.1 100 force
 execute unless predicate powerups:sleigh_void at @s run particle block{block_state:"spruce_planks"} ~ ~ ~ 0.5 0.5 0.5 0.1 100 force
