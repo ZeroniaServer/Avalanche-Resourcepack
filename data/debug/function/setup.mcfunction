@@ -281,3 +281,10 @@ forceload add -144 -33 47 -336
 forceload add 0 0
 
 setworldspawn -65 52 -65
+
+#> Messages
+# TODO: UPDATE PACK LINKS!
+data modify storage avalanche:messages ResourcePack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"We strongly recommend you to ","color":"gray"},{"text":"use the resource pack","bold":true,"color":"red"},{"text":". ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=10cQpDUFTjMoysGvn-qteVYAui3JFNtN9"}}]'
+data modify storage avalanche:messages OutdatedPack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"You are using an outdated version of the resource pack! ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD THE LATEST VERSION]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=10cQpDUFTjMoysGvn-qteVYAui3JFNtN9"}}]'
+data modify storage avalanche:messages SettingsMap set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"chat.confirm","color":"#f089a8","with":[{"translate":"chat.settings_box","color":"#1dc6c7","bold":true}]}]'
+data modify storage avalanche:messages ReadyToPlay set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"chat.the_game","color":"gray","with":[{"translate":"chat.ready_to_play","color":"green","bold":true}]}]'

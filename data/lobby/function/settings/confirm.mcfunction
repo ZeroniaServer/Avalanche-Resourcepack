@@ -4,7 +4,7 @@ fill -35 51 -149 -35 49 -151 pink_stained_glass
 
 scoreboard players reset @a modify
 tag @a remove ModiOwner
-execute as @a at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 2
+execute as @a at @s run playsound confirmsettings master @s ~ ~ ~ 1 2
 scoreboard players set $gamestate CmdData 0
 
 scoreboard players set $RedReady CmdData 0
@@ -13,6 +13,8 @@ scoreboard players set $GreenReady CmdData 0
 scoreboard players set $GreenPoints CmdData 0
 scoreboard players set $RedPoints CmdData 0
 
+title @a title {"translate":"customizer.confirmed","underlined":true,"color":"dark_green"}
+title @a subtitle [{"translate":"chat.the_game","color":"green","with":[{"translate":"chat.ready_to_play","color":"green"}]}]
 function lobby:settings/announce with storage lobby:customizer
 
 fill -56 53 -91 -56 54 -89 air
