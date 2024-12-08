@@ -6,8 +6,8 @@ execute at @s[tag=BlockySleigh,scores={CmdData=10}] run particle dust{color:[1.0
 execute at @s[tag=BlockySleigh,scores={CmdData=10}] run particle dust{color:[0.000,1.000,0.000],scale:2} ~ ~ ~ 0.4 0.2 0.4 0.1 10 force
 execute at @s[tag=BlockySleigh,scores={CmdData=10}] run particle dust{color:[0.000,0.000,1.000],scale:2} ~ ~ ~ 0.4 0.2 0.4 0.1 10 force
 item replace entity @s[tag=BlockySleigh,scores={CmdData=10}] contents with diamond_hoe[item_model="minecraft:weapons/blockysleigh"]
-execute at @s[tag=BlockySleigh,scores={CmdData=10}] run playsound entity.shulker_bullet.hit master @a ~ ~ ~ 1 2
-execute at @s[tag=BlockySleigh,scores={CmdData=10}] run playsound entity.shulker_bullet.hit master @a ~ ~ ~ 1 0
+execute at @s[tag=BlockySleigh,scores={CmdData=10}] run playsound sleightransform master @a ~ ~ ~ 1 2
+execute at @s[tag=BlockySleigh,scores={CmdData=10}] run playsound sleightransform master @a ~ ~ ~ 1 0
 execute at @s[tag=BlockySleigh,scores={CmdData=10}] run tellraw @a[tag=!blockysleigh,distance=..4] {"translate":"secret","color":"#7e50f3","bold":false,"with":[{"translate":"secret.found","color":"#af7aff","bold":true},{"text":"1/2048","color":"#af7aff","bold":true}]}
 execute at @s[tag=BlockySleigh,scores={CmdData=10}] run tag @a[tag=!blockysleigh,distance=..4] add blockysleigh
 tag @s[tag=BlockySleigh,scores={CmdData=10}] remove BlockySleigh

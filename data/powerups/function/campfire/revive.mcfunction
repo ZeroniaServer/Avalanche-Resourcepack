@@ -17,7 +17,7 @@ execute as @a[tag=Reviving] at @s run particle heart ~ ~1 ~ 0.3 0.3 0.3 0.1 6 fo
 execute as @a[tag=Reviving] at @s run particle cloud ~ ~1.4 ~ 0.3 0.3 0.3 0 4 force
 execute as @a[tag=Reviving] at @s run particle block{block_state:snow_block} ~ ~1.6 ~ 0.1 0.1 0.1 0.1 20 force
 execute as @a[tag=Reviving] at @s run particle splash ~ ~1.6 ~ 0.1 0.1 0.1 0.1 20 force
-execute as @a[tag=Reviving] at @s run playsound block.fire.extinguish master @a ~ ~ ~ 0.6 1.2
+execute as @a[tag=Reviving] at @s run playsound campfirerevive master @a ~ ~ ~ 0.6 1.2
 execute as @a[tag=Reviving] at @s run scoreboard players reset @s iframe
 execute as @a[tag=Reviving] at @s run tag @s add IFrame
 tag @a remove Reviving

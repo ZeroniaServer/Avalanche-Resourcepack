@@ -21,6 +21,6 @@ scoreboard players operation @e[type=turtle,tag=init,limit=1] sleighDamage = $du
 
 tag @e[type=#powerups:sleigh,tag=init] remove init
 
-execute unless score @s sleighDamage matches 4.. run playsound block.nether_wood.place master @a ~ ~ ~ 0.8 0
-execute unless score @s sleighDamage matches 4.. run playsound block.nether_wood.place master @a ~ ~ ~ 0.8 2
-execute unless score @s sleighDamage matches 4.. run playsound entity.chicken.egg master @a ~ ~ ~ 0.6 1.5
+execute unless score @s sleighDamage matches 4.. run playsound sleighplace1 master @a ~ ~ ~ 0.6 1.5
+execute unless score @s sleighDamage matches 4.. run playsound sleighplace2 master @a ~ ~ ~ 0.8 0
+execute unless score @s sleighDamage matches 4.. run playsound sleighplace2 master @a ~ ~ ~ 0.8 2

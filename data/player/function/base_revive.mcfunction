@@ -5,4 +5,4 @@ tellraw @a {"translate":"revive.campfire.base","color":"dark_aqua","with":[{"sel
 function inventory:clear
 execute if entity @s[team=Green] run scoreboard players set $GreenRespawn CmdData 1
 execute if entity @s[team=Red] run scoreboard players set $RedRespawn CmdData 1
-execute at @s run playsound minecraft:entity.blaze.shoot master @s ~ ~ ~ 1 0
+execute at @s run playsound playerrespawn2 master @s ~ ~ ~ 1 0

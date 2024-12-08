@@ -71,8 +71,8 @@ execute as @e[type=marker,tag=SnowEmitter,scores={CmdData=31..35}] at @s run tp 
 
 execute as @e[type=marker,tag=SnowEmitter,limit=2,sort=random] at @s run function game:avalanche/summonsecondarysnowblock
 
-execute as @e[type=marker,tag=SnowEmitter,scores={CmdData=10..35},limit=1,sort=random] at @s run playsound block.snow.break master @a ~ ~ ~ 2 0
-execute as @e[type=marker,tag=SnowEmitter,scores={CmdData=10..35},limit=1,sort=random] at @s run playsound minecraft:block.powder_snow.fall master @a ~ ~ ~ 2 0
+execute as @e[type=marker,tag=SnowEmitter,scores={CmdData=10..35},limit=1,sort=random] at @s run playsound avalanchesnowfall2 master @a ~ ~ ~ 2 0
+execute as @e[type=marker,tag=SnowEmitter,scores={CmdData=10..35},limit=1,sort=random] at @s run playsound avalanchesnowfall3 master @a ~ ~ ~ 2 0
 
 execute as @e[type=marker,tag=SnowEmitter,scores={CmdData=20..}] at @s run particle falling_dust{block_state:"minecraft:powder_snow"} ~ ~ ~ 4 1 4 0.1 20 force
 execute as @e[type=marker,tag=SnowEmitter,scores={CmdData=20..}] at @s run particle snowflake ~ ~ ~ 4 1 4 0.1 50 force
