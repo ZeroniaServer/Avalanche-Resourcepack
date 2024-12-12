@@ -115,6 +115,7 @@
   "customizer.cancel.available_in": "AVAILABLE IN %s",
   "customizer.cancel.unavailable": "UNAVAILABLE",
   "chat.confirm": "Please confirm game settings in the %s!",
+  "chat.settings_tp": "Click here to go to the %s!",
   "chat.settings_box": "Settings Box",
   "chat.the_game": "The game is %s!",
   "chat.ready_to_play": "ready to play",
