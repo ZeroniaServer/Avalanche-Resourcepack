@@ -1,3 +1,5 @@
+execute unless score $gamestate CmdData matches 0..1 run return fail
+
 scoreboard players set $gamestate CmdData 2
 
 scoreboard players reset $Countdown CmdData
