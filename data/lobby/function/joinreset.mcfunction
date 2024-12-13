@@ -1,14 +1,17 @@
 team join Lobby @s
 execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby players @a[team=Lobby]
+execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby_hearts players @a[team=Lobby]
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_lobby players @a
 execute if score $gamestate CmdData matches 0 run bossbar set bar_ready_r players @a
 execute if score $gamestate CmdData matches 0 run bossbar set bar_ready_g players @a
+execute if score $gamestate CmdData matches 0 run bossbar set bar_lobby_hearts players @a[team=!Spectator,gamemode=!spectator]
 gamemode adventure @s
 clear @s
 spawnpoint @s -65 52 -65
 tp @s @s
 execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData matches -1 run tp @s -65 52 -108 0 0
 execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData matches 0.. run tp @s -65 52 -108 180 0
+execute if score @s leavecheck = $curr leavecheck at @s run playsound ding master @s ~ ~ ~ 0.5 1.75
 title @s title ""
 title @s subtitle ""
 execute unless score @s leavecheck = $curr leavecheck run function lobby:welcome

@@ -43,12 +43,14 @@ function bossbars:apply_damage
 
 #> Set lobby bar for Lobby players
 execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby players @a[team=Lobby]
+execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby_hearts players @a[team=Lobby]
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_lobby players @a
+execute if score $gamestate CmdData matches -1 run bossbar set bar_lobby_hearts players @a[team=!Spectator,gamemode=!spectator]
 
 #> Store correct information and values in the lobby bar
 execute if score $gamestate CmdData matches -1 run bossbar set bar_lobby value 0
 execute if score $gamestate CmdData matches -1 run bossbar set bar_lobby style notched_6
-execute if score $gamestate CmdData matches -1 unless entity @a[tag=ModiOwner] run bossbar set bar_lobby name {"translate":"chat.confirm","color":"#f089a8","with":[{"translate":"chat.settings_box","color":"#1dc6c7","bold":true}]}
+execute if score $gamestate CmdData matches -1 unless entity @a[tag=ModiOwner] run bossbar set bar_lobby name [{"translate":"chat.confirm","color":"#f089a8","with":[{"translate":"chat.settings_box","color":"#1dc6c7","bold":true}]}]
 execute if score $gamestate CmdData matches -1 if entity @a[tag=ModiOwner] run bossbar set bar_lobby name {"translate":"customizer.box_owner","color":"#f089a8","with":[{"selector":"@a[tag=ModiOwner,limit=1]","color":"#1dc6c7","bold":true}]}
 
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Green] unless entity @a[team=Red] run bossbar set bar_lobby value 0

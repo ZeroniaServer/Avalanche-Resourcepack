@@ -12,3 +12,6 @@ bossbar add bar_ready_g ""
 bossbar set bar_ready_g color white
 # bossbar set bar_ready_g value 0
 bossbar set bar_ready_g max 2
+
+bossbar add bar_lobby_hearts ""
+bossbar set bar_lobby_hearts color white
