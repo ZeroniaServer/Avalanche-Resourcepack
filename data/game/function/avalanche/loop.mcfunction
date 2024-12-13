@@ -86,11 +86,11 @@ kill @e[type=block_display,tag=SecondarySnowBlockDisplay,scores={CmdData=20..}]
 #> Damage players
 execute as @e[type=marker,tag=SnowEmitter] at @s run scoreboard players set @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..5] playerHP 0
 execute as @e[type=marker,tag=SnowEmitter] at @s run scoreboard players set @e[type=item_display,tag=CampfireMain,scores={CmdData=22..1199},distance=..5] CmdData 1200
-execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout,predicate=!wasd:is_mounted,tag=!avdamaged,tag=!Iframe] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run scoreboard players add @s playerDamage 8
-execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout,predicate=!wasd:is_mounted,tag=!avdamaged,tag=!Iframe] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run damage @s 1 freeze
-execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout,predicate=!wasd:is_mounted,tag=!avdamaged,tag=!Iframe] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run effect give @s slowness 2 5 true
-execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout,predicate=!wasd:is_mounted,tag=!avdamaged,tag=!Iframe] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run tag @s add avdamaged
-execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout,predicate=!wasd:is_mounted,tag=avdamaged,tag=!Iframe] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] if score @s playerDamage >= @s playerHP run tellraw @a {"translate":"knockout.avalanche","color":"dark_aqua","with":[{"selector":"@s"}]}
+execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout,predicate=!wasd:is_mounted,tag=!avdamaged,tag=!IFrame] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run scoreboard players add @s playerDamage 8
+execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout,predicate=!wasd:is_mounted,tag=!avdamaged,tag=!IFrame] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run damage @s 1 freeze
+execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout,predicate=!wasd:is_mounted,tag=!avdamaged,tag=!IFrame] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run effect give @s slowness 2 5 true
+execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout,predicate=!wasd:is_mounted,tag=!avdamaged,tag=!IFrame] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] run tag @s add avdamaged
+execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout,predicate=!wasd:is_mounted,tag=avdamaged,tag=!IFrame] at @s if entity @e[type=marker,tag=SnowEmitter,distance=..5] if score @s playerDamage >= @s playerHP run tellraw @a {"translate":"knockout.avalanche","color":"dark_aqua","with":[{"selector":"@s"}]}
 
 #> Avalanche damage cooldown
 scoreboard players add @a[tag=avdamaged] blizzardtime 1
