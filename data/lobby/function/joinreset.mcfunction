@@ -26,5 +26,6 @@ execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=!gotTheMe
 tag @s remove gotTheMemo
 tag @s add SilentRespawn
 scoreboard players set @s playerHP 20
+attribute @s minecraft:block_interaction_range base set 4.5
 scoreboard players operation @s leavecheck = $curr leavecheck
 scoreboard players operation @s gameID = $current gameID
