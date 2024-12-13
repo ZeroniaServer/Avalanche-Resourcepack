@@ -14,6 +14,7 @@ tag @a[tag=WarpRed] remove WarpRed
 execute as @a[tag=WarpLobby] at @s run tp @s @s
 execute as @a[tag=WarpLobby,tag=!LeaveWarp] at @s run tp @s -63 50 -123 -180 0
 execute as @a[tag=WarpLobby,tag=!LeaveWarp] at @s run particle flash -63 51 -124 0 0 0 0 2 force @s
+execute as @a[tag=WarpLobby,tag=LeaveWarp] at @s run particle flash ^ ^1 ^1 0 0 0 0 2 force @s
 tag @a[tag=LeaveWarp] remove LeaveWarp
 tag @a[tag=WarpLobby] remove WarpLobby
 

@@ -14,3 +14,5 @@ setblock -67 38 -179 air
 scoreboard players set $wallplaced CmdData 0
 
 fill -63 21 -179 -63 60 -263 minecraft:air replace minecraft:barrier
+
+function game:repairblockers
