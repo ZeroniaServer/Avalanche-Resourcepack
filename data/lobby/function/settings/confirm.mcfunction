@@ -47,4 +47,6 @@ function lobby:readyteams/refreshsigns
 
 function arenaclear:reset
 
+execute as @a run trigger settings set 0
+
 tag @a remove RequestSettings
