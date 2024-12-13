@@ -1,0 +1,23 @@
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+execute at @s run function game:weakpoint/xparticle/greenstep
+tag @s add end
+execute at @s run function game:weakpoint/xparticle/greenstep
