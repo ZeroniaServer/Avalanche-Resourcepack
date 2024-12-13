@@ -12,11 +12,11 @@ effect clear @s darkness
 clear @s diamond_hoe
 execute if score $gamestate CmdData matches 3 run loot give @s loot powerups:snowball
 
-scoreboard players set @s iframe -60
+scoreboard players set @s iframe -30
 tag @s add IFrame
 
 #> Set kb resistance
-attribute @s minecraft:knockback_resistance base set 0.25
+# attribute @s minecraft:knockback_resistance base set 0.25
 
 execute if entity @s[team=Green,tag=!SilentRespawn] run scoreboard players set $GreenRespawn CmdData 1
 execute if entity @s[team=Red,tag=!SilentRespawn] run scoreboard players set $RedRespawn CmdData 1

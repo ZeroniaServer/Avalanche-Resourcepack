@@ -13,7 +13,7 @@ tag @a[tag=!Knockout,scores={playerHP=..0}] remove KOmessaged
 execute as @a[tag=!Knockout,scores={playerHP=..0}] run function player:findrocket
 tag @a[tag=!Knockout,scores={playerHP=..0}] add Knockout
 execute as @a[tag=Knockout,scores={playerHP=1..}] run function inventory:load
-execute as @a[tag=Knockout,scores={playerHP=1..}] run attribute @s minecraft:knockback_resistance base set 0.25
+# execute as @a[tag=Knockout,scores={playerHP=1..}] run attribute @s minecraft:knockback_resistance base set 0.25
 tag @a[tag=Knockout,scores={playerHP=1..}] remove Knockout
 item replace entity @a[tag=!Knockout,scores={knocktime=1..}] armor.head with air
 

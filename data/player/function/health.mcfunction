@@ -11,5 +11,6 @@ scoreboard players reset @a[scores={respawn=60..}] respawn
 
 #> Invulnerability frames
 scoreboard players add @a[tag=IFrame] iframe 1
+execute as @a[tag=IFrame,scores={iframe=30..}] run attribute @s minecraft:knockback_resistance base set 0.25
 tag @a[tag=IFrame,scores={iframe=30..}] remove IFrame
 scoreboard players reset @a[tag=!IFrame,scores={iframe=-1000..}] iframe
