@@ -2,20 +2,20 @@ execute if score $WeakpointSpawnGreen CmdData matches ..10 run scoreboard player
 execute if score $WeakpointSpawnRed CmdData matches ..10 run scoreboard players add $WeakpointSpawnRed CmdData 1
 
 #> Particles
-scoreboard players add $dust6 CmdData 1
-execute if score $dust6 CmdData matches 5.. run scoreboard players set $dust6 CmdData 0
+scoreboard players add $dust4 CmdData 1
+execute if score $dust4 CmdData matches 3.. run scoreboard players set $dust4 CmdData 0
 
 tag @a remove holdRocket
 
 scoreboard players set $gxparticle CmdData 0
 execute as @a[team=Red] if items entity @s weapon.* snowball[custom_data~{Rocket:1b}] run tag @s add holdRocket
 execute if entity @a[team=Red,tag=holdRocket] run scoreboard players set $gxparticle CmdData 1
-execute if score $gxparticle CmdData matches 1 if score $dust6 CmdData matches 0 as @e[type=marker,limit=2,tag=XParticle,tag=Green] at @s run function game:weakpoint/xparticle/green
+execute if score $gxparticle CmdData matches 1 if score $dust4 CmdData matches 0 as @e[type=marker,limit=2,tag=XParticle,tag=Green] at @s run function game:weakpoint/xparticle/green
 
 scoreboard players set $rxparticle CmdData 0
 execute as @a[team=Green] if items entity @s weapon.* snowball[custom_data~{Rocket:1b}] run tag @s add holdRocket
 execute if entity @a[team=Green,tag=holdRocket] run scoreboard players set $rxparticle CmdData 1
-execute if score $rxparticle CmdData matches 1 if score $dust6 CmdData matches 0 as @e[type=marker,limit=2,tag=XParticle,tag=Red] at @s run function game:weakpoint/xparticle/red
+execute if score $rxparticle CmdData matches 1 if score $dust4 CmdData matches 0 as @e[type=marker,limit=2,tag=XParticle,tag=Red] at @s run function game:weakpoint/xparticle/red
 
 #> Red
 # Left
