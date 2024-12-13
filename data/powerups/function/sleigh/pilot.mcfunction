@@ -4,9 +4,9 @@ execute on passengers rotated as @s[type=minecart] unless score #bool math match
 execute on passengers rotated as @s[type=minecart] unless score #bool math matches 0 at @s positioned ^ ^1 ^1.2 run scoreboard players set @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1] playerHP 0
 
 # goomba stomp snowmen beneath
-execute if score #bool math matches 0 if predicate game:in_air on passengers rotated as @s[type=minecart] at @s positioned ^ ^-1 ^ if entity @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1,scores={playerHP=1..}] run playsound snowmanstomp master @a ~ ~ ~ 1 0
-execute if score #bool math matches 0 if predicate game:in_air on passengers rotated as @s[type=minecart] at @s positioned ^ ^-1 ^ if entity @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1,scores={playerHP=1..}] run playsound snowmanstomp master @a ~ ~ ~ 1 1.4
-execute if score #bool math matches 0 if predicate game:in_air on passengers rotated as @s[type=minecart] at @s positioned ^ ^-1 ^ run scoreboard players set @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1] playerHP 0
+execute if score #bool math matches 0 if predicate game:in_#game:air on passengers rotated as @s[type=minecart] at @s positioned ^ ^-1 ^ if entity @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1,scores={playerHP=1..}] run playsound snowmanstomp master @a ~ ~ ~ 1 0
+execute if score #bool math matches 0 if predicate game:in_#game:air on passengers rotated as @s[type=minecart] at @s positioned ^ ^-1 ^ if entity @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1,scores={playerHP=1..}] run playsound snowmanstomp master @a ~ ~ ~ 1 1.4
+execute if score #bool math matches 0 if predicate game:in_#game:air on passengers rotated as @s[type=minecart] at @s positioned ^ ^-1 ^ run scoreboard players set @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1] playerHP 0
 execute on passengers rotated as @s[type=minecart] unless score #bool math matches 0 at @s positioned ^ ^-0.5 ^ if entity @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1,scores={playerHP=1..}] run playsound snowmanstomp master @a ~ ~ ~ 1 0
 execute on passengers rotated as @s[type=minecart] unless score #bool math matches 0 at @s positioned ^ ^-0.5 ^ if entity @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1,scores={playerHP=1..}] run playsound snowmanstomp master @a ~ ~ ~ 1 1.4
 execute on passengers rotated as @s[type=minecart] unless score #bool math matches 0 at @s positioned ^ ^-0.5 ^ run scoreboard players set @e[type=item_display,tag=Snowman,tag=Spawned,tag=!Dying,distance=..1] playerHP 0
@@ -38,7 +38,7 @@ execute if predicate game:big_fall run tag @s[tag=!SleighJumpBig] add SleighJump
 execute if predicate game:big_fall run tag @s add bigFall
 
 # auto jump
-# execute at @s[tag=Occupied,tag=!SleighOffGround] unless predicate game:on_ground if block ~ ~ ~ air if block ~ ~-1 ~ air if block ~ ~-2 ~ air if block ~ ~-3 ~ air if block ~ ~-4 ~ air if block ~ ~-5 ~ air run tag @s add SleighJumpBig
+# execute at @s[tag=Occupied,tag=!SleighOffGround] unless predicate game:on_ground if block ~ ~ ~ #game:air if block ~ ~-1 ~ #game:air if block ~ ~-2 ~ #game:air if block ~ ~-3 ~ #game:air if block ~ ~-4 ~ #game:air if block ~ ~-5 ~ #game:air run tag @s add SleighJumpBig
 
 execute at @s[tag=SleighJumpBig] run function powerups:sleigh/jumpbig
 

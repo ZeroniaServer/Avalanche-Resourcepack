@@ -1,9 +1,9 @@
 #> Spawning/animations
 function powerups:campfire/animation
 
-execute as @e[type=item_display,tag=CampfireMain] at @s if block ~ ~-1 ~ air run scoreboard players set @s CmdData 1300 
-execute as @e[type=item_display,tag=CampfireMain] at @s if block ~ ~-1 ~ air run tag @s add Extinguish
-execute as @e[type=item_display,tag=CampfireMain] at @s if block ~ ~-1 ~ air run kill @e[type=item_display,tag=CampfireEntity,tag=Animator,distance=..0.1]
+execute as @e[type=item_display,tag=CampfireMain] at @s if block ~ ~-1 ~ #game:air run scoreboard players set @s CmdData 1300 
+execute as @e[type=item_display,tag=CampfireMain] at @s if block ~ ~-1 ~ #game:air run tag @s add Extinguish
+execute as @e[type=item_display,tag=CampfireMain] at @s if block ~ ~-1 ~ #game:air run kill @e[type=item_display,tag=CampfireEntity,tag=Animator,distance=..0.1]
 
 #> Heal nearby players
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=20..1200},tag=!Extinguish,tag=!Reviving] at @s run function powerups:campfire/heal

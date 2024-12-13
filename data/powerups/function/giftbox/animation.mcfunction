@@ -21,10 +21,10 @@ execute as @e[type=item_display,tag=Giftbox,tag=New,scores={CmdData=3..}] run da
 tag @e[type=item_display,tag=Giftbox,tag=New,scores={CmdData=3..}] remove New
 
 #> Kill the hitbox
-execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ air unless predicate game:low_arena run particle item{item:{id:"minecraft:diamond_hoe",components:{item_model:"minecraft:custom/giftbox"}}} ~ ~0.2 ~ 0.1 0.1 0.1 0.03 30 force
-execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ air unless predicate game:low_arena run playsound giftboxbreak master @a ~ ~ ~ 1 1.2
-execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ air on passengers run kill
-execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ air run kill
+execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ #game:air unless predicate game:low_arena run particle item{item:{id:"minecraft:diamond_hoe",components:{item_model:"minecraft:custom/giftbox"}}} ~ ~0.2 ~ 0.1 0.1 0.1 0.03 30 force
+execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ #game:air unless predicate game:low_arena run playsound giftboxbreak master @a ~ ~ ~ 1 1.2
+execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ #game:air on passengers run kill
+execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ #game:air run kill
 execute as @e[type=shulker,tag=GiftboxShulker] at @s unless entity @e[type=item_display,tag=Giftbox,distance=..1] run function arenaclear:kill
 
 execute as @a[tag=!secretsanta] at @s if entity @e[type=area_effect_cloud,tag=elfsecret,distance=..6] run tellraw @s {"translate":"secret","color":"#7e50f3","bold":false,"with":[{"translate":"secret.found","color":"#af7aff","bold":true},{"text":"1/1000","color":"#af7aff","bold":true}]}
