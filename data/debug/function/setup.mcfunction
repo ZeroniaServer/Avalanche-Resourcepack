@@ -279,6 +279,14 @@ kill @e[type=marker,tag=BaseCampfire]
 summon marker -114 46 -210 {Tags:["BaseCampfire","Green"]}
 summon marker -12 45 -232 {Tags:["BaseCampfire","Red"]}
 
+#> X Particles
+kill @e[type=marker,tag=XParticle]
+summon marker 0 0 0 {Tags:["Weakpoint","XParticle","1","Red"]}
+summon marker 0 0 0 {Tags:["Weakpoint","XParticle","2","Red"]}
+summon marker 0 0 0 {Tags:["Weakpoint","XParticle","1","Green"]}
+summon marker 0 0 0 {Tags:["Weakpoint","XParticle","2","Green"]}
+
+
 #> Forceload
 forceload add -144 -33 47 -336
 forceload add 0 0
