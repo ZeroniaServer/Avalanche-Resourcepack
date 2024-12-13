@@ -12,6 +12,8 @@ tag @s remove CoalBlind
 tag @s remove snowmanTarget
 tag @s remove SleighDismounted
 tag @s remove KOmessaged
+tag @s remove avdamaged
+scoreboard players reset @s blizzardtime
 tag @s add SilentRespawn
 tag @s remove NaturalRespawn
 tag @s[team=Red] add WasRed
