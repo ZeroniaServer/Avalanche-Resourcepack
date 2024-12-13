@@ -10,6 +10,7 @@ bossbar set bar_ready_r players
 bossbar set bar_ready_r value 0
 bossbar set bar_ready_g value 0
 bossbar set bar_lobby style notched_10
+bossbar set bar_lobby_hearts players @a[team=!Spectator,gamemode=!spectator]
 bossbar set bar_lobby_hearts name [{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]}]
 
 #> Cancel countdown conditions

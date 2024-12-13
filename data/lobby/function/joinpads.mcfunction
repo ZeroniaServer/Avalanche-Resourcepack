@@ -41,6 +41,7 @@ execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2 run loot give
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 3 run loot give @s loot powerups:snowball
 
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 at @s run playsound jointeam master @a ~ ~ ~ 1 1
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run gamemode adventure
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run team join Green
 execute as @a[tag=JoinGreen] run attribute @s knockback_resistance base set 0.25
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.chest loot game:chestplate
@@ -68,6 +69,7 @@ execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run scoreboard 
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run loot give @s loot powerups:barricade_prep
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 3 run loot give @s loot powerups:snowball
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 at @s run playsound jointeam master @a ~ ~ ~ 1 1
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run gamemode adventure
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run team join Red
 execute as @a[tag=JoinRed] run attribute @s knockback_resistance base set 0.25
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.chest loot game:chestplate
@@ -88,7 +90,7 @@ execute as @a[tag=LeaveTeam,team=Red] if score $gamestate CmdData matches 0..3 a
 execute as @a[tag=LeaveTeam,team=Spectator] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {"translate":"lobby.left_spectator","color":"dark_aqua","with":[{"selector":"@s","color":"blue"}]}
 execute as @a[tag=LeaveTeam,team=!] run function player:leave
 execute as @a[tag=LeaveTeam] run tp @s @s
-execute unless entity @a[team=Red] unless entity @a[team=Green] if loaded 0 0 0 if score $gamestate CmdData matches 2.. run tellraw @a ["\n",{"translate":"game.no_players","color":"red"}]
+execute unless entity @a[team=Red] unless entity @a[team=Green] if loaded 0 0 0 if score $gamestate CmdData matches 2.. run tellraw @a ["\n",{"translate":"game.no_players","color":"red"},"\n"]
 execute unless entity @a[team=Red] unless entity @a[team=Green] if score $gamestate CmdData matches 2.. if loaded 0 0 0 run function game:forcestop
 execute as @a[tag=LeaveTeam] run gamemode adventure @s
 execute as @a[tag=LeaveTeam,tag=WasRed] if score $gamestate CmdData matches 0.. run tp @s -40 50 -150 -90 0
