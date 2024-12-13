@@ -6,6 +6,11 @@ scoreboard players reset @a modify
 tag @a remove ModiOwner
 execute as @a at @s run playsound confirmsettings master @s ~ ~ ~ 1 2
 scoreboard players set $gamestate CmdData 0
+bossbar set bar_lobby_hearts players
+bossbar set bar_ready_r players @a
+bossbar set bar_ready_g players @a
+bossbar set bar_lobby_hearts players @a[team=!Spectator,gamemode=!spectator]
+execute if score $gamestate CmdData matches 0 run bossbar set bar_lobby_hearts name [{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]}]
 
 scoreboard players set $RedReady CmdData 0
 scoreboard players set $GreenReady CmdData 0

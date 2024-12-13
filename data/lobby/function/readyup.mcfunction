@@ -24,6 +24,9 @@ execute if score $gamestate CmdData matches 0 if score $RedReady CmdData matches
 #> Ready bossbars
 execute if score $gamestate CmdData matches 0 run bossbar set bar_ready_r players @a
 execute if score $gamestate CmdData matches 0 run bossbar set bar_ready_g players @a
+execute if score $gamestate CmdData matches 0 run bossbar set bar_lobby_hearts players @a[team=!Spectator,gamemode=!spectator]
+execute if score $gamestate CmdData matches 0 run bossbar set bar_lobby_hearts name [{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]}]
+
 execute if score $RedReadyFirst CmdData matches 1 unless score $GreenReady CmdData matches 1 run bossbar set bar_ready_r value 1
 execute if score $RedReadyFirst CmdData matches 1 if score $GreenReady CmdData matches 1 run bossbar set bar_ready_r value 2
 execute if score $GreenReadyFirst CmdData matches 1 unless score $RedReady CmdData matches 1 run bossbar set bar_ready_g value 1

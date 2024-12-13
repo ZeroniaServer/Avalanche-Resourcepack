@@ -10,6 +10,7 @@ bossbar set bar_ready_r players
 bossbar set bar_ready_r value 0
 bossbar set bar_ready_g value 0
 bossbar set bar_lobby style notched_10
+bossbar set bar_lobby_hearts name [{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]}]
 
 #> Cancel countdown conditions
 execute unless score $forcecountdown CmdData matches 1 if score $Countdown CmdData matches 2.. unless entity @a[team=Red] run return run function lobby:cancelcountdown

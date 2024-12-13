@@ -20,6 +20,7 @@ execute if score $gamestate CmdData matches 1 if score $precountdown CmdData mat
 execute if score $gamestate CmdData matches 1 unless score $precountdown CmdData matches ..19 as @a run trigger readyup set 0
 execute unless score $gamestate CmdData matches 0..1 run bossbar set bar_ready_r players
 execute unless score $gamestate CmdData matches 0..1 run bossbar set bar_ready_g players
+execute unless score $gamestate CmdData matches 0..1 run bossbar set bar_lobby_hearts name [{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]}]
 
 #> Modification room
 execute if score $gamestate CmdData matches -1 run function lobby:settings/loop
