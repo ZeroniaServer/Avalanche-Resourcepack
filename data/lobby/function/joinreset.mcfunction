@@ -26,8 +26,8 @@ execute unless score @s leavecheck = $curr leavecheck run function lobby:welcome
 #> Notify players about resource pack
 # TODO UPDATE VERSION NUMBER
 execute if score $gamestate CmdData matches 0..3 run tellraw @s ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{"translate":"ver0.0.2","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"ReadyToPlay","storage":"avalanche:messages","interpret":true}]}]}]
-execute unless score $gamestate CmdData matches 0.. run tellraw @s ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{"translate":"ver0.0.2","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"SettingsBox","storage":"avalanche:messages","interpret":true,"clickEvent":{"action":"run_command","value":"/trigger settings"}}]}]}]
-
+execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=!gotTheMemo] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{"translate":"ver0.0.2","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"SettingsBox","storage":"avalanche:messages","interpret":true,"clickEvent":{"action":"run_command","value":"/trigger settings"}}]}]}]
+tag @s remove gotTheMemo
 tag @s add SilentRespawn
 scoreboard players set @s playerHP 20
 scoreboard players operation @s leavecheck = $curr leavecheck
