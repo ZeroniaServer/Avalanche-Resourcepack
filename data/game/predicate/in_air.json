@@ -4,10 +4,7 @@
     "predicate": {
         "stepping_on": {
             "block": {
-                "blocks": [
-                    "air",
-                    "moving_piston"
-                ]
+                "blocks": "#game:air"
             }
         }
     }
