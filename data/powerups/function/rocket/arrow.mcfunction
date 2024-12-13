@@ -14,7 +14,7 @@ execute on passengers run data modify entity @s Rotation set from storage avalan
 
 execute at @s if predicate game:green_base run tag @s add BasePrevention
 execute at @s if predicate game:red_base run tag @s add BasePrevention
-execute at @s[scores={lifetime=20..},tag=!BasePrevention] run function powerups:rocket/explosion
+execute at @s[scores={lifetime=21..},tag=!BasePrevention] run function powerups:rocket/explosion
 execute as @s[tag=BasePrevention] on vehicle run kill @s
 execute as @s[tag=BasePrevention] on passengers run kill @s
 execute as @s[tag=BasePrevention] run kill @s
