@@ -57,8 +57,11 @@ scoreboard players set $RedPoints CmdData 0
 scoreboard players set $GreenPoints CmdData 0
 scoreboard players set $DamageRed CmdData 0
 scoreboard players set $DamageGreen CmdData 0
+scoreboard players reset $GreenRespawn CmdData
+scoreboard players reset $RedRespawn CmdData
 
 function arenaclear:reset
 
 tellraw @a[team=Lobby] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{"translate":"ver0.0.2","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"SettingsBox","storage":"avalanche:messages","interpret":true,"clickEvent":{"action":"run_command","value":"/trigger settings"}}]}]}]
+tag @a[team=] add gotTheMemo
 tellraw @a[team=] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{"translate":"ver0.0.2","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"SettingsBox","storage":"avalanche:messages","interpret":true,"clickEvent":{"action":"run_command","value":"/trigger settings"}}]}]}]
