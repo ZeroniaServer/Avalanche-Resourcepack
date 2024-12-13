@@ -39,6 +39,7 @@ scoreboard players reset $ElfTimer CmdData
 scoreboard players reset $precountdown CmdData
 scoreboard players reset $Countdown CmdData
 scoreboard players reset $CountSec CmdData
+scoreboard players set $forcecountdown CmdData 0
 scoreboard players set $RedReady CmdData 0
 scoreboard players set $GreenReady CmdData 0
 scoreboard players set $RedReadyFirst CmdData 0
@@ -58,3 +59,6 @@ scoreboard players set $DamageRed CmdData 0
 scoreboard players set $DamageGreen CmdData 0
 
 function arenaclear:reset
+
+tellraw @a[team=Lobby] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{"translate":"ver0.0.2","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"SettingsBox","storage":"avalanche:messages","interpret":true,"clickEvent":{"action":"run_command","value":"/trigger settings"}}]}]}]
+tellraw @a[team=] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{"translate":"ver0.0.2","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"SettingsBox","storage":"avalanche:messages","interpret":true,"clickEvent":{"action":"run_command","value":"/trigger settings"}}]}]}]

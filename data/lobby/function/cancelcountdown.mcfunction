@@ -5,6 +5,7 @@ execute if score $GreenReady CmdData matches 0 if entity @a[team=Green] run tell
 scoreboard players reset $Countdown CmdData
 scoreboard players reset $CountSec CmdData
 scoreboard players reset $precountdown CmdData
+scoreboard players set $forcecountdown CmdData 0
 scoreboard players set $gamestate CmdData 0
 bossbar set bar_lobby style progress
 bossbar set bar_lobby_hearts players

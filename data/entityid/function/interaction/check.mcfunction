@@ -13,9 +13,10 @@ execute if entity @s[tag=GiftboxInteraction] at @s run function powerups:giftbox
 #> Warp Poles
 execute if entity @s[tag=WarpGreen] on target run tag @s add LobbyWarp
 execute if entity @s[tag=WarpRed] on target run tag @s add LobbyWarp
-execute if entity @s[tag=WarpLobby] on target run tag @s[team=!Green,team=!Red] add LobbyWarp
+execute if entity @s[tag=WarpLobby] on target run tag @s add LobbyWarp
+execute if entity @s[tag=WarpLobby] on target run tag @s[team=!Lobby,team=!Spectator] add LeaveTeam
+execute if entity @s[tag=WarpLobby] on target run tag @s[team=!Lobby,team=!Spectator] add LeaveWarp
+execute if entity @s[tag=WarpLobby] on target run tag @s add WarpLobby
 execute if entity @s[tag=WarpGreen] on target run tag @s add WarpGreen
 execute if entity @s[tag=WarpRed] on target run tag @s add WarpRed
-execute if entity @s[tag=WarpLobby] on target run tag @s[team=!Green,team=!Red] add WarpLobby
-execute if entity @s[tag=WarpLobby] on target run tag @s[team=!Lobby,team=!Spectator] add LeaveTeam
 execute if entity @s[tag=WarpSpectate] on target run tag @s add WarpSpectate

@@ -1,10 +1,17 @@
 team join Lobby @s
 execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby players @a[team=Lobby]
-execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby_hearts players @a[team=Lobby]
+# execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby_hearts players @a[team=Lobby,gamemode=!spectator]
+execute unless score $gamestate CmdData matches 2.. run say lobbybar
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_lobby players @a
 execute if score $gamestate CmdData matches 0 run bossbar set bar_ready_r players @a
 execute if score $gamestate CmdData matches 0 run bossbar set bar_ready_g players @a
-execute if score $gamestate CmdData matches 0 run bossbar set bar_lobby_hearts players @a[team=!Spectator,gamemode=!spectator]
+execute if score $gamestate CmdData matches 1 if score $precountdown CmdData matches 1.. run say readyr
+execute if score $gamestate CmdData matches 1 if score $precountdown CmdData matches 1.. run bossbar set bar_ready_r players @a
+execute if score $gamestate CmdData matches 1 if score $precountdown CmdData matches 1.. run say readyg
+execute if score $gamestate CmdData matches 1 if score $precountdown CmdData matches 1.. run bossbar set bar_ready_g players @a
+execute if score $gamestate CmdData matches ..1 run say lobbyhearts
+# execute if score $gamestate CmdData matches ..1 run bossbar set bar_lobby_hearts players @a[team=!Spectator,gamemode=!spectator]
+
 gamemode adventure @s
 clear @s
 spawnpoint @s -65 52 -65

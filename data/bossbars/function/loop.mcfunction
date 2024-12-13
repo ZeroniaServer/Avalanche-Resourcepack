@@ -43,7 +43,7 @@ function bossbars:apply_damage
 
 #> Set lobby bar for Lobby players
 execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby players @a[team=Lobby]
-execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby_hearts players @a[team=Lobby]
+execute if score $gamestate CmdData matches 2.. run bossbar set bar_lobby_hearts players @a[team=Lobby,gamemode=!spectator]
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_lobby players @a
 execute if score $gamestate CmdData matches -1 run bossbar set bar_lobby_hearts players @a[team=!Spectator,gamemode=!spectator]
 
