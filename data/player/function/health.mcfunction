@@ -11,5 +11,5 @@ scoreboard players reset @a[scores={respawn=60..}] respawn
 
 #> Invulnerability frames
 scoreboard players add @a[tag=IFrame] iframe 1
-tag @a[tag=IFrame,scores={iframe=60..}] remove IFrame
+tag @a[tag=IFrame,scores={iframe=30..}] remove IFrame
 scoreboard players reset @a[tag=!IFrame,scores={iframe=-1000..}] iframe
