@@ -5,7 +5,8 @@ execute if score $gamestate CmdData matches 3.. as @a[tag=!Knockout,scores={play
 execute as @a[tag=!Knockout,scores={playerHP=..0}] run function inventory:save
 clear @a[tag=!Knockout,scores={playerHP=..0}] snowball
 clear @a[tag=!Knockout,scores={playerHP=..0}] diamond_hoe[!custom_data~{HotChoco:1b}]
-clear @a[tag=!Knockout,scores={playerHP=..0}] clay
+execute if score $gamestate CmdData matches 3.. run clear @a[tag=!Knockout,scores={playerHP=..0}] clay
+execute as @a[tag=!Knockout,scores={playerHP=..0}] run attribute @s minecraft:block_interaction_range base set 0 
 clear @a[tag=!Knockout,scores={playerHP=..0}] ghast_spawn_egg
 clear @a[tag=!Knockout,scores={playerHP=..0}] elytra
 
@@ -13,7 +14,7 @@ tag @a[tag=!Knockout,scores={playerHP=..0}] remove KOmessaged
 execute as @a[tag=!Knockout,scores={playerHP=..0}] run function player:findrocket
 tag @a[tag=!Knockout,scores={playerHP=..0}] add Knockout
 execute as @a[tag=Knockout,scores={playerHP=1..}] run function inventory:load
-# execute as @a[tag=Knockout,scores={playerHP=1..}] run attribute @s minecraft:knockback_resistance base set 0.25
+execute as @a[tag=Knockout,scores={playerHP=1..}] run attribute @s minecraft:block_interaction_range base set 4.5
 tag @a[tag=Knockout,scores={playerHP=1..}] remove Knockout
 item replace entity @a[tag=!Knockout,scores={knocktime=1..}] armor.head with air
 

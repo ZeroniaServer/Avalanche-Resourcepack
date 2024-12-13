@@ -14,6 +14,7 @@ tag @s remove SleighDismounted
 tag @s remove KOmessaged
 tag @s remove avdamaged
 scoreboard players reset @s blizzardtime
+attribute @s minecraft:block_interaction_range base set 4.5
 tag @s add SilentRespawn
 tag @s remove NaturalRespawn
 tag @s[team=Red] add WasRed

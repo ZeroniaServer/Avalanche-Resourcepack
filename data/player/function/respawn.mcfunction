@@ -17,6 +17,7 @@ tag @s add IFrame
 
 #> Set kb resistance
 # attribute @s minecraft:knockback_resistance base set 0.25
+attribute @s minecraft:block_interaction_range base set 4.5
 
 execute if entity @s[team=Green,tag=!SilentRespawn] run scoreboard players set $GreenRespawn CmdData 1
 execute if entity @s[team=Red,tag=!SilentRespawn] run scoreboard players set $RedRespawn CmdData 1
