@@ -644,7 +644,7 @@
             "step/snow3",
             "step/snow4"
         ],
-        "subtitle": "subtitles.sleigh.brake`"
+        "subtitle": "subtitles.sleigh.brake"
     },
     "sleighdamage": {
         "sounds": [
