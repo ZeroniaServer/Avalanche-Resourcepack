@@ -205,6 +205,24 @@
                 "\uE018"
             ]
         },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/heart_lobby_2.png",
+            "ascent": 101,
+            "height": 101,
+            "chars": [
+                "\uE019"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/heart_lobby.png",
+            "ascent": 63,
+            "height": 63,
+            "chars": [
+                "\uE01A"
+            ]
+        },
 		{
             "type": "space",
             "advances": {

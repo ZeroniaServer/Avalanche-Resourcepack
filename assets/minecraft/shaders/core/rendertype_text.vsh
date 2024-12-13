@@ -176,4 +176,12 @@ void main() {
     else if (Color == vec4(42/255., 40/255., 7/255., Color.a)) {
         vertexColor = vec4(0); // remove shadow
     }
+
+    // lobby hearts
+    else if (Color == vec4(168/255., 160/255., 32/255., Color.a)) {
+        gl_Position.xy += vec2(0, -2) * gl_Position.w;
+
+        // remove color from marker
+        vertexColor = texelFetch(Sampler2, UV2 / 16, 0); 
+    }
 }
