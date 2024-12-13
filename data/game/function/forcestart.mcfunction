@@ -14,6 +14,9 @@ execute as @a at @s run playsound prepstart2 master @s ~ ~ ~ 1 1.9
 
 function bossbars:get_points
 
+execute as @a[team=Red] run function player:actionbar
+execute as @a[team=Green] run function player:actionbar
+
 bossbar set bar_lobby players @a[team=Lobby]
 bossbar set bar_lobby_hearts players @a[team=Lobby]
 bossbar set bar_lobby value 0
