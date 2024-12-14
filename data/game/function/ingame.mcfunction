@@ -78,3 +78,6 @@ execute as @a[tag=inMountains,scores={mountaintime=5},tag=!Knockout] if score @s
 execute as @a[tag=inMountains,tag=!Knockout,scores={mountaintime=5}] run damage @s 1 starve
 effect give @a[tag=inMountains,tag=!Knockout] slowness 1 3 true
 execute as @a[tag=inMountains,scores={mountaintime=10..}] run scoreboard players reset @s mountaintime
+
+#> Hitmarkers
+execute as @a[team=!Lobby,team=!Spectator] at @s run function game:hitmarkers

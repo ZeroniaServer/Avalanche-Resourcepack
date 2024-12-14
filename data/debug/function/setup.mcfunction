@@ -53,6 +53,8 @@ scoreboard objectives add iframe dummy
 scoreboard objectives add mountaintime dummy
 scoreboard objectives add sleighjumpcd dummy
 scoreboard objectives add settings trigger
+scoreboard objectives add HitmarkerType dummy
+scoreboard objectives add HitmarkerTimer dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100
