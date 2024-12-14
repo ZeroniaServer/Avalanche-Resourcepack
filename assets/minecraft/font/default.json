@@ -223,6 +223,105 @@
                 "\uE01A"
             ]
         },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker/normal/0.png",
+            "ascent": 1,
+            "height": 8,
+            "chars": [
+                "\uE01B"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker/normal/2.png",
+            "ascent": 1,
+            "height": 8,
+            "chars": [
+                "\uE01C"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker/normal/4.png",
+            "ascent": 1,
+            "height": 8,
+            "chars": [
+                "\uE01D"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker/crit_red/0.png",
+            "ascent": 1,
+            "height": 8,
+            "chars": [
+                "\uE01E"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker/crit_red/2.png",
+            "ascent": 1,
+            "height": 8,
+            "chars": [
+                "\uE01F"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker/crit_red/4.png",
+            "ascent": 1,
+            "height": 8,
+            "chars": [
+                "\uE020"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker/crit_red/5.png",
+            "ascent": 1,
+            "height": 8,
+            "chars": [
+                "\uE021"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker/crit_green/0.png",
+            "ascent": 1,
+            "height": 8,
+            "chars": [
+                "\uE022"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker/crit_green/2.png",
+            "ascent": 1,
+            "height": 8,
+            "chars": [
+                "\uE023"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker/crit_green/4.png",
+            "ascent": 1,
+            "height": 8,
+            "chars": [
+                "\uE024"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker/crit_green/5.png",
+            "ascent": 1,
+            "height": 8,
+            "chars": [
+                "\uE025"
+            ]
+        },
 		{
             "type": "space",
             "advances": {

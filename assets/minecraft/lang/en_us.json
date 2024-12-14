@@ -81,6 +81,8 @@
   "subtitles.game.ready": "Team ready",
   "subtitles.game.not_ready": "Team not ready",
   "subtitles.avalanche.trigger": "AVALANCHE!",
+  "subtitles.avalanche.hitmarker_normal": "Mountain hit!",
+  "subtitles.avalanche.hitmarker_critical": "Weakpoint hit!",
   "block.minecraft.bed.occupied": "",
   "container.spectatorCantOpen": "",
   "mount.onboard": "",

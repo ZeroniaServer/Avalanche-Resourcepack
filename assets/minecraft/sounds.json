@@ -1285,5 +1285,17 @@
             ],
             "subtitle": "subtitles.rocket.spawn"
         }
+    },
+    "hitmarker_normal": {
+        "sounds": [
+            "avalanche/hitmarker_normal"
+        ],
+        "subtitle": "subtitles.avalanche.hitmarker_normal"
+    },
+    "hitmarker_critical": {
+        "sounds": [
+            "avalanche/hitmarker_critical"
+        ],
+        "subtitle": "subtitles.avalanche.hitmarker_critical"
     }
 }
