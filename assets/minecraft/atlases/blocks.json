@@ -182,6 +182,14 @@
         },
         {
             "type": "single",
+            "resource": "minecraft:custom/weakpoint_cracks_red"
+        },
+        {
+            "type": "single",
+            "resource": "minecraft:custom/weakpoint_cracks_green"
+        },
+        {
+            "type": "single",
             "resource": "minecraft:custom/blockysleigh"
         },
         {
