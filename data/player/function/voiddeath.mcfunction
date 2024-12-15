@@ -3,6 +3,7 @@ execute if score $gamestate CmdData matches 3.. if entity @s[team=!Lobby,team=!S
 execute as @a[team=!Lobby,team=!Spectator,tag=!Knockout] run scoreboard players add @s MVPdeath 1
 execute if entity @s[team=Lobby] run tp @s @s
 execute if entity @s[team=Lobby] run return run tp @s -65 52 -108 -180 0
+execute if entity @s[team=Spectator] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.spectate_bounds","color":"red"}]
 execute if entity @s[team=Spectator] run return run tp @s -63 85 -221
 
 clear @s snowball
