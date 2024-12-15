@@ -116,6 +116,8 @@ scoreboard objectives add bestParkourSecs dummy
 scoreboard objectives add bestParkourDeci dummy
 scoreboard objectives add bestParkourDeci2 dummy
 scoreboard objectives add bestParkourTime dummy
+scoreboard objectives add click minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add clickcooldown dummy
 
 #> Teams
 team add Lobby

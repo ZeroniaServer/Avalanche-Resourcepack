@@ -38,3 +38,9 @@ execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_main p
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_red players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_green players
 execute unless score $gamestate CmdData matches 2.. run bossbar set bar_r_timer players
+
+#> Parkour
+execute as @a[team=Lobby] run function lobby:parkour/main
+effect clear @a[team=!Lobby,tag=inParkour] invisibility
+tag @a[team=!Lobby,tag=inParkour] remove inParkour
+tag @a[team=!Lobby,tag=resettimeonce] remove resettimeonce
