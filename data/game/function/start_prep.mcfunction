@@ -7,12 +7,12 @@ scoreboard players operation $prepticks CmdData = $PrepSeconds CmdData
 scoreboard players operation $prepticks CmdData *= $20 CmdData
 function game:timer_prep
 
-function game:placewall
-
 clear @a clay
 clear @a stone_shovel
 execute as @a unless entity @s[team=!Green,team=!Red] run loot replace entity @s hotbar.0 loot powerups:shovel
 function game:calcbarricades
+
+function game:placewall
 
 fill -115 46 -209 -113 48 -211 moving_piston replace air
 fill -112 46 -210 -111 48 -209 moving_piston replace air

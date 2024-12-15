@@ -16,6 +16,9 @@ execute as @a at @s run playsound prepstart2 master @s ~ ~ ~ 1 1.9
 
 function bossbars:get_points
 
+scoreboard players set $Tip CmdData 0
+function game:tips/newset
+
 execute as @a[team=Red] run function player:actionbar
 execute as @a[team=Green] run function player:actionbar
 

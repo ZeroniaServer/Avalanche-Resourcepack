@@ -55,6 +55,8 @@ scoreboard objectives add sleighjumpcd dummy
 scoreboard objectives add settings trigger
 scoreboard objectives add HitmarkerType dummy
 scoreboard objectives add HitmarkerTimer dummy
+scoreboard objectives add GamesPlayed dummy
+scoreboard objectives add toggleTips trigger
 
 #> Static scores
 scoreboard players set $100 CmdData 100

@@ -42,6 +42,7 @@ execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 3 run loot give
 
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 at @s run playsound jointeam master @a ~ ~ ~ 1 1
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run gamemode adventure
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run clear @s
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run team join Green
 execute as @a[tag=JoinGreen] run attribute @s knockback_resistance base set 0.25
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.chest loot game:chestplate
@@ -72,6 +73,7 @@ execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 at @s run pl
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run gamemode adventure
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run team join Red
 execute as @a[tag=JoinRed] run attribute @s knockback_resistance base set 0.25
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run clear @s
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.chest loot game:chestplate
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.legs loot game:leggings
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.feet loot game:boots

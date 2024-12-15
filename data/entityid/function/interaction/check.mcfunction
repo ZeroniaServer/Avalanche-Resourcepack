@@ -20,4 +20,4 @@ execute if entity @s[tag=WarpLobby] on target run tag @s add WarpLobby
 execute if entity @s[tag=WarpGreen] on target run tag @s add WarpGreen
 execute if entity @s[tag=WarpRed] on target run tag @s add WarpRed
 execute if entity @s[tag=WarpSpectate] on target run tag @s add WarpSpectate
-execute on target if entity @s[tag=LobbyWarp] run function lobby:parkour/cancel
+execute on target if entity @s[tag=LobbyWarp,tag=inParkour] run function lobby:parkour/cancel

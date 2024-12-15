@@ -28,6 +28,9 @@ execute as @a[team=Green] run function player:firework_belowname
 function game:avalanche/loop
 function game:weakpoint/loop
 
+#> Tips
+function game:tips/showtip
+
 #> End game
 execute if score $ticks CmdData matches ..0 unless score $gamestate CmdData matches 4 run function game:end
 
