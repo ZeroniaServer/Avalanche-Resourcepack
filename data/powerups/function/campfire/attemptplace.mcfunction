@@ -1,9 +1,10 @@
 # First, match the raycast y position and center along x and z
-function iris:set_coordinates/main
+# function iris:set_coordinates/main
+tp @s ~ ~1 ~
 execute at @s align xz rotated as @a[tag=placer,limit=1] rotated ~180 ~ run tp @s ~0.5 ~ ~0.5 ~ ~
 
-# Next, if we did not hit the top face of a block, align to the adjacent floor
-execute unless data storage iris:output TargetedFace{Direction:"UP"} unless data storage iris:output {TargetType:"NONE"} run function powerups:placeable_init/alignfloor
+# Next, align to the adjacent floor
+function powerups:placeable_init/alignfloor
 
 # Next, ensure that there is enough space above for this campfire to sit
 data modify storage iris:settings Blacklist set value "#iris:shape_groups/air"

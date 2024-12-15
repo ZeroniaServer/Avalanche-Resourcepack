@@ -1,8 +1,8 @@
 # Nudge back against the wall
-execute if data storage iris:output TargetedFace{Direction: "WEST"} at @s run tp @s ~-1 ~ ~
-execute if data storage iris:output TargetedFace{Direction: "EAST"} at @s run tp @s ~1 ~ ~
-execute if data storage iris:output TargetedFace{Direction: "NORTH"} at @s run tp @s ~ ~ ~-1
-execute if data storage iris:output TargetedFace{Direction: "SOUTH"} at @s run tp @s ~ ~ ~1
+# execute if data storage iris:output TargetedFace{Direction: "WEST"} at @s run tp @s ~-1 ~ ~
+# execute if data storage iris:output TargetedFace{Direction: "EAST"} at @s run tp @s ~1 ~ ~
+# execute if data storage iris:output TargetedFace{Direction: "NORTH"} at @s run tp @s ~ ~ ~-1
+# execute if data storage iris:output TargetedFace{Direction: "SOUTH"} at @s run tp @s ~ ~ ~1
 
 # Down cast to the floor
 data modify storage iris:settings Blacklist set value "#iris:shape_groups/air"
