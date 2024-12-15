@@ -256,6 +256,7 @@
   "error.cannot_spectate": "Unable to spectate.",
   "error.already_spectating": "You’re already spectating!",
   "error.cannot_leave": "Unable to leave the game.",
+  "error.spectate_bounds": "Unable to spectate outside the map.",
   "lobby.spectate": "Spectate",
   "lobby.join.red": "Join Red Team",
   "lobby.join.green": "Join Green Team",
