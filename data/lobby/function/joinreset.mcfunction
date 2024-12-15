@@ -10,10 +10,15 @@ execute if score $gamestate CmdData matches ..1 run bossbar set bar_lobby_hearts
 
 gamemode adventure @s
 clear @s
+function lobby:items
 spawnpoint @s -65 52 -65
 tp @s @s
 execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData matches -1 run tp @s -65 52 -108 0 0
 execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData matches 0.. run tp @s -65 52 -108 180 0
+execute if score @s leavecheck = $curr leavecheck run tellraw @s[tag=inParkour] [{"translate":"parkour.left_canceled","color":"red"}]
+tag @s[tag=inParkour] remove resettimeonce
+tag @s[tag=inParkour] remove inParkour
+
 execute if score @s leavecheck = $curr leavecheck at @s run playsound ding master @s ~ ~ ~ 0.5 1.75
 title @s title ""
 title @s subtitle ""

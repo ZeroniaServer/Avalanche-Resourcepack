@@ -13,5 +13,3 @@ execute as @e[type=area_effect_cloud,tag=ParkourRecordAEC] run data merge entity
 data remove storage avalanche:parkour Head
 data remove storage avalanche:parkour Name
 data remove storage avalanche:parkour Time
-
-# setblock -74 -24 1 minecraft:oak_wall_sign

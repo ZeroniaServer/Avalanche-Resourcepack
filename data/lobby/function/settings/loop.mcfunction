@@ -2,7 +2,9 @@ scoreboard players enable @a[predicate=lobby:modification_room] modify
 scoreboard players enable @a[team=Lobby] settings
 execute as @a[team=!Lobby] run trigger settings set 0
 execute as @a[scores={settings=1..}] run tag @s add WarpSettings
+execute as @a[scores={settings=1..},tag=inParkour] run function lobby:parkour/cancel
 scoreboard players reset @a[scores={settings=1..}] settings
+execute as @a[scores={modify=1..},tag=inParkour] run function lobby:parkour/cancel
 
 execute unless entity @a[tag=ModiOwner] if entity @a[predicate=lobby:modification_room,limit=1,scores={modify=1..}] run playsound settingsclaim master @a -63 53 -93 1 1
 execute unless entity @a[tag=ModiOwner] if entity @a[predicate=lobby:modification_room,limit=1,scores={modify=1..}] run tag @a[predicate=lobby:modification_room,limit=1,sort=random,scores={modify=1..}] add ModiOwner
