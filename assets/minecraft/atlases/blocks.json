@@ -203,6 +203,14 @@
         {
             "type": "single",
             "resource": "minecraft:custom/pole_red"
+        },
+        {
+            "type": "single",
+            "resource": "minecraft:custom/parkour_quit"
+        },
+        {
+            "type": "single",
+            "resource": "minecraft:custom/parkour_restart"
         }
     ]
 }
