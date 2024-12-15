@@ -25,5 +25,6 @@ tag @s[team=Spectator] add WasSpectator
 tag @s[team=!Spectator] remove WasSpectator
 team leave @s
 clear @s
+function lobby:items
 scoreboard players reset @s leftgame
 title @s actionbar ""
