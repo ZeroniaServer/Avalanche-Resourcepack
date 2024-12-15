@@ -34,7 +34,7 @@ execute if entity @a[tag=inParkour,distance=0.0001..8] run effect give @s invisi
 execute unless entity @a[tag=inParkour,distance=0.0001..8] run effect clear @s invisibility
 
 #> Exit parkour if you fall on the ground
-execute positioned -56 52 -70 if entity @s[tag=!CancelParkour,distance=8..] at @s if predicate {condition:"location_check","predicate":{"position":{"y":{"max":51}}}} run tag @s add CancelParkour
+execute positioned -56 52 -70 if entity @s[tag=!CancelParkour,distance=8..] at @s if predicate {condition:"location_check","predicate":{"position":{"y":{"max":52}}}} run tag @s add CancelParkour
 
 #> Cancel parkour
 execute at @s[tag=CancelParkour] run function lobby:parkour/cancel
