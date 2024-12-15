@@ -22,6 +22,11 @@ function game:tips/newset
 execute as @a[team=Red] run function player:actionbar
 execute as @a[team=Green] run function player:actionbar
 
+tag @a remove KillMVP
+tag @a remove DeathMVP
+tag @a remove DamageMVP
+tag @a remove RocketMVP
+
 bossbar set bar_lobby players @a[team=Lobby]
 bossbar set bar_lobby_hearts players @a[team=Lobby,gamemode=!spectator,gamemode=!creative]
 bossbar set bar_lobby value 0

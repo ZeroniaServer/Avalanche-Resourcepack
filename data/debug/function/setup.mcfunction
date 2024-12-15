@@ -57,6 +57,10 @@ scoreboard objectives add HitmarkerType dummy
 scoreboard objectives add HitmarkerTimer dummy
 scoreboard objectives add GamesPlayed dummy
 scoreboard objectives add toggleTips trigger
+scoreboard objectives add MVPkill dummy
+scoreboard objectives add MVPdeath dummy
+scoreboard objectives add MVPdamage dummy
+scoreboard objectives add MVProcket dummy
 
 #> Static scores
 scoreboard players set $100 CmdData 100

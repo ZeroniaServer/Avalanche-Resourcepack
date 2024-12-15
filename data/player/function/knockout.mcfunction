@@ -1,6 +1,7 @@
 execute as @a[tag=!Knockout,scores={playerHP=..0}] run ride @s dismount
 scoreboard players set @a[tag=!Knockout,scores={playerHP=..-1}] playerHP 0
 
+execute as @a[tag=!Knockout,scores={playerHP=..0}] run scoreboard players add @s MVPdeath 1
 execute if score $gamestate CmdData matches 3.. as @a[tag=!Knockout,scores={playerHP=..0}] at @s run function powerups:rocket/drop
 execute as @a[tag=!Knockout,scores={playerHP=..0}] run function inventory:save
 clear @a[tag=!Knockout,scores={playerHP=..0}] snowball

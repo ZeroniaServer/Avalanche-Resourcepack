@@ -15,6 +15,7 @@ execute as @a[tag=victim,tag=!Knockout,tag=!KOmessaged,limit=1] if score @s play
 execute as @a[tag=victim,tag=!Knockout,limit=1] if score @s playerDamage >= @s playerHP run tag @s add KOmessaged
 execute unless entity @s[tag=SnowmanSnowball] on origin if entity @a[tag=victim,tag=KOmessage,limit=1] run tellraw @a [{"translate":"knockout.attack.direct","color":"dark_aqua","with":[{"selector":"@a[tag=victim,tag=KOmessage,limit=1]"},{"selector":"@s"}]}]
 execute if entity @s[tag=SnowmanSnowball] on origin if entity @a[tag=victim,tag=KOmessage,limit=1] run tellraw @a [{"translate":"knockout.attack.snowman","color":"dark_aqua","with":[{"selector":"@a[tag=victim,tag=KOmessage,limit=1]"},{"selector":"@s"}]}]
+execute on origin if entity @a[tag=victim,tag=KOmessage,limit=1] run scoreboard players add @s MVPkill 1
 tag @a[tag=victim,tag=KOmessage] remove KOmessage
 execute unless entity @s[tag=SnowmanSnowball] run scoreboard players reset @a[tag=victim,tag=!Knockout] snowmanhit
 execute if entity @s[tag=SnowmanSnowball] run scoreboard players set @a[tag=victim,tag=!Knockout] snowmanhit 1

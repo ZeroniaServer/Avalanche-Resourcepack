@@ -44,3 +44,9 @@ execute as @a[team=Lobby] run function lobby:parkour/main
 effect clear @a[team=!Lobby,tag=inParkour] invisibility
 tag @a[team=!Lobby,tag=inParkour] remove inParkour
 tag @a[team=!Lobby,tag=resettimeonce] remove resettimeonce
+
+#> Reset stats/tags
+scoreboard players reset @a[team=Lobby] MVPkill
+scoreboard players reset @a[team=Lobby] MVPdeath
+scoreboard players reset @a[team=Lobby] MVProcket
+scoreboard players reset @a[team=Lobby] MVPdamage

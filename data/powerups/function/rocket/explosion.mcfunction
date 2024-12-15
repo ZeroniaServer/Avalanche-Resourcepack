@@ -61,6 +61,11 @@ execute if entity @s[tag=RocketGreen,tag=Scored] run scoreboard players operatio
 execute if entity @s[tag=RocketRed,tag=Scored] run scoreboard players operation $DamageGreen CmdData += $DamageCalcG CmdData
 execute if entity @s[tag=RocketGreen,tag=Scored] run scoreboard players operation $DamageRed CmdData += $DamageCalcR CmdData
 
+execute if entity @s[tag=RocketRed,tag=Scored] on origin run scoreboard players operation @s MVPdamage += $DamageCalcG CmdData
+execute if entity @s[tag=RocketGreen,tag=Scored] on origin run scoreboard players operation @s MVPdamage += $DamageCalcR CmdData
+execute if entity @s[tag=RocketRed,tag=Scored] if score $DamageCalcG CmdData matches 1.. on origin run scoreboard players add @s MVProcket 1
+execute if entity @s[tag=RocketGreen,tag=Scored] if score $DamageCalcR CmdData matches 1.. on origin run scoreboard players add @s MVProcket 1
+
 scoreboard players reset $DamageCalcG CmdData
 scoreboard players reset $DamageCalcR CmdData
 

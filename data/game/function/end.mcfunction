@@ -12,6 +12,7 @@ execute if score $End CmdData matches 1 run scoreboard players remove @a[team=Gr
 execute if score $End CmdData matches 1 run scoreboard players set $gamestate CmdData 4
 execute if score $End CmdData matches 1 run scoreboard players set $ticks CmdData 0
 execute if score $End CmdData matches 1 run function game:timer
+execute if score $End CmdData matches 1 run function game:mvpstats/check
 
 #> Green wins
 execute if score $End CmdData matches 1 if score $Winner CmdData matches 1 as @a[team=Green] at @s run playsound wingame master @s ~ ~ ~ 1 1.2

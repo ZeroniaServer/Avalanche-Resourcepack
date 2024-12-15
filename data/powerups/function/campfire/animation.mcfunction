@@ -31,7 +31,7 @@ execute as @e[type=item_display,tag=CampfireEntity,tag=Flame,scores={CmdData=18}
 execute as @e[type=item_display,tag=CampfireEntity,tag=Flame,scores={CmdData=20}] run data merge entity @s {interpolation_duration:1,start_interpolation:0,transformation:{scale:[1.0f,1.0f,1.0f],translation:[0.0f,0.5f,0.0f]}}
 execute as @e[type=item_display,tag=CampfireEntity,tag=Flame,scores={CmdData=22}] at @s run playsound campfirelight master @a ~ ~ ~ 0.6 0.6
 
-execute as @e[type=item_display,tag=CampfireEntity,tag=CampfireMain,tag=Green,scores={CmdData=22}] at @s run data merge entity @s {item:{id:"diamond_hoe",count:1,components:{item_model:"minecraft:campfire/green_lit"}}}
-execute as @e[type=item_display,tag=CampfireEntity,tag=CampfireMain,tag=Red,scores={CmdData=22}] at @s run data merge entity @s {item:{id:"diamond_hoe",count:1,components:{item_model:"minecraft:campfire/red_lit"}}}
+execute as @e[type=item_display,tag=CampfireEntity,tag=CampfireMain,tag=Green,scores={CmdData=22}] at @s run item replace entity @s contents with diamond_hoe[item_model="minecraft:campfire/green_lit"]
+execute as @e[type=item_display,tag=CampfireEntity,tag=CampfireMain,tag=Red,scores={CmdData=22}] at @s run item replace entity @s contents with diamond_hoe[item_model="minecraft:campfire/red_lit"]
 
 kill @e[type=item_display,tag=CampfireEntity,tag=Animator,scores={CmdData=22..}]
