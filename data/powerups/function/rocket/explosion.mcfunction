@@ -69,8 +69,8 @@ execute if entity @s[tag=RocketGreen,tag=Scored] if score $DamageCalcR CmdData m
 scoreboard players reset $DamageCalcG CmdData
 scoreboard players reset $DamageCalcR CmdData
 
-#> Destroy nearby Snowman
-scoreboard players set @e[type=item_display,tag=Snowman,distance=..4] playerHP 0
+#> Destroy nearby Snowmen
+execute as @e[type=item_display,tag=Snowman,distance=..4] at @s run function powerups:snowman/kill
 
 #> Destroy nearby Sleighs
 execute as @e[type=turtle,distance=..5] at @s run scoreboard players add @s sleighDamage 1
