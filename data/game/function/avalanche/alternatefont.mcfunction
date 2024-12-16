@@ -1,0 +1,2 @@
+execute if data storage game:data {mountain:'{"text":"\\uE00B","color":"#a8a000"}'} run return run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
+execute if data storage game:data {mountain:'{"text":"\\uE00C","color":"#a8a000"}'} run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
