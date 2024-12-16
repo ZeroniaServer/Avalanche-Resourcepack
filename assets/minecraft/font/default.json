@@ -322,6 +322,15 @@
                 "\uE025"
             ]
         },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/logo_book.png",
+            "ascent": 12,
+            "height": 64,
+            "chars": [
+                "\uE026"
+            ]
+        },
 		{
             "type": "space",
             "advances": {
