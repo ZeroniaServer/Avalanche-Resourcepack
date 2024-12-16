@@ -61,6 +61,8 @@ scoreboard objectives add MVPkill dummy
 scoreboard objectives add MVPdeath dummy
 scoreboard objectives add MVPdamage dummy
 scoreboard objectives add MVProcket dummy
+function iris:setup/scoreboard
+
 
 #> Static scores
 scoreboard players set $100 CmdData 100

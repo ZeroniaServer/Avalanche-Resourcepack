@@ -35,6 +35,7 @@ tag @a[tag=WarpSpectate] remove WarpSpectate
 execute as @a[tag=WarpSettings] at @s run tp @s @s
 execute as @a[tag=WarpSettings] at @s run tp @s -60 52 -90 -90 0
 execute as @a[tag=WarpSettings] at @s run particle flash -59 52 -90 0 0 0 0 2 force @s
+execute as @a[tag=WarpSettings] at @s run playsound entity.player.teleport master @s ~ ~ ~ 0.6 1.1
 tag @a[tag=WarpSettings] remove WarpSettings
 
 execute positioned -63 95 -221 run tag @a[team=Spectator,distance=..3] add LeaveTeam
