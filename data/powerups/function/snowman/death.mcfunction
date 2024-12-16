@@ -5,7 +5,7 @@ execute at @s[tag=!Dying,scores={playerHP=20..200}] run particle block_crumble{b
 execute at @s[tag=!Dying,scores={playerHP=20..100}] run particle falling_water ~ ~1 ~ 0.2 0.3 0.2 0.01 1 force
 
 tag @s[tag=!Dying,scores={playerHP=..0}] remove Targeting
-scoreboard players set @s[tag=!Dying,scores={playerHP=..0}] CmdData 50
+scoreboard players set @s[tag=!Dying,scores={playerHP=..0},tag=!AirKill] CmdData 50
 execute at @s[tag=!Dying,scores={playerHP=..0}] run tp @s ~ ~ ~
 execute at @s[tag=!Dying,scores={playerHP=..0}] run rotate @s ~ ~
 execute at @s[tag=!Dying,scores={playerHP=..0}] run function powerups:snowman/stop_all_anims
@@ -25,7 +25,8 @@ execute at @s[tag=Dying,scores={CmdData=50..58}] run playsound snowmandie2 maste
 execute at @s[tag=Dying,scores={CmdData=55}] run playsound snowmandie4 master @a ~ ~ ~ 1 1
 execute at @s[tag=Dying,scores={CmdData=57}] run playsound snowmandie4 master @a ~ ~ ~ 1 0.7
 execute at @s[tag=Dying,scores={CmdData=59}] run playsound snowmandie4 master @a ~ ~ ~ 1 1.3
-
+execute at @s[tag=Dying,scores={CmdData=61..218},tag=Kill] run scoreboard players set @s CmdData 219
+execute at @s[tag=Dying,scores={CmdData=61..218},tag=AirKill] run scoreboard players set @s CmdData 219
 execute at @s[tag=Dying,scores={CmdData=61}] run playsound snowmanhatland master @a ~ ~ ~ 1 1.2
 execute at @s[tag=Dying,scores={CmdData=85}] run playsound snowmansnow master @a ~ ~ ~ 1 0
 execute at @s[tag=Dying,scores={CmdData=85..87}] run particle block{block_state:snow_block} ^ ^ ^-0.5 0.1 0 0.1 0.1 5
