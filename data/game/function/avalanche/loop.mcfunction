@@ -3,48 +3,24 @@ scoreboard players add @e[type=marker,tag=AvalancheEntity,tag=SnowEmitter] CmdDa
 scoreboard players add @e[type=block_display,tag=AvalancheEntity,tag=SnowBlockDisplay] CmdData 1
 scoreboard players add @e[type=block_display,tag=AvalancheEntity,tag=SecondarySnowBlockDisplay] CmdData 1
 
-# mountain font animation
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 1 run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 1 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 1 run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 1 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 5 run data modify storage game:data mountain set value '{"text":"\\uE00A","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 5 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 9 run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 9 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 9 run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 9 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 13 run data modify storage game:data mountain set value '{"text":"\\uE00A","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 13 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 17 run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 17 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 17 run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 17 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 21 run data modify storage game:data mountain set value '{"text":"\\uE00A","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 21 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 25 run data modify storage game:data mountain set value '{"text":"\\uE005","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 25 run function bossbars:get_points
+execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=1}] run scoreboard players set $greenflicker CmdData 0
+execute as @e[type=marker,tag=AVSnowStarter,tag=Red,scores={CmdData=1}] run scoreboard players set $redflicker CmdData 0
+execute if entity @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] run scoreboard players add $greenflicker CmdData 1
+execute if entity @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] run scoreboard players add $redflicker CmdData 1
 
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 1 run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 1 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 1 run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 1 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 5 run data modify storage game:data mountain set value '{"text":"\\uE00A","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 5 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 9 run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 9 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 9 run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 9 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 13 run data modify storage game:data mountain set value '{"text":"\\uE00A","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 13 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 17 run data modify storage game:data mountain set value '{"text":"\\uE00B","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Green,limit=1] CmdData matches 17 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 17 run data modify storage game:data mountain set value '{"text":"\\uE00C","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,tag=Red,limit=1] CmdData matches 17 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 21 run data modify storage game:data mountain set value '{"text":"\\uE00A","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 21 run function bossbars:get_points
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 25 run data modify storage game:data mountain set value '{"text":"\\uE005","color":"#a8a000"}'
-execute if score @e[type=marker,tag=AVSnowStarter,limit=1] CmdData matches 25 run function bossbars:get_points
+# mountain font animation
+scoreboard players set #greenavs CmdData 0
+execute if entity @e[type=marker,tag=AVSnowStarter,tag=Green] if score $greenflicker CmdData matches ..26 run scoreboard players set #greenavs CmdData 1
+scoreboard players set #redavs CmdData 0
+execute if entity @e[type=marker,tag=AVSnowStarter,tag=Red] if score $redflicker CmdData matches ..26 run scoreboard players set #redavs CmdData 1
+
+execute if score #redavs CmdData matches 1 if score #greenavs CmdData matches 0 run function game:avalanche/fontanimred
+execute if score #greenavs CmdData matches 1 if score #redavs CmdData matches 0 run function game:avalanche/fontanimgreen
+scoreboard players set #bothavs CmdData 0
+execute if score #redavs CmdData matches 1 if score #greenavs CmdData matches 1 run scoreboard players set #bothavs CmdData 1
+execute if score #bothavs CmdData matches 1 run function game:avalanche/fontanimboth
+execute unless score #bothavs CmdData matches 1 run scoreboard players reset #bothflicker
+execute unless score #bothavs CmdData matches 1 unless score $redflicker CmdData matches 1..25 unless score $greenflicker CmdData matches 1..25 unless data storage game:data {mountain:'{"text":"\\uE005","color":"#a8a000"}'} run function game:avalanche/resetfont
 
 execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=5}] at @s run summon marker ~-5 ~ ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-90.0f,0.0f]}
 execute as @e[type=marker,tag=AVSnowStarter,tag=Green,scores={CmdData=5}] at @s run summon marker ~ ~ ~ {Tags:["AvalancheEntity","SnowEmitter"],Rotation:[-75.0f,0.0f]}
