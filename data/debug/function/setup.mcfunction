@@ -62,7 +62,10 @@ scoreboard objectives add MVPdeath dummy
 scoreboard objectives add MVPdamage dummy
 scoreboard objectives add MVProcket dummy
 function iris:setup/scoreboard
-
+execute unless score $gamestate CmdData matches -1.. run scoreboard players set $gamestate CmdData -1
+execute unless score $Minutes CmdData matches 1.. run scoreboard players set $Minutes CmdData 10
+execute unless score $PrepSeconds CmdData matches 1.. run scoreboard players set $PrepSeconds CmdData 30
+execute unless score $Barricades CmdData matches 1.. run scoreboard players set $Barricades CmdData 120
 
 #> Static scores
 scoreboard players set $100 CmdData 100
