@@ -1,3 +1,5 @@
+execute unless score #input math matches 1.. on passengers if entity @s[type=minecart] store result score .unrot vehicle run data get entity @s Rotation[0] 100
+execute unless score #input math matches 1.. run scoreboard players operation @s vehicle.rot = .unrot vehicle
 scoreboard players operation $math.sincos.x bs.in = @s vehicle.rot
 execute if score $math.sincos.x bs.in matches ..-1 run scoreboard players add $math.sincos.x bs.in 36000
 function #bs.math:sincos

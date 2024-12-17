@@ -31,4 +31,4 @@ execute if entity @s[tag=DrinkChoco] run scoreboard players operation #max vehic
 
 execute if score $math.isqrt bs.out > #max vehicle run function powerups:sleigh/normalize
 
-scoreboard players operation @s vehicle.rot = .rot vehicle
+execute if score .rot vehicle matches -2147483648..2147483647 run scoreboard players operation @s vehicle.rot = .rot vehicle
