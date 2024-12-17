@@ -26,6 +26,9 @@ tag @s remove sleighself
 execute if entity @s[tag=slowThrow] run scoreboard players operation #max vehicle /= 2 const
 tag @s remove slowThrow
 
+# slow down while drinking
+execute if entity @s[tag=DrinkChoco] run scoreboard players operation #max vehicle /= 2 const
+
 execute if score $math.isqrt bs.out > #max vehicle run function powerups:sleigh/normalize
 
 scoreboard players operation @s vehicle.rot = .rot vehicle
