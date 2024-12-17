@@ -542,7 +542,7 @@
             "block/nether_wood/break4"
         ]
     },
-    "sleighdrop": {
+    "sleighdrop1": {
         "sounds": [
             "mob/chicken/plop"
         ],
