@@ -1,3 +1,3 @@
 tp @s @s
-tp @s -58 51 -70 -90 0
+tp @s -59 51 -67 -135 0
 tag @s remove RestartParkour
