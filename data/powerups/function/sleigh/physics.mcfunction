@@ -28,9 +28,10 @@ scoreboard players add @s[tag=Surf] surfTimer 1
 tag @s[scores={surfTimer=30..}] remove Surf
 scoreboard players reset @s[scores={surfTimer=30..}] surfTimer
 data merge entity @s[tag=!Surf] {NoAI:1b}
-execute if score #input math matches 1 run data merge entity @s {NoAI:0b}
+execute if score #input math matches 1.. run data merge entity @s {NoAI:0b}
+execute on passengers on passengers if predicate wasd:backward on vehicle on vehicle run data merge entity @s {NoAI:1b}
 execute unless score #bool math matches 0 run data merge entity @s {NoAI:0b}
-execute on passengers on passengers if predicate wasd:backward on vehicle on vehicle run data merge entity @s {NoAI:0b}
+execute on passengers on passengers if predicate wasd:jump on vehicle on vehicle run data merge entity @s {NoAI:0b}
 execute unless predicate game:on_ground run data merge entity @s {NoAI:0b}
 
 ########################
