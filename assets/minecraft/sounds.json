@@ -1279,12 +1279,10 @@
         ]
     },
     "rocketvoid": {
-        "entity.firework_rocket.twinkle": {
-            "sounds": [
-                "fireworks/twinkle1"
-            ],
-            "subtitle": "subtitles.rocket.spawn"
-        }
+        "sounds": [
+            "fireworks/twinkle1"
+        ],
+        "subtitle": "subtitles.rocket.spawn"
     },
     "hitmarker_normal": {
         "sounds": [
@@ -1302,6 +1300,11 @@
         "replace": true,
         "sounds": [
             "silent"
+        ]
+    },
+    "hitmarker2": {
+        "sounds": [
+            "random/successful_hit"
         ]
     }
 }
