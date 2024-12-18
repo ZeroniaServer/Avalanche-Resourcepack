@@ -1,4 +1,4 @@
-scoreboard players add @s fireworkCount 1
+scoreboard players add @s[predicate=game:middle] fireworkCount 1
 
 tag @s add self
 execute summon marker run function powerups:rocket/spawnitem

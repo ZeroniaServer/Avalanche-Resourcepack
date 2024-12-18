@@ -7,8 +7,6 @@ scoreboard players add $End CmdData 1
 execute if score $End CmdData matches 1 if score $GreenPoints CmdData > $RedPoints CmdData run scoreboard players set $Winner CmdData 1
 execute if score $End CmdData matches 1 if score $RedPoints CmdData > $GreenPoints CmdData run scoreboard players set $Winner CmdData 2
 execute if score $End CmdData matches 1 if score $GreenPoints CmdData = $RedPoints CmdData run scoreboard players set $Winner CmdData 0
-execute if score $End CmdData matches 1 run scoreboard players remove @a[team=Red,scores={GamesPlayed=1..}] GamesPlayed 1
-execute if score $End CmdData matches 1 run scoreboard players remove @a[team=Green,scores={GamesPlayed=1..}] GamesPlayed 1
 execute if score $End CmdData matches 1 run scoreboard players set $gamestate CmdData 4
 execute if score $End CmdData matches 1 run scoreboard players set $ticks CmdData 0
 execute if score $End CmdData matches 1 run function game:timer

@@ -55,7 +55,7 @@ scoreboard objectives add sleighjumpcd dummy
 scoreboard objectives add settings trigger
 scoreboard objectives add HitmarkerType dummy
 scoreboard objectives add HitmarkerTimer dummy
-scoreboard objectives add GamesPlayed dummy
+scoreboard objectives remove GamesPlayed
 scoreboard objectives add toggleTips trigger
 scoreboard objectives add MVPkill dummy
 scoreboard objectives add MVPdeath dummy

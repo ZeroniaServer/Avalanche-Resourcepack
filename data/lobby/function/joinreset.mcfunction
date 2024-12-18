@@ -24,7 +24,6 @@ execute if score @s leavecheck = $curr leavecheck at @s run playsound ding maste
 title @s title ""
 title @s subtitle ""
 execute unless score @s leavecheck = $curr leavecheck run function lobby:welcome
-execute unless score @s GamesPlayed matches -2147483648..2147483647 run scoreboard players set @s GamesPlayed 3
 
 #> Notify players about resource pack
 # TODO UPDATE VERSION NUMBER
