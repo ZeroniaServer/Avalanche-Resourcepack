@@ -357,5 +357,11 @@
   "book.padding.credits": "         ",
   "book.padding.zeroniacredit": "  ",
   "book.zeroniacredit": "A Zeronia Minigame",
-  "book.createdby": "Created By:"
+  "book.createdby": "Created By:",
+  "parkour.display.title" : "Lobby Parkour",
+  "parkour.display.line1" : "Climb the gifts and make your way",
+  "parkour.display.line2" : "above the fireplace in the fastest time.",
+  "parkour.display.record_holder" : "Record Holder:",
+  "parkour.display.current_record" : "Current Record:",
+  "parkour.display.global_jumps" : "Global Jumps:"
 }
