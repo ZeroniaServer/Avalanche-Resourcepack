@@ -1,0 +1,1 @@
+$execute as @e[type=text_display,tag=parkour_display,tag=custom] run data merge entity @s {text:'["",{"color":"green","text":"$(name)"},{"text":"\\n"},{"color":"green","text":"$(time)"},{"text":"\\n"},{"color":"green","text":"$(jumps)"}]'}

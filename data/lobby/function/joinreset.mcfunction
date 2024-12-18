@@ -17,6 +17,7 @@ execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData ma
 execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData matches 0.. run tp @s -65 52 -108 180 0
 execute if score @s leavecheck = $curr leavecheck run tellraw @s[tag=inParkour] [{"translate":"parkour.left_canceled","color":"red"}]
 tag @s[tag=inParkour] remove resettimeonce
+execute as @s[tag=inParkour] run function lobby:parkour/updatejumps
 tag @s[tag=inParkour] remove inParkour
 
 execute if score @s leavecheck = $curr leavecheck at @s run playsound ding master @s ~ ~ ~ 0.5 1.75

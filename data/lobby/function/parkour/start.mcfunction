@@ -7,3 +7,4 @@ playsound parkourstart master @s ~ ~ ~ 1 1.3
 playsound parkourstart2 master @s ~ ~ ~ 1 1
 particle firework ~ ~1 ~ 0 0 0 0.1 100 normal @s
 tag @s add inParkour
+scoreboard players reset @s parkourJumps
