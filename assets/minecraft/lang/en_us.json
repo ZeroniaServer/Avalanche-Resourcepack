@@ -363,5 +363,16 @@
   "parkour.display.line2" : "above the fireplace in the fastest time.",
   "parkour.display.record_holder" : "Record Holder:",
   "parkour.display.current_record" : "Current Record:",
-  "parkour.display.global_jumps" : "Global Jumps:"
+  "parkour.display.global_jumps" : "Global Jumps:",
+  "chat.welcome": "Welcome to %1$s %2$s %3$s %4$s!",
+  "chat.welcome.snowy": "Snowy",
+  "chat.welcome.skirmish": "Skirmish",
+  "chat.welcome.two": "2:",
+  "chat.welcome.avalanche": "Avalanche",
+  "chat.welcome.point": "%s %s",
+  "chat.welcome.point.1": "Open your %s to learn how the game works.",
+  "chat.welcome.point.2": "Go to the %s to change game settings.",
+  "chat.welcome.point.3": "Click on poles to move around the Lobby.",
+  "chat.welcome.point.4": "Walk into portals to join teams.",
+  "chat.welcome.point.5": "And most of all, have fun! %s"
 }
