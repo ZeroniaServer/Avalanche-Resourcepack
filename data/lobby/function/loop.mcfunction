@@ -14,6 +14,11 @@ execute if score $gamestate CmdData matches -1 run function lobby:joinpads_off
 #> Teleporters
 function lobby:poles/main
 
+#> Cancel match
+execute if score $gamestate CmdData matches 0.. run scoreboard players enable @a[team=Lobby] cancelMatch
+execute as @a[team=!Lobby,team=!Developer] run trigger cancelMatch set 0
+execute as @a[team=Lobby,scores={cancelMatch=1..}] run function lobby:settings/cancel/interact
+
 #> Readyup
 execute if score $gamestate CmdData matches 0 run function lobby:readyup
 execute if score $gamestate CmdData matches 1 if score $precountdown CmdData matches ..19 run function lobby:readyup

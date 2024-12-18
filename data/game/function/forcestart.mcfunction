@@ -35,4 +35,7 @@ bossbar set bar_lobby name {"translate":"lobby.in_progress","color":"green"}
 
 function game:start_prep
 
+#> Disable match canceling
+function lobby:settings/cancel/reset
+
 function lobby:readyteams/refreshsigns

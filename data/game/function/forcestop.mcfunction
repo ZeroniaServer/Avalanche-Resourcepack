@@ -1,3 +1,6 @@
+execute if score $mcancel CmdData matches 1 if entity @s[type=player] run tellraw @a {"translate":"chat.canceled_match","color":"red","with":[{"selector":"@s","color":"blue","bold":true}]}
+scoreboard players reset $mcancel CmdData
+
 fill -90 53 -148 -90 55 -150 minecraft:light_gray_stained_glass
 fill -35 51 -149 -35 49 -151 light_gray_stained_glass
 
@@ -22,7 +25,7 @@ setblock -56 53 -91 cherry_wall_sign[facing=west]
 setblock -56 53 -89 warped_wall_sign[facing=west]
 
 function lobby:settings/refreshsigns with storage lobby:customizer
-
+schedule clear lobby:settings/cancel/counter
 
 scoreboard players set $GreenPoints CmdData 0
 scoreboard players set $RedPoints CmdData 0

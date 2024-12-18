@@ -45,7 +45,9 @@ function lobby:settings/refreshsigns with storage lobby:customizer
 
 function lobby:readyteams/refreshsigns
 
-function arenaclear:reset
+execute unless score $mcancel CmdData matches 1 run function arenaclear:reset
+scoreboard players reset $mcancel CmdData
+function lobby:settings/cancel/begin
 
 execute as @a run trigger settings set 0
 

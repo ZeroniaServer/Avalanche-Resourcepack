@@ -66,6 +66,7 @@ execute unless score $gamestate CmdData matches -1.. run scoreboard players set 
 execute unless score $Minutes CmdData matches 1.. run scoreboard players set $Minutes CmdData 10
 execute unless score $PrepSeconds CmdData matches 1.. run scoreboard players set $PrepSeconds CmdData 30
 execute unless score $Barricades CmdData matches 1.. run scoreboard players set $Barricades CmdData 120
+scoreboard objectives add cancelMatch trigger
 
 #> Static scores
 scoreboard players set $100 CmdData 100

@@ -34,6 +34,7 @@ execute as @a[tag=JoinGreen] store result score @s gameID run scoreboard players
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run tp @s @s
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tp @s -91 53 -149 90 0
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2..3 run tp @s -114 47 -210 -90 0
+execute as @a[tag=JoinGreen,limit=1] unless score $gamestate CmdData matches 2.. unless score $mcancel CmdData matches -1 run function lobby:settings/cancel/reset
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2 run loot give @s loot powerups:shovel
 #TODO: maybe a nicer way to give out a fair number of barricades, for now this should do
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2 run scoreboard players set @s BarricadeTracker 10
@@ -64,6 +65,7 @@ execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 store result
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run tp @s @s
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tp @s -34 49 -150 -90 0
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2..3 run tp @s -12 47 -232 90 0
+execute as @a[tag=JoinRed,limit=1] unless score $gamestate CmdData matches 2.. unless score $mcancel CmdData matches -1 run function lobby:settings/cancel/reset
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run loot give @s loot powerups:shovel
 #TODO: maybe a nicer way to give out a fair number of barricades, for now this should do
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run scoreboard players set @s BarricadeTracker 10
@@ -105,6 +107,7 @@ execute as @a[tag=LeaveTeam,tag=!WasSpectator] if score $gamestate CmdData match
 execute as @a[tag=LeaveTeam,tag=WasSpectator] if score $gamestate CmdData matches 0..3 at @s run playsound leavespectator master @a ~ ~ ~ 1 1
 tag @a[tag=LeaveTeam] remove WasSpectator
 execute as @a[tag=LeaveTeam] run team join Lobby @s
+execute as @a[tag=LeaveTeam,limit=1] unless entity @a[team=Red] unless entity @a[team=Green] if score $gamestate CmdData matches 0 if score $mcancel CmdData matches -1 run function lobby:settings/cancel/resume
 tag @a[tag=LeaveTeam] remove LeaveTeam
 
 #> Servermode trigger commands
