@@ -24,6 +24,8 @@ tag @s[team=!Green] remove WasGreen
 tag @s[team=Spectator] add WasSpectator
 tag @s[team=!Spectator] remove WasSpectator
 team leave @s
+scoreboard players reset @s HitmarkerTimer
+scoreboard players reset @s HitmarkerType
 clear @s
 function lobby:items
 scoreboard players reset @s leftgame

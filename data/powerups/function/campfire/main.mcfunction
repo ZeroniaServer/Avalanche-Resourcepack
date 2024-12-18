@@ -15,8 +15,8 @@ execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=20..1200},tag=!
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1200..},tag=!Extinguish] at @s run particle smoke ~ ~0.2 ~ 0.1 0.2 0.1 0.03 5 force
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1200..},tag=!Extinguish] at @s run particle large_smoke ~ ~0.2 ~ 0.1 0.3 0.1 0 8 force
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1200..},tag=!Extinguish] at @s run playsound campfireextinguish master @a ~ ~ ~ 0.8 0.8
-execute as @e[type=item_display,tag=CampfireMain,tag=Green,scores={CmdData=1200..},tag=!Extinguish] at @s run data merge entity @s {item:{id:"diamond_hoe",components:{item_model:"minecraft:campfire/green_unlit"}}}
-execute as @e[type=item_display,tag=CampfireMain,tag=Red,scores={CmdData=1200..},tag=!Extinguish] at @s run data merge entity @s {item:{id:"diamond_hoe",components:{item_model:"minecraft:campfire/red_unlit"}}}
+execute as @e[type=item_display,tag=CampfireMain,tag=Green,scores={CmdData=1200..},tag=!Extinguish] at @s run item replace entity @s contents with diamond_hoe[item_model="minecraft:campfire/green_unlit"]
+execute as @e[type=item_display,tag=CampfireMain,tag=Red,scores={CmdData=1200..},tag=!Extinguish] at @s run item replace entity @s contents with diamond_hoe[item_model="minecraft:campfire/red_unlit"]
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Extinguish] at @s run particle block{block_state:oak_log} ~ ~ ~ 0.1 0 0.1 0.1 20 force
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Extinguish] at @s run particle block{block_state:coal_block} ~ ~ ~ 0.1 0 0.1 0.1 10 force
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1300..},tag=Extinguish] at @s run playsound campfirebreak master @a ~ ~ ~ 0.6 0
@@ -31,8 +31,8 @@ execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1150},tag=!Exti
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1150..1180},tag=!Extinguish,tag=Reviving] at @s run particle soul ~ ~0.1 ~ 0.1 0.4 0.1 0.1 1 force
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1150..1160},tag=!Extinguish,tag=Reviving] at @s run particle soul_fire_flame ~ ~0.5 ~ 0 0.4 0 0.01 3 force
 
-execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1150},tag=Green,tag=!Extinguish,tag=Reviving] at @s run data merge entity @s {item:{id:"diamond_hoe",components:{item_model:"minecraft:campfire/green_revive"}}}
-execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1150},tag=Red,tag=!Extinguish,tag=Reviving] at @s run data merge entity @s {item:{id:"diamond_hoe",components:{item_model:"minecraft:campfire/red_revive"}}}
+execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1150},tag=Green,tag=!Extinguish,tag=Reviving] at @s run item replace entity @s contents with diamond_hoe[item_model="minecraft:campfire/green_revive"]
+execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1150},tag=Red,tag=!Extinguish,tag=Reviving] at @s run item replace entity @s contents with diamond_hoe[item_model="minecraft:campfire/red_revive"]
 
 execute as @e[type=item_display,tag=CampfireMain,scores={CmdData=1200..},tag=!Extinguish] run tag @s add Extinguish
 

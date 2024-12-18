@@ -13,6 +13,6 @@ scoreboard objectives setdisplay below_name fireworkCount
 scoreboard players set $gamestate CmdData 3
 function bossbars:get_points
 
-execute as @a[team=!Lobby,team=!Spectator] at @s run playsound battlestart master @a ~ ~ ~ 1 1.6
+execute as @a[team=!Lobby,team=!Spectator] at @s run playsound battlestart master @s ~ ~ ~ 1 1.6
 
 scoreboard players set $ElfTimer CmdData 380

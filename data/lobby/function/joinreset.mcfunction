@@ -36,3 +36,5 @@ scoreboard players set @s playerHP 20
 attribute @s minecraft:block_interaction_range base set 4.5
 scoreboard players operation @s leavecheck = $curr leavecheck
 scoreboard players operation @s gameID = $current gameID
+scoreboard players reset @s HitmarkerTimer
+scoreboard players reset @s HitmarkerType
