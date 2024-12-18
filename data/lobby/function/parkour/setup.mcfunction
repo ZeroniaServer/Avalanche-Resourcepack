@@ -12,7 +12,4 @@ summon text_display -56.5 51.8 -72.7 {alignment:"right",Tags:["parkour_display",
 summon minecraft:armor_stand -58.7 53.3 -73.2 {Invulnerable:true,NoBasePlate:true,NoGravity:true,ShowArms:true,Rotation:[335f, 0f],Pose:{Body:[16f,0f,0f],Head:[34f,12f,0f],LeftLeg:[285f,328f,0f],RightLeg:[305f,10f,0f],LeftArm:[344f,0f,350f],RightArm:[346f,0f,12f]},ArmorItems:[{id:"diamond_boots"},{id:"golden_leggings"},{id:"diamond_chestplate"},{id:"player_head",components:{"minecraft:profile":{name:"MHF_Question"}}}],Tags:["parkour_display"],DisabledSlots:4144959}
 
 # Reset leaderboard
-data modify storage lobby:parkour name set value "???"
-data modify storage lobby:parkour time set value "???"
-data modify storage lobby:parkour jumps set value 0
-scoreboard players set _global parkourJumps 0
+function lobby:parkour/resethighscore

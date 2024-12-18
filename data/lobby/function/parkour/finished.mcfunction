@@ -16,7 +16,9 @@ clear @s carrot_on_a_stick
 execute if entity @s[tag=!firstParkour] run function lobby:parkour/personalbest
 execute if entity @s[tag=firstParkour] if score @s finalParkourTime < @s bestParkourTime run function lobby:parkour/personalbest
 
-# TODO Store in leaderboard
+#> Update leaderboard
+execute if score @s bestParkourTime < #current bestParkourTime run function lobby:parkour/updatelb
+
 # execute if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime > @s finalParkourTime run function lobby:parkour/updatelb
 
 #> Update global jump counter
