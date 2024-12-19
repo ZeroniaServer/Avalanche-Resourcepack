@@ -6,3 +6,9 @@ data merge block -29 49 -147 {lock:{count:-1}}
 data merge block -33 49 -147 {lock:{count:-1}}
 data merge block -32 55 -147 {lock:{count:-1}}
 data merge block -32 52 -147 {lock:{count:-1}}
+data merge block -28 51 -147 {lock:{count:-1}}
+data merge block -29 51 -147 {lock:{count:-1}}
+data merge block -30 51 -147 {lock:{count:-1}}
+data merge block -31 51 -147 {lock:{count:-1}}
+data merge block -32 51 -147 {lock:{count:-1}}
+data merge block -33 51 -147 {lock:{count:-1}}
