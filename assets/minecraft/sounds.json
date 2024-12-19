@@ -1306,5 +1306,17 @@
         "sounds": [
             "random/successful_hit"
         ]
+    },
+    "block.chest.locked": {
+        "replace": true,
+        "sounds": [
+            "silent"
+        ]
+    },
+    "block.chiseled_bookshelf.pickup": {
+        "replace": true,
+        "sounds": [
+            "silent"
+        ]
     }
 }
