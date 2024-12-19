@@ -2,7 +2,7 @@ execute if score $mcancel CmdData matches 1 if entity @s[type=player] run tellra
 scoreboard players reset $mcancel CmdData
 
 fill -90 53 -148 -90 55 -150 minecraft:light_gray_stained_glass
-fill -35 51 -149 -35 49 -151 light_gray_stained_glass
+fill -35 51 -150 -35 49 -152 light_gray_stained_glass
 
 function game:removewall
 

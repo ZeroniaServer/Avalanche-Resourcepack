@@ -197,8 +197,8 @@ setblock -95 54 -147 air
 setblock -34 50 -148 air
 setblock -95 54 -147 air
 setblock -95 54 -147 oak_wall_sign{front_text:{messages:['{"translate":"lobby.leave_sign.1","color":"#00CEFF","clickEvent":{"action":"run_command","value":"/trigger leavegame"}}','{"translate":"lobby.leave_sign.2","color":"#00CEFF"}','{"translate":"lobby.leave_sign.3","color":"aqua","bold":true}','{"translate":"lobby.leave_sign.4","color":"aqua","bold":true}']}}
-setblock -34 50 -148 air
-setblock -34 50 -148 oak_wall_sign[facing=east]{front_text:{messages:['{"translate":"lobby.leave_sign.1","color":"#00CEFF","clickEvent":{"action":"run_command","value":"/trigger leavegame"}}','{"translate":"lobby.leave_sign.2","color":"#00CEFF"}','{"translate":"lobby.leave_sign.3","color":"aqua","bold":true}','{"translate":"lobby.leave_sign.4","color":"aqua","bold":true}']}}
+setblock -34 50 -149 air
+setblock -34 50 -149 oak_wall_sign[facing=east]{front_text:{messages:['{"translate":"lobby.leave_sign.1","color":"#00CEFF","clickEvent":{"action":"run_command","value":"/trigger leavegame"}}','{"translate":"lobby.leave_sign.2","color":"#00CEFF"}','{"translate":"lobby.leave_sign.3","color":"aqua","bold":true}','{"translate":"lobby.leave_sign.4","color":"aqua","bold":true}']}}
 fill -85 50 -113 -35 40 -162 minecraft:stripped_cherry_wood[axis=z] replace minecraft:barrel
 setblock -66 50 -110 stripped_cherry_wood[axis=z]
 setblock -64 50 -111 stripped_cherry_wood[axis=z]
@@ -209,12 +209,10 @@ fill -111 46 -207 -113 47 -205 minecraft:stripped_cherry_wood[axis=y] replace ba
 fill -111 46 -207 -113 47 -205 minecraft:stripped_cherry_wood[axis=z] replace barrel[facing=north]
 fill -87 51 -142 -101 57 -156 stripped_cherry_wood[axis=y] replace barrel
 function debug:protect
-setblock -35 54 -152 minecraft:smooth_quartz
 data modify block -48 65 -65 profile set from block -82 65 -58 profile
 data modify block -48 65 -58 profile set from block -82 65 -58 profile
 data modify block -82 65 -86 profile set from block -82 65 -58 profile
 data modify block -82 65 -90 profile set from block -82 65 -58 profile
-setblock -36 50 -150 air
 setblock -89 54 -149 air
 setblock -113 47 -213 spruce_fence
 setblock -13 47 -229 spruce_fence
@@ -285,7 +283,7 @@ summon text_display -79.85 53 -152 {Tags:["LobbyText"],text:'["",{"text":" "},{"
 summon text_display -79.85 53 -148 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":":arrow_right:","color":"#2ba818"},{"text":" "}]',transformation:{scale:[2.0f,2.0f,2.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
 
 summon text_display -89 54.35 -149 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.join.green","color":"green"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-12763843,shadow:0b,see_through:0b,alignment:"center"}
-summon text_display -36 50.35 -150 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.join.red","color":"red"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-12763843,shadow:0b,see_through:0b,alignment:"center"}
+summon text_display -36 50.35 -151 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.join.red","color":"red"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-12763843,shadow:0b,see_through:0b,alignment:"center"}
 
 summon text_display -121.15 46 -209 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.leave_game","color":"dark_blue"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
 summon text_display -3.85 46 -233 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.leave_game","color":"dark_blue"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}

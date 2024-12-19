@@ -6,24 +6,24 @@ execute as @a[team=Green] run scoreboard players add $InGreen CmdData 1
 execute as @a[team=Red] run scoreboard players add $InRed CmdData 1
 
 #> Particles
-execute if block -35 50 -150 pink_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[1.000f,0.000f,0.000f],scale:1} -36 50 -150.75 0 1 0 0 3 force
-execute if block -35 50 -150 pink_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[1.000f,0.000f,0.000f],scale:1} -36 50 -148.25 0 1 0 0 3 force
-execute if block -35 50 -150 pink_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[1.000f,0.000f,0.000f],scale:1} -36 51.75 -150 0 0 1 0 3 force
-execute if block -35 50 -150 pink_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[1.000f,0.000f,0.000f],scale:1} -36 49.25 -150 0 0 1 0 3 force
+execute if block -35 50 -150 pink_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[1.000f,0.000f,0.000f],scale:1} -36 50 -151.75 0 1 0 0 3 force
+execute if block -35 50 -150 pink_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[1.000f,0.000f,0.000f],scale:1} -36 50 -149.25 0 1 0 0 3 force
+execute if block -35 50 -150 pink_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[1.000f,0.000f,0.000f],scale:1} -36 51.75 -151 0 0 1 0 3 force
+execute if block -35 50 -150 pink_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[1.000f,0.000f,0.000f],scale:1} -36 49.25 -151 0 0 1 0 3 force
 
 execute if block -90 54 -149 cyan_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[0.000f,1.000f,0.000f],scale:1} -89 54 -147.25 0 1 0 0 3 force
 execute if block -90 54 -149 cyan_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[0.000f,1.000f,0.000f],scale:1} -89 54 -149.75 0 1 0 0 3 force
 execute if block -90 54 -149 cyan_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[0.000f,1.000f,0.000f],scale:1} -89 53.25 -149 0 0 1 0 3 force
 execute if block -90 54 -149 cyan_stained_glass if score $gamestate CmdData matches 0..2 run particle dust{color:[0.000f,1.000f,0.000f],scale:1} -89 55.75 -149 0 0 1 0 3 force
 
-execute if block -35 50 -150 pink_stained_glass run particle trail{duration:30,color:[1.000,0.000,0.000],target:[-35.0,50.5,-149.5]} -38 50 -150 0.1 1 1 0 1 force
+execute if block -35 50 -150 pink_stained_glass run particle trail{duration:30,color:[1.000,0.000,0.000],target:[-35.0,50.5,-150.5]} -38 50 -151 0.1 1 1 0 1 force
 execute if block -90 54 -149 cyan_stained_glass run particle trail{duration:30,color:[0.000,1.000,0.000],target:[-90.0,54.5,-148.5]} -87 54 -149 0.1 1 1 0 1 force
 
 #> Block off portals
 execute if score $InGreen CmdData > $InRed CmdData run fill -90 53 -148 -90 55 -150 minecraft:light_gray_stained_glass
 execute if score $InGreen CmdData <= $InRed CmdData run fill -90 53 -148 -90 55 -150 minecraft:cyan_stained_glass
-execute if score $InRed CmdData > $InGreen CmdData run fill -35 49 -151 -35 51 -149 minecraft:light_gray_stained_glass
-execute if score $InRed CmdData <= $InGreen CmdData run fill -35 49 -151 -35 51 -149 minecraft:pink_stained_glass
+execute if score $InRed CmdData > $InGreen CmdData run fill -35 49 -152 -35 51 -150 minecraft:light_gray_stained_glass
+execute if score $InRed CmdData <= $InGreen CmdData run fill -35 49 -152 -35 51 -150 minecraft:pink_stained_glass
 
 #> Green
 execute as @a[team=Lobby,predicate=lobby:joinpad_green,limit=1,sort=random] unless score $InGreen CmdData > $InRed CmdData unless score $InGreen CmdData >= $MaxTeamSize CmdData unless function lobby:nomidgamejoin if score $gamestate CmdData matches 0..3 run tag @s add JoinGreen
@@ -63,7 +63,7 @@ execute unless score $InRed CmdData >= $MaxTeamSize CmdData if score $NoMidgameJ
 execute unless function lobby:nomidgamejoin if score $InRed CmdData > $InGreen CmdData as @a[team=Lobby,predicate=lobby:joinpad_red,tag=!tryJoinRed] run function lobby:portals/red/imbalanced
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 store result score @s gameID run scoreboard players get $current gameID
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run tp @s @s
-execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tp @s -34 49 -150 -90 0
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tp @s -34 49 -151 -90 0
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2..3 run tp @s -12 47 -232 90 0
 execute as @a[tag=JoinRed,limit=1] unless score $gamestate CmdData matches 2.. unless score $mcancel CmdData matches -1 run function lobby:settings/cancel/reset
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run loot give @s loot powerups:shovel

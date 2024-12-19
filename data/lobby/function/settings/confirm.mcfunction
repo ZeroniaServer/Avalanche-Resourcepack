@@ -1,5 +1,5 @@
 fill -90 53 -148 -90 55 -150 minecraft:cyan_stained_glass
-fill -35 51 -149 -35 49 -151 pink_stained_glass
+fill -35 51 -150 -35 49 -152 pink_stained_glass
 
 
 scoreboard players reset @a modify

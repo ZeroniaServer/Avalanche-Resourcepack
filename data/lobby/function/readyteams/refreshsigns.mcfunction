@@ -3,4 +3,4 @@ execute if score $RedReady CmdData matches 0 run data modify storage avalanche:r
 execute if score $GreenReady CmdData matches 1 run data modify storage avalanche:readysign Green set value '{"translate":"lobby.ready_sign.format","color":"green","with":[{"color":"green","translate":"lobby.ready_sign.green"},{"color":"#03DE00","text":"✔","bold":true}]}'
 execute if score $GreenReady CmdData matches 0 run data modify storage avalanche:readysign Green set value '{"translate":"lobby.ready_sign.format","color":"green","with":[{"color":"green","translate":"lobby.ready_sign.green"},{"color":"#D20000","text":"❌","bold":true}]}'
 execute positioned -95 54 -151 run function lobby:readyteams/setsigns
-execute positioned -23 50 -148 run function lobby:readyteams/setsigns
+execute positioned -31 50 -153 run function lobby:readyteams/setsigns

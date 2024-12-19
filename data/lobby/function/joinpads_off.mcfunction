@@ -1,7 +1,7 @@
-execute as @a[predicate=lobby:joinpad_green,tag=!RequestSettings] at @s run tellraw @s {"translate":"chat.confirm","color":"#f089a8","with":[{"translate":"chat.settings_box","color":"#1dc6c7","bold":true}]}
+execute as @a[predicate=lobby:joinpad_green,tag=!RequestSettings] at @s run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"chat.confirm","color":"#f089a8","with":[{"translate":"chat.settings_box","color":"#1dc6c7","bold":true}]}]
 execute as @a[predicate=lobby:joinpad_green,tag=!RequestSettings] at @s run playsound joinfail master @s ~ ~ ~ 1 0
 
-execute as @a[predicate=lobby:joinpad_red,tag=!RequestSettings] at @s run tellraw @s {"translate":"chat.confirm","color":"#f089a8","with":[{"translate":"chat.settings_box","color":"#1dc6c7","bold":true}]}
+execute as @a[predicate=lobby:joinpad_red,tag=!RequestSettings] at @s run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"chat.confirm","color":"#f089a8","with":[{"translate":"chat.settings_box","color":"#1dc6c7","bold":true}]}]
 execute as @a[predicate=lobby:joinpad_red,tag=!RequestSettings] at @s run playsound joinfail master @s ~ ~ ~ 1 0
 
 tag @a[predicate=lobby:joinpad_green,tag=!RequestSettings] add RequestSettings

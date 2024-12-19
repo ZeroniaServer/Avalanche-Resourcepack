@@ -318,3 +318,6 @@ execute unless block 13 69 -205 minecraft:spruce_trapdoor[half=top,open=false,fa
 execute unless block 6 69 -204 minecraft:spruce_trapdoor[half=top,open=false,facing=west] run setblock 6 69 -204 minecraft:spruce_trapdoor[half=top,open=false,facing=west] replace 
 execute unless block 10 70 -205 minecraft:spruce_trapdoor[half=top,open=false,facing=west] run setblock 10 70 -205 minecraft:spruce_trapdoor[half=top,open=false,facing=west] replace 
 execute unless block 0 70 -201 minecraft:spruce_trapdoor[half=top,open=false,facing=west] run setblock 0 70 -201 minecraft:spruce_trapdoor[half=top,open=false,facing=west] replace 
+execute unless block -29 56 -148 minecraft:spruce_trapdoor[open=true,facing=east,half=bottom] run setblock -29 56 -148 minecraft:spruce_trapdoor[open=true,facing=east,half=bottom]
+execute unless block -30 57 -148 minecraft:spruce_trapdoor[open=false,facing=west,half=bottom] run setblock -30 57 -148 minecraft:spruce_trapdoor[open=false,facing=west,half=bottom]
+execute unless block -31 57 -148 minecraft:acacia_trapdoor[open=true,facing=north,half=bottom] run setblock -31 57 -148 minecraft:acacia_trapdoor[open=true,facing=north,half=bottom]
