@@ -16,3 +16,7 @@ setblock 0 0 0 air
 
 loot replace entity @e[type=armor_stand,tag=parkour_display,limit=1] armor.head 1 loot lobby:playerhead
 function lobby:parkour/updatedisplay
+
+execute if entity @s[tag=templeader] run tellraw @a[team=!Purple,team=!Orange] ["",{"translate":"parkour.new_record","color":"dark_green","with":[{"selector":"@s"}]}]
+
+tag @s remove templeader
