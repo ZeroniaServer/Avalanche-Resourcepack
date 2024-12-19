@@ -97,7 +97,7 @@ execute as @a[tag=LeaveTeam] run tp @s @s
 execute unless entity @a[team=Red] unless entity @a[team=Green] if loaded 0 0 0 if score $gamestate CmdData matches 2.. run tellraw @a ["\n",{"translate":"game.no_players","color":"red"},"\n"]
 execute unless entity @a[team=Red] unless entity @a[team=Green] if score $gamestate CmdData matches 2.. if loaded 0 0 0 run function game:forcestop
 execute as @a[tag=LeaveTeam] run gamemode adventure @s
-execute as @a[tag=LeaveTeam,tag=WasRed] if score $gamestate CmdData matches 0.. run tp @s -40 50 -150 -90 0
+execute as @a[tag=LeaveTeam,tag=WasRed] if score $gamestate CmdData matches 0.. run tp @s -40 50 -151 -90 0
 execute as @a[tag=LeaveTeam,tag=WasGreen] if score $gamestate CmdData matches 0.. run tp @s -85 54 -149 90 0
 execute as @a[tag=LeaveTeam,tag=WasSpectator] if score $gamestate CmdData matches 0.. run tp @s -65 52 -108 180 0
 execute as @a[tag=LeaveTeam] if score $gamestate CmdData matches -1 run tp @s -65 52 -108 0 0
