@@ -1,2 +1,2 @@
 kill @e[type=text_display,tag=sboxtitle]
-summon text_display -58.01 58.6 -90 {shadow:1b,Tags:["sboxtitle","LobbyText"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[2.5f,2.5f,2.5f]},text:'{"color":"aqua","translate":"chat.settings_box","shadow_color":[0.5,0,0.5,1]}',Rotation:[90f,0f],"alignment":"center",background:16777215}
+summon text_display -58.01 58.6 -90 {shadow:1b,Tags:["sboxtitle"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[2.5f,2.5f,2.5f]},text:'{"color":"aqua","translate":"chat.settings_box","shadow_color":[0.5,0,0.5,1]}',Rotation:[90f,0f],"alignment":"center",background:16777215}
