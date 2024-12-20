@@ -9,6 +9,8 @@ execute at @s anchored feet rotated 0 90 positioned ^ ^ ^ store result score $ra
 execute unless data storage iris:output {TargetType:"NONE"} run function iris:set_coordinates/main
 
 execute if entity @s[distance=0.1..] run scoreboard players set $aboveground CmdData 1
-execute at @s if entity @e[type=shulker,tag=GiftboxShulker,distance=..1] run scoreboard players set $aboveground CmdData 0
-execute at @s positioned ~ ~-0.5 ~ if entity @e[type=shulker,tag=cfcollision,distance=..1] run scoreboard players set $aboveground CmdData 0
+execute at @s if score $raydist CmdData matches ..1000000 if entity @e[type=shulker,tag=GiftboxShulker,distance=..1] run scoreboard players set $aboveground CmdData 0
+execute at @s if score $raydist CmdData matches ..1000000 positioned ~ ~-0.5 ~ if entity @e[type=shulker,tag=cfcollision,distance=..1] run scoreboard players set $aboveground CmdData 0
+execute at @s if score $raydist CmdData matches ..1000000 if entity @e[type=oak_boat,tag=!thisboat,distance=..1] run scoreboard players set $aboveground CmdData 0
+tellraw @a [{"score":{"name":"$aboveground","objective":"CmdData"}}]
 kill @s

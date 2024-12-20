@@ -34,7 +34,9 @@ execute unless score #bool math matches 0 run tag @s remove NoAI
 execute on passengers on passengers if predicate wasd:jump on vehicle on vehicle run tag @s remove NoAI
 execute unless predicate game:on_ground run tag @s remove NoAI
 
+execute on passengers on passengers if entity @s[type=oak_boat] run tag @s add thisboat
 execute at @s[tag=NoAI] summon marker run function powerups:sleigh/aboveground
+execute on passengers on passengers if entity @s[type=oak_boat] run tag @s remove thisboat
 execute if score $aboveground CmdData matches 1 run tag @s remove NoAI
 
 data merge entity @s[tag=NoAI] {NoAI:1b}
