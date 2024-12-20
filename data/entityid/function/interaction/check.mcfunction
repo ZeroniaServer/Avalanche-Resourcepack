@@ -21,3 +21,14 @@ execute if entity @s[tag=WarpGreen] on target run tag @s add WarpGreen
 execute if entity @s[tag=WarpRed] on target run tag @s add WarpRed
 execute if entity @s[tag=WarpSpectate] on target run tag @s add WarpSpectate
 execute on target if entity @s[tag=LobbyWarp,tag=inParkour] run function lobby:parkour/cancel
+
+#> Translator Credits
+execute if entity @s[tag=TranslatorCredit] as @e[type=item_display,tag=Globe,tag=!Spin,limit=1] run function lobby:credits/translators/next
+
+#> Credits
+execute if entity @s[tag=BlockyCredit] on target at @s run function lobby:credits/blocky
+execute if entity @s[tag=LouCredit] on target at @s run function lobby:credits/lou
+execute if entity @s[tag=EvtemaCredit] on target at @s run function lobby:credits/evtema
+execute if entity @s[tag=StuffyCredit] on target at @s run function lobby:credits/stuffy
+execute if entity @s[tag=YZEROCredit] on target at @s run function lobby:credits/yzero
+execute if entity @s[tag=ZeroniaCredit] on target at @s run function lobby:credits/zeronia

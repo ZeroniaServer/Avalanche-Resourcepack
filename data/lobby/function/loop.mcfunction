@@ -55,3 +55,8 @@ scoreboard players reset @a[team=Lobby] MVPkill
 scoreboard players reset @a[team=Lobby] MVPdeath
 scoreboard players reset @a[team=Lobby] MVProcket
 scoreboard players reset @a[team=Lobby] MVPdamage
+
+#> Translator credits
+execute as @e[type=item_display,tag=Globe,limit=1] run function lobby:credits/translators/loop
+execute as @e[type=item_display,tag=TranslatorCredit,tag=Credit] run function lobby:credits/translators/loop
+execute as @e[type=text_display,tag=TranslatorCredit,tag=Credit] run function lobby:credits/translators/loop

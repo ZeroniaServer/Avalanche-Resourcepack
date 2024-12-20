@@ -18,3 +18,6 @@ execute if entity @s[tag=KOmessage,tag=!KOmessaged] if entity @a[tag=hitter,limi
 execute if entity @s[tag=KOmessage,tag=!KOmessaged] run scoreboard players add @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] MVPkill 1
 execute if entity @s[type=player,tag=!Knockout] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] if score @s playerDamage >= @s playerHP run tag @s add KOmessaged
 tag @s remove KOmessage
+
+#> Translator Credits
+execute if entity @s[tag=TranslatorCredit] as @e[type=item_display,tag=Globe,tag=!Spin,limit=1] run function lobby:credits/translators/previous
