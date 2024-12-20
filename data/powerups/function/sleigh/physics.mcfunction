@@ -27,12 +27,17 @@ execute if score #bool math matches 1.. at @s[predicate=!game:in_air] run functi
 scoreboard players add @s[tag=Surf] surfTimer 1
 tag @s[scores={surfTimer=30..}] remove Surf
 scoreboard players reset @s[scores={surfTimer=30..}] surfTimer
-data merge entity @s[tag=!Surf] {NoAI:1b}
-execute if score #input math matches 1.. run data merge entity @s {NoAI:0b}
-execute on passengers on passengers if predicate wasd:backward on vehicle on vehicle run data merge entity @s {NoAI:1b}
-execute unless score #bool math matches 0 run data merge entity @s {NoAI:0b}
-execute on passengers on passengers if predicate wasd:jump on vehicle on vehicle run data merge entity @s {NoAI:0b}
-execute unless predicate game:on_ground run data merge entity @s {NoAI:0b}
+tag @s[tag=!Surf] add NoAI
+execute if score #input math matches 1.. run tag @s remove NoAI
+execute on passengers on passengers if predicate wasd:backward on vehicle on vehicle run tag @s add NoAI
+execute unless score #bool math matches 0 run tag @s remove NoAI
+execute on passengers on passengers if predicate wasd:jump on vehicle on vehicle run tag @s remove NoAI
+execute unless predicate game:on_ground run tag @s remove NoAI
+
+execute if entity @s[tag=NoAI] unless predicate wasd:is_mounted run scoreboard players add @s snowballcounter 1
+execute if score @s snowballcounter matches 3.. at @s run function powerups:sleigh/ground
+execute unless entity @s[tag=NoAI] run scoreboard players reset @s snowballcounter
+execute unless entity @s[tag=NoAI] on vehicle run kill
 
 ########################
 
