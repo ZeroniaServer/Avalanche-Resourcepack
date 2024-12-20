@@ -40,6 +40,9 @@ execute at @s[tag=NoAI] summon marker run function powerups:sleigh/aboveground
 execute on passengers on passengers if entity @s[type=oak_boat] run tag @s remove thisboat
 execute if score $aboveground CmdData matches 1 run tag @s remove NoAI
 
+execute if entity @s[tag=NoAI] on passengers on passengers if entity @s[type=oak_boat] run tag @s add solid
+execute if entity @s[tag=!NoAI] on passengers on passengers if entity @s[type=oak_boat] run tag @s remove solid
+
 data merge entity @s[tag=NoAI] {NoAI:1b}
 data merge entity @s[tag=!NoAI] {NoAI:0b}
 
