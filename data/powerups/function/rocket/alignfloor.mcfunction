@@ -13,4 +13,4 @@ execute at @s anchored feet rotated 0 90 positioned ^ ^ ^ store result score $ra
 execute unless data storage iris:output {TargetType:"NONE"} run return run function iris:set_coordinates/main
 
 # Otherwise, this is an illegal placement (no floor close enough)
-tag @s add illegal
+tp @s ~ 42.5 ~

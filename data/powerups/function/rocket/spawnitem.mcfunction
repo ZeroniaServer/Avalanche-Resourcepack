@@ -5,7 +5,7 @@ data remove storage iris:output TargetedFace
 function powerups:placeable_init/alignfloor
 
 execute at @s[tag=illegal,predicate=game:low_arena] run tag @s add tooLow
-execute at @s[tag=tooLow] positioned ~ 50 ~ run tp @s ~ ~ ~
+execute at @s[tag=tooLow] run tp @s ~ ~50 ~
 execute at @s[tag=tooLow] run function powerups:rocket/alignfloor
 execute at @s[tag=tooLow] run tp @s ~ ~1.5 ~
 
