@@ -308,3 +308,6 @@ data modify storage avalanche:messages ResourcePack set value '[{"text":"[","col
 data modify storage avalanche:messages OutdatedPack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"You are using an outdated version of the resource pack! ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD THE LATEST VERSION]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=12CBkGOcmYlub8A9FAEW-hb16o63koLvV"}}]'
 data modify storage avalanche:messages SettingsBox set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"chat.settings_tp","color":"#f089a8","underlined":true,"with":[{"translate":"chat.settings_box","color":"#1dc6c7","bold":true}]}]'
 data modify storage avalanche:messages ReadyToPlay set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"chat.the_game","color":"gray","with":[{"translate":"chat.ready_to_play","color":"green","bold":true}]}]'
+
+#> Remove void platform
+fill -8 -61 -8 24 -61 -1 air
