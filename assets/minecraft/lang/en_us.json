@@ -86,6 +86,7 @@
   "subtitles.parkour.start": "Parkour started",
   "subtitles.parkour.cancel": "Parkour canceled",
   "subtitles.parkour.finish": "Parkour completed",
+  "subtitles.globe.spin": "Globe spins",
   "container.isLocked": "",
   "block.minecraft.bed.occupied": "",
   "container.spectatorCantOpen": "",

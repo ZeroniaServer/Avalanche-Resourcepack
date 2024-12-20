@@ -1318,5 +1318,11 @@
         "sounds": [
             "silent"
         ]
+    },
+    "globespin": {
+        "sounds": [
+            "globespin"
+        ],
+        "subtitle": "subtitles.globe.spin"
     }
 }
