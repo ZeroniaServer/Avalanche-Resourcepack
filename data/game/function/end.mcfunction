@@ -11,6 +11,12 @@ execute if score $End CmdData matches 1 run scoreboard players set $gamestate Cm
 execute if score $End CmdData matches 1 run scoreboard players set $ticks CmdData 0
 execute if score $End CmdData matches 1 run function game:timer
 execute if score $End CmdData matches 1 run function game:mvpstats/check
+execute if score $End CmdData matches 1 run tag @a[team=Red] add IFrame
+execute if score $End CmdData matches 1 run tag @a[team=Green] add IFrame
+execute if score $End CmdData matches 1 run tag @a remove SnowMark
+execute if score $End CmdData matches 1 run effect clear @a blindness
+execute if score $End CmdData matches 1 run effect clear @a darkness
+execute if score $End CmdData matches 1 run effect clear @a slowness
 
 #> Green wins
 execute if score $End CmdData matches 1 if score $Winner CmdData matches 1 as @a[team=Green] at @s run playsound wingame master @s ~ ~ ~ 1 1.2
@@ -42,5 +48,7 @@ execute if score $End CmdData matches 1 if score $Winner CmdData matches 0 run t
 
 execute if score $End CmdData matches 150 as @a[team=Red,gamemode=adventure] run gamemode spectator @s
 execute if score $End CmdData matches 150 as @a[team=Green,gamemode=adventure] run gamemode spectator @s
+execute if score $End CmdData matches 150 as @a[team=Red] run item replace entity @s armor.head with air
+execute if score $End CmdData matches 150 as @a[team=Green] run item replace entity @s armor.head with air
 
 execute if score $End CmdData matches 250.. run function game:forcestop

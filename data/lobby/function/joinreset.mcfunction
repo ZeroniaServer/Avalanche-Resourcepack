@@ -42,3 +42,5 @@ scoreboard players operation @s leavecheck = $curr leavecheck
 scoreboard players operation @s gameID = $current gameID
 scoreboard players reset @s HitmarkerTimer
 scoreboard players reset @s HitmarkerType
+tag @s remove IFrame
+scoreboard players reset @s iframe

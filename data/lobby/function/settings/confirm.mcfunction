@@ -20,7 +20,7 @@ scoreboard players set $RedPoints CmdData 0
 
 title @a title {"translate":"customizer.confirmed","underlined":true,"color":"#87edce","shadow_color":[0.494,0.165,0.494,1]}
 title @a subtitle [{"translate":"chat.the_game","color":"green","with":[{"translate":"chat.ready_to_play","color":"green"}]}]
-function lobby:settings/announce with storage lobby:customizer
+execute as @a run function lobby:settings/announce with storage lobby:customizer
 
 fill -56 53 -91 -56 54 -89 air
 

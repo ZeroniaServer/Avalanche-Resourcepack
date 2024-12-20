@@ -10,8 +10,8 @@ particle block_crumble{block_state:"minecraft:coal_block"} ~ ~1 ~ 0.4 0.2 0.4 0.
 execute if entity @s[tag=Red] as @e[type=item_display,tag=CampfireMain,tag=Red,scores={CmdData=22..1199},distance=..2] at @s run function powerups:campfire/refuel
 execute if entity @s[tag=Green] as @e[type=item_display,tag=CampfireMain,tag=Green,scores={CmdData=22..1199},distance=..2] at @s run function powerups:campfire/refuel
 
-effect give @a[gamemode=!spectator,distance=..4] blindness 4 100 true
-effect give @a[gamemode=!spectator,distance=..4] darkness 4 100 true
+execute unless score $gamestate CmdData matches 4 run effect give @a[gamemode=!spectator,distance=..4] blindness 4 100 true
+execute unless score $gamestate CmdData matches 4 run effect give @a[gamemode=!spectator,distance=..4] darkness 4 100 true
 execute as @a[gamemode=!spectator,distance=..4] at @s run stopsound @s * coalstockrelease
 execute as @a[gamemode=!spectator,distance=..4] at @s run playsound coalstockrelease master @s ~ ~ ~ 1 1
 tag @a[gamemode=!spectator,distance=..4] add CoalBlind

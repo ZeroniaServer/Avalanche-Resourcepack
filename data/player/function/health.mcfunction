@@ -3,7 +3,7 @@ execute as @a[team=!Lobby,gamemode=spectator] run title @s actionbar ""
 execute as @a[team=!Lobby,gamemode=creative] run title @s actionbar ""
 
 execute as @a[scores={playerDamage=1..}] if score @s respawn matches 1.. run scoreboard players reset @s playerDamage
-execute as @a[scores={playerDamage=1..}] unless score @s respawn matches 1.. run function player:dealdamage
+execute if score $gamestate CmdData matches 2..3 as @a[scores={playerDamage=1..}] unless score @s respawn matches 1.. run function player:dealdamage
 
 #> Spawn immunity
 scoreboard players add @a[scores={respawn=1..}] respawn 1

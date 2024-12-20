@@ -13,6 +13,8 @@ tag @s remove snowmanTarget
 tag @s remove SleighDismounted
 tag @s remove KOmessaged
 tag @s remove avdamaged
+tag @s remove IFrame
+scoreboard players reset @s iframe
 scoreboard players reset @s blizzardtime
 attribute @s minecraft:block_interaction_range base set 4.5
 tag @s add SilentRespawn

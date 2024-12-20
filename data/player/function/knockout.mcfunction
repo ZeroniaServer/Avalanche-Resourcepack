@@ -23,9 +23,9 @@ scoreboard players reset @a[tag=!Knockout,scores={knocktime=1..}] knocktime
 
 scoreboard players add @a[tag=Knockout] knocktime 1
 
-effect give @a[tag=Knockout,scores={knocktime=1}] slowness 1 100 true
-effect give @a[tag=Knockout,scores={knocktime=1}] darkness 1 100 true
-effect give @a[tag=Knockout,scores={knocktime=1}] blindness 1 100 true
+execute unless score $gamestate CmdData matches 4 run effect give @a[tag=Knockout,scores={knocktime=1}] slowness 1 100 true
+execute unless score $gamestate CmdData matches 4 run effect give @a[tag=Knockout,scores={knocktime=1}] darkness 1 100 true
+execute unless score $gamestate CmdData matches 4 run effect give @a[tag=Knockout,scores={knocktime=1}] blindness 1 100 true
 
 effect clear @a[tag=Knockout,scores={knocktime=10}] slowness
 

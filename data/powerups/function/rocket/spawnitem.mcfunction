@@ -1,9 +1,14 @@
 execute if entity @s[predicate=game:void] run tag @s add void
 
+
 data remove storage iris:output TargetedFace
 function powerups:placeable_init/alignfloor
 
-execute at @s[tag=illegal,predicate=game:low_arena] run tp @s ~ 44 ~
+execute at @s[tag=illegal,predicate=game:low_arena] run tag @s add tooLow
+execute at @s[tag=tooLow] positioned ~ 50 ~ run tp @s ~ ~ ~
+execute at @s[tag=tooLow] run function powerups:rocket/alignfloor
+execute at @s[tag=tooLow] run tp @s ~ ~1.5 ~
+
 execute at @s[tag=illegal,predicate=!game:rocket_arena] facing -63 42 -221 run function powerups:rocket/movefloor
 
 execute at @s run playsound rocketspawn master @a ~ ~ ~ 1 1.6

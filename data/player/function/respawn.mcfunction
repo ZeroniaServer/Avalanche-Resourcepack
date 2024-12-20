@@ -9,7 +9,7 @@ scoreboard players set @s playerHP 20
 scoreboard players reset @s playerDamage
 effect clear @s blindness
 effect clear @s darkness
-clear @s diamond_hoe
+execute unless score $gamestate CmdData matches 4 run clear @s diamond_hoe
 execute if score $gamestate CmdData matches 3 run loot give @s loot powerups:snowball
 
 scoreboard players set @s iframe -60
