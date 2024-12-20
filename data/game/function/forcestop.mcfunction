@@ -8,7 +8,7 @@ function game:removewall
 
 execute as @a[team=!Lobby,team=!Spectator] run function player:leave
 
-scoreboard players set $gamestate CmdData -1
+scoreboard players set $gamestate CmdData 0
 
 scoreboard objectives setdisplay below_name
 team modify Lobby nametagVisibility always
@@ -52,7 +52,6 @@ function lobby:readyteams/refreshsigns
 bossbar set bar_ready_g value 0
 bossbar set bar_ready_r value 0
 bossbar set bar_lobby style notched_6
-bossbar set bar_lobby name {"translate":"chat.confirm","color":"#f089a8","with":[{"translate":"chat.settings_box","color":"#1dc6c7","bold":true}]}
 
 scoreboard players set $red_progress CmdData 0
 scoreboard players set $green_progress CmdData 0
@@ -64,7 +63,4 @@ scoreboard players reset $GreenRespawn CmdData
 scoreboard players reset $RedRespawn CmdData
 
 function arenaclear:reset
-
-tellraw @a[team=Lobby] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{"translate":"ver1.0.0pre1","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"SettingsBox","storage":"avalanche:messages","interpret":true,"clickEvent":{"action":"run_command","value":"/trigger settings"}}]}]}]
-tag @a[team=] add gotTheMemo
-tellraw @a[team=] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{"translate":"ver1.0.0pre1","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"SettingsBox","storage":"avalanche:messages","interpret":true,"clickEvent":{"action":"run_command","value":"/trigger settings"}}]}]}]
+function lobby:settings/auto_confirm
