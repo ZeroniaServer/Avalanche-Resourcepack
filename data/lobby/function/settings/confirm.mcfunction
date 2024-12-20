@@ -18,7 +18,7 @@ scoreboard players set $GreenReady CmdData 0
 scoreboard players set $GreenPoints CmdData 0
 scoreboard players set $RedPoints CmdData 0
 
-title @a title {"translate":"customizer.confirmed","underlined":true,"color":"#87edce","shadow_color":[0.165,0.341,0.494,1]}
+title @a title {"translate":"customizer.confirmed","underlined":true,"color":"#87edce","shadow_color":[0.494,0.165,0.494,1]}
 title @a subtitle [{"translate":"chat.the_game","color":"green","with":[{"translate":"chat.ready_to_play","color":"green"}]}]
 function lobby:settings/announce with storage lobby:customizer
 
@@ -47,7 +47,8 @@ function lobby:readyteams/refreshsigns
 
 execute unless score $mcancel CmdData matches 1 run function arenaclear:reset
 scoreboard players reset $mcancel CmdData
-function lobby:settings/cancel/begin
+setblock -56 53 -90 warped_wall_sign[facing=west]{front_text:{messages:['{"text":""}','{"translate":"customizer.edit","color":"red","bold":true}','""','{"text":"","clickEvent":{"action":"run_command","value":"/trigger cancelMatch set 1"}}']}}
+scoreboard players set $mcancelcount CmdData 0
 
 execute as @a run trigger settings set 0
 
