@@ -34,10 +34,11 @@ execute unless score #bool math matches 0 run tag @s remove NoAI
 execute on passengers on passengers if predicate wasd:jump on vehicle on vehicle run tag @s remove NoAI
 execute unless predicate game:on_ground run tag @s remove NoAI
 
-execute if entity @s[tag=NoAI] unless predicate wasd:is_mounted run scoreboard players add @s snowballcounter 1
-execute if score @s snowballcounter matches 3.. at @s run function powerups:sleigh/ground
-execute unless entity @s[tag=NoAI] run scoreboard players reset @s snowballcounter
-execute unless entity @s[tag=NoAI] on vehicle run kill
+execute at @s[tag=NoAI] summon marker run function powerups:sleigh/aboveground
+execute if score $aboveground CmdData matches 1 run tag @s remove NoAI
+
+data merge entity @s[tag=NoAI] {NoAI:1b}
+data merge entity @s[tag=!NoAI] {NoAI:0b}
 
 ########################
 
