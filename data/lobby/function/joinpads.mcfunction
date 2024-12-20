@@ -107,7 +107,7 @@ execute as @a[tag=LeaveTeam,tag=!WasSpectator] if score $gamestate CmdData match
 execute as @a[tag=LeaveTeam,tag=WasSpectator] if score $gamestate CmdData matches 0..3 at @s run playsound leavespectator master @a ~ ~ ~ 1 1
 tag @a[tag=LeaveTeam] remove WasSpectator
 execute as @a[tag=LeaveTeam] run team join Lobby @s
-execute as @a[tag=LeaveTeam,limit=1] unless entity @a[team=Red] unless entity @a[team=Green] if score $gamestate CmdData matches 0 if score $mcancel CmdData matches -1 run function lobby:settings/cancel/resume
+execute unless entity @a[team=Red] unless entity @a[team=Green] if score $gamestate CmdData matches 0 if score $mcancel CmdData matches -1 run function lobby:settings/cancel/resume
 tag @a[tag=LeaveTeam] remove LeaveTeam
 
 #> Servermode trigger commands
