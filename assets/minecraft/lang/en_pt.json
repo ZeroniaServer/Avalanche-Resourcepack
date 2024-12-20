@@ -245,5 +245,16 @@
   "parkour.personal_best": "That be a new personal best time!",
   "parkour.time": "Parkour Time: %s",
   "parkour.finished": "%1$s completed th’ Parkour in %2$s!",
-  "lobby.brought_by": "Brought t’ ye by:"
+  "lobby.brought_by": "Brought t’ ye by:",
+  "credits.game_developer": "Game Developer",
+  "credits.producer": "Producer",
+  "credits.builder": "Builder",
+  "credits.level_designer": "Level Designer",
+  "credits.trailer_director": "Trailer Director",
+  "credits.logo_designer": "Logo Designer",
+  "credits.translators": "Translators",
+  "credits.socials": "Click to visit socials:",
+  "credits.zeronia": "Stay up to date wit’ our projects!",
+  "credits.discord": "Join our Discord community today!"
+
 }

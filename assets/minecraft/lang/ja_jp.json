@@ -321,5 +321,15 @@
   "book.padding.credits": "         ",
   "book.padding.zeroniacredit": "  ",
   "book.createdby": "製作:",
-  "lobby.brought_by": "󐀌提供:"
+  "lobby.brought_by": "󐀌提供:",
+  "credits.game_developer": "ゲーム開発",
+  "credits.producer": "プロデューサー",
+  "credits.builder": "建築",
+  "credits.level_designer": "レベルデザイン",
+  "credits.trailer_director": "トレーラーディレクター",
+  "credits.logo_designer": "ロゴのデザイン",
+  "credits.translators": "翻訳者",
+  "credits.socials": "クリックでソーシャルサイトへ飛ぶ:",
+  "credits.zeronia": "私たちのプロジェクトの最新情報をお届けします！",
+  "credits.discord": "今すぐDiscordコミュニティにご参加ください！"
 }

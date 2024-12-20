@@ -207,5 +207,15 @@
   "book.padding.credits": "         ",
   "book.padding.zeroniacredit": "  ",
   "chat.welcome.point": "%s %s",
-  "lobby.brought_by": "Brakt til deg av:"
+  "lobby.brought_by": "Brakt til deg av:",
+  "credits.game_developer": "Spillutvikler",
+  "credits.producer": "Produsent",
+  "credits.builder": "Bygger",
+  "credits.level_designer": "Nivå-designer",
+  "credits.trailer_director": "Trailer-regissør",
+  "credits.logo_designer": "Logo-designer",
+  "credits.translators": "Oversettere",
+  "credits.socials": "Klikk for å besøke sosiale media:",
+  "credits.zeronia": "Hold deg oppdatert på prosjektene våre!",
+  "credits.discord": "Bli med i Discord-samfunnet vårt i dag!"
 }

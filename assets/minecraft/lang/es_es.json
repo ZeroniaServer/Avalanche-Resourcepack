@@ -354,5 +354,15 @@
   "chat.welcome.point.3": "Haga click en los postes para moverse por el lobby.",
   "chat.welcome.point.4": "Entra en los portales para unirte a los equipos.",
   "chat.welcome.point.5": "¡Y sobre todo, diviértete! %s",
-  "lobby.brought_by": "Presentado por:"
+  "lobby.brought_by": "Presentado por:",
+  "credits.game_developer": "Desarrollador del juego",
+  "credits.producer": "Productor",
+  "credits.builder": "Constructor",
+  "credits.level_designer": "Diseñador de Niveles",
+  "credits.trailer_director": "Director del Tráiler",
+  "credits.logo_designer": "Diseñador del Logo",
+  "credits.translators": "Traductores",
+  "credits.socials": "Click para visitar las redes sociales:",
+  "credits.zeronia": "¡Mantente al día de nuestros proyectos!",
+  "credits.discord": "¡Únete a nuestra comunidad de Discord ahora!"
 }

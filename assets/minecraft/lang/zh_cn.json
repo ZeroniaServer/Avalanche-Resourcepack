@@ -354,5 +354,15 @@
   "chat.welcome.point.3": "点击柱子在大厅四周移动.",
   "chat.welcome.point.4": "走入传送门以加入队伍.",
   "chat.welcome.point.5": "最重要的是, 玩的开心! %s",
-  "lobby.brought_by": "本地图由:"
+  "lobby.brought_by": "本地图由:",
+  "credits.game_developer": "游戏开发者",
+  "credits.producer": "监制",
+  "credits.builder": "建筑",
+  "credits.level_designer": "关卡设计",
+  "credits.trailer_director": "预告片导演",
+  "credits.logo_designer": "Logo设计",
+  "credits.translators": "翻译人员",
+  "credits.socials": "点击这里查看社交活动:",
+  "credits.zeronia": "与我们的项目保持同步!",
+  "credits.discord": "现在加入我们 Discord 社区吧!"
 }

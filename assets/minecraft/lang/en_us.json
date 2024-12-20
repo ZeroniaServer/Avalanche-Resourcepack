@@ -375,5 +375,15 @@
   "chat.welcome.point.3": "Click on poles to move around the lobby.",
   "chat.welcome.point.4": "Walk into portals to join teams.",
   "chat.welcome.point.5": "And most of all, have fun! %s",
-  "lobby.brought_by": "Brought to you by:"
+  "lobby.brought_by": "Brought to you by:",
+  "credits.game_developer": "Game Developer",
+  "credits.producer": "Producer",
+  "credits.builder": "Builder",
+  "credits.level_designer": "Level Designer",
+  "credits.trailer_director": "Trailer Director",
+  "credits.logo_designer": "Logo Designer",
+  "credits.translators": "Translators",
+  "credits.socials": "Click to visit socials:",
+  "credits.zeronia": "Stay up to date with our projects!",
+  "credits.discord": "Join our Discord community today!"
 }
