@@ -14,7 +14,11 @@ function lobby:items
 spawnpoint @s -65 52 -65
 tp @s @s
 execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData matches -1 run tp @s -65 52 -108 0 0
-execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData matches 0.. run tp @s -65 52 -108 180 0
+execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData matches 0.. run tp @s[tag=!WasRed,tag=!WasGreen] -65 52 -108 180 0
+execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData matches 0.. run tp @s[tag=WasRed] -40 50 -151 -90 0
+execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData matches 0.. run tp @s[tag=WasGreen] -85 54 -149 90 0
+tag @s remove WasRed
+tag @s remove WasGreen
 execute if score @s leavecheck = $curr leavecheck run tellraw @s[tag=inParkour] [{"translate":"parkour.left_canceled","color":"red"}]
 tag @s[tag=inParkour] remove resettimeonce
 execute as @s[tag=inParkour] run function lobby:parkour/updatejumps
@@ -33,6 +37,7 @@ tag @s remove gotTheMemo
 tag @s add SilentRespawn
 scoreboard players set @s playerHP 20
 attribute @s minecraft:block_interaction_range base set 4.5
+execute if score @s leavecheck = $curr leavecheck run function lobby:settings/announce with storage lobby:customizer
 scoreboard players operation @s leavecheck = $curr leavecheck
 scoreboard players operation @s gameID = $current gameID
 scoreboard players reset @s HitmarkerTimer

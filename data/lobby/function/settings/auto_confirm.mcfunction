@@ -22,8 +22,6 @@ scoreboard players set $GreenReady CmdData 0
 scoreboard players set $GreenPoints CmdData 0
 scoreboard players set $RedPoints CmdData 0
 
-function lobby:settings/announce with storage lobby:customizer
-
 fill -56 53 -91 -56 54 -89 air
 
 function bossbars:get_points
