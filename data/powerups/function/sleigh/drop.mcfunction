@@ -64,5 +64,4 @@ $loot spawn ~ ~0.01 ~ loot {\
         }\
     ]\
 }
-execute as @e[type=item] if items entity @s contents ghast_spawn_egg[!custom_data~{NoDrop:1b}] run tag @s add SleighItem
-execute as @e[type=item,tag=SleighItem] run item modify entity @s contents {function:"set_custom_data",tag:{NoDrop:1b}}
+execute as @e[type=item] if items entity @s contents ghast_spawn_egg[!custom_data~{NoDrop:1b}] run function powerups:sleigh/resetitem
