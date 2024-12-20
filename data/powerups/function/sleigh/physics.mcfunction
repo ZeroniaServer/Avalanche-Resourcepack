@@ -7,6 +7,7 @@ scoreboard players add @s vehicle.dz 0
 
 ## ran as the vehicle base
 execute unless predicate game:in_air run scoreboard players set @s vehicle.friction 70
+execute if predicate game:on_ground run scoreboard players set @s vehicle.friction 70
 execute if predicate game:on_ice run scoreboard players operation @s vehicle.friction /= #2 constant
 execute if predicate game:in_air unless predicate game:on_ground run scoreboard players set @s vehicle.friction 0
 execute unless score @s vehicle.friction matches 0 run function powerups:sleigh/friction
