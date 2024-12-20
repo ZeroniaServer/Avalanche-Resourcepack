@@ -288,8 +288,6 @@ summon text_display -36 50.35 -151 {Tags:["LobbyText"],text:'["",{"text":" "},{"
 summon text_display -121.15 46 -209 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.leave_game","color":"dark_blue"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
 summon text_display -3.85 46 -233 {Tags:["LobbyText"],text:'["",{"text":" "},{"translate":"lobby.leave_game","color":"dark_blue"},{"text":" "}]',transformation:{scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f],left_rotation:[0f,-1f,0f,1f],translation:[0f,0f,0f]},background:-3158065,shadow:0b,see_through:0b,alignment:"center"}
 
-summon text_display -59 58 -90 {shadow:1b,Tags:["sboxtitle","LobbyText"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[2.5f,2.5f,2.5f]},text:'{"color":"aqua","translate":"chat.settings_box","shadow_color":[0.5,0,0.5,1]}',Rotation:[90f,0f],"alignment":"center"}
-
 #> Base campfires
 kill @e[type=marker,tag=BaseCampfire]
 summon marker -114 46 -210 {Tags:["BaseCampfire","Green"]}
