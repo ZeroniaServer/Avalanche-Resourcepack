@@ -60,7 +60,5 @@ execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $Transla
 execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 2 at @s run particle dust{color:[0.015,0.521,0.690],scale:1.0} ~2 ~1.5 ~-2.0 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
 
 execute if score @s[tag=Credit1,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust{color:[0.815,0.0,0.0],scale:1.0} ~-2 ~1.5 ~-2.0 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust{color:[1.0,1.0,1.0],scale:1.0} ~ ~1.5 ~-2.0 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust{color:[1.0,0.498,0.749],scale:1.0} ~ ~1.5 ~-2.0 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
 execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust{color:[1.0,1.0,1.0],scale:1.0} ~2 ~1.5 ~-2.0 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-
-
