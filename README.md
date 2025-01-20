@@ -10,5 +10,4 @@ Resource pack for Snowy Skirmish 2: Avalanche. Made by Zeronia.
 - [AmberW's Tiny Emoji Font](https://github.com/AmberWat/TinyEmojiFontResource)
 - [PuckiSilver's NoShadow](https://github.com/PuckiSilver/NoShadow/)
 - [Ts's Move Hearts Shader](https://github.com/McTsts/mc-core-shaders/tree/main/move%20hearts) (thanks to Ts for additional support!)
-- [BalintCsala](https://github.com/BalintCsala) for water mask shader support
 - [Zeronia Translators](https://crowdin.com/project/zeronia)
