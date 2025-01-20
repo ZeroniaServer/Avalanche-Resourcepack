@@ -14,8 +14,8 @@ execute on passengers rotated as @s[type=minecart] unless score #bool math match
 # check if occupied
 scoreboard players set $occupied CmdData 0
 execute on passengers on passengers if entity @s[type=player] run scoreboard players set $occupied CmdData 1
-execute if score $occupied CmdData matches 1 unless entity @s[tag=Occupied] on passengers on passengers if entity @s[type=oak_boat] run function powerups:sleigh/occupy
-execute if score $occupied CmdData matches 0 if entity @s[tag=Occupied] on passengers on passengers if entity @s[type=oak_boat] on passengers run kill @s[tag=occupant]
+execute if score $occupied CmdData matches 1 unless entity @s[tag=Occupied] on passengers on passengers if entity @s[type=bamboo_raft] run function powerups:sleigh/occupy
+execute if score $occupied CmdData matches 0 if entity @s[tag=Occupied] on passengers on passengers if entity @s[type=bamboo_raft] on passengers run kill @s[tag=occupant]
 execute if score $occupied CmdData matches 1 run tag @s add Occupied
 execute if score $occupied CmdData matches 0 run tag @s[tag=Occupied] remove Occupied
 

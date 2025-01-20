@@ -14,7 +14,7 @@ execute if score #input math matches 1.. unless score .s wasd matches 1 on vehic
 execute if score .s wasd matches 1 on vehicle on vehicle run function powerups:sleigh/brake
 
 execute on vehicle rotated as @s on vehicle on passengers run rotate @s[type=item_display] ~ ~
-execute on vehicle rotated as @s on vehicle on passengers on passengers run rotate @s[type=oak_boat] ~ ~
+execute on vehicle rotated as @s on vehicle on passengers on passengers run rotate @s[type=bamboo_raft] ~ ~
 
 execute if predicate wasd:sneak run tag @s add SleighDismounted
 execute if predicate wasd:sneak at @s run tp @s ~ ~1 ~
