@@ -8,6 +8,7 @@ uniform mat4 ModelViewMat;
 uniform mat4 ProjMat;
 
 out vec2 texCoord0;
+out vec4 vertexColor;
 
 /*
  * Vertex Color utility function provided by Ts
@@ -36,4 +37,5 @@ void main() {
 	vec4 color = getVertexColor(Sampler0, gl_VertexID, texCoord0); // get the color of the vertex
 	if(color.a == 1.0/255.0) gl_Position = ProjMat * ModelViewMat * vec4(Position + vec3(0.0, -19.0, 0.0), 1.0); // the vertex renders a bossbar, offset it.
 	if(color.a == 2.0/255.0) gl_Position = ProjMat * ModelViewMat * vec4(Position + vec3(0.0, -38.0, 0.0), 1.0); // the vertex renders a bossbar, offset it.
+	vertexColor = Color;
 }
