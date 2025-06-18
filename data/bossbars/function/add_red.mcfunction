@@ -1,6 +1,6 @@
-bossbar add bar_r_main {"text":"\uE005","color":"#a8a000"}
-bossbar add bar_r_green {"text":"\uE007"}
-bossbar add bar_r_red {"text":"\uE008"}
+bossbar add bar_r_main {text:"\uE005",color:"#a8a000"}
+bossbar add bar_r_green {text:"\uE007"}
+bossbar add bar_r_red {text:"\uE008"}
 
 bossbar set bar_r_main color white
 bossbar set bar_r_green color blue

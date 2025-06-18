@@ -27,5 +27,5 @@ execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ #g
 execute as @e[type=interaction,tag=GiftboxInteraction] at @s if block ~ ~-1 ~ #game:air run kill
 execute as @e[type=shulker,tag=GiftboxShulker] at @s unless entity @e[type=item_display,tag=Giftbox,distance=..1] run function arenaclear:kill
 
-execute as @a[tag=!secretsanta] at @s if entity @e[type=area_effect_cloud,tag=elfsecret,distance=..6] run tellraw @s {"translate":"secret","color":"#7e50f3","bold":false,"with":[{"translate":"secret.found","color":"#af7aff","bold":true},{"text":"1/1000","color":"#af7aff","bold":true}]}
+execute as @a[tag=!secretsanta] at @s if entity @e[type=area_effect_cloud,tag=elfsecret,distance=..6] run tellraw @s {translate:"secret",color:"#7e50f3",bold:false,with:[{translate:"secret.found",color:"#af7aff",bold:true},{text:"1/1000",color:"#af7aff",bold:true}]}
 execute as @a[tag=!secretsanta] at @s if entity @e[type=area_effect_cloud,tag=elfsecret,distance=..6] run tag @s add secretsanta

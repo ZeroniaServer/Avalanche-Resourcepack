@@ -13,6 +13,6 @@ scoreboard players operation #healthdec playerHP %= 2 const
 execute store result storage game:data health int 0.5 run scoreboard players get #health playerHP
 execute if score #healthdec playerHP matches 1 run data modify storage game:data healthdec set value ".5"
 execute if score #healthdec playerHP matches 0 run data modify storage game:data healthdec set value ".0"
-execute if score #health playerHP matches 1.. run data modify storage game:data healthicon set value '\\uE010'
-execute if score #health playerHP matches 0 run data modify storage game:data healthicon set value '\\uE011'
+execute if score #health playerHP matches 1.. run data modify storage game:data healthicon set value '\uE010'
+execute if score #health playerHP matches 0 run data modify storage game:data healthicon set value '\uE011'
 function player:set_belowname with storage game:data

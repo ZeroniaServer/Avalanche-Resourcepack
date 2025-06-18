@@ -14,7 +14,7 @@ tag @s remove SnowMark
 scoreboard players add @s[tag=!Knockout,scores={playerHP=1..}] playerHP 9
 scoreboard players set @s[tag=Knockout] playerHP 4
 execute if entity @s[tag=Knockout] run function inventory:load
-execute if entity @s[tag=Knockout] run tellraw @a {"translate":"revive.hotchoco","color":"dark_aqua","with":[{"selector":"@s"}]}
+execute if entity @s[tag=Knockout] run tellraw @a {translate:"revive.hotchoco",color:"dark_aqua",with:[{selector:"@s"}]}
 
 scoreboard players set #replaceslot CmdData 0
 execute if score #replaceslot CmdData matches 0 if items entity @s weapon.offhand diamond_hoe[minecraft:custom_data~{HotChoco:1b}] unless items entity @s weapon.mainhand diamond_hoe[minecraft:custom_data~{HotChoco:1b}] run scoreboard players set #replaceslot CmdData 1

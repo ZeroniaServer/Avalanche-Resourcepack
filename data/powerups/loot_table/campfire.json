@@ -21,17 +21,103 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:item_name": "{\"translate\": \"powerup.campfire.name\",\"color\":\"dark_aqua\"}",
+                        "minecraft:item_name": {
+                            "translate": "powerup.campfire.name",
+                            "color": "dark_aqua"
+                        },
                         "minecraft:lore": [
-                            "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.heal.1\",\"italic\":false,\"color\":\"light_purple\"}]",
-                            "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.heal.2\",\"italic\":false,\"color\":\"light_purple\"}]",
-                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
-                            "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
-                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]",
-                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.2\",\"italic\":false,\"color\":\"gold\"}]"
+                            [
+                                {
+                                    "translate": ":heart:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.campfire.effect.heal.1",
+                                    "italic": false,
+                                    "color": "light_purple"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":heart:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.campfire.effect.heal.2",
+                                    "italic": false,
+                                    "color": "light_purple"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.campfire.effect.support.1",
+                                    "italic": false,
+                                    "color": "blue"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":crossed_swords:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.campfire.effect.damage.1",
+                                    "italic": false,
+                                    "color": "red"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":hourglass:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.campfire.effect.temporary.1",
+                                    "italic": false,
+                                    "color": "gold"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":hourglass:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.campfire.effect.temporary.2",
+                                    "italic": false,
+                                    "color": "gold"
+                                }
+                            ]
                         ],
                         "minecraft:item_model": "minecraft:weapons/campfire_red",
-                        "minecraft:hide_additional_tooltip": {},
                         "minecraft:custom_data": "{NoDrop:1b,Campfire:1b}",
                         "minecraft:entity_data": {
                             "id": "minecraft:marker",
@@ -44,20 +130,16 @@
                             }
                         },
                         "minecraft:can_place_on": {
-                            "predicates": [
-                                {
-                                    "blocks": "#powerups:placeable"
-                                }
-                            ],
-                            "show_in_tooltip": false
+                            "blocks": "#powerups:placeable"
                         },
-                        "can_break": {
-                            "predicates": [
-                                {
-                                    "blocks": "minecraft:target"
-                                }
-                            ],
-                            "show_in_tooltip": false
+                        "minecraft:can_break": {
+                            "blocks": "minecraft:target"
+                        },
+                        "minecraft:tooltip_display": {
+                            "hidden_components": [
+                                "minecraft:can_place_on",
+                                "minecraft:can_break"
+                            ]
                         }
                     }
                 },
@@ -100,17 +182,103 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:item_name": "{\"translate\": \"powerup.campfire.name\",\"color\":\"dark_aqua\"}",
+                        "minecraft:item_name": {
+                            "translate": "powerup.campfire.name",
+                            "color": "dark_aqua"
+                        },
                         "minecraft:lore": [
-                            "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.heal.1\",\"italic\":false,\"color\":\"light_purple\"}]",
-                            "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.heal.2\",\"italic\":false,\"color\":\"light_purple\"}]",
-                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
-                            "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
-                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]",
-                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.campfire.effect.temporary.2\",\"italic\":false,\"color\":\"gold\"}]"
+                            [
+                                {
+                                    "translate": ":heart:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.campfire.effect.heal.1",
+                                    "italic": false,
+                                    "color": "light_purple"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":heart:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.campfire.effect.heal.2",
+                                    "italic": false,
+                                    "color": "light_purple"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.campfire.effect.support.1",
+                                    "italic": false,
+                                    "color": "blue"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":crossed_swords:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.campfire.effect.damage.1",
+                                    "italic": false,
+                                    "color": "red"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":hourglass:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.campfire.effect.temporary.1",
+                                    "italic": false,
+                                    "color": "gold"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":hourglass:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.campfire.effect.temporary.2",
+                                    "italic": false,
+                                    "color": "gold"
+                                }
+                            ]
                         ],
                         "minecraft:item_model": "minecraft:weapons/campfire_green",
-                        "minecraft:hide_additional_tooltip": {},
                         "minecraft:custom_data": "{NoDrop:1b,Campfire:1b}",
                         "minecraft:entity_data": {
                             "id": "minecraft:marker",
@@ -123,20 +291,16 @@
                             }
                         },
                         "minecraft:can_place_on": {
-                            "predicates": [
-                                {
-                                    "blocks": "#powerups:placeable"
-                                }
-                            ],
-                            "show_in_tooltip": false
+                            "blocks": "#powerups:placeable"
                         },
-                        "can_break": {
-                            "predicates": [
-                                {
-                                    "blocks": "minecraft:target"
-                                }
-                            ],
-                            "show_in_tooltip": false
+                        "minecraft:can_break": {
+                            "blocks": "minecraft:target"
+                        },
+                        "minecraft:tooltip_display": {
+                            "hidden_components": [
+                                "minecraft:can_place_on",
+                                "minecraft:can_break"
+                            ]
                         }
                     }
                 },

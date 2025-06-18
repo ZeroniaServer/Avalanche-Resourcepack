@@ -12,32 +12,119 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:custom_name": "[{\"translate\":\"powerup.snowglobe.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+                        "minecraft:custom_name": [
+                            {
+                                "translate": "powerup.snowglobe.name",
+                                "italic": false,
+                                "color": "dark_aqua"
+                            }
+                        ],
                         "minecraft:lore": [
-                            "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowglobe.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
-                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowglobe.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
-                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowglobe.effect.support.2\",\"italic\":false,\"color\":\"blue\"}]",
-                            "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowglobe.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]",
-                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowglobe.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]",
-                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.snowglobe.effect.temporary.2\",\"italic\":false,\"color\":\"gold\"}]"
+                            [
+                                {
+                                    "translate": ":crossed_swords:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.snowglobe.effect.damage.1",
+                                    "italic": false,
+                                    "color": "red"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.snowglobe.effect.support.1",
+                                    "italic": false,
+                                    "color": "blue"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.snowglobe.effect.support.2",
+                                    "italic": false,
+                                    "color": "blue"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":star:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.snowglobe.effect.special.1",
+                                    "italic": false,
+                                    "color": "yellow"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":hourglass:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.snowglobe.effect.temporary.1",
+                                    "italic": false,
+                                    "color": "gold"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":hourglass:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.snowglobe.effect.temporary.2",
+                                    "italic": false,
+                                    "color": "gold"
+                                }
+                            ]
                         ],
                         "minecraft:item_model": "minecraft:weapons/snowglobe",
                         "minecraft:custom_data": "{NoDrop:1b}",
-                        "minecraft:attribute_modifiers": {
-                            "modifiers": [],
-                            "show_in_tooltip": false
-                        },
                         "minecraft:use_cooldown": {
                             "seconds": 6,
                             "cooldown_group": "snowglobe"
                         },
                         "can_break": {
-                            "predicates": [
-                                {
-                                    "blocks": "minecraft:target"
-                                }
-                            ],
-                            "show_in_tooltip": false
+                            "blocks": "minecraft:target"
+                        },
+                        "minecraft:tooltip_display": {
+                            "hidden_components": [
+                                "minecraft:attribute_modifiers",
+                                "minecraft:can_break"
+                            ]
                         }
                     }
                 }

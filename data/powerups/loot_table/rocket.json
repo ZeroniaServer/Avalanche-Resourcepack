@@ -12,30 +12,76 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:custom_name": "[{\"translate\":\"powerup.rocket.name\",\"italic\":false,\"color\":\"gold\"}]",
+                        "minecraft:custom_name": [
+                            {
+                                "translate": "powerup.rocket.name",
+                                "italic": false,
+                                "color": "gold"
+                            }
+                        ],
                         "minecraft:lore": [
-                            "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.rocket.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]",
-                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.rocket.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
-                            "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.rocket.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]"
+                            [
+                                {
+                                    "translate": ":star:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.rocket.effect.special.1",
+                                    "italic": false,
+                                    "color": "yellow"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.rocket.effect.support.1",
+                                    "italic": false,
+                                    "color": "blue"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":crossed_swords:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.rocket.effect.damage.1",
+                                    "italic": false,
+                                    "color": "red"
+                                }
+                            ]
                         ],
                         "minecraft:custom_data": "{NoDrop:1b,Rocket:1b}",
                         "minecraft:enchantment_glint_override": false,
-                        "minecraft:attribute_modifiers": {
-                            "modifiers": [],
-                            "show_in_tooltip": false
-                        },
+                        "minecraft:attribute_modifiers": [],
                         "minecraft:use_cooldown": {
                             "seconds": 1,
                             "cooldown_group": "rocket"
                         },
                         "minecraft:max_stack_size": 64,
                         "can_break": {
-                            "predicates": [
-                                {
-                                    "blocks": "minecraft:target"
-                                }
-                            ],
-                            "show_in_tooltip": false
+                            "blocks": "minecraft:target"
+                        },
+                        "tooltip_display": {
+                            "hidden_components": [
+                                "attribute_modifiers",
+                                "can_break"
+                            ]
                         }
                     }
                 },

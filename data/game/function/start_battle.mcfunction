@@ -5,8 +5,8 @@ function game:removewall
 clear @a[team=!Lobby,team=!Spectator] #game:prep_items
 execute as @e[type=item] if items entity @s contents #game:prep_items run kill
 loot give @a[team=!Lobby,team=!Spectator] loot powerups:snowball
-title @a[team=!Lobby,team=!Spectator] title {"translate":"game.start.combat.top","color":"dark_aqua","underlined": true}
-title @a[team=!Lobby,team=!Spectator] subtitle {"translate":"game.start.combat.bottom","color":"aqua"}
+title @a[team=!Lobby,team=!Spectator] title {translate:"game.start.combat.top",color:"dark_aqua",underlined: true}
+title @a[team=!Lobby,team=!Spectator] subtitle {translate:"game.start.combat.bottom",color:"aqua"}
 
 team modify Lobby nametagVisibility never
 scoreboard objectives setdisplay below_name fireworkCount

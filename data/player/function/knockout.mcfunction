@@ -36,7 +36,7 @@ execute as @a[tag=Knockout,scores={knocktime=1}] at @s unless blocks ~ -64 ~ ~ ~
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s if predicate game:5050 run function powerups:giftbox/spawn
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s run particle block{block_state:"minecraft:snow"} ~ ~1.5 ~ 0.15 0.15 0.15 0.15 30
 execute as @a[tag=Knockout,scores={knocktime=1}] at @s run particle minecraft:snowflake ~ ~1.5 ~ 0.1 0.1 0.1 0.1 7
-execute as @a[tag=Knockout,scores={knocktime=1}] at @s run item replace entity @s armor.head with snow_block[minecraft:equippable={slot:head,camera_overlay:"misc/powder_snow_outline"},enchantment_glint_override=false,enchantments={levels:{binding_curse:1}}]
+execute as @a[tag=Knockout,scores={knocktime=1}] at @s run item replace entity @s armor.head with snow_block[minecraft:equippable={slot:head,camera_overlay:"misc/powder_snow_outline"},enchantment_glint_override=false,enchantments={binding_curse:1},tooltip_display={hidden_components:[enchantments]}]
 
 execute as @a[tag=Knockout,scores={knocktime=40}] run damage @s 1 freeze
 execute as @a[tag=Knockout,scores={knocktime=40}] at @s run scoreboard players remove @s playerHP 1

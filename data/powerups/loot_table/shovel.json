@@ -12,23 +12,49 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:custom_name": "[{\"translate\":\"powerup.shovel.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
-                        "minecraft:lore": [
-                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.shovel.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
-                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.shovel.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
+                        "minecraft:custom_name": [
+                            {
+                                "translate": "powerup.shovel.name",
+                                "italic": false,
+                                "color": "dark_aqua"
+                            }
                         ],
-                        "minecraft:custom_data": "{NoDrop:1b}",
-                        "minecraft:attribute_modifiers": {
-                            "modifiers": [],
-                            "show_in_tooltip": false
-                        },
-                        "can_break": {
-                            "predicates": [
+                        "minecraft:lore": [
+                            [
                                 {
-                                    "blocks": "minecraft:target"
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.shovel.effect.support.1",
+                                    "italic": false,
+                                    "color": "blue"
                                 }
                             ],
-                            "show_in_tooltip": false
+                            [
+                                {
+                                    "translate": ":hourglass:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.shovel.effect.temporary.1",
+                                    "italic": false,
+                                    "color": "gold"
+                                }
+                            ]
+                        ],
+                        "minecraft:custom_data": "{NoDrop:1b}",
+                        "minecraft:attribute_modifiers": [],
+                        "can_break": {
+                            "blocks": "minecraft:target"
                         },
                         "tool": {
                             "rules": [
@@ -39,8 +65,13 @@
                                 }
                             ]
                         },
-                        "unbreakable": {
-                            "show_in_tooltip": false
+                        "unbreakable": {},
+                        "tooltip_display": {
+                            "hidden_components": [
+                                "can_break",
+                                "attribute_modifiers",
+                                "unbreakable"
+                            ]
                         }
                     }
                 }

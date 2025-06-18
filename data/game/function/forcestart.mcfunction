@@ -31,7 +31,7 @@ bossbar set bar_lobby players @a[team=Lobby]
 bossbar set bar_lobby_hearts players @a[team=Lobby,gamemode=!spectator,gamemode=!creative]
 bossbar set bar_lobby value 0
 bossbar set bar_lobby style notched_12
-bossbar set bar_lobby name {"translate":"lobby.in_progress","color":"green"}
+bossbar set bar_lobby name {translate:"lobby.in_progress",color:"green"}
 
 function game:start_prep
 

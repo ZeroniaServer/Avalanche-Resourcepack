@@ -11,7 +11,7 @@ bossbar set bar_ready_r value 0
 bossbar set bar_ready_g value 0
 bossbar set bar_lobby style notched_10
 bossbar set bar_lobby_hearts players @a[team=!Spectator,gamemode=!spectator,gamemode=!creative]
-bossbar set bar_lobby_hearts name [{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE01A\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]}]
+bossbar set bar_lobby_hearts name [{text:"\uE01A\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE01A\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE01A\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE01A\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE01A\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE01A\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE01A\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE01A\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE01A\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE01A\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]}]
 
 #> Cancel countdown conditions
 execute unless score $forcecountdown CmdData matches 1 if score $Countdown CmdData matches 2.. unless entity @a[team=Red] run return run function lobby:cancelcountdown
@@ -32,8 +32,8 @@ execute if score $CountSec CmdData matches 10 if score $Countdown CmdData matche
 execute if score $CountSec CmdData matches 15 if score $Countdown CmdData matches 2 as @a at @s run playsound block.note_block.chime master @s ~ ~ ~ 1 1.7
 execute if score $CountSec CmdData matches 20 if score $Countdown CmdData matches 2 as @a at @s run playsound block.note_block.chime master @s ~ ~ ~ 1 1.8
 
-execute if score $Countdown CmdData matches 2.. run bossbar set bar_lobby name {"translate":"lobby.countdown.seconds","color":"aqua","with":[{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"white"}]}
-execute if score $Countdown CmdData matches 1 run bossbar set bar_lobby name {"translate":"lobby.countdown.second","color":"aqua","with":[{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"white"}]}
+execute if score $Countdown CmdData matches 2.. run bossbar set bar_lobby name {translate:"lobby.countdown.seconds",color:"aqua",with:[{score:{name:"$Countdown",objective:"CmdData"},bold:true,color:"white"}]}
+execute if score $Countdown CmdData matches 1 run bossbar set bar_lobby name {translate:"lobby.countdown.second",color:"aqua",with:[{score:{name:"$Countdown",objective:"CmdData"},bold:true,color:"white"}]}
 
 execute if score $CountSec CmdData matches 5 if score $Countdown CmdData matches 1 run function game:forcestart
 execute if score $CountSec CmdData matches 20 if score $Countdown CmdData matches 1 run function lobby:unforcecountdown

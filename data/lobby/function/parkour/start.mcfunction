@@ -1,6 +1,6 @@
-item replace entity @s hotbar.3 with carrot_on_a_stick[unbreakable={show_in_tooltip:0b},custom_name='{"translate":"parkour.restart","color":"green","bold":true,"italic":false}',item_model="minecraft:parkour/restart",custom_data={Restart:1b,NoDrop:1b}]
-item replace entity @s hotbar.5 with carrot_on_a_stick[unbreakable={show_in_tooltip:0b},custom_name='{"translate":"parkour.quit","color":"red","bold":true,"italic":false}',item_model="minecraft:parkour/quit",custom_data={Quit:1b,NoDrop:1b}]
-tellraw @s [{"translate":"parkour.begin","color":"dark_green","bold":true}]
+item replace entity @s hotbar.3 with carrot_on_a_stick[unbreakable={},custom_name={translate:"parkour.restart",color:"green",bold:true,italic:false},item_model="minecraft:parkour/restart",custom_data={Restart:1b,NoDrop:1b},tooltip_display={hidden_components:["unbreakable"]}]
+item replace entity @s hotbar.5 with carrot_on_a_stick[unbreakable={},custom_name={translate:"parkour.quit",color:"red",bold:true,italic:false},item_model="minecraft:parkour/quit",custom_data={Quit:1b,NoDrop:1b},tooltip_display={hidden_components:["unbreakable"]}]
+tellraw @s [{translate:"parkour.begin",color:"dark_green",bold:true}]
 execute store result score #book CmdData run clear @s written_book 0
 execute unless score #book CmdData matches 1 run function lobby:items
 playsound parkourstart master @s ~ ~ ~ 1 1.3

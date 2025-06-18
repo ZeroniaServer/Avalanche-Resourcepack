@@ -19,7 +19,7 @@ execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData ma
 execute if score @s leavecheck = $curr leavecheck if score $gamestate CmdData matches 0.. run tp @s[tag=WasGreen] -85 54 -149 90 0
 tag @s remove WasRed
 tag @s remove WasGreen
-execute if score @s leavecheck = $curr leavecheck run tellraw @s[tag=inParkour] [{"translate":"parkour.left_canceled","color":"red"}]
+execute if score @s leavecheck = $curr leavecheck run tellraw @s[tag=inParkour] [{translate:"parkour.left_canceled",color:"red"}]
 tag @s[tag=inParkour] remove resettimeonce
 execute as @s[tag=inParkour] run function lobby:parkour/updatejumps
 tag @s[tag=inParkour] remove inParkour
@@ -30,8 +30,8 @@ title @s subtitle ""
 execute unless score @s leavecheck = $curr leavecheck run function lobby:welcome
 
 #> Notify players about resource pack
-execute if score $gamestate CmdData matches 0..3 run tellraw @s ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{"translate":"ver1.0.1","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"ReadyToPlay","storage":"avalanche:messages","interpret":true}]}]}]
-execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=!gotTheMemo] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{"translate":"ver1.0.1","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"SettingsBox","storage":"avalanche:messages","interpret":true,"clickEvent":{"action":"run_command","value":"/trigger settings"}}]}]}]
+execute if score $gamestate CmdData matches 0..3 run tellraw @s ["",{translate:"%1$s",with:[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{translate:"ver1.0.1","fallback":"%1$s",with:[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"ReadyToPlay","storage":"avalanche:messages","interpret":true}]}]}]
+execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=!gotTheMemo] ["",{translate:"%1$s",with:[{"nbt":"ResourcePack","storage":"avalanche:messages","interpret":true},{translate:"ver1.0.1","fallback":"%1$s",with:[{"nbt":"OutdatedPack","storage":"avalanche:messages","interpret":true},{"nbt":"SettingsBox","storage":"avalanche:messages","interpret":true,click_event:{action:"run_command",command:"/trigger settings"}}]}]}]
 tag @s remove gotTheMemo
 tag @s add SilentRespawn
 scoreboard players set @s playerHP 20

@@ -1,6 +1,6 @@
 function game:weakpoint/remove_all
-title @a[team=!Lobby,team=!Spectator] title {"translate":"game.start.preparation.top","color":"dark_aqua","underlined": true}
-title @a[team=!Lobby,team=!Spectator] subtitle {"translate":"game.start.preparation.bottom","color":"aqua"}
+title @a[team=!Lobby,team=!Spectator] title {translate:"game.start.preparation.top",color:"dark_aqua",underlined: true}
+title @a[team=!Lobby,team=!Spectator] subtitle {translate:"game.start.preparation.bottom",color:"aqua"}
 
 scoreboard players set $gamestate CmdData 2
 scoreboard players operation $prepticks CmdData = $PrepSeconds CmdData

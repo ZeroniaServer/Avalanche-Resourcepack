@@ -14,7 +14,7 @@ execute if entity @s[tag=!hitbox,tag=!GiftboxInteraction,tag=!Knockout,tag=!IFra
 execute if entity @s[type=player,tag=!Knockout,tag=!IFrame] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run scoreboard players add @s playerDamage 5
 execute if entity @s[type=player,tag=!Knockout,tag=!IFrame,tag=SnowMark] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run scoreboard players add @s playerDamage 3
 execute if entity @s[type=player,tag=!Knockout,tag=!IFrame] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] if score @s playerDamage >= @s playerHP run tag @s add KOmessage
-execute unless score $gamestate CmdData matches 4 if entity @s[tag=KOmessage,tag=!KOmessaged] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run tellraw @a [{"translate":"knockout.attack.direct","color":"dark_aqua","with":[{"selector":"@s"},{"selector":"@a[tag=hitter,limit=1]"}]}]
+execute unless score $gamestate CmdData matches 4 if entity @s[tag=KOmessage,tag=!KOmessaged] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run tellraw @a [{translate:"knockout.attack.direct",color:"dark_aqua",with:[{selector:"@s"},{selector:"@a[tag=hitter,limit=1]"}]}]
 execute if entity @s[tag=KOmessage,tag=!KOmessaged] run scoreboard players add @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] MVPkill 1
 execute if entity @s[type=player,tag=!Knockout] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] if score @s playerDamage >= @s playerHP run tag @s add KOmessaged
 tag @s remove KOmessage

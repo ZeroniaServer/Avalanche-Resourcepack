@@ -14,7 +14,7 @@ bossbar set bar_lobby_g players
 # bossbar set bar_ready_r players @a
 # bossbar set bar_ready_g players @a
 # bossbar set bar_lobby_hearts players @a[team=!Spectator,gamemode=!spectator,gamemode=!creative]
-execute if score $gamestate CmdData matches 0 run bossbar set bar_lobby_hearts name [{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]}]
+execute if score $gamestate CmdData matches 0 run bossbar set bar_lobby_hearts name [{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]}]
 
 scoreboard players set $RedReady CmdData 0
 scoreboard players set $GreenReady CmdData 0
@@ -45,7 +45,7 @@ function lobby:settings/refreshsigns with storage lobby:customizer
 
 function lobby:readyteams/refreshsigns
 
-setblock -56 53 -90 warped_wall_sign[facing=west]{front_text:{messages:['{"text":""}','{"translate":"customizer.edit","color":"red","bold":true}','""','{"text":"","clickEvent":{"action":"run_command","value":"/trigger cancelMatch set 1"}}']}}
+setblock -56 53 -90 warped_wall_sign[facing=west]{front_text:{messages:[{text:""},{translate:"customizer.edit",color:"red",bold:true},'""',{text:"",click_event:{action:"run_command",command:"/trigger cancelMatch set 1"}}]}}
 scoreboard players set $mcancelcount CmdData 0
 
 execute as @a run trigger settings set 0

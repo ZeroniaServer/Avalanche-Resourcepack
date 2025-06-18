@@ -12,31 +12,58 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:custom_name": "[{\"translate\":\"powerup.barricade.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+                        "minecraft:custom_name": [
+                            {
+                                "translate": "powerup.barricade.name",
+                                "italic": false,
+                                "color": "dark_aqua"
+                            }
+                        ],
                         "minecraft:lore": [
-                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.barricade.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
-                            "[{\"translate\":\":hourglass:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.barricade.effect.temporary.1\",\"italic\":false,\"color\":\"gold\"}]"
+                            [
+                                {
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.barricade.effect.support.1",
+                                    "italic": false,
+                                    "color": "blue"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":hourglass:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.barricade.effect.temporary.1",
+                                    "italic": false,
+                                    "color": "gold"
+                                }
+                            ]
                         ],
                         "minecraft:custom_data": "{NoDrop:1b}",
-                        "minecraft:attribute_modifiers": {
-                            "modifiers": [],
-                            "show_in_tooltip": false
-                        },
                         "minecraft:can_place_on": {
-                            "predicates": [
-                                {
-                                    "blocks": "#powerups:placeable"
-                                }
-                            ],
-                            "show_in_tooltip": false
+                            "blocks": "#powerups:placeable"
                         },
                         "can_break": {
-                            "predicates": [
-                                {
-                                    "blocks": "minecraft:target"
-                                }
-                            ],
-                            "show_in_tooltip": false
+                            "blocks": "minecraft:target"
+                        },
+                        "tooltip_display": {
+                            "hidden_components": [
+                                "attribute_modifiers",
+                                "can_place_on",
+                                "can_break"
+                            ]
                         }
                     }
                 },

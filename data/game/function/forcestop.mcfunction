@@ -1,4 +1,4 @@
-execute if score $mcancel CmdData matches 1 if entity @s[type=player] run tellraw @a {"translate":"lobby.customizer.editing","color":"#f089a8","with":[{"selector":"@s","color":"blue","bold":true}]}
+execute if score $mcancel CmdData matches 1 if entity @s[type=player] run tellraw @a {translate:"lobby.customizer.editing",color:"#f089a8",with:[{selector:"@s",color:"blue",bold:true}]}
 
 fill -90 53 -148 -90 55 -150 minecraft:light_gray_stained_glass
 fill -35 51 -150 -35 49 -152 light_gray_stained_glass

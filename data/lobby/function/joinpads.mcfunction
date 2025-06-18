@@ -49,8 +49,8 @@ execute as @a[tag=JoinGreen] run attribute @s knockback_resistance base set 0.25
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.chest loot game:chestplate
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.legs loot game:leggings
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.feet loot game:boots
-execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tellraw @a {"translate":"lobby.joined","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"lobby.joined.green","color":"green"}]}
-execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2..3 run tellraw @a {"translate":"lobby.joined.late","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"lobby.joined.green","color":"green"}]}
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tellraw @a {translate:"lobby.joined",color:"dark_aqua",with:[{selector:"@s",color:"blue"},{translate:"lobby.joined.green",color:"green"}]}
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2..3 run tellraw @a {translate:"lobby.joined.late",color:"dark_aqua",with:[{selector:"@s",color:"blue"},{translate:"lobby.joined.green",color:"green"}]}
 
 execute as @a[tag=JoinGreen] run scoreboard players set @s fireworkCount 0
 tag @a[tag=JoinGreen] remove JoinGreen
@@ -80,8 +80,8 @@ execute as @a[tag=JoinRed] if score $gamestate CmdData matches 3 run loot give @
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.chest loot game:chestplate
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.legs loot game:leggings
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run loot replace entity @s armor.feet loot game:boots
-execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tellraw @a {"translate":"lobby.joined","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"lobby.joined.red","color":"red"}]}
-execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2..3 run tellraw @a {"translate":"lobby.joined.late","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"lobby.joined.red","color":"red"}]}
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tellraw @a {translate:"lobby.joined",color:"dark_aqua",with:[{selector:"@s",color:"blue"},{translate:"lobby.joined.red",color:"red"}]}
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2..3 run tellraw @a {translate:"lobby.joined.late",color:"dark_aqua",with:[{selector:"@s",color:"blue"},{translate:"lobby.joined.red",color:"red"}]}
 execute as @a[tag=JoinRed] run scoreboard players set @s fireworkCount 0
 tag @a[tag=JoinRed] remove JoinRed
 tag @a[tag=tryJoinRed,predicate=!lobby:joinpad_red] remove tryJoinRed
@@ -90,12 +90,12 @@ tag @a[tag=tryJoinRed,predicate=!lobby:joinpad_red] remove tryJoinRed
 scoreboard players enable @a[team=!Lobby] leavegame
 scoreboard players reset @a[team=Lobby] leavegame
 execute as @a[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveTeam
-execute as @a[tag=LeaveTeam,team=Green] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {"translate":"lobby.left_team","color":"dark_aqua","with":[{"selector":"@s","color":"green"}]}
-execute as @a[tag=LeaveTeam,team=Red] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {"translate":"lobby.left_team","color":"dark_aqua","with":[{"selector":"@s","color":"red"}]}
-execute as @a[tag=LeaveTeam,team=Spectator] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {"translate":"lobby.left_spectator","color":"dark_aqua","with":[{"selector":"@s","color":"blue"}]}
+execute as @a[tag=LeaveTeam,team=Green] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {translate:"lobby.left_team",color:"dark_aqua",with:[{selector:"@s",color:"green"}]}
+execute as @a[tag=LeaveTeam,team=Red] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {translate:"lobby.left_team",color:"dark_aqua",with:[{selector:"@s",color:"red"}]}
+execute as @a[tag=LeaveTeam,team=Spectator] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {translate:"lobby.left_spectator",color:"dark_aqua",with:[{selector:"@s",color:"blue"}]}
 execute as @a[tag=LeaveTeam,team=!] run function player:leave
 execute as @a[tag=LeaveTeam] run tp @s @s
-execute unless entity @a[team=Red] unless entity @a[team=Green] if loaded 0 0 0 if score $gamestate CmdData matches 2.. run tellraw @a ["\n",{"translate":"game.no_players","color":"red"},"\n"]
+execute unless entity @a[team=Red] unless entity @a[team=Green] if loaded 0 0 0 if score $gamestate CmdData matches 2.. run tellraw @a ["\n",{translate:"game.no_players",color:"red"},"\n"]
 execute unless entity @a[team=Red] unless entity @a[team=Green] if score $gamestate CmdData matches 2.. if loaded 0 0 0 run function game:forcestop
 execute as @a[tag=LeaveTeam] run gamemode adventure @s
 execute as @a[tag=LeaveTeam,tag=WasRed] if score $gamestate CmdData matches 0.. run tp @s -40 50 -151 -90 0
@@ -124,9 +124,9 @@ execute if score $gamestate CmdData matches 0..3 if score $InGreen CmdData >= $M
 execute if score $NoMidgameJoins CmdData matches 1 if score $gamestate CmdData matches 2..3 as @a[team=!Green,scores={joingreen=1..},tag=!tryJoinGreen] run function lobby:portals/green/full
 execute if score $gamestate CmdData matches 0..3 if score $InGreen CmdData > $InRed CmdData as @a[team=!Green,scores={joingreen=1..},tag=!tryJoinGreen] run function lobby:portals/green/imbalanced
 
-execute unless score $gamestate CmdData matches 0..3 run tellraw @a[scores={joingreen=1..}] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
-execute if score $gamestate CmdData matches 0..3 if score $InGreen CmdData = $InRed CmdData run tellraw @a[team=Red,scores={joingreen=1..}] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
-execute as @a[team=Green,scores={joingreen=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_joined","color":"red"}]
+execute unless score $gamestate CmdData matches 0..3 run tellraw @a[scores={joingreen=1..}] [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_join",color:"red"}]
+execute if score $gamestate CmdData matches 0..3 if score $InGreen CmdData = $InRed CmdData run tellraw @a[team=Red,scores={joingreen=1..}] [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_join",color:"red"}]
+execute as @a[team=Green,scores={joingreen=1..}] run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.already_joined",color:"red"}]
 
 scoreboard players reset @a[scores={joingreen=1..}] joingreen
 
@@ -142,9 +142,9 @@ execute if score $gamestate CmdData matches 0..3 if score $InRed CmdData >= $Max
 execute if score $NoMidgameJoins CmdData matches 1 if score $gamestate CmdData matches 2..3 as @a[team=!Red,scores={joinred=1..},tag=!tryJoinRed] run function lobby:portals/red/full
 execute if score $gamestate CmdData matches 0..3 if score $InRed CmdData > $InGreen CmdData as @a[team=!Red,scores={joinred=1..},tag=!tryJoinRed] run function lobby:portals/red/imbalanced
 
-execute unless score $gamestate CmdData matches 0..3 run tellraw @a[scores={joinred=1..}] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
-execute if score $gamestate CmdData matches 0..3 if score $InRed CmdData = $InGreen CmdData run tellraw @a[team=Green,scores={joinred=1..}] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
-execute as @a[team=Red,scores={joinred=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_joined","color":"red"}]
+execute unless score $gamestate CmdData matches 0..3 run tellraw @a[scores={joinred=1..}] [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_join",color:"red"}]
+execute if score $gamestate CmdData matches 0..3 if score $InRed CmdData = $InGreen CmdData run tellraw @a[team=Green,scores={joinred=1..}] [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_join",color:"red"}]
+execute as @a[team=Red,scores={joinred=1..}] run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.already_joined",color:"red"}]
 
 scoreboard players reset @a[scores={joinred=1..}] joinred
 
@@ -154,7 +154,7 @@ execute unless score $servermode CmdData matches 1 run trigger spectate set 0
 
 execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 4 run tag @a[team=!Spectator,scores={spectate=1..}] add WarpSpectate
 
-execute unless score $gamestate CmdData matches 0..3 as @a if score @s spectate matches 1.. run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_spectate","color":"red"}]
-execute as @a[team=Spectator,scores={spectate=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_spectating","color":"red"}]
+execute unless score $gamestate CmdData matches 0..3 as @a if score @s spectate matches 1.. run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_spectate",color:"red"}]
+execute as @a[team=Spectator,scores={spectate=1..}] run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.already_spectating",color:"red"}]
 
 scoreboard players reset @a[scores={spectate=1..}] spectate

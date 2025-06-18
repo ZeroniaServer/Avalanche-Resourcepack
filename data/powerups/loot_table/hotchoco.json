@@ -12,34 +12,84 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:custom_name": "[{\"translate\":\"powerup.hotchoco.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+                        "minecraft:custom_name": [
+                            {
+                                "translate": "powerup.hotchoco.name",
+                                "italic": false,
+                                "color": "dark_aqua"
+                            }
+                        ],
                         "minecraft:lore": [
-                            "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.hotchoco.effect.heal.1\",\"italic\":false,\"color\":\"light_purple\"}]",
-                            "[{\"translate\":\":heart:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.hotchoco.effect.heal.2\",\"italic\":false,\"color\":\"light_purple\"}]",
-                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.hotchoco.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]"
+                            [
+                                {
+                                    "translate": ":heart:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.hotchoco.effect.heal.1",
+                                    "italic": false,
+                                    "color": "light_purple"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":heart:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.hotchoco.effect.heal.2",
+                                    "italic": false,
+                                    "color": "light_purple"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.hotchoco.effect.support.1",
+                                    "italic": false,
+                                    "color": "blue"
+                                }
+                            ]
                         ],
                         "minecraft:item_model": "minecraft:weapons/hotchoco",
-                        "minecraft:attribute_modifiers": {
-                            "modifiers": [],
-                            "show_in_tooltip": false
-                        },
                         "minecraft:consumable": {
                             "consume_seconds": 1.25,
                             "animation": "toot_horn",
                             "sound": "entity.generic.drink",
                             "has_consume_particles": false
                         },
-                        "custom_data": {"HotChoco": 1, "NoDrop": 1},
+                        "custom_data": {
+                            "HotChoco": 1,
+                            "NoDrop": 1
+                        },
                         "max_stack_size": 64,
                         "!max_damage": {},
-                        "use_cooldown": {"seconds": 0.55, "cooldown_group": "hotchoco"},
+                        "use_cooldown": {
+                            "seconds": 0.55,
+                            "cooldown_group": "hotchoco"
+                        },
                         "can_break": {
-                            "predicates": [
-                                {
-                                    "blocks": "minecraft:target"
-                                }
-                            ],
-                            "show_in_tooltip": false
+                            "blocks": "minecraft:target"
+                        },
+                        "tooltip_display": {
+                            "hidden_components": [
+                                "can_break"
+                            ]
                         }
                     }
                 }

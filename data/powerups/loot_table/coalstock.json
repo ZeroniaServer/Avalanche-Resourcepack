@@ -12,28 +12,73 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:custom_name": "[{\"translate\":\"powerup.coalstock.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+                        "minecraft:custom_name": [
+                            {
+                                "translate": "powerup.coalstock.name",
+                                "italic": false,
+                                "color": "dark_aqua"
+                            }
+                        ],
                         "minecraft:lore": [
-                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.coalstock.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
-                            "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.coalstock.effect.support.2\",\"italic\":false,\"color\":\"blue\"}]","[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.coalstock.effect.support.3\",\"italic\":false,\"color\":\"blue\"}]"
+                            [
+                                {
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.coalstock.effect.support.1",
+                                    "italic": false,
+                                    "color": "blue"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.coalstock.effect.support.2",
+                                    "italic": false,
+                                    "color": "blue"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.coalstock.effect.support.3",
+                                    "italic": false,
+                                    "color": "blue"
+                                }
+                            ]
                         ],
                         "minecraft:item_model": "minecraft:weapons/coalstockings",
                         "minecraft:custom_data": "{NoDrop:1b}",
-                        "minecraft:attribute_modifiers": {
-                            "modifiers": [],
-                            "show_in_tooltip": false
-                        },
                         "minecraft:use_cooldown": {
                             "seconds": 2,
                             "cooldown_group": "coalstock"
                         },
                         "can_break": {
-                            "predicates": [
-                                {
-                                    "blocks": "minecraft:target"
-                                }
-                            ],
-                            "show_in_tooltip": false
+                            "blocks": "minecraft:target"
+                        },
+                        "tooltip_display": {
+                            "hidden_components": [
+                                "can_break"
+                            ]
                         }
                     }
                 }

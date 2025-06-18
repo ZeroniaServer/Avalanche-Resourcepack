@@ -1,7 +1,7 @@
 bossbar set bar_lobby players @a[team=Lobby]
 bossbar set bar_lobby value 0
 bossbar set bar_lobby style notched_12
-bossbar set bar_lobby name {"translate":"lobby.in_progress","color":"green"}
+bossbar set bar_lobby name {translate:"lobby.in_progress",color:"green"}
 
 scoreboard players add $gametime CmdData 1
 
@@ -77,7 +77,7 @@ execute as @a[team=!Lobby,team=!Spectator] at @s unless entity @s[predicate=!gam
 scoreboard players reset @a[tag=!inMountains,scores={mountaintime=1..}] mountaintime
 scoreboard players add @a[tag=inMountains] mountaintime 1
 execute as @a[tag=inMountains,scores={mountaintime=5}] run scoreboard players add @s[tag=!IFrame] playerDamage 2
-execute unless score $gamestate CmdData matches 4 as @a[tag=inMountains,scores={mountaintime=5},tag=!Knockout] if score @s playerDamage >= @s playerHP run tellraw @a [{"translate":"knockout.mountains","color":"dark_aqua","with":[{"selector":"@s"}]}]
+execute unless score $gamestate CmdData matches 4 as @a[tag=inMountains,scores={mountaintime=5},tag=!Knockout] if score @s playerDamage >= @s playerHP run tellraw @a [{translate:"knockout.mountains",color:"dark_aqua",with:[{selector:"@s"}]}]
 execute unless score $gamestate CmdData matches 4 as @a[tag=inMountains,tag=!Knockout,scores={mountaintime=5}] run damage @s 1 starve
 execute unless score $gamestate CmdData matches 4 run effect give @a[tag=inMountains,tag=!Knockout] slowness 1 3 true
 execute as @a[tag=inMountains,scores={mountaintime=10..}] run scoreboard players reset @s mountaintime

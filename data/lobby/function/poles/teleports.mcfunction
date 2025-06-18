@@ -23,7 +23,7 @@ execute as @a[tag=LobbyWarp] at @s run playsound playerwarp master @s ~ ~ ~ 0.4 
 tag @a[tag=LobbyWarp] remove LobbyWarp
 
 #> Spectate
-execute as @a[tag=WarpSpectate] run tellraw @a {"translate":"lobby.joined_spectator","color":"dark_aqua","with":[{"selector":"@s","color":"blue"}]}
+execute as @a[tag=WarpSpectate] run tellraw @a {translate:"lobby.joined_spectator",color:"dark_aqua",with:[{selector:"@s",color:"blue"}]}
 execute as @a[tag=WarpSpectate] at @s run gamemode spectator @s
 execute as @a[tag=WarpSpectate] at @s run team join Spectator @s
 execute as @a[tag=WarpSpectate] at @s run tp @s @s
@@ -41,4 +41,4 @@ tag @a[tag=WarpSettings] remove WarpSettings
 execute positioned -63 95 -221 run tag @a[team=Spectator,distance=..3] add LeaveTeam
 
 particle dust{color:[0.000,0.500,1.000],scale:2} -63 95 -221 1 1 1 0.1 10 force @a[team=Spectator]
-title @a[team=Spectator] actionbar {"translate":"lobby.leave_spectator","color":"aqua"}
+title @a[team=Spectator] actionbar {translate:"lobby.leave_spectator",color:"aqua"}

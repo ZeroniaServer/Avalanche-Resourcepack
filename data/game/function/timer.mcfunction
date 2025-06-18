@@ -32,9 +32,9 @@ scoreboard players operation $seconds_digit2 CmdData %= $10 CmdData
 #> Undo false offset
 scoreboard players remove $ticks CmdData 20
 
-execute if score $minutes CmdData matches 10.. run data modify storage game:data minutes set value '{"score":{"name":"$minutes_digit1","objective":"CmdData"},"font":"minecraft:timer","color":"#a8a004"},{"text":" ","font":"minecraft:timer","color":"#a8a004"},{"score":{"name":"$minutes_digit2","objective":"CmdData"},"font":"minecraft:timer","color":"#a8a004"}'
-execute if score $seconds CmdData matches 10.. run data modify storage game:data seconds set value '{"score":{"name":"$seconds_digit1","objective":"CmdData"},"font":"minecraft:timer","color":"#a8a004"},{"text":" ","font":"minecraft:timer","color":"#a8a004"},{"score":{"name":"$seconds_digit2","objective":"CmdData"},"font":"minecraft:timer","color":"#a8a004"}'
-execute if score $minutes CmdData matches ..9 run data modify storage game:data minutes set value '{"text":"0 ","font":"minecraft:timer","color":"#a8a004"},{"score":{"name":"$minutes_digit2","objective":"CmdData"},"font":"minecraft:timer","color":"#a8a004"}'
-execute if score $seconds CmdData matches ..9 run data modify storage game:data seconds set value '{"text":"0 ","font":"minecraft:timer","color":"#a8a004"},{"score":{"name":"$seconds_digit2","objective":"CmdData"},"font":"minecraft:timer","color":"#a8a004"}'
+execute if score $minutes CmdData matches 10.. run data modify storage game:data minutes set value [{score:{name:"$minutes_digit1",objective:"CmdData"},font:"minecraft:timer",color:"#a8a004"},{text:" ",font:"minecraft:timer",color:"#a8a004"},{score:{name:"$minutes_digit2",objective:"CmdData"},font:"minecraft:timer",color:"#a8a004"}]
+execute if score $seconds CmdData matches 10.. run data modify storage game:data seconds set value [{score:{name:"$seconds_digit1",objective:"CmdData"},font:"minecraft:timer",color:"#a8a004"},{text:" ",font:"minecraft:timer",color:"#a8a004"},{score:{name:"$seconds_digit2",objective:"CmdData"},font:"minecraft:timer",color:"#a8a004"}]
+execute if score $minutes CmdData matches ..9 run data modify storage game:data minutes set value [{text:"0 ",font:"minecraft:timer",color:"#a8a004"},{score:{name:"$minutes_digit2",objective:"CmdData"},font:"minecraft:timer",color:"#a8a004"}]
+execute if score $seconds CmdData matches ..9 run data modify storage game:data seconds set value [{text:"0 ",font:"minecraft:timer",color:"#a8a004"},{score:{name:"$seconds_digit2",objective:"CmdData"},font:"minecraft:timer",color:"#a8a004"}]
 
 function bossbars:set_timer with storage game:data

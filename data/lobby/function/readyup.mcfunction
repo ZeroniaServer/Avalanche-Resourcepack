@@ -17,7 +17,7 @@ execute as @a[team=!Lobby,team=!Spectator,team=!Developer] unless score @s ready
 scoreboard players reset @a[team=!Green,team=!Red] readyup
 
 #> Start countdown
-execute if score $gamestate CmdData matches 0 if score $RedReady CmdData matches 1 if score $GreenReady CmdData matches 1 run bossbar set bar_lobby name {"translate":"lobby.countdown.beginning","color":"dark_aqua"}
+execute if score $gamestate CmdData matches 0 if score $RedReady CmdData matches 1 if score $GreenReady CmdData matches 1 run bossbar set bar_lobby name {translate:"lobby.countdown.beginning",color:"dark_aqua"}
 execute if score $gamestate CmdData matches 0 if score $RedReady CmdData matches 1 if score $GreenReady CmdData matches 1 run scoreboard players set $precountdown CmdData 1
 execute if score $gamestate CmdData matches 0 if score $RedReady CmdData matches 1 if score $GreenReady CmdData matches 1 run scoreboard players set $gamestate CmdData 1
 
@@ -25,7 +25,7 @@ execute if score $gamestate CmdData matches 0 if score $RedReady CmdData matches
 bossbar set bar_ready_r players @a
 bossbar set bar_ready_g players @a
 bossbar set bar_lobby_hearts players @a[team=!Spectator,gamemode=!spectator,gamemode=!creative]
-bossbar set bar_lobby_hearts name [{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]},{"text":"\uE019\uDAFF\uDFFE","color":"#a8a020","shadow_color":[0,0,0,0]}]
+bossbar set bar_lobby_hearts name [{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]},{text:"\uE019\uDAFF\uDFFE",color:"#a8a020",shadow_color:[0,0,0,0]}]
 
 execute if score $RedReadyFirst CmdData matches 1 unless score $GreenReady CmdData matches 1 run bossbar set bar_ready_r value 1
 execute if score $RedReadyFirst CmdData matches 1 if score $GreenReady CmdData matches 1 run bossbar set bar_ready_r value 2

@@ -21,20 +21,23 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:item_name": "{\"translate\": \"game.armor.red.name\",\"color\":\"red\"}",
-                        "minecraft:custom_data": "{NoDrop:1b}",
-                        "minecraft:hide_additional_tooltip": {},
-                        "minecraft:unbreakable": {
-                            "show_in_tooltip": false
+                        "minecraft:item_name": {
+                            "translate": "game.armor.red.name",
+                            "color": "red"
                         },
+                        "minecraft:custom_data": "{NoDrop:1b}",
+                        "minecraft:unbreakable": {},
                         "minecraft:enchantments": {
-                            "levels": {
-                                "minecraft:binding_curse": 1
-                            },
-                            "show_in_tooltip": false
+                            "minecraft:binding_curse": 1
                         },
                         "minecraft:enchantment_glint_override": false,
-                        "!minecraft:attribute_modifiers": {}
+                        "!minecraft:attribute_modifiers": {},
+                        "tooltip_display": {
+                            "hidden_components": [
+                                "enchantments",
+                                "unbreakable"
+                            ]
+                        }
                     }
                 }
             ]
@@ -60,20 +63,23 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:item_name": "{\"translate\": \"game.armor.green.name\",\"color\":\"green\"}",
-                        "minecraft:custom_data": "{NoDrop:1b}",
-                        "minecraft:hide_additional_tooltip": {},
-                        "minecraft:unbreakable": {
-                            "show_in_tooltip": false
+                        "minecraft:item_name": {
+                            "translate": "game.armor.green.name",
+                            "color": "green"
                         },
+                        "minecraft:custom_data": "{NoDrop:1b}",
+                        "minecraft:unbreakable": {},
                         "minecraft:enchantments": {
-                            "levels": {
-                                "minecraft:binding_curse": 1
-                            },
-                            "show_in_tooltip": false
+                            "minecraft:binding_curse": 1
                         },
                         "minecraft:enchantment_glint_override": false,
-                        "!minecraft:attribute_modifiers": {}
+                        "!minecraft:attribute_modifiers": {},
+                        "tooltip_display": {
+                            "hidden_components": [
+                                "enchantments",
+                                "unbreakable"
+                            ]
+                        }
                     }
                 }
             ]

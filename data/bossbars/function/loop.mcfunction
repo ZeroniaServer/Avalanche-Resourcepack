@@ -50,19 +50,19 @@ execute if score $gamestate CmdData matches -1 run bossbar set bar_lobby_hearts 
 #> Store correct information and values in the lobby bar
 execute if score $gamestate CmdData matches -1 run bossbar set bar_lobby value 0
 execute if score $gamestate CmdData matches -1 run bossbar set bar_lobby style notched_6
-execute if score $gamestate CmdData matches -1 unless entity @a[tag=ModiOwner] run bossbar set bar_lobby name [{"translate":"chat.confirm","color":"#f089a8","with":[{"translate":"chat.settings_box","color":"#1dc6c7","bold":true}]}]
-execute if score $gamestate CmdData matches -1 if entity @a[tag=ModiOwner] run bossbar set bar_lobby name {"translate":"customizer.box_owner","color":"#f089a8","with":[{"selector":"@a[tag=ModiOwner,limit=1]","color":"blue","bold":true}]}
+execute if score $gamestate CmdData matches -1 unless entity @a[tag=ModiOwner] run bossbar set bar_lobby name [{translate:"chat.confirm",color:"#f089a8",with:[{translate:"chat.settings_box",color:"#1dc6c7",bold:true}]}]
+execute if score $gamestate CmdData matches -1 if entity @a[tag=ModiOwner] run bossbar set bar_lobby name {translate:"customizer.box_owner",color:"#f089a8",with:[{selector:"@a[tag=ModiOwner,limit=1]",color:"blue",bold:true}]}
 
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Green] unless entity @a[team=Red] run bossbar set bar_lobby value 0
-execute if score $gamestate CmdData matches 0 unless entity @a[team=Green] unless entity @a[team=Red] run bossbar set bar_lobby name {"translate":"lobby.wait.join.both","color":"dark_aqua","with":[{"translate":"lobby.wait.join.green","color":"green"},{"translate":"lobby.wait.join.red","color":"red"}]}
+execute if score $gamestate CmdData matches 0 unless entity @a[team=Green] unless entity @a[team=Red] run bossbar set bar_lobby name {translate:"lobby.wait.join.both",color:"dark_aqua",with:[{translate:"lobby.wait.join.green",color:"green"},{translate:"lobby.wait.join.red",color:"red"}]}
 
 execute if score $gamestate CmdData matches 0 if entity @a[team=Green] unless entity @a[team=Red] run bossbar set bar_lobby value 5
-execute if score $gamestate CmdData matches 0 if entity @a[team=Green] unless entity @a[team=Red] run bossbar set bar_lobby name {"translate":"lobby.wait.join.single","color":"dark_aqua","with":[{"translate":"lobby.wait.join.red","color":"red"}]}
+execute if score $gamestate CmdData matches 0 if entity @a[team=Green] unless entity @a[team=Red] run bossbar set bar_lobby name {translate:"lobby.wait.join.single",color:"dark_aqua",with:[{translate:"lobby.wait.join.red",color:"red"}]}
 
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Green] if entity @a[team=Red] run bossbar set bar_lobby value 5
-execute if score $gamestate CmdData matches 0 unless entity @a[team=Green] if entity @a[team=Red] run bossbar set bar_lobby name {"translate":"lobby.wait.join.single","color":"dark_aqua","with":[{"translate":"lobby.wait.join.green","color":"green"}]}
+execute if score $gamestate CmdData matches 0 unless entity @a[team=Green] if entity @a[team=Red] run bossbar set bar_lobby name {translate:"lobby.wait.join.single",color:"dark_aqua",with:[{translate:"lobby.wait.join.green",color:"green"}]}
 
 execute if score $gamestate CmdData matches 0 if entity @a[team=Green] if entity @a[team=Red] run bossbar set bar_lobby value 10
-execute if score $gamestate CmdData matches 0 if entity @a[team=Green] if entity @a[team=Red] unless score $GreenReady CmdData matches 1 unless score $RedReady CmdData matches 1 run bossbar set bar_lobby name {"translate":"lobby.wait.ready.both","color":"dark_aqua","with":[{"translate":"lobby.wait.ready.green","color":"green"},{"translate":"lobby.wait.ready.red","color":"red"}]}
-execute if score $gamestate CmdData matches 0 if entity @a[team=Green] if entity @a[team=Red] unless score $GreenReady CmdData matches 1 if score $RedReady CmdData matches 1 run bossbar set bar_lobby name {"translate":"lobby.wait.ready.single","color":"dark_aqua","with":[{"translate":"lobby.wait.ready.green","color":"green"}]}
-execute if score $gamestate CmdData matches 0 if entity @a[team=Green] if entity @a[team=Red] if score $GreenReady CmdData matches 1 unless score $RedReady CmdData matches 1 run bossbar set bar_lobby name {"translate":"lobby.wait.ready.single","color":"dark_aqua","with":[{"translate":"lobby.wait.ready.red","color":"red"}]}
+execute if score $gamestate CmdData matches 0 if entity @a[team=Green] if entity @a[team=Red] unless score $GreenReady CmdData matches 1 unless score $RedReady CmdData matches 1 run bossbar set bar_lobby name {translate:"lobby.wait.ready.both",color:"dark_aqua",with:[{translate:"lobby.wait.ready.green",color:"green"},{translate:"lobby.wait.ready.red",color:"red"}]}
+execute if score $gamestate CmdData matches 0 if entity @a[team=Green] if entity @a[team=Red] unless score $GreenReady CmdData matches 1 if score $RedReady CmdData matches 1 run bossbar set bar_lobby name {translate:"lobby.wait.ready.single",color:"dark_aqua",with:[{translate:"lobby.wait.ready.green",color:"green"}]}
+execute if score $gamestate CmdData matches 0 if entity @a[team=Green] if entity @a[team=Red] if score $GreenReady CmdData matches 1 unless score $RedReady CmdData matches 1 run bossbar set bar_lobby name {translate:"lobby.wait.ready.single",color:"dark_aqua",with:[{translate:"lobby.wait.ready.red",color:"red"}]}

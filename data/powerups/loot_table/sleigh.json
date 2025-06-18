@@ -33,32 +33,75 @@
             "function": "minecraft:set_components",
             "components": {
                 "minecraft:can_place_on": {
-                    "predicates": [
-                        {
-                            "blocks": "#powerups:placeable"
-                        }
-                    ],
-                    "show_in_tooltip": false
+                    "blocks": "#powerups:placeable"
                 },
                 "minecraft:item_model": "minecraft:weapons/sleigh",
-                "minecraft:hide_additional_tooltip": {},
                 "minecraft:custom_data": "{NoDrop:1b,Sleigh:1b,Blank:1b}",
-                "minecraft:custom_name": "[{\"translate\":\"powerup.sleigh.name\",\"italic\":false,\"color\":\"dark_aqua\"}]",
-                "minecraft:lore": [
-                    "[{\"translate\":\":beginner:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.sleigh.effect.support.1\",\"italic\":false,\"color\":\"blue\"}]",
-                    "[{\"translate\":\":crossed_swords:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.sleigh.effect.damage.1\",\"italic\":false,\"color\":\"red\"}]",
-                    "[{\"translate\":\":star:\",\"color\":\"white\",\"italic\":false},{\"text\":\" \"},{\"translate\":\"powerup.sleigh.effect.special.1\",\"italic\":false,\"color\":\"yellow\"}]"
+                "minecraft:custom_name": [
+                    {
+                        "translate": "powerup.sleigh.name",
+                        "italic": false,
+                        "color": "dark_aqua"
+                    }
                 ],
-                "can_break": {
-                    "predicates": [
+                "minecraft:lore": [
+                    [
                         {
-                            "blocks": "minecraft:target"
+                            "translate": ":beginner:",
+                            "color": "white",
+                            "italic": false
+                        },
+                        {
+                            "text": " "
+                        },
+                        {
+                            "translate": "powerup.sleigh.effect.support.1",
+                            "italic": false,
+                            "color": "blue"
                         }
                     ],
-                    "show_in_tooltip": false
+                    [
+                        {
+                            "translate": ":crossed_swords:",
+                            "color": "white",
+                            "italic": false
+                        },
+                        {
+                            "text": " "
+                        },
+                        {
+                            "translate": "powerup.sleigh.effect.damage.1",
+                            "italic": false,
+                            "color": "red"
+                        }
+                    ],
+                    [
+                        {
+                            "translate": ":star:",
+                            "color": "white",
+                            "italic": false
+                        },
+                        {
+                            "text": " "
+                        },
+                        {
+                            "translate": "powerup.sleigh.effect.special.1",
+                            "italic": false,
+                            "color": "yellow"
+                        }
+                    ]
+                ],
+                "can_break": {
+                    "blocks": "minecraft:target"
                 },
                 "minecraft:max_damage": 4,
-                "!minecraft:max_stack_size": {}
+                "!minecraft:max_stack_size": {},
+                "tooltip_display": {
+                    "hidden_components": [
+                        "can_break",
+                        "can_place_on"
+                    ]
+                }
             }
         }
     ]
