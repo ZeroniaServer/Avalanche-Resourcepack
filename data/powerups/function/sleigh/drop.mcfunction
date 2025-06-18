@@ -21,7 +21,7 @@ $loot spawn ~ ~0.01 ~ loot {\
                                     "blocks": "#powerups:placeable"\
                                 },\
                                 "minecraft:item_model": "minecraft:weapons/sleigh",\
-                                "minecraft:custom_data": "\"{Sleigh:1b}\"",\
+                                "minecraft:custom_data": {Sleigh:1b},\
                                 "minecraft:custom_name": [\
                                     {\
                                         "translate": "powerup.sleigh.name",\
@@ -34,7 +34,7 @@ $loot spawn ~ ~0.01 ~ loot {\
                                         {\
                                             "translate": ":beginner:",\
                                             "color": "white",\
-                                            "italic": 0\
+                                            "italic": false\
                                         },\
                                         {\
                                             "text": " "\
@@ -49,7 +49,7 @@ $loot spawn ~ ~0.01 ~ loot {\
                                         {\
                                             "translate": ":crossed_swords:",\
                                             "color": "white",\
-                                            "italic": 0\
+                                            "italic": false\
                                         },\
                                         {\
                                             "text": " "\
@@ -64,7 +64,7 @@ $loot spawn ~ ~0.01 ~ loot {\
                                         {\
                                             "translate": ":star:",\
                                             "color": "white",\
-                                            "italic": 0\
+                                            "italic": false\
                                         },\
                                         {\
                                             "text": " "\

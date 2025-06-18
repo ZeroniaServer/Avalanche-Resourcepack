@@ -21,7 +21,7 @@ $loot $(func) loot {\
                                     "blocks": "#powerups:placeable"\
                                 },\
                                 "minecraft:item_model": "minecraft:weapons/sleigh",\
-                                "minecraft:custom_data": "\"{Sleigh:1b}\"",\
+                                "minecraft:custom_data": {Sleigh:1b},\
                                 "minecraft:custom_name": [\
                                     {\
                                         "translate": "powerup.sleigh.name",\

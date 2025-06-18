@@ -83,12 +83,14 @@
                             "seconds": 0.55,
                             "cooldown_group": "hotchoco"
                         },
+                        "attribute_modifiers": [],
                         "can_break": {
                             "blocks": "minecraft:target"
                         },
                         "tooltip_display": {
                             "hidden_components": [
-                                "can_break"
+                                "can_break",
+                                "attribute_modifiers"
                             ]
                         }
                     }

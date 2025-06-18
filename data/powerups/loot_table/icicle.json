@@ -106,7 +106,8 @@
                         },
                         "tooltip_display": {
                             "hidden_components": [
-                                "can_break"
+                                "can_break",
+                                "attribute_modifiers"
                             ]
                         }
                     }
