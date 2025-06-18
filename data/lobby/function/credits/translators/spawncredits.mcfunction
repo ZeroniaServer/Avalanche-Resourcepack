@@ -21,10 +21,10 @@ execute if score $TranslatorPage CmdData matches 1 run summon text_display ~ ~ ~
 execute if score $TranslatorPage CmdData matches 1 run data merge entity @e[tag=GlobeText,limit=1] {text:[{text:"[1/3]",color:"white"}],start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
 
 #> Page 2
-#Tai_zazanek - Japanese
+#tainoji_z - Japanese
 execute if score $TranslatorPage CmdData matches 2 run summon item_display ~ ~ ~ {Tags:["TranslatorCredit","Credit","Credit1","Skull"],start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed"}
 execute if score $TranslatorPage CmdData matches 2 run item replace entity @e[type=item_display,tag=Credit1,tag=Skull,tag=!Old,limit=1] contents with player_head[profile={id:[I;483675371,1918650750,-1877476915,1372624576]}]
-execute if score $TranslatorPage CmdData matches 2 run summon text_display ~ ~ ~ {Tags:["TranslatorCredit","Credit","Credit1","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:[{text:"Tai_zazanek",color:"#c0c0c0"}],alignment:"center"}
+execute if score $TranslatorPage CmdData matches 2 run summon text_display ~ ~ ~ {Tags:["TranslatorCredit","Credit","Credit1","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:[{text:"tainoji_z",color:"#c0c0c0"}],alignment:"center"}
 execute if score $TranslatorPage CmdData matches 2 run summon text_display ~ ~ ~ {Tags:["TranslatorCredit","Credit","Credit1","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:[{translate:":flag_jp:",color:"white"}],alignment:"center"}
 #Ostensvig - Norwegian
 execute if score $TranslatorPage CmdData matches 2 run summon item_display ~ ~ ~ {Tags:["TranslatorCredit","Credit","Credit2","Skull"],start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed"}
