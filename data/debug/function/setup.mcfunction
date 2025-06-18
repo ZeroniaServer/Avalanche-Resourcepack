@@ -61,6 +61,7 @@ scoreboard objectives add MVPkill dummy
 scoreboard objectives add MVPdeath dummy
 scoreboard objectives add MVPdamage dummy
 scoreboard objectives add MVProcket dummy
+scoreboard objectives add impulse_cooldown dummy
 function iris:setup/scoreboard
 execute unless score $gamestate CmdData matches -1.. run scoreboard players set $gamestate CmdData -1
 execute unless score $Minutes CmdData matches 1.. run scoreboard players set $Minutes CmdData 10

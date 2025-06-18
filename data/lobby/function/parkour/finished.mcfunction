@@ -9,7 +9,7 @@ playsound parkourfinish1 master @s ~ ~ ~ 1 1.1
 playsound parkourfinish2 master @s ~ ~ ~ 1 1
 playsound parkourfinish3 master @s ~ ~ ~ 1 1.3
 particle firework ~ ~1 ~ 0 0 0 0.1 100 normal @s
-clear @s carrot_on_a_stick
+clear @s nautilus_shell
 # function lobby:items
 
 #> Personal best
