@@ -1,3 +1,6 @@
+#> World Updates
+execute if score $load CmdData matches 40.. run function version:check
+
 #> Lobby
 function lobby:loop
 
