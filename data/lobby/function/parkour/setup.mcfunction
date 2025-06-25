@@ -5,7 +5,7 @@ scoreboard objectives add parkourJumps minecraft.custom:minecraft.jump
 kill @e[tag=parkour_display]
 summon text_display -57.5 52.8 -72.7 {shadow:1b,alignment:"center",Tags:["parkour_display"],background:16777215,transformation:{translation:[0.0, 0.0, 0.0],left_rotation:[0f, 0f, 0f, 1f],right_rotation:[0f, 0f, 0f, 1f],scale: [0.8, 0.8, 0.8]}}
 data merge entity @e[type=text_display,limit=1,tag=parkour_display] {alignment:"center",text:["",{bold:true,color:"yellow",translate:"parkour.display.title"},{text:"\n\n"},{color:"gray",translate:"parkour.display.line1"},{text:"\n"},{color:"gray",translate:"parkour.display.line2"}]}
-summon text_display -57.5 51.7 -72.7 {alignment:"center",Tags:["parkour_display"],text:'"                                         \n\n\n\n\n\n\n"'}
+summon text_display -57.5 51.7 -72.7 {alignment:"center",Tags:["parkour_display"],text:'                                         \n\n\n\n\n\n\n'}
 summon text_display -58.5 51.8 -72.7 {alignment:"left",Tags:["parkour_display"],background:16777215,transformation:{translation:[0.0, 0.0, 0.0],left_rotation:[0f, 0f, 0f, 1f],right_rotation:[0f, 0f, 0f, 1f],scale: [0.8, 0.8, 0.8]},text:["",{color:"red",translate:"parkour.display.record_holder"},{text:"\n"},{color:"red",translate:"parkour.display.current_record"},{text:"\n"},{color:"red",translate:"parkour.display.global_jumps"}]}
 summon text_display -56.5 51.8 -72.7 {alignment:"right",Tags:["parkour_display",custom],background:16777215,transformation:{translation:[0.0, 0.0, 0.0],left_rotation:[0f, 0f, 0f, 1f],right_rotation:[0f, 0f, 0f, 1f],scale: [0.8, 0.8, 0.8]},text:["",{color:"green",text:"???"},{text:"\n"},{color:"green",text:"???"},{text:"\n"},{color:"green",text:"0"}]}
 
