@@ -191,6 +191,7 @@ gamerule fallDamage false
 gamerule fireDamage false
 gamerule drowningDamage false
 gamerule doTileDrops true
+gamerule locatorBar false
 
 #> Join area modifications
 fill -96 58 -145 -94 57 -145 air replace minecraft:barrier
