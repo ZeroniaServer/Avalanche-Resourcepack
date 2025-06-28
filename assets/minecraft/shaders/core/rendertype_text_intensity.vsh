@@ -37,7 +37,7 @@ void main() {
 
     // green firework on top
     else if (Color == vec4(168/255., 164/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y + 3.0, Position.z + 200.0);
+        vec3 newPos = vec3(Position.x, Position.y + 3.0, Position.z);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // remove color from marker
@@ -49,7 +49,7 @@ void main() {
 
     // red firework on top
     else if (Color == vec4(168/255., 172/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y - 4.0, Position.z + 200.0);
+        vec3 newPos = vec3(Position.x, Position.y - 4.0, Position.z);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // remove color from marker
@@ -61,7 +61,7 @@ void main() {
 
     // firework below
     else if (Color == vec4(168/255., 168/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y - 23.0, Position.z + 200.0);
+        vec3 newPos = vec3(Position.x, Position.y - 23.0, Position.z);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // remove color from marker
@@ -73,7 +73,7 @@ void main() {
 
     // mountain
     else if (Color == vec4(168/255., 160/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y + 10.0, Position.z + 200.0);
+        vec3 newPos = vec3(Position.x, Position.y + 10.0, Position.z + 0.04);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // remove color from marker
@@ -85,7 +85,7 @@ void main() {
 
     // timer
     else if (Color == vec4(168/255., 160/255., 4/255., Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y - 21.0, Position.z + 200.0);
+        vec3 newPos = vec3(Position.x, Position.y - 21.0, Position.z + 0.04);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // remove color from marker
@@ -105,7 +105,7 @@ void main() {
 
     // green score
     else if (Color == vec4(168/255., 160/255., 12/255., Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y + 19.0, Position.z + 200.0);
+        vec3 newPos = vec3(Position.x, Position.y + 19.0, Position.z);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // recolor to green
@@ -114,7 +114,7 @@ void main() {
         vertexColor.b = 85.0/255.0;
     }
     else if (Color == vec4(42/255., 40/255., 3/255., Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y + 19.0, Position.z + 200.0);
+        vec3 newPos = vec3(Position.x, Position.y + 19.0, Position.z);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // recolor to green
@@ -125,7 +125,7 @@ void main() {
 
     // red score
     else if (Color == vec4(168/255., 160/255., 16/255., Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y + 19.0, Position.z + 200.0);
+        vec3 newPos = vec3(Position.x, Position.y + 19.0, Position.z);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // recolor to green
@@ -134,7 +134,7 @@ void main() {
         vertexColor.b = 85.0/255.0;
     }
     else if (Color == vec4(42/255., 40/255., 4/255., Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y + 19.0, Position.z + 200.0);
+        vec3 newPos = vec3(Position.x, Position.y + 19.0, Position.z);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // recolor to green
@@ -146,7 +146,7 @@ void main() {
     // sleigh UI
     if (Color == vec4(168/255., 160/255., 20/255., Color.a)) {
         vertexColor = texelFetch(Sampler2, UV2 / 16, 0); // remove color from no shadow marker
-        vec3 newPos = vec3(Position.x + 50.0, Position.y, Position.z + 200.0);
+        vec3 newPos = vec3(Position.x + 50.0, Position.y, Position.z + 0.05);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
     }
     else if (Color == vec4(42/255., 40/255., 5/255., Color.a)) {
@@ -155,7 +155,7 @@ void main() {
 
     // mountain prep
     else if (Color == vec4(168/255., 160/255., 24/255., Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y - 13.0, Position.z + 200.0);
+        vec3 newPos = vec3(Position.x, Position.y - 13.0, Position.z - 0.01);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // remove color from marker
@@ -167,7 +167,7 @@ void main() {
 
     // timer prep
     else if (Color == vec4(168/255., 160/255., 28/255., Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y + 36.0, Position.z + 250.0);
+        vec3 newPos = vec3(Position.x, Position.y + 36.0, Position.z);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // remove color from marker
@@ -175,5 +175,13 @@ void main() {
     }
     else if (Color == vec4(42/255., 40/255., 7/255., Color.a)) {
         vertexColor = vec4(0); // remove shadow
+    }
+
+    // lobby hearts
+    else if (Color == vec4(168/255., 160/255., 32/255., Color.a)) {
+        gl_Position.xy += vec2(0, -2) * gl_Position.w;
+
+        // remove color from marker
+        vertexColor = texelFetch(Sampler2, UV2 / 16, 0); 
     }
 }
