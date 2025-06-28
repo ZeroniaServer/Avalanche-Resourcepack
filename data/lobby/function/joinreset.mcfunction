@@ -39,6 +39,7 @@ attribute @s minecraft:block_interaction_range base set 4.5
 execute if score @s leavecheck = $curr leavecheck run function lobby:settings/announce with storage lobby:customizer
 scoreboard players operation @s leavecheck = $curr leavecheck
 scoreboard players operation @s gameID = $current gameID
+scoreboard players reset @s BarricadeTracker
 scoreboard players reset @s HitmarkerTimer
 scoreboard players reset @s HitmarkerType
 tag @s remove IFrame

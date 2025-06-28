@@ -30,7 +30,8 @@ execute as @a[team=Lobby,predicate=lobby:joinpad_green,limit=1,sort=random] unle
 execute if score $InGreen CmdData >= $MaxTeamSize CmdData as @a[team=Lobby,predicate=lobby:joinpad_green,tag=!tryJoinGreen] run function lobby:portals/green/full
 execute unless score $InGreen CmdData >= $MaxTeamSize CmdData if score $NoMidgameJoins CmdData matches 1 if score $gamestate CmdData matches 2.. as @a[team=Lobby,predicate=lobby:joinpad_green,tag=!tryJoinGreen] run function lobby:portals/green/full
 execute unless function lobby:nomidgamejoin if score $InGreen CmdData > $InRed CmdData as @a[team=Lobby,predicate=lobby:joinpad_green,tag=!tryJoinGreen] run function lobby:portals/green/imbalanced
-execute as @a[tag=JoinGreen] store result score @s gameID run scoreboard players get $current gameID
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..2 unless score @s BarricadeTracker matches -2147483648..2147483647 run function game:calcbarricades
+execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 store result score @s gameID run scoreboard players get $current gameID
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run tp @s @s
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tp @s -91 53 -149 90 0
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2..3 run tp @s -114 47 -210 -90 0
@@ -59,6 +60,7 @@ execute as @a[team=Lobby,predicate=lobby:joinpad_red,limit=1,sort=random] unless
 execute if score $InRed CmdData >= $MaxTeamSize CmdData as @a[team=Lobby,predicate=lobby:joinpad_red,tag=!tryJoinRed] run function lobby:portals/red/full
 execute unless score $InRed CmdData >= $MaxTeamSize CmdData if score $NoMidgameJoins CmdData matches 1 if score $gamestate CmdData matches 2.. as @a[team=Lobby,predicate=lobby:joinpad_red,tag=!tryJoinRed] run function lobby:portals/red/full
 execute unless function lobby:nomidgamejoin if score $InRed CmdData > $InGreen CmdData as @a[team=Lobby,predicate=lobby:joinpad_red,tag=!tryJoinRed] run function lobby:portals/red/imbalanced
+execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..2 unless score @s BarricadeTracker matches -2147483648..2147483647 run function game:calcbarricades
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 store result score @s gameID run scoreboard players get $current gameID
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run tp @s @s
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tp @s -34 49 -151 -90 0

@@ -10,7 +10,8 @@ function game:timer_prep
 clear @a clay
 clear @a stone_shovel
 execute as @a unless entity @s[team=!Green,team=!Red] run loot replace entity @s hotbar.0 loot powerups:shovel
-function game:calcbarricades
+execute as @a unless entity @s[team=!Green,team=!Red] run function game:calcbarricades
+execute as @a unless entity @s[team=!Green,team=!Red] run loot give @s loot powerups:barricade_prep
 
 function game:placewall
 
