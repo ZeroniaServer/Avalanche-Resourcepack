@@ -35,8 +35,6 @@ execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run tp @s 
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..1 run tp @s -91 53 -149 90 0
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2..3 run tp @s -114 47 -210 -90 0
 execute as @a[tag=JoinGreen,limit=1] unless score $gamestate CmdData matches 2.. unless score $mcancel CmdData matches -1 run function lobby:settings/cancel/reset
-#TODO: maybe a nicer way to give out a fair number of barricades, for now this should do
-execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 2 run scoreboard players set @s BarricadeTracker 10
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 at @s run playsound jointeam master @a ~ ~ ~ 1 1
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run gamemode adventure
 execute as @a[tag=JoinGreen] if score $gamestate CmdData matches 0..3 run clear @s
@@ -66,8 +64,6 @@ execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run tp @s @s
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..1 run tp @s -34 49 -151 -90 0
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2..3 run tp @s -12 47 -232 90 0
 execute as @a[tag=JoinRed,limit=1] unless score $gamestate CmdData matches 2.. unless score $mcancel CmdData matches -1 run function lobby:settings/cancel/reset
-#TODO: maybe a nicer way to give out a fair number of barricades, for now this should do
-execute as @a[tag=JoinRed] if score $gamestate CmdData matches 2 run scoreboard players set @s BarricadeTracker 10
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 at @s run playsound jointeam master @a ~ ~ ~ 1 1
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run gamemode adventure
 execute as @a[tag=JoinRed] if score $gamestate CmdData matches 0..3 run team join Red
@@ -93,6 +89,7 @@ execute as @a[team=!Lobby] unless score @s leavegame matches 0 run tag @s add Le
 execute as @a[tag=LeaveTeam,team=Green] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {translate:"lobby.left_team",color:"dark_aqua",with:[{selector:"@s",color:"green"}]}
 execute as @a[tag=LeaveTeam,team=Red] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {translate:"lobby.left_team",color:"dark_aqua",with:[{selector:"@s",color:"red"}]}
 execute as @a[tag=LeaveTeam,team=Spectator] if score $gamestate CmdData matches 0..3 at @s run tellraw @a {translate:"lobby.left_spectator",color:"dark_aqua",with:[{selector:"@s",color:"blue"}]}
+execute as @a[tag=LeaveTeam] unless entity @s[team=!Green,team=!Red] if score $gamestate CmdData matches 2 store result score @s BarricadeTracker run clear @s clay 0
 execute as @a[tag=LeaveTeam,team=!] run function player:leave
 execute as @a[tag=LeaveTeam] run tp @s @s
 execute unless entity @a[team=Red] unless entity @a[team=Green] if loaded 0 0 0 if score $gamestate CmdData matches 2.. run tellraw @a ["\n",{translate:"game.no_players",color:"red"},"\n"]
