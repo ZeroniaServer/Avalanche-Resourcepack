@@ -3,7 +3,7 @@ execute as @a[tag=hitter,limit=1] unless entity @s[advancements={entityid:hit={i
 
 #> Icicle (instant KO)
 execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run scoreboard players set @s playerHP 0
-execute as @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run function powerups:icicle/break
+execute as @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}}] run function powerups:icicle/damage
 
 #> Iceball (instant KO)
 execute if entity @a[tag=hitter,limit=1,advancements={entityid:hit={iceball=true}}] run scoreboard players set @s playerHP 0

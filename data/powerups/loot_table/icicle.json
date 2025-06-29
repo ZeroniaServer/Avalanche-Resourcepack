@@ -52,6 +52,21 @@
                             ],
                             [
                                 {
+                                    "translate": ":crossed_swords:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.icicle.effect.damage.3",
+                                    "italic": false,
+                                    "color": "red"
+                                }
+                            ],
+                            [
+                                {
                                     "translate": ":beginner:",
                                     "color": "white",
                                     "italic": false
@@ -76,6 +91,21 @@
                                 },
                                 {
                                     "translate": "powerup.icicle.effect.temporary.1",
+                                    "italic": false,
+                                    "color": "gold"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":hourglass:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.icicle.effect.temporary.2",
                                     "italic": false,
                                     "color": "gold"
                                 }
