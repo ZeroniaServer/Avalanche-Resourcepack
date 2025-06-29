@@ -1,5 +1,7 @@
 #version 150
 
+#moj_import <minecraft:utils.vsh>
+
 // Can't moj_import in things used during startup, when resource packs don't exist.
 // This is a copy of dynamicimports.glsl and projection.glsl
 layout(std140) uniform DynamicTransforms {
@@ -47,7 +49,9 @@ void main() {
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
     texCoord0 = UV0;
 	vec4 color = getVertexColor(Sampler0, gl_VertexID, texCoord0); // get the color of the vertex
-	if(color.a == 1.0/255.0) gl_Position = ProjMat * ModelViewMat * vec4(Position + vec3(0.0, -19.0, 0.0), 1.0); // the vertex renders a bossbar, offset it.
-	if(color.a == 2.0/255.0) gl_Position = ProjMat * ModelViewMat * vec4(Position + vec3(0.0, -38.0, 0.0), 1.0); // the vertex renders a bossbar, offset it.
+	float alpha = color.a * 255.0;
+	if(check_alpha(alpha, 1.0)) gl_Position = ProjMat * ModelViewMat * vec4(Position + vec3(0.0, -19.0, -0.05), 1.0); // the vertex renders a bossbar, offset it.
+	if(check_alpha(alpha, 2.0)) gl_Position = ProjMat * ModelViewMat * vec4(Position + vec3(0.0, -38.0, -0.05), 1.0); // the vertex renders a bossbar, offset it.
+	if(check_alpha(alpha, 3.0)) gl_Position = ProjMat * ModelViewMat * vec4(Position + vec3(0.0, 0.0, -0.1), 1.0); // the vertex renders a bossbar, offset it.
 	vertexColor = Color;
 }
