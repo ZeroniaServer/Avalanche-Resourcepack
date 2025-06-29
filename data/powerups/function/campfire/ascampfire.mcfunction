@@ -1,6 +1,6 @@
-execute if block ~ ~-1 ~ #game:air run scoreboard players set @s CmdData 1000 
-execute if block ~ ~-1 ~ #game:air run tag @s add Extinguish
-execute if block ~ ~-1 ~ #game:air run kill @e[type=item_display,tag=CampfireEntity,tag=Animator,distance=..0.1]
+execute positioned ~ ~0.01 ~ if block ~ ~-1 ~ #game:air run scoreboard players set @s CmdData 1000 
+execute positioned ~ ~0.01 ~ if block ~ ~-1 ~ #game:air run tag @s add Extinguish
+execute positioned ~ ~0.01 ~ if block ~ ~-1 ~ #game:air run kill @e[type=item_display,tag=CampfireEntity,tag=Animator,distance=..0.1]
 
 #> Heal nearby players
 execute if entity @s[scores={CmdData=20..900},tag=!Extinguish,tag=!Reviving] run function powerups:campfire/heal
