@@ -73,7 +73,7 @@ void main() {
 
     // mountain
     else if (Color == vec4(168/255., 160/255., 0, Color.a)) {
-        vec3 newPos = vec3(Position.x, Position.y + 10.0, Position.z - 0.04);
+        vec3 newPos = vec3(Position.x, Position.y + 10.0, Position.z - 0.02);
         gl_Position = ProjMat * ModelViewMat * vec4(newPos, 1.0);
 
         // remove color from marker
