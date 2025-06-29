@@ -246,7 +246,7 @@
   "lobby.join.red": "Board Red Ship",
   "lobby.join.green": "Board Green Ship",
   "lobby.leave_game": "Abandon Ship",
-  "lobby.leave_spectator": "Fly into th’ Blue particle cluster t’ stop spectatin’.",
+  "lobby.leave_spectator": "Fly into th’ blue particle cluster t’ stop spectatin’.",
   "secret": "%1$s This be a %2$s chance o’ happenin’!",
   "secret.found": "Secret Plundered!",
   "parkour.new_record": "%s now holds th’ Parkour Record!",
