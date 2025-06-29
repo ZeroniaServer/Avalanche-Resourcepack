@@ -13,6 +13,7 @@
   },
   "pack": {
     "pack_format": 81,
+    "supported_formats": [80, 81],
     "description": "Made by Zeronia"
   }
 }
