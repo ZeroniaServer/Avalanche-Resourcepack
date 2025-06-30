@@ -21,9 +21,9 @@ tag @s remove KOmessage
 
 #> Icicle + Campfires
 execute if entity @s[tag=cfcollision,tag=red] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}},team=Green] on vehicle on vehicle run scoreboard players set @s[scores={CmdData=22..899}] CmdData 900
-execute if entity @s[tag=cfcollision,tag=red] as @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}},team=Green] run function powerups:icicle/break
+execute if entity @s[tag=cfcollision,tag=red] as @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}},team=Green] run function powerups:icicle/damage
 execute if entity @s[tag=cfcollision,tag=green] if entity @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}},team=Red] on vehicle on vehicle run scoreboard players set @s[scores={CmdData=22..899}] CmdData 900
-execute if entity @s[tag=cfcollision,tag=green] as @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}},team=Red] run function powerups:icicle/break
+execute if entity @s[tag=cfcollision,tag=green] as @a[tag=hitter,limit=1,advancements={entityid:hit={icicle=true}},team=Red] run function powerups:icicle/damage
 
 #> Translator Credits
 execute if entity @s[tag=TranslatorCredit] as @e[type=item_display,tag=Globe,tag=!Spin,limit=1] run function lobby:credits/translators/previous

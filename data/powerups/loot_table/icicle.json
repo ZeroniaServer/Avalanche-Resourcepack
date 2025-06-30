@@ -37,21 +37,6 @@
                             ],
                             [
                                 {
-                                    "translate": ":beginner:",
-                                    "color": "white",
-                                    "italic": false
-                                },
-                                {
-                                    "text": " "
-                                },
-                                {
-                                    "translate": "powerup.icicle.effect.support.1",
-                                    "italic": false,
-                                    "color": "blue"
-                                }
-                            ],
-                            [
-                                {
                                     "translate": ":crossed_swords:",
                                     "color": "white",
                                     "italic": false
@@ -82,7 +67,7 @@
                             ],
                             [
                                 {
-                                    "translate": ":crossed_swords:",
+                                    "translate": ":beginner:",
                                     "color": "white",
                                     "italic": false
                                 },
@@ -90,9 +75,24 @@
                                     "text": " "
                                 },
                                 {
-                                    "translate": "powerup.icicle.effect.damage.3",
+                                    "translate": "powerup.icicle.effect.support.1",
                                     "italic": false,
-                                    "color": "red"
+                                    "color": "blue"
+                                }
+                            ],
+                            [
+                                {
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.icicle.effect.support.2",
+                                    "italic": false,
+                                    "color": "blue"
                                 }
                             ],
                             [
@@ -106,21 +106,6 @@
                                 },
                                 {
                                     "translate": "powerup.icicle.effect.temporary.1",
-                                    "italic": false,
-                                    "color": "gold"
-                                }
-                            ],
-                            [
-                                {
-                                    "translate": ":hourglass:",
-                                    "color": "white",
-                                    "italic": false
-                                },
-                                {
-                                    "text": " "
-                                },
-                                {
-                                    "translate": "powerup.icicle.effect.temporary.2",
                                     "italic": false,
                                     "color": "gold"
                                 }
