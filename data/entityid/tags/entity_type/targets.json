@@ -2,6 +2,7 @@
   "values": [
     "minecraft:interaction",
     "minecraft:husk",
-    "minecraft:player"
+    "minecraft:player",
+    "minecraft:shulker"
   ]
 }
