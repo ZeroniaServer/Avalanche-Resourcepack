@@ -18,7 +18,7 @@ out vec4 fragColor;
 void main() {
     vec4 color = texture(Sampler0, texCoord0) * vertexColor * ColorModulator;
 	float alpha = textureLod(Sampler0, texCoord0, 0.0).a * 255.0;
-    if (check_alpha(alpha, 250.0) || check_alpha(alpha, 242)) {
+    if (check_alpha(alpha, 250.0) || check_alpha(alpha, 77.0)) {
         color = texture(Sampler0, texCoord0) * ColorModulator;
     }
     color = apply_global_emissive(color, lightColor, alpha);
