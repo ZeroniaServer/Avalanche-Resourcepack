@@ -11,7 +11,8 @@
 			"faces": {
 				"east": {"uv": [2, 0, 14, 14], "texture": "#1"},
 				"west": {"uv": [2, 0, 14, 14], "texture": "#1"}
-			}
+			},
+			"light_emission": 15
 		},
 		{
 			"from": [5, 1, 3],
@@ -20,7 +21,8 @@
 			"faces": {
 				"east": {"uv": [2, 0, 14, 14], "texture": "#1"},
 				"west": {"uv": [2, 0, 14, 14], "texture": "#1"}
-			}
+			},
+			"light_emission": 15
 		}
 	],
 	"display": {
