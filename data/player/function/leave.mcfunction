@@ -1,3 +1,6 @@
+# player will already leave from forcestop
+execute if entity @s[tag=LeaveTeam] unless entity @a[team=Red] unless entity @a[team=Green] if score $gamestate CmdData matches 2.. run return fail
+
 ride @s dismount
 scoreboard players set @s playerHP 20
 scoreboard players reset @s respawn

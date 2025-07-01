@@ -62,6 +62,6 @@ scoreboard players reset $GreenRespawn CmdData
 scoreboard players reset $RedRespawn CmdData
 
 function arenaclear:reset
-execute unless score $mcancel CmdData matches 1 run function lobby:settings/auto_confirm
+execute unless score $mcancel CmdData matches 1 run schedule function lobby:settings/auto_confirm 1t
 execute if score $mcancel CmdData matches 1 run function lobby:settings/cancel/begin
 scoreboard players reset $mcancel CmdData

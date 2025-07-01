@@ -1,14 +1,13 @@
 fill -90 53 -148 -90 55 -150 minecraft:cyan_stained_glass
 fill -35 51 -150 -35 49 -152 pink_stained_glass
 
-
 scoreboard players reset @a modify
 tag @a remove ModiOwner
 scoreboard players set $gamestate CmdData 0
 # bossbar set bar_lobby players
 bossbar set bar_lobby_hearts players
-bossbar set bar_lobby_r players
-bossbar set bar_lobby_g players
+bossbar set bar_ready_r players
+bossbar set bar_ready_g players
 
 # bossbar set bar_lobby players @a
 # bossbar set bar_ready_r players @a
