@@ -22,6 +22,21 @@
                         "minecraft:lore": [
                             [
                                 {
+                                    "translate": ":star:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.icicle.effect.special.1",
+                                    "italic": false,
+                                    "color": "yellow"
+                                }
+                            ],
+                            [
+                                {
                                     "translate": ":crossed_swords:",
                                     "color": "white",
                                     "italic": false
@@ -67,6 +82,21 @@
                             ],
                             [
                                 {
+                                    "translate": ":beginner:",
+                                    "color": "white",
+                                    "italic": false
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "translate": "powerup.icicle.effect.support.2",
+                                    "italic": false,
+                                    "color": "blue"
+                                }
+                            ],
+                            [
+                                {
                                     "translate": ":hourglass:",
                                     "color": "white",
                                     "italic": false
@@ -78,21 +108,6 @@
                                     "translate": "powerup.icicle.effect.temporary.1",
                                     "italic": false,
                                     "color": "gold"
-                                }
-                            ],
-                            [
-                                {
-                                    "translate": ":star:",
-                                    "color": "white",
-                                    "italic": false
-                                },
-                                {
-                                    "text": " "
-                                },
-                                {
-                                    "translate": "powerup.icicle.effect.special.1",
-                                    "italic": false,
-                                    "color": "yellow"
                                 }
                             ]
                         ],
