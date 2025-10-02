@@ -44,7 +44,7 @@ function lobby:settings/refreshsigns with storage lobby:customizer
 
 function lobby:readyteams/refreshsigns
 
-setblock -56 53 -90 warped_wall_sign[facing=west]{front_text:{messages:[{text:""},{translate:"customizer.edit",color:"red",bold:true},'""',{text:"",click_event:{action:"run_command",command:"/trigger cancelMatch set 1"}}]}}
+setblock -56 53 -90 warped_wall_sign[facing=west]{front_text:{messages:[{text:""},{translate:"customizer.edit",color:"red",bold:true},'',{text:"",click_event:{action:"run_command",command:"/trigger cancelMatch set 1"}}]}}
 scoreboard players set $mcancelcount CmdData 0
 
 execute as @a run trigger settings set 0

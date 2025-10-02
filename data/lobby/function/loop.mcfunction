@@ -1,6 +1,7 @@
 #> Kick people without the proper gameID out (also acts on firstjoin players) + crash detection
 scoreboard players add $curr leavecheck 1
 scoreboard players add @a leavecheck 1
+execute as @a[scores={leftgame=1..}] run function lobby:joinreset
 execute as @a unless score @s leavecheck = $curr leavecheck run function lobby:joinreset
 execute as @a[team=!Lobby,team=!Spectator] unless score @s gameID = $current gameID run function lobby:joinreset
 
