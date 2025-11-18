@@ -50,7 +50,7 @@ void main() {
     texCoord0 = UV0;
 	vec4 color = getVertexColor(Sampler0, gl_VertexID, texCoord0); // get the color of the vertex
 	float alpha = color.a * 255.0;
-	if(check_alpha(alpha, 1.0)) gl_Position = ProjMat * ModelViewMat * vec4(Position + vec3(0.0, -19.0, -0.05), 1.0); // the vertex renders a bossbar, offset it.
-	if(check_alpha(alpha, 2.0)) gl_Position = ProjMat * ModelViewMat * vec4(Position + vec3(0.0, -38.0, -0.05), 1.0); // the vertex renders a bossbar, offset it.
+	if(check_alpha(alpha, 1.0)) gl_Position = ProjMat * ModelViewMat * vec4(Position + vec3(0.0, -19.0, 0), 1.0); // the vertex renders a bossbar, offset it.
+	if(check_alpha(alpha, 2.0)) gl_Position = ProjMat * ModelViewMat * vec4(Position + vec3(0.0, -38.0, 0), 1.0); // the vertex renders a bossbar, offset it.
 	vertexColor = Color;
 }
