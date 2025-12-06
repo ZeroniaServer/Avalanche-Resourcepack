@@ -400,6 +400,16 @@
         ],
         "subtitle": "subtitles.block.generic.place"
     },
+    "block.grass.place": {
+        "replace": true,
+        "sounds": [
+            "barricade/dig1",
+            "barricade/dig2",
+            "barricade/dig3",
+            "barricade/dig4"
+        ],
+        "subtitle": "subtitles.block.generic.place"
+    },
     "block.grass.break": {
         "replace": true,
         "sounds": [
