@@ -34,11 +34,7 @@ void main() {
 #ifdef PER_FACE_LIGHTING
     color *= (gl_FrontFacing ? vertexPerFaceColorFront : vertexPerFaceColorBack) * ColorModulator;
 #else
-	float alpha = textureLod(Sampler0, texCoord0, 0.0).a * 255.0;
-    if (!check_alpha(alpha, 250.0) && !check_alpha(alpha, 77.0)) {
-        color *= vertexColor;
-    }
-    color *= ColorModulator;
+    color *= vertexColor * ColorModulator;
 #endif
 #ifndef NO_OVERLAY
     color.rgb = mix(overlayColor.rgb, color.rgb, overlayColor.a);
