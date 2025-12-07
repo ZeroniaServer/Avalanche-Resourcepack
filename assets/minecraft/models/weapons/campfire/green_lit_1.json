@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"1": "custom/campfire_flame_green",
+		"1": "custom/campfire_flame_green_1",
 		"2": "custom/campfire_green",
 		"particle": "custom/campfire_green"
 	},
