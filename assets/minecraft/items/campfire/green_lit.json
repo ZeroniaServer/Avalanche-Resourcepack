@@ -1,6 +1,44 @@
 {
     "model": {
-        "type": "minecraft:model",
-        "model": "minecraft:weapons/campfire/green_lit"
+        "type": "minecraft:range_dispatch",
+        "property": "minecraft:custom_model_data",
+        "index": 0,
+        "entries": [
+            {
+                "threshold": 0,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "minecraft:weapons/campfire/green_lit_0"
+                }
+            },
+            {
+                "threshold": 240,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "minecraft:weapons/campfire/green_lit_1"
+                }
+            },
+            {
+                "threshold": 480,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "minecraft:weapons/campfire/green_lit_2"
+                }
+            },
+            {
+                "threshold": 720,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "minecraft:weapons/campfire/green_lit_3"
+                }
+            },
+            {
+                "threshold": 960,
+                "model": {
+                    "type": "minecraft:model",
+                    "model": "minecraft:weapons/campfire/green_lit_4"
+                }
+            }
+        ]
     }
 }
