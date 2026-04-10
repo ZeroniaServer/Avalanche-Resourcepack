@@ -248,7 +248,7 @@
   "lobby.join.red": "Unirse al Equipo Rojo",
   "lobby.join.green": "Unirse al Equipo Verde",
   "lobby.leave_game": "Abandonar la Partida",
-  "lobby.leave_spectator": "Vuela al Cúmulo de partículas azules para dejar de observar.",
+  "lobby.leave_spectator": "Vuela al cúmulo de partículas azules para dejar de observar.",
   "secret": "%1$s ¡Esto tiene una probabilidad %2$s de ocurrir!",
   "secret.found": "¡Secreto encontrado!",
   "parkour.new_record": "¡%s ahora tiene el Récord en el Parkour!",
