@@ -1,7 +1,7 @@
 #version 330
 
 #moj_import <minecraft:utils.vsh>
-#moj_import <minecraft:sample_lightmap.glsl>
+#moj_import <minecraft:light.glsl>
 #moj_import <minecraft:fog.glsl>
 #moj_import <minecraft:dynamictransforms.glsl>
 #moj_import <minecraft:projection.glsl>
@@ -27,6 +27,10 @@ void main() {
     cylindricalVertexDistance = fog_cylindrical_distance(Position);
     texCoord0 = UV0;
     vertexColor = Color;
-	lightColor = sample_lightmap(Sampler2, UV2);
-	maxLightColor = sample_lightmap(Sampler2, ivec2(240.0, 240.0));
+	lightColor = minecraft_sample_lightmap(Sampler2, UV2);
+	maxLightColor = minecraft_sample_lightmap(Sampler2, ivec2(240.0, 240.0));
+
+    if (Color == vec4(0/255., 0/255., 0/255., Color.a)) {
+        vertexColor = vec4(0);
+    }
 }

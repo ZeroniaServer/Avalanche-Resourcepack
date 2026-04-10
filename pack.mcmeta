@@ -1,15 +1,30 @@
 {
     "pack": {
         "min_format": 69,
-        "max_format": 75,
-        "description": "v1.0.4 Made by Zeronia"
+        "max_format": 84,
+        "description": "v1.0.5 Made by Zeronia"
     },
     "overlays": {
         "entries": [
             {
-                "directory": "1_21_10",
+                "directory": "overlay-1_21_10",
                 "min_format": 69,
-                "max_format": 69 
+                "max_format": 69
+            },
+            {
+                "directory": "overlay-1_21_11",
+                "min_format": 75,
+                "max_format": 75
+            },
+            {
+                "directory": "overlay-1_21",
+                "min_format": 69,
+                "max_format": 75
+            },
+            {
+                "directory": "overlay-26_1",
+                "min_format": 84,
+                "max_format": 84
             }
         ]
     }
