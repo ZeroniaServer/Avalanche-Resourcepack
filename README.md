@@ -11,3 +11,4 @@ Resource pack for Snowy Skirmish 2: Avalanche. Made by Zeronia.
 - [PuckiSilver's NoShadow](https://github.com/PuckiSilver/NoShadow/)
 - [Ts's Move Hearts Shader](https://github.com/McTsts/mc-core-shaders/tree/main/move%20hearts) (thanks to Ts for additional support!)
 - [Zeronia Translators](https://crowdin.com/project/zeronia)
+- [Animated Java](https://animated-java.dev/)
