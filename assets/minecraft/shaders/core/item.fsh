@@ -8,12 +8,7 @@ uniform sampler2D Sampler0;
 
 in float sphericalVertexDistance;
 in float cylindricalVertexDistance;
-#ifdef PER_FACE_LIGHTING
-in vec4 vertexPerFaceColorBack;
-in vec4 vertexPerFaceColorFront;
-#else
 in vec4 vertexColor;
-#endif
 in vec4 lightMapColor;
 in vec4 overlayColor;
 in vec2 texCoord0;
@@ -26,21 +21,18 @@ void main() {
     if (color.a < ALPHA_CUTOUT) {
         discard;
     }
-#else // for solid rendering -- hopefully no other consequences
-    if (color.a == 0.0) {
-        discard;
+#endif
+    float alpha = textureLod(Sampler0, texCoord0, 0.0).a * 255.0;
+    if (!check_alpha(alpha, 250.0)) {
+        color *= vertexColor;
     }
-#endif
-#ifdef PER_FACE_LIGHTING
-    color *= (gl_FrontFacing ? vertexPerFaceColorFront : vertexPerFaceColorBack) * ColorModulator;
-#else
-    color *= vertexColor * ColorModulator;
-#endif
-#ifndef NO_OVERLAY
+    else {
+        color.a = 1.0;
+    }
+    color *= ColorModulator;
     color.rgb = mix(overlayColor.rgb, color.rgb, overlayColor.a);
-#endif
-#ifndef EMISSIVE
-    color *= lightMapColor;
-#endif
+    if (!check_alpha(alpha, 250.0)) {
+        color *= lightMapColor;
+    }
     fragColor = apply_fog(color, sphericalVertexDistance, cylindricalVertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd, FogColor);
 }
