@@ -331,7 +331,7 @@
   "mvp.kill.plural_each": "%s players knocked out each!",
   "mvp.rocket.1": "%1$s is the top Rocket Launcher! %2$s",
   "mvp.rocket.2": "%1$s and %2$s are the top Rocket Launchers! %3$s",
-  "mvp.rocket.single": "%s Avalanche Rockets!",
+  "mvp.rocket.single": "%s Avalanche Rocket!",
   "mvp.rocket.plural": "%s Avalanche Rockets!",
   "mvp.rocket.damage": "%1$s mountain damage dealt using %2$s",
   "mvp.statistics": "Round Statistics:",
